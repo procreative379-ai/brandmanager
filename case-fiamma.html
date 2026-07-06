@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<script>document.documentElement.className=(document.documentElement.className+" js").trim();</script>
+<link rel="dns-prefetch" href="https://mc.yandex.ru">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<meta name="google-site-verification" content="d0fa0e814302fe56" />
+<meta name="keywords" content="кейс ребрендинг, СТМ бренд, запуск бренда Россия, кофейное оборудование брендинг">
+<meta name="description" content="Кейс Fiamma Espresso: ребрендинг и обновление СТМ. Запуск португальского бренда кофейного оборудования на рынок России. Дмитрий Москаленко.">
+<meta name="yandex-verification" content="a22af711bd8343d6" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кейс Fiamma Espresso — Ребрендинг · Дмитрий Москаленко</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230a0a0a'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='18' fill='%23c8ff00'>DM</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Onest:wght@400;600&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Onest:wght@400;600&display=swap" media="print" onload="this.media='all';this.onload=null">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Onest:wght@400;600&display=swap"></noscript>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --coral: #EC6C5F;
+    --azure: #142942;
+    --black: #0e0e0e;
+    --white: #faf8f5;
+    --mid: #181818;
+    --muted: #888;
+    --border: rgba(255,255,255,0.08);
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Onest', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+  }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 48px;
+    background: rgba(14,14,14,0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 13px; font-weight: 700;
+    color: var(--white); text-decoration: none;
+  }
+  .nav-back {
+    font-size: 13px; color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .nav-back:hover { color: var(--white); }
+  .nav-back::before { content: '←'; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 120px 48px 80px;
+    position: relative; overflow: hidden;
+    background: var(--azure);
+  }
+  .hero-wave {
+    position: absolute; bottom: -2px; left: 0; right: 0;
+    height: 6px; background: var(--coral);
+  }
+  .hero-since {
+    position: absolute; top: 50%; right: 48px;
+    transform: translateY(-50%);
+    font-family: 'Unbounded', sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.15); text-transform: uppercase;
+    writing-mode: vertical-rl; text-orientation: mixed;
+  }
+  .hero-tag {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.15em;
+    color: var(--coral); text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .hero-title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(56px, 10vw, 112px);
+    font-weight: 900; line-height: 0.9;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+  }
+  .hero-title .sub-word { display: block; color: rgba(255,255,255,0.4); font-size: 0.65em; }
+  .hero-sub {
+    font-size: 18px; color: rgba(250,248,245,0.6);
+    max-width: 520px; line-height: 1.6;
+  }
+  .hero-meta {
+    display: flex; gap: 48px; margin-top: 60px;
+  }
+  .meta-item label {
+    display: block; font-size: 11px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 6px;
+  }
+  .meta-item span { font-size: 15px; font-weight: 500; }
+
+  section { padding: 100px 48px; border-top: 1px solid var(--border); }
+  .section-num {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.15em;
+    color: var(--coral); text-transform: uppercase; margin-bottom: 40px;
+  }
+  h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 700; line-height: 1.1;
+    letter-spacing: -0.02em; margin-bottom: 40px;
+  }
+  h2 em { color: var(--coral); font-style: normal; }
+  p { font-size: 16px; line-height: 1.75; color: rgba(250,248,245,0.7); margin-bottom: 20px; }
+
+  /* CARDS */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 40px 0; }
+  .card { background: var(--mid); padding: 40px; }
+  .card.accent-card { background: var(--coral); }
+  .card.azure-card { background: var(--azure); }
+  .card h3 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 16px;
+    color: rgba(255,255,255,0.5);
+  }
+  .card.accent-card h3 { color: rgba(255,255,255,0.6); }
+  .card p { margin: 0; font-size: 15px; }
+  .card.accent-card p { color: var(--white); }
+
+  /* PALETTE */
+  .palette { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin: 40px 0; }
+  .swatch {
+    height: 160px; display: flex; flex-direction: column;
+    justify-content: flex-end; padding: 20px;
+  }
+  .swatch span { font-size: 13px; font-weight: 600; }
+  .swatch small { font-size: 11px; opacity: 0.6; margin-top: 4px; display: block; }
+
+  /* LOGO SIZE */
+  .size-demo {
+    display: flex; flex-direction: column; gap: 2px; margin: 40px 0;
+  }
+  .size-row {
+    background: var(--mid); padding: 32px 40px;
+    display: flex; align-items: center; gap: 40px;
+  }
+  .size-label {
+    font-size: 11px; color: var(--muted); letter-spacing: 0.08em;
+    text-transform: uppercase; min-width: 120px; flex-shrink: 0;
+  }
+  .logo-fiamma {
+    font-family: 'Unbounded', sans-serif; font-weight: 900;
+    color: var(--black); letter-spacing: -0.01em;
+  }
+  .logo-fiamma .flame { color: var(--coral); }
+
+  /* BG DEMO */
+  .bg-demos {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin: 40px 0;
+  }
+  .bg-card {
+    padding: 40px; min-height: 160px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .bg-inner {
+    text-align: center;
+    font-family: 'Unbounded', sans-serif; font-weight: 900;
+    font-size: 18px; letter-spacing: -0.01em;
+  }
+  .bg-inner .since {
+    display: block; font-size: 10px; font-weight: 400;
+    letter-spacing: 0.2em; margin-top: 4px;
+    font-family: 'Onest', sans-serif;
+  }
+
+  /* RESULT */
+  .result-band {
+    background: var(--coral);
+    padding: 80px 48px; margin: 0 -48px;
+  }
+  .result-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 48px;
+  }
+  .r-val {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 48px; font-weight: 900; line-height: 1;
+    color: var(--white); margin-bottom: 8px;
+  }
+  .r-label { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.5; }
+
+  /* KEY PRINCIPLES */
+  .principles { display: flex; flex-direction: column; gap: 2px; margin: 40px 0; }
+  .principle {
+    background: var(--mid); padding: 28px 36px;
+    display: flex; gap: 24px; align-items: flex-start;
+  }
+  .p-num {
+    font-family: 'Unbounded', sans-serif; font-size: 11px; font-weight: 700;
+    color: var(--coral); min-width: 24px; padding-top: 2px;
+  }
+  .p-content h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+  .p-content p { font-size: 14px; margin: 0; color: rgba(250,248,245,0.55); }
+
+  /* FONT */
+  .font-demo {
+    background: var(--azure); padding: 48px; margin: 40px 0;
+  }
+  .font-demo .f-name {
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4); margin-bottom: 32px; display: block;
+  }
+  .font-alpha {
+    font-size: clamp(32px, 5vw, 52px); font-weight: 700; line-height: 1.2;
+    letter-spacing: -0.01em; color: var(--coral);
+  }
+
+  .cta-section { padding: 120px 48px; text-align: center; }
+  .cta-section h2 { max-width: 600px; margin: 0 auto 40px; }
+  .btn {
+    display: inline-block; padding: 18px 40px;
+    background: var(--coral); color: var(--white);
+    font-family: 'Unbounded', sans-serif;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn:hover { background: #d45c50; transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent; border: 1px solid var(--border);
+    margin-left: 16px; color: rgba(250,248,245,0.6);
+  }
+  .btn-outline:hover { background: var(--mid); color: var(--white); transform: translateY(-2px); }
+
+  footer {
+    padding: 40px 48px; border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px; color: var(--muted);
+  }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--white); }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .hero { padding: 100px 24px 60px; }
+    .hero-since { display: none; }
+    section { padding: 60px 24px; }
+    .two-col, .palette, .bg-demos { grid-template-columns: 1fr; }
+    .result-grid { grid-template-columns: 1fr 1fr; }
+    .result-band { padding: 48px 24px; margin: 0 -24px; }
+    .cta-section { padding: 80px 24px; }
+    footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+    .hero-meta { flex-wrap: wrap; gap: 24px; }
+  }
+
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;position:relative;z-index:200;background:none;border:none}
+  .burger span{display:block;width:24px;height:2px;background:var(--white);transition:transform .3s,opacity .3s,width .3s;transform-origin:center}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0;width:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile-menu{display:none;position:fixed;inset:0;background:rgba(10,10,10,.98);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:8px;backdrop-filter:blur(16px)}
+  .mobile-menu.open{display:flex}
+  .mobile-menu a{font-family:var(--font-display);font-size:clamp(22px,6vw,36px);font-weight:900;letter-spacing:-.02em;color:var(--white);text-decoration:none;padding:12px 24px;transition:color .2s;text-align:center}
+  .mobile-menu a:hover{color:var(--accent)}
+  .mobile-menu a.nav-cta{background:var(--accent);color:var(--black)!important;border-radius:2px;margin-top:16px;font-size:clamp(14px,4vw,20px)}
+  .mobile-menu-close{position:absolute;top:24px;right:24px;font-size:28px;color:var(--white);cursor:pointer;background:none;border:none;line-height:1;transition:color .2s}
+  .mobile-menu-close:hover{color:var(--accent)}
+  
+  /* ── NAV LINKS BASE STYLES ── */
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    position: relative;
+    z-index: 1;
+  }
+  .nav-links a {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted, #888);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta {
+    background: var(--accent) !important;
+    color: #0a0a0a !important;
+    padding: 10px 22px !important;
+    border-radius: 2px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.06em !important;
+    transition: opacity 0.3s !important;
+  }
+  .nav-cta:hover { opacity: 0.85 !important; }
+
+  }
+
+
+  /* ── MOBILE EDGE PADDING FIX ── */
+  @media (max-width: 768px) {
+    .hero, section, .cta-section, .footer-inner, footer {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+    h1, h2, h3, p, .section-num, .section-label,
+    .hero-tag, .hero-title, .hero-sub, .hero-meta {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+
+/* ── COOKIE BANNER ── */
+.cookie-banner {
+  position: fixed; bottom: 24px; left: 24px; right: 24px;
+  max-width: 560px; z-index: 9000;
+  background: #1a1a1a; border: 1px solid #2e2e2e;
+  border-left: 3px solid #c8ff00;
+  padding: 20px 24px; display: flex;
+  align-items: center; gap: 20px; flex-wrap: wrap;
+  transform: translateY(120px); opacity: 0;
+  transition: transform .4s ease, opacity .4s ease;
+}
+.cookie-banner.show { transform: translateY(0); opacity: 1; }
+.cookie-text { font-size: 13px; color: #aaa; line-height: 1.6; flex: 1; min-width: 200px; }
+.cookie-text a { color: #c8ff00; text-decoration: none; }
+.cookie-text a:hover { text-decoration: underline; }
+.cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.cookie-btn {
+  font-family: 'Unbounded', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  padding: 10px 20px; border: none; border-radius: 2px; cursor: pointer;
+  transition: transform .15s, opacity .2s;
+}
+.cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
+.cookie-accept { background: #c8ff00; color: #0a0a0a; }
+.cookie-decline { background: transparent; color: #666; border: 1px solid #2e2e2e; }
+
+
+  /* ── MOBILE BURGER & MENU ── */
+  .burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 200;
+  }
+  .burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #f5f2ed;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+    transform-origin: center;
+  }
+  .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity: 0; width: 0; }
+  .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,10,10,0.98);
+    z-index: 150;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .mobile-menu.open { display: flex !important; }
+  .mobile-menu a {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(22px, 6vw, 36px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #f5f2ed;
+    text-decoration: none;
+    padding: 12px 24px;
+    transition: color 0.2s;
+    text-align: center;
+  }
+  .mobile-menu a:hover { color: #c8ff00; }
+  .mobile-menu a.nav-cta {
+    background: #c8ff00 !important;
+    color: #0a0a0a !important;
+    border-radius: 2px;
+    margin-top: 16px;
+    font-size: clamp(14px, 4vw, 20px);
+  }
+  .mobile-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 32px;
+    color: #f5f2ed;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+    padding: 8px;
+    z-index: 160;
+  }
+  .mobile-menu-close:hover { color: #c8ff00; }
+  @media (max-width: 1024px) {
+    .burger { display: flex !important; }
+    .nav-links { display: none !important; }
+  }
+
+
+  /* ── КРИТИЧЕСКИЕ МОБИЛЬНЫЕ СТИЛИ ── */
+  @media (max-width: 768px) {
+    html, body { width: 100%; overflow-x: hidden; }
+    img, video, iframe, svg { max-width: 100%; height: auto; }
+    * { word-break: break-word; }
+  }
+  @media (max-width: 1024px) {
+    .nav-links { display: none !important; }
+    .burger { display: flex !important; }
+  }
+
+</style>
+
+
+<!-- Yandex.Metrika counter (lazy) -->
+<script type="text/javascript">
+(function(){
+  var loaded=false;
+  function lazyMetrika(){
+    if(loaded)return; loaded=true;
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+    ym(72239779,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:false});
+  }
+  ['scroll','mousemove','touchstart','click','keydown'].forEach(function(ev){
+    window.addEventListener(ev,lazyMetrika,{once:true,passive:true});
+  });
+  setTimeout(lazyMetrika,3500);
+})();
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72239779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter (lazy) -->
+<meta property="og:title" content="Кейс Fiamma Espresso — Ребрендинг · Дмитрий Москаленко">
+<meta property="og:description" content="Кейс Fiamma Espresso: ребрендинг и обновление СТМ. Запуск португальского бренда кофейного оборудования на рынок России. Дмитрий Москаленко.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://brandmanager.su/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://brandmanager.su/og-image.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://brandmanager.su/" },
+    { "@type": "ListItem", "position": 2, "name": "Кейсы", "item": "https://brandmanager.su/#cases" },
+    { "@type": "ListItem", "position": 3, "name": "Кейс Fiamma Espresso — Ребрендинг СТМ", "item": "https://brandmanager.su/case-fiamma.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">DM / Brand</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="services.html">Услуги</a></li>
+    <li><a href="articles.html">Статьи</a></li>
+    <li><a href="blog.html">Блог</a></li>
+    <li><a href="resume.html">Резюме</a></li>
+    <li><a href="brief.html">Бриф</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Обсудить проект</a></li>
+  </ul>
+  <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Открыть меню">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
+  <a href="index.html" onclick="closeMobileMenu()">Главная</a>
+  <a href="services.html" onclick="closeMobileMenu()">Услуги</a>
+  <a href="articles.html" onclick="closeMobileMenu()">Статьи</a>
+  <a href="blog.html" onclick="closeMobileMenu()">Блог</a>
+  <a href="resume.html" onclick="closeMobileMenu()">Резюме</a>
+  <a href="brief.html" onclick="closeMobileMenu()">Бриф</a>
+  <a href="index.html#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
+</div>
+
+<div class="hero">
+  <div class="hero-wave"></div>
+  <div class="hero-since">Since 1977</div>
+  <div class="hero-tag">Кейс · Brand Guidelines · Кофейное оборудование · Португалия</div>
+  <h1 class="hero-title">
+    fiamma
+    <span class="sub-word">Espresso</span>
+  </h1>
+  <p class="hero-sub">Разработка полной системы бренд-гайдлайнов для португальского производителя профессионального кофейного оборудования</p>
+  <div class="hero-meta">
+    <div class="meta-item">
+      <label>Категория</label>
+      <span>HoReCa / Premium</span>
+    </div>
+    <div class="meta-item">
+      <label>Тип работы</label>
+      <span>Brand Guidelines</span>
+    </div>
+    <div class="meta-item">
+      <label>Рынок</label>
+      <span>Европа / Экспорт</span>
+    </div>
+    <div class="meta-item">
+      <label>Штаб-квартира</label>
+      <span>Авейру, Португалия</span>
+    </div>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section>
+  <div class="section-num">01 / О проекте</div>
+  <h2>Бренд с <em>характером</em> и историей</h2>
+  <p>Fiamma — португальский производитель профессионального кофейного оборудования с 1977 года. Задача: создать исчерпывающую систему бренд-гайдлайнов, которая сохранит аутентичность марки и обеспечит единообразие коммуникаций на всех рынках.</p>
+
+  <div class="two-col">
+    <div class="card accent-card">
+      <h3>Задача</h3>
+      <p>Систематизировать визуальный язык бренда и создать руководство для всех носителей — от упаковки до цифровых каналов</p>
+    </div>
+    <div class="card azure-card">
+      <h3>Контекст</h3>
+      <p>Бренд существует с 1977 года, имеет сильный характер и heritage. Нужно зафиксировать правила, не разрушив живость марки</p>
+    </div>
+    <div class="card">
+      <h3>Аудитория документа</h3>
+      <p>Дистрибьюторы, дизайн-команды, маркетологи — все, кто работает с брендом в разных странах</p>
+    </div>
+    <div class="card">
+      <h3>Результат</h3>
+      <p>Полные brand guidelines: логотип, охранная зона, минимальные размеры, цвета, типографика, правила использования на разных фонах</p>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO -->
+<section>
+  <div class="section-num">02 / Логотип и охранная зона</div>
+  <h2>Два варианта — <em>единая система</em></h2>
+  <p>Логотип Fiamma существует в двух версиях: стандартной и heritage («Since 1977»). Обе версии подчиняются единым правилам охранной зоны — минимальное защитное поле равно высоте иконки бренда.</p>
+
+  <div class="two-col">
+    <div class="card">
+      <h3>Стандартная версия</h3>
+      <p style="margin-bottom:24px;">Для современных носителей, диджитала и ситуаций, где нет необходимости подчёркивать историю бренда</p>
+      <div style="background:#f5f5f5; padding:32px; text-align:center; border-radius:2px;">
+        <span class="logo-fiamma" style="font-size:28px;">fiamma <span class="flame">&#9607;&#9607;</span></span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Heritage версия (Since 1977)</h3>
+      <p style="margin-bottom:24px;">Для носителей, где важно подчеркнуть историю и экспертизу бренда</p>
+      <div style="background:#f5f5f5; padding:32px; text-align:center; border-radius:2px;">
+        <span class="logo-fiamma" style="font-size:28px;">fiamma <span class="flame">&#9607;&#9607;</span></span>
+        <div style="font-size:10px; letter-spacing:0.2em; color:#333; margin-top:6px; font-family:'Onest',sans-serif;">SINCE 1977</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-num" style="margin-top:60px;">Минимальные размеры</div>
+  <div class="size-demo">
+    <div class="size-row">
+      <span class="size-label">20mm · Стандарт</span>
+      <span class="logo-fiamma" style="font-size:28px; background:#fff; padding:8px 20px; color:#111;">fiamma <span class="flame">&#9607;&#9607;</span></span>
+    </div>
+    <div class="size-row">
+      <span class="size-label">15mm</span>
+      <span class="logo-fiamma" style="font-size:22px; background:#fff; padding:6px 16px; color:#111;">fiamma <span class="flame">&#9607;&#9607;</span></span>
+    </div>
+    <div class="size-row">
+      <span class="size-label">10mm</span>
+      <span class="logo-fiamma" style="font-size:16px; background:#fff; padding:4px 12px; color:#111;">fiamma <span class="flame">&#9607;&#9607;</span></span>
+    </div>
+    <div class="size-row">
+      <span class="size-label">5mm · Минимум</span>
+      <span class="logo-fiamma" style="font-size:11px; background:#fff; padding:3px 10px; color:#111;">fiamma <span class="flame">&#9607;</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- COLORS -->
+<section>
+  <div class="section-num">03 / Цветовая система</div>
+  <h2>Coral + Azure — <em>тепло и глубина</em></h2>
+  <p>Четыре цвета образуют полную палитру бренда. Coral — фирменный акцент, носитель энергии и тепла. Azure — глубина, экспертиза, профессионализм. Чёрный и белый дают универсальность.</p>
+
+  <div class="palette">
+    <div class="swatch" style="background:#EC6C5F;">
+      <span style="color:#fff;">Coral</span>
+      <small style="color:rgba(255,255,255,0.7);">PANTONE 7416 U<br>#EC6C5F</small>
+    </div>
+    <div class="swatch" style="background:#142942;">
+      <span style="color:#fff;">Azure</span>
+      <small style="color:rgba(255,255,255,0.5);">PANTONE 295 U<br>#142942</small>
+    </div>
+    <div class="swatch" style="background:#000000;">
+      <span style="color:#fff;">Black</span>
+      <small style="color:rgba(255,255,255,0.4);">#000000</small>
+    </div>
+    <div class="swatch" style="background:#ffffff; border:1px solid #ddd;">
+      <span style="color:#000;">White</span>
+      <small style="color:#888;">#ffffff</small>
+    </div>
+  </div>
+
+  <div class="section-num" style="margin-top:60px;">Логотип на различных фонах</div>
+  <div class="bg-demos">
+    <div class="bg-card" style="background:#ffffff;">
+      <div class="bg-inner" style="color:#111;">
+        fiamma <span style="color:#EC6C5F;">&#9607;&#9607;</span>
+        <span class="since" style="color:#888;">SINCE 1977</span>
+      </div>
+    </div>
+    <div class="bg-card" style="background:#000000;">
+      <div class="bg-inner" style="color:#fff;">
+        fiamma <span style="color:#EC6C5F;">&#9607;&#9607;</span>
+        <span class="since" style="color:rgba(255,255,255,0.4);">SINCE 1977</span>
+      </div>
+    </div>
+    <div class="bg-card" style="background:#EC6C5F;">
+      <div class="bg-inner" style="color:#fff;">
+        fiamma <span style="color:#142942;">&#9607;&#9607;</span>
+        <span class="since" style="color:rgba(255,255,255,0.6);">SINCE 1977</span>
+      </div>
+    </div>
+    <div class="bg-card" style="background:#142942;">
+      <div class="bg-inner" style="color:#EC6C5F;">
+        fiamma <span style="color:#EC6C5F;">&#9607;&#9607;</span>
+        <span class="since" style="color:rgba(255,255,255,0.4);">SINCE 1977</span>
+      </div>
+    </div>
+    <div class="bg-card" style="background:#e0d0c8;">
+      <div class="bg-inner" style="color:#111;">
+        fiamma <span style="color:#EC6C5F;">&#9607;&#9607;</span>
+        <span class="since" style="color:#888;">SINCE 1977</span>
+      </div>
+    </div>
+    <div class="bg-card" style="background:#2bbb88;">
+      <div class="bg-inner" style="color:#fff;">
+        fiamma <span style="color:#fff;">&#9607;&#9607;</span>
+        <span class="since" style="color:rgba(255,255,255,0.5);">SINCE 1977</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPOGRAPHY -->
+<section>
+  <div class="section-num">04 / Типографика</div>
+  <h2>Averta — <em>шрифт с характером</em></h2>
+  <p>Фирменная гарнитура бренда — Averta, разработанная Косtas Bartsokasом в 2015 году. Несколько начертаний от Regular до Black обеспечивают гибкую типографическую систему для любых носителей.</p>
+
+  <div class="font-demo">
+    <span class="f-name">Averta · Uppercase</span>
+    <div class="font-alpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+    <div class="font-alpha" style="margin-top:16px;">abcdefghijklmnopqrstuvwxyz</div>
+    <div class="font-alpha" style="margin-top:16px; font-size:clamp(24px,3vw,40px);">01234 56789 ()&#63;! #&#64;&amp;%</div>
+  </div>
+
+  <div class="principles" style="margin-top: 40px;">
+    <div class="principle">
+      <span class="p-num">R</span>
+      <div class="p-content">
+        <h4>Regular — основной текст</h4>
+        <p>Для body-copy, подписей, вспомогательного контента</p>
+      </div>
+    </div>
+    <div class="principle">
+      <span class="p-num">SB</span>
+      <div class="p-content">
+        <h4>Semi-Bold — акценты</h4>
+        <p>Для подзаголовков, выделений, навигации</p>
+      </div>
+    </div>
+    <div class="principle">
+      <span class="p-num">BL</span>
+      <div class="p-content">
+        <h4>Black — заголовки</h4>
+        <p>Для крупных заголовков, hero-блоков, брендинга</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY RULES -->
+<section>
+  <div class="section-num">05 / Ключевые принципы применения</div>
+  <h2>Правила, которые <em>защищают</em> бренд</h2>
+
+  <div class="principles">
+    <div class="principle">
+      <span class="p-num">01</span>
+      <div class="p-content">
+        <h4>Охранная зона логотипа</h4>
+        <p>Вокруг логотипа всегда сохраняется защитная область, равная высоте иконки бренда. Никаких других элементов в этой зоне</p>
+      </div>
+    </div>
+    <div class="principle">
+      <span class="p-num">02</span>
+      <div class="p-content">
+        <h4>Минимальный размер</h4>
+        <p>Стандартная версия — не менее 5mm по высоте. Heritage версия — не менее 10mm. Меньше — потеря читаемости</p>
+      </div>
+    </div>
+    <div class="principle">
+      <span class="p-num">03</span>
+      <div class="p-content">
+        <h4>Coral-on-Azure: только с согласованием</h4>
+        <p>Комбинация фирменных цветов при наложении требует проверки на контрастность. На некоторых носителях видимость может быть недостаточной</p>
+      </div>
+    </div>
+    <div class="principle">
+      <span class="p-num">04</span>
+      <div class="p-content">
+        <h4>Правило тёмных и светлых фонов</h4>
+        <p>На тёмных фонах — белый логотип с цветной иконкой. На светлых — чёрный логотип с цветной иконкой. Монохром допускается</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULT -->
+<section style="padding: 100px 48px; border: none;">
+  <div class="result-band" style="padding: 80px 48px;">
+    <div class="section-num" style="color:rgba(255,255,255,0.6);">06 / Итог</div>
+    <h2 style="color:var(--white);">Sistema identità visiva — <em style="color:rgba(255,255,255,0.55);">готова</em></h2>
+    <div class="result-grid">
+      <div>
+        <div class="r-val">2</div>
+        <div class="r-label">Версии логотипа с полными гайдлайнами</div>
+      </div>
+      <div>
+        <div class="r-val">4</div>
+        <div class="r-label">Фирменных цвета с PANTONE-кодами</div>
+      </div>
+      <div>
+        <div class="r-val">1977</div>
+        <div class="r-label">Год основания — зафиксирован в DNA бренда</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-section">
+  <h2>Нужна система <em>идентичности</em> для вашего бренда?</h2>
+  <a href="https://t.me/Dmitrii_Diezel" class="btn">Обсудить в Telegram</a>
+  <a href="index.html#cases" class="btn btn-outline">Все кейсы</a>
+</div>
+
+<footer>
+  <span>© 2026 · Дмитрий Москаленко</span>
+  <div style="display:flex;gap:24px;">
+    <a href="privacy.html">Конфиденциальность</a>
+    <a href="cookies.html">Cookie</a>
+    <a href="terms.html">Соглашение</a>
+    <a href="https://t.me/Dmitrii_Diezel">Telegram</a>
+    <a href="https://vk.com/dmitrii_moskalenko">VK</a>
+    <a href="index.html">Главная</a>
+  </div>
+</footer>
+
+
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-text">
+    Мы используем cookies для аналитики (Яндекс.Метрика) и улучшения сайта.
+    Подробнее в <a href="privacy.html">Политике конфиденциальности</a>.
+  </div>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Принять</button>
+    <button class="cookie-btn cookie-decline" onclick="declineCookies()">Отклонить</button>
+  </div>
+</div>
+
+
+<script>
+(function(){
+  try {
+    if (!localStorage.getItem('cookie_consent')) {
+      setTimeout(function(){
+        var b = document.getElementById('cookieBanner');
+        if (b) b.classList.add('show');
+      }, 1500);
+    }
+  } catch(e){}
+})();
+function acceptCookies(){
+  try { localStorage.setItem('cookie_consent','accepted'); } catch(e){}
+  var b = document.getElementById('cookieBanner');
+  if(b) b.classList.remove('show');
+}
+function declineCookies(){
+  try { localStorage.setItem('cookie_consent','declined'); } catch(e){}
+  var b = document.getElementById('cookieBanner');
+  if(b) b.classList.remove('show');
+}
+</script>
+
+<script>
+function toggleMobileMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var burger = document.getElementById('burger');
+  if (!menu || !burger) return;
+  var isOpen = menu.classList.contains('open');
+  if (isOpen) {
+    menu.classList.remove('open');
+    burger.classList.remove('open');
+    document.body.style.overflow = '';
+  } else {
+    menu.classList.add('open');
+    burger.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+function closeMobileMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var burger = document.getElementById('burger');
+  if (menu) menu.classList.remove('open');
+  if (burger) burger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+// Close menu on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+</script>
+<script>
+/* REVEAL_FAILSAFE: гарантированно показываем контент, даже если что-то сломалось */
+(function(){
+  function showAll(){
+    var els=document.querySelectorAll('.reveal:not(.visible)');
+    for(var i=0;i<els.length;i++){els[i].classList.add('visible');}
+  }
+  // если через 1.2с что-то ещё скрыто — показать принудительно
+  setTimeout(showAll,1200);
+  // и на случай полной ошибки — по load
+  window.addEventListener('load',function(){setTimeout(showAll,300);});
+})();
+</script>
+</body>
+</html>

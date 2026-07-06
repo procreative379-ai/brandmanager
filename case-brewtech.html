@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<script>document.documentElement.className=(document.documentElement.className+" js").trim();</script>
+<link rel="dns-prefetch" href="https://mc.yandex.ru">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<meta name="google-site-verification" content="d0fa0e814302fe56" />
+<meta name="keywords" content="кейс брендбук, платформа бренда, кофемашины брендинг, бренд-стратегия B2B">
+<meta name="description" content="Кейс BREW.TECH: разработка платформы бренда и брендбука для производителя кофемашин российской сборки. Дмитрий Москаленко.">
+<meta name="yandex-verification" content="a22af711bd8343d6" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кейс BREW.TECH — Платформа бренда · Дмитрий Москаленко</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230a0a0a'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='18' fill='%23c8ff00'>DM</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Onest:wght@400;600&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Onest:wght@400;600&display=swap" media="print" onload="this.media='all';this.onload=null">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Onest:wght@400;600&display=swap"></noscript>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f3ef;
+    --accent: #0066ff;
+    --accent2: #ff6b35;
+    --mid: #1a1a1a;
+    --muted: #888;
+    --border: rgba(255,255,255,0.08);
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Onest', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 48px;
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 13px; font-weight: 700;
+    color: var(--white); text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+  .nav-back {
+    font-size: 13px; color: var(--muted);
+    text-decoration: none; letter-spacing: 0.03em;
+    transition: color 0.2s;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .nav-back:hover { color: var(--white); }
+  .nav-back::before { content: '←'; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 120px 48px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 80% 30%, rgba(0,102,255,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 10% 70%, rgba(0,102,255,0.08) 0%, transparent 60%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.5) 70%, transparent);
+  }
+  .hero-tag {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.15em;
+    color: var(--accent); text-transform: uppercase;
+    margin-bottom: 24px; position: relative;
+  }
+  .hero-title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(48px, 8vw, 96px);
+    font-weight: 900; line-height: 0.95;
+    letter-spacing: -0.02em;
+    position: relative; margin-bottom: 32px;
+  }
+  .hero-title span { color: var(--accent); }
+  .hero-sub {
+    font-size: 18px; color: rgba(245,243,239,0.6);
+    max-width: 560px; line-height: 1.6;
+    position: relative;
+  }
+  .hero-meta {
+    display: flex; gap: 48px; margin-top: 60px;
+    position: relative;
+  }
+  .meta-item label {
+    display: block; font-size: 11px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 6px;
+  }
+  .meta-item span {
+    font-size: 15px; font-weight: 500; color: var(--white);
+  }
+
+  /* SECTION */
+  section { padding: 100px 48px; border-top: 1px solid var(--border); }
+  .section-num {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.15em;
+    color: var(--accent); text-transform: uppercase; margin-bottom: 40px;
+  }
+  h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 700; line-height: 1.1;
+    letter-spacing: -0.02em; margin-bottom: 40px;
+  }
+  h2 em { color: var(--accent); font-style: normal; }
+  p { font-size: 16px; line-height: 1.75; color: rgba(245,243,239,0.75); margin-bottom: 20px; }
+
+  /* OVERVIEW GRID */
+  .overview-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2px; margin-bottom: 80px;
+  }
+  .overview-card {
+    background: var(--mid); padding: 40px;
+  }
+  .overview-card:first-child { background: var(--accent); }
+  .overview-card h3 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; margin-bottom: 16px;
+    color: rgba(255,255,255,0.5);
+  }
+  .overview-card:first-child h3 { color: rgba(255,255,255,0.7); }
+  .overview-card p { font-size: 15px; color: rgba(245,243,239,0.8); margin: 0; }
+  .overview-card:first-child p { color: var(--white); font-size: 18px; line-height: 1.5; }
+
+  /* VALUES */
+  .values-list {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    margin: 40px 0;
+  }
+  .value-item {
+    background: var(--mid); padding: 36px;
+    border-left: 3px solid var(--accent);
+  }
+  .value-item .val-num {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 40px; font-weight: 900;
+    color: var(--accent); line-height: 1;
+    margin-bottom: 8px;
+  }
+  .value-item .val-label {
+    font-size: 13px; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+  .value-item p { font-size: 14px; margin: 0; color: rgba(245,243,239,0.6); }
+
+  /* PALETTE */
+  .palette {
+    display: flex; gap: 2px; margin: 40px 0;
+  }
+  .swatch {
+    flex: 1; height: 120px;
+    display: flex; flex-direction: column;
+    justify-content: flex-end; padding: 16px;
+  }
+  .swatch span { font-size: 12px; font-weight: 600; }
+  .swatch small { font-size: 11px; opacity: 0.7; }
+
+  /* AUDIENCE */
+  .audience-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin: 40px 0;
+  }
+  .audience-card {
+    background: var(--mid); padding: 36px;
+  }
+  .audience-card .aud-share {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 36px; font-weight: 900; color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .audience-card h4 {
+    font-size: 14px; font-weight: 600; letter-spacing: 0.05em;
+    text-transform: uppercase; margin-bottom: 12px; color: var(--white);
+  }
+  .audience-card p { font-size: 14px; margin: 0; color: rgba(245,243,239,0.55); }
+
+  /* POSITIONING */
+  .positioning-block {
+    background: var(--mid); padding: 60px;
+    border-left: 4px solid var(--accent);
+    margin: 40px 0;
+  }
+  .positioning-block blockquote {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 700; line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+  .positioning-block cite {
+    display: block; margin-top: 24px;
+    font-size: 13px; color: var(--muted);
+    font-style: normal; letter-spacing: 0.05em;
+  }
+
+  /* SLOGAN */
+  .slogan-list {
+    display: flex; flex-direction: column; gap: 2px; margin: 40px 0;
+  }
+  .slogan-item {
+    background: var(--mid); padding: 28px 36px;
+    display: flex; align-items: center; gap: 24px;
+    transition: background 0.2s;
+  }
+  .slogan-item:hover { background: #222; }
+  .slogan-item .arrow { color: var(--accent); font-size: 18px; flex-shrink: 0; }
+  .slogan-item span { font-size: 15px; font-weight: 500; }
+
+  /* RESULT BLOCK */
+  .result-block {
+    background: var(--accent); padding: 80px;
+    margin: 0 -48px;
+  }
+  .result-block h2 { color: var(--white); }
+  .result-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 48px;
+  }
+  .result-item .r-val {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 48px; font-weight: 900; line-height: 1;
+    color: var(--white); margin-bottom: 8px;
+  }
+  .result-item .r-label {
+    font-size: 14px; color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 120px 48px; text-align: center;
+  }
+  .cta-section h2 { max-width: 600px; margin: 0 auto 40px; }
+  .btn {
+    display: inline-block;
+    padding: 18px 40px;
+    background: var(--accent); color: var(--white);
+    font-family: 'Unbounded', sans-serif;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn:hover { background: #0052cc; transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent; border: 1px solid var(--border);
+    margin-left: 16px;
+    color: rgba(245,243,239,0.6);
+  }
+  .btn-outline:hover { background: var(--mid); color: var(--white); transform: translateY(-2px); }
+
+  /* TYPOGRAPHY SECTION */
+  .type-demo {
+    background: var(--mid); padding: 48px; margin: 40px 0;
+  }
+  .type-h1 { font-family: 'Unbounded', sans-serif; font-size: 64px; font-weight: 900; letter-spacing: -0.02em; line-height: 1; margin-bottom: 8px; }
+  .type-h2 { font-family: 'Unbounded', sans-serif; font-size: 40px; font-weight: 700; margin-bottom: 8px; }
+  .type-h3 { font-family: 'Unbounded', sans-serif; font-size: 28px; font-weight: 500; margin-bottom: 8px; }
+  .type-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 24px; display: block; }
+
+  /* LOGO GUIDELINES */
+  .logo-demos {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 40px 0;
+  }
+  .logo-card {
+    padding: 48px; display: flex; flex-direction: column;
+    justify-content: space-between; min-height: 200px;
+  }
+  .logo-card.bg-light { background: #f5f5f5; }
+  .logo-card.bg-dark { background: var(--black); border: 1px solid var(--border); }
+  .logo-card.bg-blue { background: var(--accent); }
+  .logo-card label { font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 32px; display: block; }
+  .logo-card.bg-light label, .logo-card.bg-blue label { color: rgba(0,0,0,0.4); }
+  .logo-display {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 32px; font-weight: 900; letter-spacing: -0.01em;
+  }
+  .logo-display .dot-tech { color: var(--accent); }
+  .logo-card.bg-light .logo-display { color: var(--black); }
+  .logo-card.bg-dark .logo-display { color: var(--white); }
+  .logo-card.bg-blue .logo-display { color: var(--white); }
+  .logo-card.bg-blue .dot-tech { color: rgba(255,255,255,0.6); }
+
+  footer {
+    padding: 40px 48px;
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px; color: var(--muted);
+  }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--white); }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .hero { padding: 100px 24px 60px; }
+    section { padding: 60px 24px; }
+    .overview-grid, .values-list, .audience-grid, .logo-demos { grid-template-columns: 1fr; }
+    .result-grid { grid-template-columns: 1fr 1fr; }
+    .palette { flex-wrap: wrap; }
+    .result-block { padding: 48px 24px; margin: 0 -24px; }
+    .cta-section { padding: 80px 24px; }
+    footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+    .hero-meta { flex-wrap: wrap; gap: 24px; }
+  }
+
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;position:relative;z-index:200;background:none;border:none}
+  .burger span{display:block;width:24px;height:2px;background:var(--white);transition:transform .3s,opacity .3s,width .3s;transform-origin:center}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0;width:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile-menu{display:none;position:fixed;inset:0;background:rgba(10,10,10,.98);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:8px;backdrop-filter:blur(16px)}
+  .mobile-menu.open{display:flex}
+  .mobile-menu a{font-family:var(--font-display);font-size:clamp(22px,6vw,36px);font-weight:900;letter-spacing:-.02em;color:var(--white);text-decoration:none;padding:12px 24px;transition:color .2s;text-align:center}
+  .mobile-menu a:hover{color:var(--accent)}
+  .mobile-menu a.nav-cta{background:var(--accent);color:var(--black)!important;border-radius:2px;margin-top:16px;font-size:clamp(14px,4vw,20px)}
+  .mobile-menu-close{position:absolute;top:24px;right:24px;font-size:28px;color:var(--white);cursor:pointer;background:none;border:none;line-height:1;transition:color .2s}
+  .mobile-menu-close:hover{color:var(--accent)}
+  
+  /* ── NAV LINKS BASE STYLES ── */
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    position: relative;
+    z-index: 1;
+  }
+  .nav-links a {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted, #888);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta {
+    background: var(--accent) !important;
+    color: #0a0a0a !important;
+    padding: 10px 22px !important;
+    border-radius: 2px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.06em !important;
+    transition: opacity 0.3s !important;
+  }
+  .nav-cta:hover { opacity: 0.85 !important; }
+
+  }
+
+
+  /* ── MOBILE EDGE PADDING FIX ── */
+  @media (max-width: 768px) {
+    .hero, section, .cta-section, .footer-inner, footer {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+    h1, h2, h3, p, .section-num, .section-label,
+    .hero-tag, .hero-title, .hero-sub, .hero-meta {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+
+/* ── COOKIE BANNER ── */
+.cookie-banner {
+  position: fixed; bottom: 24px; left: 24px; right: 24px;
+  max-width: 560px; z-index: 9000;
+  background: #1a1a1a; border: 1px solid #2e2e2e;
+  border-left: 3px solid #c8ff00;
+  padding: 20px 24px; display: flex;
+  align-items: center; gap: 20px; flex-wrap: wrap;
+  transform: translateY(120px); opacity: 0;
+  transition: transform .4s ease, opacity .4s ease;
+}
+.cookie-banner.show { transform: translateY(0); opacity: 1; }
+.cookie-text { font-size: 13px; color: #aaa; line-height: 1.6; flex: 1; min-width: 200px; }
+.cookie-text a { color: #c8ff00; text-decoration: none; }
+.cookie-text a:hover { text-decoration: underline; }
+.cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.cookie-btn {
+  font-family: 'Unbounded', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  padding: 10px 20px; border: none; border-radius: 2px; cursor: pointer;
+  transition: transform .15s, opacity .2s;
+}
+.cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
+.cookie-accept { background: #c8ff00; color: #0a0a0a; }
+.cookie-decline { background: transparent; color: #666; border: 1px solid #2e2e2e; }
+
+
+  /* ── MOBILE BURGER & MENU ── */
+  .burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 200;
+  }
+  .burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #f5f2ed;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+    transform-origin: center;
+  }
+  .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity: 0; width: 0; }
+  .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,10,10,0.98);
+    z-index: 150;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .mobile-menu.open { display: flex !important; }
+  .mobile-menu a {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(22px, 6vw, 36px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #f5f2ed;
+    text-decoration: none;
+    padding: 12px 24px;
+    transition: color 0.2s;
+    text-align: center;
+  }
+  .mobile-menu a:hover { color: #c8ff00; }
+  .mobile-menu a.nav-cta {
+    background: #c8ff00 !important;
+    color: #0a0a0a !important;
+    border-radius: 2px;
+    margin-top: 16px;
+    font-size: clamp(14px, 4vw, 20px);
+  }
+  .mobile-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 32px;
+    color: #f5f2ed;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+    padding: 8px;
+    z-index: 160;
+  }
+  .mobile-menu-close:hover { color: #c8ff00; }
+  @media (max-width: 1024px) {
+    .burger { display: flex !important; }
+    .nav-links { display: none !important; }
+  }
+
+
+  /* ── КРИТИЧЕСКИЕ МОБИЛЬНЫЕ СТИЛИ ── */
+  @media (max-width: 768px) {
+    html, body { width: 100%; overflow-x: hidden; }
+    img, video, iframe, svg { max-width: 100%; height: auto; }
+    * { word-break: break-word; }
+  }
+  @media (max-width: 1024px) {
+    .nav-links { display: none !important; }
+    .burger { display: flex !important; }
+  }
+
+</style>
+
+
+<!-- Yandex.Metrika counter (lazy) -->
+<script type="text/javascript">
+(function(){
+  var loaded=false;
+  function lazyMetrika(){
+    if(loaded)return; loaded=true;
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+    ym(72239779,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:false});
+  }
+  ['scroll','mousemove','touchstart','click','keydown'].forEach(function(ev){
+    window.addEventListener(ev,lazyMetrika,{once:true,passive:true});
+  });
+  setTimeout(lazyMetrika,3500);
+})();
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72239779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter (lazy) -->
+<meta property="og:title" content="Кейс BREW.TECH — Платформа бренда · Дмитрий Москаленко">
+<meta property="og:description" content="Кейс BREW.TECH: разработка платформы бренда и брендбука для производителя кофемашин российской сборки. Дмитрий Москаленко.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://brandmanager.su/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://brandmanager.su/og-image.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://brandmanager.su/" },
+    { "@type": "ListItem", "position": 2, "name": "Кейсы", "item": "https://brandmanager.su/#cases" },
+    { "@type": "ListItem", "position": 3, "name": "Кейс BREW.TECH — Платформа бренда кофемашин", "item": "https://brandmanager.su/case-brewtech.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">DM / Brand</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="services.html">Услуги</a></li>
+    <li><a href="articles.html">Статьи</a></li>
+    <li><a href="blog.html">Блог</a></li>
+    <li><a href="resume.html">Резюме</a></li>
+    <li><a href="brief.html">Бриф</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Обсудить проект</a></li>
+  </ul>
+  <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Открыть меню">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
+  <a href="index.html" onclick="closeMobileMenu()">Главная</a>
+  <a href="services.html" onclick="closeMobileMenu()">Услуги</a>
+  <a href="articles.html" onclick="closeMobileMenu()">Статьи</a>
+  <a href="blog.html" onclick="closeMobileMenu()">Блог</a>
+  <a href="resume.html" onclick="closeMobileMenu()">Резюме</a>
+  <a href="brief.html" onclick="closeMobileMenu()">Бриф</a>
+  <a href="index.html#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-tag">Кейс · Брендбук · Профессиональное оборудование · <a href="https://brewtechology.ru/" target="_blank" style="color:var(--accent);text-decoration:none;">brewtechology.ru ↗</a></div>
+  <h1 class="hero-title">BREW<span>.</span><span>TECH</span></h1>
+  <p class="hero-sub">Разработка платформы бренда и брендбука для BREW.TECH — производителя профессиональных кофемашин и кофемолок российской сборки</p>
+  <div class="hero-meta">
+    <div class="meta-item">
+      <label>Категория</label>
+      <span>HoReCa / B2B</span>
+    </div>
+    <div class="meta-item">
+      <label>Тип работы</label>
+      <span>Брендбук + Стратегия</span>
+    </div>
+    <div class="meta-item">
+      <label>Рынок</label>
+      <span>Россия</span>
+    </div>
+    <div class="meta-item">
+      <label>Статус</label>
+      <span>Завершён</span>
+    </div>
+    <div class="meta-item">
+      <label>Сайт бренда</label>
+      <a href="https://brewtechology.ru/" target="_blank" style="color:var(--accent);text-decoration:none;font-size:14px;">brewtechology.ru ↗</a>
+    </div>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section>
+  <div class="section-num">01 / Задача</div>
+  <h2>Новый бренд на <em>конкурентном рынке</em></h2>
+  <div class="overview-grid">
+    <div class="overview-card">
+      <h3>Продукт</h3>
+      <p>Профессиональные кофемашины и кофемолки российской сборки: модель BT-PRO/01, двухгруппные машины, кофемолки с плоскими жёрнами и дозированием по весу</p>
+    </div>
+    <div class="overview-card">
+      <h3>Вызов</h3>
+      <p>Войти на рынок, где доминируют итальянские и немецкие бренды с десятилетиями истории. Доказать, что российская сборка — это технологично, надёжно и честно по цене</p>
+    </div>
+    <div class="overview-card">
+      <h3>Аудитория</h3>
+      <p>Кофейни, рестораны и отели. Профессиональные бариста 20–40 лет для которых качество оборудования напрямую влияет на результат в чашке</p>
+    </div>
+    <div class="overview-card">
+      <h3>Решение</h3>
+      <p>Платформа бренда + брендбук: позиционирование, миссия, визуальный язык, типографика, палитра, гайдлайны. Сервис в 14 городах РФ, гарантия 12 месяцев</p>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section>
+  <div class="section-num">02 / Миссия и ценности</div>
+  <h2>Открытая платформа. <em>Прозрачная цена.</em></h2>
+  <p>BREW.TECH строится на трёх столпах: профессиональные кофемашины российской сборки, открытая платформа (сервисный доступ, заменяемые компоненты) и прозрачное ценообразование. В категории где маржа скрыта за премиальным фасадом — BREW.TECH честно объясняет из чего складывается стоимость. Локальный сервис в 14 городах РФ, гарантия 12 месяцев.</p>
+
+  <div class="positioning-block">
+    <blockquote>«Машина, которая судит о кофе»</blockquote>
+    <cite>— Слоган бренда BREW.TECH · brewtechology.ru</cite>
+  </div>
+
+  <div class="values-list">
+    <div class="value-item">
+      <div class="val-num">01</div>
+      <div class="val-label">Профессионализм</div>
+      <p>Оборудование для тех, кто воспринимает кофе как ремесло, а не просто напиток</p>
+    </div>
+    <div class="value-item">
+      <div class="val-num">02</div>
+      <div class="val-label">Технологичность</div>
+      <p>Доступные решения с реальными инновациями — без переплаты за статус бренда</p>
+    </div>
+    <div class="value-item">
+      <div class="val-num">03</div>
+      <div class="val-label">Прозрачность</div>
+      <p>Себестоимость + небольшая честная маржа. Никаких скрытых наценок</p>
+    </div>
+  </div>
+</section>
+
+<!-- POSITIONING -->
+<section>
+  <div class="section-num">03 / Позиционирование</div>
+  <h2>Платформа <em>для экспериментов,</em> а не просто машина</h2>
+  <p>Бренд обращается к четырём ключевым сегментам с разными, но взаимосвязанными посылами.</p>
+
+  <div class="audience-grid">
+    <div class="audience-card">
+      <div class="aud-share">40%</div>
+      <h4>Владельцы кофеен</h4>
+      <p>Возраст 25–50 лет, средний+ доход. Ищут баланс цены и качества. Боятся дорогостоящих простоев оборудования<br><br><em style="color:var(--accent); font-size:13px;">«Машина, которая окупается надёжностью»</em></p>
+    </div>
+    <div class="audience-card">
+      <div class="aud-share">35%</div>
+      <h4>Профессиональные бариста</h4>
+      <p>20–40 лет, 3+ года опыта. Перфекционисты, для которых качество оборудования напрямую влияет на результат<br><br><em style="color:var(--accent); font-size:13px;">«Твой инструмент, твои правила»</em></p>
+    </div>
+    <div class="audience-card">
+      <div class="aud-share">15%</div>
+      <h4>Рестораны и кафе</h4>
+      <p>Малый и средний бизнес. Нужна надёжность и простота в обслуживании без сложных настроек<br><br><em style="color:var(--accent); font-size:13px;">«Кофе, который не требует внимания»</em></p>
+    </div>
+    <div class="audience-card">
+      <div class="aud-share">10%</div>
+      <h4>Гостиницы и отели</h4>
+      <p>3–5 звёзд. Требуется профессиональный уровень без сложности эксплуатации<br><br><em style="color:var(--accent); font-size:13px;">«Лаборатория для экспериментов»</em></p>
+    </div>
+  </div>
+
+  <div class="section-num" style="margin-top: 60px;">Слоганы бренда</div>
+  <div class="slogan-list">
+    <div class="slogan-item">
+      <span class="arrow">→</span>
+      <span>Твоя идея → Наше обновление → Твоя машина</span>
+    </div>
+    <div class="slogan-item">
+      <span class="arrow">→</span>
+      <span>Профессионализм, который не требует сверхбюджета</span>
+    </div>
+    <div class="slogan-item">
+      <span class="arrow">→</span>
+      <span>ТЕХНОЛОГИЯ | МИНИМАЛИЗМ | НАДЁЖНОСТЬ</span>
+    </div>
+  </div>
+</section>
+
+<!-- VISUAL IDENTITY -->
+<section>
+  <div class="section-num">04 / Визуальная идентичность</div>
+  <h2>Чёткость. <em>Технологичность.</em> Минимализм.</h2>
+
+  <p>Визуальный язык BREW.TECH строится на геометрии, чистых линиях и двух доминирующих цветах — чёрном и ярко-синем. Каждый элемент системы несёт смысловую нагрузку.</p>
+
+  <div class="section-num" style="margin-top: 60px; margin-bottom: 16px;">Цветовая палитра</div>
+  <div class="palette">
+    <div class="swatch" style="background:#000000; flex:2;">
+      <span style="color:#fff;">True Black</span>
+      <small style="color:rgba(255,255,255,0.5);">#000000</small>
+    </div>
+    <div class="swatch" style="background:#0066ff; flex:2;">
+      <span style="color:#fff;">Tech Blue</span>
+      <small style="color:rgba(255,255,255,0.6);">#0066ff</small>
+    </div>
+    <div class="swatch" style="background:#ffffff; border:1px solid #ddd; flex:1;">
+      <span style="color:#000;">White</span>
+      <small style="color:#888;">#ffffff</small>
+    </div>
+    <div class="swatch" style="background:#f5f5f5; border:1px solid #ddd; flex:1;">
+      <span style="color:#333;">BG Grey</span>
+      <small style="color:#888;">#f5f5f5</small>
+    </div>
+    <div class="swatch" style="background:#ff6b35; flex:1;">
+      <span style="color:#fff;">Accent</span>
+      <small style="color:rgba(255,255,255,0.7);">#ff6b35</small>
+    </div>
+  </div>
+
+  <div class="section-num" style="margin-top: 60px; margin-bottom: 16px;">Применение логотипа</div>
+  <div class="logo-demos">
+    <div class="logo-card bg-light">
+      <label style="color:#888;">На светлом фоне</label>
+      <div class="logo-display" style="color:#000;">BREW<span class="dot-tech" style="color:#0066ff;">.TECH</span></div>
+    </div>
+    <div class="logo-card bg-dark">
+      <label>На тёмном фоне</label>
+      <div class="logo-display">BREW<span class="dot-tech">.TECH</span></div>
+    </div>
+    <div class="logo-card bg-blue">
+      <label style="color:rgba(255,255,255,0.6);">На фирменном синем</label>
+      <div class="logo-display" style="color:#fff;">BREW<span class="dot-tech" style="color:rgba(255,255,255,0.5);">.TECH</span></div>
+    </div>
+    <div class="logo-card" style="background:#1a1a1a; border: 1px solid #333;">
+      <label>Точка — символ минимализма</label>
+      <p style="font-size:14px; color:rgba(245,243,239,0.6); line-height:1.7; margin:0;">«BREW» — профессиональное слово, ассоциирующееся с кофе. «TECH» — технологичность. Точка между ними — чистота и современность дизайна.</p>
+    </div>
+  </div>
+
+  <div class="section-num" style="margin-top: 60px; margin-bottom: 16px;">Типографика — Montserrat</div>
+  <div class="type-demo">
+    <span class="type-label">H1 · Extrabold · 70px</span>
+    <div class="type-h1">ЗАГОЛОВОК</div>
+    <span class="type-label" style="margin-top:32px;">H2 · Semibold · 40px</span>
+    <div class="type-h2">Подзаголовок раздела</div>
+    <span class="type-label" style="margin-top:24px;">H3 · Medium · 32px</span>
+    <div class="type-h3">Раздел контента</div>
+    <span class="type-label" style="margin-top:24px;">Body · Regular · 18px</span>
+    <p style="margin:0;">Основной текст для описания продуктов и услуг, используется для основного контента на всех носителях бренда.</p>
+  </div>
+</section>
+
+<!-- RESULT -->
+<section style="padding: 100px 48px; border: none;">
+  <div class="result-block" style="padding: 80px 48px;">
+    <div class="section-num" style="color: rgba(255,255,255,0.6);">05 / Результат</div>
+    <h2 style="color: var(--white);">Готовая система <em style="color: rgba(255,255,255,0.6);">идентичности</em></h2>
+    <div class="result-grid">
+      <div class="result-item">
+        <div class="r-val">4</div>
+        <div class="r-label">Целевых сегмента с индивидуальными посылами</div>
+      </div>
+      <div class="result-item">
+        <div class="r-val">5</div>
+        <div class="r-label">Фирменных цветов в палитре бренда</div>
+      </div>
+      <div class="result-item">
+        <div class="r-val">1</div>
+        <div class="r-label">Полный брендбук — от концепции до упаковки</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2>Нужен похожий <em>проект?</em></h2>
+  <a href="https://t.me/Dmitrii_Diezel" class="btn">Обсудить в Telegram</a>
+  <a href="https://brewtechology.ru/" target="_blank" class="btn" style="background:var(--accent);color:#0a0a0a;font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:16px 32px;text-decoration:none;border-radius:2px;margin-right:16px;">Посетить сайт ↗</a>
+  <a href="index.html#cases" class="btn btn-outline">Все кейсы</a>
+</div>
+
+<footer>
+  <span>© 2026 · Дмитрий Москаленко</span>
+  <div style="display:flex; gap:24px;">
+    <a href="privacy.html">Конфиденциальность</a>
+    <a href="cookies.html">Cookie</a>
+    <a href="terms.html">Соглашение</a>
+    <a href="https://t.me/Dmitrii_Diezel">Telegram</a>
+    <a href="https://vk.com/dmitrii_moskalenko">VK</a>
+    <a href="index.html">Главная</a>
+  </div>
+</footer>
+
+
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-text">
+    Мы используем cookies для аналитики (Яндекс.Метрика) и улучшения сайта.
+    Подробнее в <a href="privacy.html">Политике конфиденциальности</a>.
+  </div>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Принять</button>
+    <button class="cookie-btn cookie-decline" onclick="declineCookies()">Отклонить</button>
+  </div>
+</div>
+
+
+<script>
+(function(){
+  try {
+    if (!localStorage.getItem('cookie_consent')) {
+      setTimeout(function(){
+        var b = document.getElementById('cookieBanner');
+        if (b) b.classList.add('show');
+      }, 1500);
+    }
+  } catch(e){}
+})();
+function acceptCookies(){
+  try { localStorage.setItem('cookie_consent','accepted'); } catch(e){}
+  var b = document.getElementById('cookieBanner');
+  if(b) b.classList.remove('show');
+}
+function declineCookies(){
+  try { localStorage.setItem('cookie_consent','declined'); } catch(e){}
+  var b = document.getElementById('cookieBanner');
+  if(b) b.classList.remove('show');
+}
+</script>
+
+<script>
+function toggleMobileMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var burger = document.getElementById('burger');
+  if (!menu || !burger) return;
+  var isOpen = menu.classList.contains('open');
+  if (isOpen) {
+    menu.classList.remove('open');
+    burger.classList.remove('open');
+    document.body.style.overflow = '';
+  } else {
+    menu.classList.add('open');
+    burger.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+function closeMobileMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var burger = document.getElementById('burger');
+  if (menu) menu.classList.remove('open');
+  if (burger) burger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+// Close menu on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+</script>
+<script>
+/* REVEAL_FAILSAFE: гарантированно показываем контент, даже если что-то сломалось */
+(function(){
+  function showAll(){
+    var els=document.querySelectorAll('.reveal:not(.visible)');
+    for(var i=0;i<els.length;i++){els[i].classList.add('visible');}
+  }
+  // если через 1.2с что-то ещё скрыто — показать принудительно
+  setTimeout(showAll,1200);
+  // и на случай полной ошибки — по load
+  window.addEventListener('load',function(){setTimeout(showAll,300);});
+})();
+</script>
+</body>
+</html>

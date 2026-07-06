@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<script>document.documentElement.className=(document.documentElement.className+" js").trim();</script>
+<link rel="dns-prefetch" href="https://mc.yandex.ru">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<meta name="google-site-verification" content="d0fa0e814302fe56" />
+<meta name="keywords" content="кейс бренд-стратегия вода, разработка позиционирования, платформа бренда кейс">
+<meta name="description" content="Кейс HiWater: разработка бренд-стратегии для бренда питьевой воды. Позиционирование, платформа бренда, визуальная концепция. Бренд-менеджер Дмитрий Москаленко.">
+<meta name="yandex-verification" content="a22af711bd8343d6" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кейс HiWater — Бренд-стратегия · Дмитрий Москаленко</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230a0a0a'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='18' fill='%23c8ff00'>DM</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Onest:wght@400;600&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Onest:wght@400;600&display=swap" media="print" onload="this.media='all';this.onload=null">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Onest:wght@400;600&display=swap"></noscript>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --yellow: #FFD93D;
+    --blue: #4A90D9;
+    --dark: #1B2A3B;
+    --black: #0c0c0c;
+    --white: #f4f2ef;
+    --mid: #161616;
+    --muted: #777;
+    --border: rgba(255,255,255,0.08);
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Onest', sans-serif;
+    overflow-x: hidden;
+  }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 48px;
+    background: rgba(12,12,12,0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 13px; font-weight: 700;
+    color: var(--white); text-decoration: none;
+  }
+  .nav-back {
+    font-size: 13px; color: var(--muted);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 8px;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--white); }
+  .nav-back::before { content: '←'; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--dark);
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 120px 48px 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero-drops {
+    position: absolute; top: 0; right: 0; bottom: 0;
+    width: 50%; overflow: hidden;
+    opacity: 0.06;
+    background: repeating-linear-gradient(
+      -45deg,
+      var(--yellow) 0, var(--yellow) 2px,
+      transparent 2px, transparent 20px
+    );
+  }
+  .hero-badge {
+    position: absolute; top: 160px; right: 48px;
+    background: var(--yellow); color: var(--black);
+    font-family: 'Unbounded', sans-serif;
+    font-size: 24px; font-weight: 900;
+    padding: 16px 28px;
+    letter-spacing: -0.01em;
+  }
+  .hero-tag {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.15em;
+    color: var(--yellow); text-transform: uppercase; margin-bottom: 24px;
+  }
+  .hero-title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(56px, 9vw, 104px);
+    font-weight: 900; line-height: 0.92;
+    letter-spacing: -0.03em; margin-bottom: 32px;
+  }
+  .hero-title .hi { color: var(--yellow); }
+  .hero-sub {
+    font-size: 18px; color: rgba(244,242,239,0.55);
+    max-width: 540px; line-height: 1.65;
+  }
+  .hero-meta { display: flex; gap: 48px; margin-top: 60px; }
+  .meta-item label {
+    display: block; font-size: 11px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 6px;
+  }
+  .meta-item span { font-size: 15px; font-weight: 500; }
+
+  section { padding: 100px 48px; border-top: 1px solid var(--border); }
+  .section-num {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.15em;
+    color: var(--yellow); text-transform: uppercase; margin-bottom: 40px;
+  }
+  h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 700; line-height: 1.1;
+    letter-spacing: -0.02em; margin-bottom: 40px;
+  }
+  h2 em { color: var(--yellow); font-style: normal; }
+  p { font-size: 16px; line-height: 1.75; color: rgba(244,242,239,0.65); margin-bottom: 20px; }
+
+  /* STAGES */
+  .stages { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin: 40px 0; }
+  .stage {
+    padding: 36px; background: var(--mid);
+    border-top: 3px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .stage:hover { border-color: var(--yellow); }
+  .stage-num {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 32px; font-weight: 900; color: rgba(255,255,255,0.1);
+    margin-bottom: 16px; line-height: 1;
+  }
+  .stage h3 {
+    font-size: 13px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 12px; color: var(--yellow);
+  }
+  .stage ul { list-style: none; }
+  .stage ul li {
+    font-size: 13px; color: rgba(244,242,239,0.5);
+    padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .stage ul li::before { content: '— '; color: var(--yellow); }
+
+  /* MARKET DATA */
+  .market-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin: 40px 0; }
+  .market-card { background: var(--mid); padding: 40px; }
+  .market-card.highlight { background: var(--yellow); }
+  .m-val {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 40px; font-weight: 900; line-height: 1; margin-bottom: 8px;
+  }
+  .market-card.highlight .m-val { color: var(--black); }
+  .m-unit {
+    font-size: 13px; font-weight: 600; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;
+  }
+  .market-card.highlight .m-unit { color: rgba(0,0,0,0.5); }
+  .market-card p { font-size: 14px; margin: 0; }
+  .market-card.highlight p { color: rgba(0,0,0,0.7); }
+
+  /* FILTRATION TABLE */
+  .filt-grid {
+    display: grid; grid-template-columns: repeat(7, 1fr);
+    gap: 2px; margin: 40px 0; font-size: 12px;
+  }
+  .filt-header { background: var(--blue); padding: 10px 8px; text-align: center; font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .filt-label { background: var(--blue); padding: 12px; font-weight: 700; font-size: 12px; }
+  .filt-cell { background: var(--mid); padding: 10px 8px; text-align: center; color: var(--yellow); font-weight: 600; }
+  .filt-cell.weak { color: rgba(244,242,239,0.2); }
+
+  /* CONSUMER PATH */
+  .path { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; margin: 40px 0; }
+  .path-step { background: var(--mid); padding: 20px 16px; text-align: center; }
+  .path-step h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--yellow); margin-bottom: 8px; }
+  .path-step p { font-size: 11px; color: rgba(244,242,239,0.45); margin: 0; line-height: 1.5; }
+
+  /* PLATFORM */
+  .platform-items { display: flex; flex-direction: column; gap: 2px; margin: 40px 0; }
+  .platform-item {
+    background: var(--mid); padding: 28px 36px;
+    display: flex; align-items: center; gap: 24px;
+  }
+  .pi-icon { font-size: 20px; flex-shrink: 0; opacity: 0.6; }
+  .pi-label { font-size: 13px; font-weight: 600; flex-grow: 1; }
+  .pi-desc { font-size: 13px; color: var(--muted); }
+
+  /* ARCHETYPE WHEEL — simplified */
+  .archetype-band {
+    background: var(--dark); padding: 60px; margin: 40px 0;
+    display: flex; gap: 60px; align-items: center;
+  }
+  .arch-left { flex: 1; }
+  .arch-left h3 { font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 16px; }
+  .arch-left p { font-size: 15px; }
+  .arch-right { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .arch-item { background: var(--mid); padding: 20px; }
+  .arch-item h5 { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--yellow); margin-bottom: 8px; }
+  .arch-item p { font-size: 13px; margin: 0; color: rgba(244,242,239,0.5); }
+
+  /* RESULT */
+  .result-band { background: var(--yellow); padding: 80px 48px; margin: 0 -48px; }
+  .result-band h2 { color: var(--black); }
+  .result-band h2 em { color: rgba(0,0,0,0.4); }
+  .result-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 48px; }
+  .r-val { font-family: 'Unbounded', sans-serif; font-size: 40px; font-weight: 900; color: var(--black); margin-bottom: 8px; line-height: 1; }
+  .r-label { font-size: 14px; color: rgba(0,0,0,0.55); line-height: 1.5; }
+
+  .cta-section { padding: 120px 48px; text-align: center; }
+  .cta-section h2 { max-width: 600px; margin: 0 auto 40px; }
+  .btn {
+    display: inline-block; padding: 18px 40px;
+    background: var(--yellow); color: var(--black);
+    font-family: 'Unbounded', sans-serif;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn:hover { background: #f5cb28; transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent; border: 1px solid var(--border);
+    margin-left: 16px; color: rgba(244,242,239,0.6);
+  }
+  .btn-outline:hover { background: var(--mid); color: var(--white); transform: translateY(-2px); }
+
+  footer { padding: 40px 48px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--white); }
+
+  @media (max-width: 768px) {
+    nav, footer { padding: 16px 24px; }
+    .hero { padding: 100px 24px 60px; }
+    .hero-badge { display: none; }
+    section { padding: 60px 24px; }
+    .stages, .market-grid { grid-template-columns: 1fr 1fr; }
+    .filt-grid, .path { display: none; }
+    .result-grid { grid-template-columns: 1fr 1fr; }
+    .result-band { padding: 48px 24px; margin: 0 -24px; }
+    .arch-band { flex-direction: column; padding: 40px 24px; }
+    .cta-section { padding: 80px 24px; }
+    footer { flex-direction: column; gap: 16px; text-align: center; }
+    .hero-meta { flex-wrap: wrap; gap: 24px; }
+  }
+
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;position:relative;z-index:200;background:none;border:none}
+  .burger span{display:block;width:24px;height:2px;background:var(--white);transition:transform .3s,opacity .3s,width .3s;transform-origin:center}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0;width:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile-menu{display:none;position:fixed;inset:0;background:rgba(10,10,10,.98);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:8px;backdrop-filter:blur(16px)}
+  .mobile-menu.open{display:flex}
+  .mobile-menu a{font-family:var(--font-display);font-size:clamp(22px,6vw,36px);font-weight:900;letter-spacing:-.02em;color:var(--white);text-decoration:none;padding:12px 24px;transition:color .2s;text-align:center}
+  .mobile-menu a:hover{color:var(--accent)}
+  .mobile-menu a.nav-cta{background:var(--accent);color:var(--black)!important;border-radius:2px;margin-top:16px;font-size:clamp(14px,4vw,20px)}
+  .mobile-menu-close{position:absolute;top:24px;right:24px;font-size:28px;color:var(--white);cursor:pointer;background:none;border:none;line-height:1;transition:color .2s}
+  .mobile-menu-close:hover{color:var(--accent)}
+  
+  /* ── NAV LINKS BASE STYLES ── */
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    position: relative;
+    z-index: 1;
+  }
+  .nav-links a {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted, #888);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta {
+    background: var(--accent) !important;
+    color: #0a0a0a !important;
+    padding: 10px 22px !important;
+    border-radius: 2px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.06em !important;
+    transition: opacity 0.3s !important;
+  }
+  .nav-cta:hover { opacity: 0.85 !important; }
+
+  }
+
+
+  /* ── MOBILE EDGE PADDING FIX ── */
+  @media (max-width: 768px) {
+    .hero, section, .cta-section, .footer-inner, footer {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+    h1, h2, h3, p, .section-num, .section-label,
+    .hero-tag, .hero-title, .hero-sub, .hero-meta {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+
+/* ── COOKIE BANNER ── */
+.cookie-banner {
+  position: fixed; bottom: 24px; left: 24px; right: 24px;
+  max-width: 560px; z-index: 9000;
+  background: #1a1a1a; border: 1px solid #2e2e2e;
+  border-left: 3px solid #c8ff00;
+  padding: 20px 24px; display: flex;
+  align-items: center; gap: 20px; flex-wrap: wrap;
+  transform: translateY(120px); opacity: 0;
+  transition: transform .4s ease, opacity .4s ease;
+}
+.cookie-banner.show { transform: translateY(0); opacity: 1; }
+.cookie-text { font-size: 13px; color: #aaa; line-height: 1.6; flex: 1; min-width: 200px; }
+.cookie-text a { color: #c8ff00; text-decoration: none; }
+.cookie-text a:hover { text-decoration: underline; }
+.cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.cookie-btn {
+  font-family: 'Unbounded', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  padding: 10px 20px; border: none; border-radius: 2px; cursor: pointer;
+  transition: transform .15s, opacity .2s;
+}
+.cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
+.cookie-accept { background: #c8ff00; color: #0a0a0a; }
+.cookie-decline { background: transparent; color: #666; border: 1px solid #2e2e2e; }
+
+
+  /* ── MOBILE BURGER & MENU ── */
+  .burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 200;
+  }
+  .burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #f5f2ed;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+    transform-origin: center;
+  }
+  .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity: 0; width: 0; }
+  .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,10,10,0.98);
+    z-index: 150;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .mobile-menu.open { display: flex !important; }
+  .mobile-menu a {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(22px, 6vw, 36px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #f5f2ed;
+    text-decoration: none;
+    padding: 12px 24px;
+    transition: color 0.2s;
+    text-align: center;
+  }
+  .mobile-menu a:hover { color: #c8ff00; }
+  .mobile-menu a.nav-cta {
+    background: #c8ff00 !important;
+    color: #0a0a0a !important;
+    border-radius: 2px;
+    margin-top: 16px;
+    font-size: clamp(14px, 4vw, 20px);
+  }
+  .mobile-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 32px;
+    color: #f5f2ed;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+    padding: 8px;
+    z-index: 160;
+  }
+  .mobile-menu-close:hover { color: #c8ff00; }
+  @media (max-width: 1024px) {
+    .burger { display: flex !important; }
+    .nav-links { display: none !important; }
+  }
+
+
+  /* ── КРИТИЧЕСКИЕ МОБИЛЬНЫЕ СТИЛИ ── */
+  @media (max-width: 768px) {
+    html, body { width: 100%; overflow-x: hidden; }
+    img, video, iframe, svg { max-width: 100%; height: auto; }
+    * { word-break: break-word; }
+  }
+  @media (max-width: 1024px) {
+    .nav-links { display: none !important; }
+    .burger { display: flex !important; }
+  }
+
+</style>
+
+
+<!-- Yandex.Metrika counter (lazy) -->
+<script type="text/javascript">
+(function(){
+  var loaded=false;
+  function lazyMetrika(){
+    if(loaded)return; loaded=true;
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+    ym(72239779,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:false});
+  }
+  ['scroll','mousemove','touchstart','click','keydown'].forEach(function(ev){
+    window.addEventListener(ev,lazyMetrika,{once:true,passive:true});
+  });
+  setTimeout(lazyMetrika,3500);
+})();
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72239779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter (lazy) -->
+<meta property="og:title" content="Кейс HiWater — Бренд-стратегия · Дмитрий Москаленко">
+<meta property="og:description" content="Кейс HiWater: разработка бренд-стратегии для бренда питьевой воды. Позиционирование, платформа бренда, визуальная концепция. Бренд-менеджер Дмитрий Москаленко.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://brandmanager.su/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://brandmanager.su/og-image.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://brandmanager.su/" },
+    { "@type": "ListItem", "position": 2, "name": "Кейсы", "item": "https://brandmanager.su/#cases" },
+    { "@type": "ListItem", "position": 3, "name": "Кейс HiWater — Бренд-стратегия для бренда воды", "item": "https://brandmanager.su/case-hiwater.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">DM / Brand</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="services.html">Услуги</a></li>
+    <li><a href="articles.html">Статьи</a></li>
+    <li><a href="blog.html">Блог</a></li>
+    <li><a href="resume.html">Резюме</a></li>
+    <li><a href="brief.html">Бриф</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Обсудить проект</a></li>
+  </ul>
+  <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Открыть меню">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
+  <a href="index.html" onclick="closeMobileMenu()">Главная</a>
+  <a href="services.html" onclick="closeMobileMenu()">Услуги</a>
+  <a href="articles.html" onclick="closeMobileMenu()">Статьи</a>
+  <a href="blog.html" onclick="closeMobileMenu()">Блог</a>
+  <a href="resume.html" onclick="closeMobileMenu()">Резюме</a>
+  <a href="brief.html" onclick="closeMobileMenu()">Бриф</a>
+  <a href="index.html#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
+</div>
+
+<div class="hero">
+  <div class="hero-drops"></div>
+  <div class="hero-badge">HiWater</div>
+  <div class="hero-tag">Кейс · Платформа бренда · Вода · Россия · 2021</div>
+  <h1 class="hero-title"><span class="hi">Hi</span>Water</h1>
+  <p class="hero-sub">Разработка полной платформы бренда для нового игрока на российском рынке воды: от стратегического анализа до бренд-платформы и стратегии продвижения</p>
+  <div class="hero-meta">
+    <div class="meta-item"><label>Категория</label><span>FMCG / Вода</span></div>
+    <div class="meta-item"><label>Тип работы</label><span>Платформа бренда</span></div>
+    <div class="meta-item"><label>Рынок</label><span>Россия</span></div>
+    <div class="meta-item"><label>Год</label><span>2021</span></div>
+  </div>
+</div>
+
+<!-- METHODOLOGY -->
+<section>
+  <div class="section-num">01 / Методология</div>
+  <h2>4 этапа — <em>от данных к стратегии</em></h2>
+  <p>Разработка платформы бренда строилась по системной методологии: сначала глубокое понимание рынка и аудитории, затем концептирование и финальная платформа с рекомендациями по внедрению.</p>
+
+  <div class="stages">
+    <div class="stage">
+      <div class="stage-num">I</div>
+      <h3>Стратегический анализ</h3>
+      <ul>
+        <li>Анализ рынка</li>
+        <li>Анализ компании</li>
+        <li>Конкуренты</li>
+        <li>Аудитория</li>
+      </ul>
+    </div>
+    <div class="stage">
+      <div class="stage-num">II</div>
+      <h3>Концептинг</h3>
+      <ul>
+        <li>Наблюдения</li>
+        <li>Гипотезы</li>
+        <li>Карта рынка</li>
+        <li>Позиционирование</li>
+      </ul>
+    </div>
+    <div class="stage">
+      <div class="stage-num">III</div>
+      <h3>Платформа</h3>
+      <ul>
+        <li>Brand purpose</li>
+        <li>Brand values</li>
+        <li>Архетип</li>
+        <li>Tone of voice</li>
+      </ul>
+    </div>
+    <div class="stage">
+      <div class="stage-num">IV</div>
+      <h3>Брифинги</h3>
+      <ul>
+        <li>Бриф на дизайн</li>
+        <li>Бриф на контент</li>
+        <li>Авторский надзор</li>
+        <li>Внедрение</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET ANALYSIS -->
+<section>
+  <div class="section-num">02 / Анализ рынка</div>
+  <h2>Рынок растёт — <em>конкуренция жёсткая</em></h2>
+  <p>Рынок фильтров воды в России характеризуется высокой конкуренцией (300+ мировых производителей) и при этом устойчивым спросом от более чем 65 000 потенциальных B2B-клиентов.</p>
+
+  <div class="market-grid">
+    <div class="market-card highlight">
+      <div class="m-val">300+</div>
+      <div class="m-unit">Производителей</div>
+      <p>Мировых производителей фильтров обратного осмоса</p>
+    </div>
+    <div class="market-card">
+      <div class="m-val">7 500</div>
+      <div class="m-unit" style="color:var(--muted);">Кофеен</div>
+      <p>Потенциальных B2B-клиентов только в сегменте кофе</p>
+    </div>
+    <div class="market-card">
+      <div class="m-val">60 000</div>
+      <div class="m-unit" style="color:var(--muted);">Ресторанов</div>
+      <p>Ресторанов в России — ключевой рынок для HiWater</p>
+    </div>
+    <div class="market-card">
+      <div class="m-val">5 000</div>
+      <div class="m-unit" style="color:var(--muted);">Отелей</div>
+      <p>Гостиниц и отелей, нуждающихся в качественной воде</p>
+    </div>
+    <div class="market-card">
+      <div class="m-val">2</div>
+      <div class="m-unit" style="color:var(--muted);">Продукта</div>
+      <p>RO-400 и RO-600 — базовая линейка фильтров для HoReCa</p>
+    </div>
+    <div class="market-card" style="background: var(--dark);">
+      <div class="m-val" style="color:var(--yellow);">Element</div>
+      <div class="m-unit">Pure / Intense / Still</div>
+      <p style="color:rgba(244,242,239,0.5);">Линейка бутилированной воды с разными уровнями минерализации</p>
+    </div>
+  </div>
+
+  <div class="section-num" style="margin-top:60px;">Технологии фильтрации — сравнительная таблица</div>
+  <div style="overflow-x:auto; margin:40px 0;">
+    <div style="min-width:700px;">
+      <div class="filt-grid">
+        <div style="background:var(--mid);"></div>
+        <div class="filt-header">Твёрдые частицы</div>
+        <div class="filt-header">Мутность</div>
+        <div class="filt-header">Органика</div>
+        <div class="filt-header">Тяж. металлы</div>
+        <div class="filt-header">Жёсткость</div>
+        <div class="filt-header">Хлор</div>
+        <div class="filt-label">Полипропилен</div>
+        <div class="filt-cell">+++</div><div class="filt-cell">++</div><div class="filt-cell weak">—</div><div class="filt-cell weak">—</div><div class="filt-cell weak">—</div><div class="filt-cell weak">—</div>
+        <div class="filt-label">Акт. уголь</div>
+        <div class="filt-cell">+</div><div class="filt-cell">++</div><div class="filt-cell">+++</div><div class="filt-cell">+</div><div class="filt-cell weak">—</div><div class="filt-cell">+++</div>
+        <div class="filt-label" style="background:var(--yellow); color:var(--black); font-weight:700;">Обр. осмос</div>
+        <div class="filt-cell" style="background:#1e2e1e;">+++</div><div class="filt-cell" style="background:#1e2e1e;">+++</div><div class="filt-cell" style="background:#1e2e1e;">+++</div><div class="filt-cell" style="background:#1e2e1e;">+++</div><div class="filt-cell" style="background:#1e2e1e;">+++</div><div class="filt-cell" style="background:#1e2e1e;">+++</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSUMER PATH -->
+<section>
+  <div class="section-num">03 / Путь потребителя (CJM)</div>
+  <h2>От осознания до <em>амбассадора</em></h2>
+  <p>Карта пути покупателя показала 7 ключевых этапов с различными точками контакта и триггерами принятия решений.</p>
+
+  <div style="overflow-x:auto; margin:40px 0;">
+    <div class="path" style="min-width:800px;">
+      <div class="path-step"><h4>Задача</h4><p>Медиа, соцсети экспертов, реклама</p></div>
+      <div class="path-step"><h4>Сбор инфо</h4><p>Поисковики, форумы, консультации</p></div>
+      <div class="path-step"><h4>Выбор</h4><p>Как выбрать, сравнение, демо</p></div>
+      <div class="path-step"><h4>Покупка</h4><p>Цена, доставка, условия оплаты</p></div>
+      <div class="path-step"><h4>Эксплуатация</h4><p>Установка, пуско-наладка, сервис</p></div>
+      <div class="path-step"><h4>Повтор</h4><p>Лояльность, напоминания, скидки</p></div>
+      <div class="path-step"><h4>Сарафан</h4><p>Образ, лояльность, амбассадор</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND PLATFORM -->
+<section>
+  <div class="section-num">04 / Платформа бренда</div>
+  <h2>Бренд как <em>система смыслов</em></h2>
+  <p>На основании анализа аудитории, конкурентов и трендов была разработана полная платформа бренда, включающая все элементы от миссии до архетипа и RTB.</p>
+
+  <div class="platform-items">
+    <div class="platform-item">
+      <span class="pi-icon">🎯</span>
+      <span class="pi-label">Brand Purpose (Цель)</span>
+      <span class="pi-desc">Зачем бренд существует в мире — глубинная миссия</span>
+    </div>
+    <div class="platform-item">
+      <span class="pi-icon">👁</span>
+      <span class="pi-label">Brand Vision (Видение)</span>
+      <span class="pi-desc">Каким бренд хочет видеть мир в будущем</span>
+    </div>
+    <div class="platform-item">
+      <span class="pi-icon">💬</span>
+      <span class="pi-label">Brand Mission (Миссия)</span>
+      <span class="pi-desc">Что делает бренд для достижения видения</span>
+    </div>
+    <div class="platform-item">
+      <span class="pi-icon">💎</span>
+      <span class="pi-label">Brand Values (Ценности)</span>
+      <span class="pi-desc">Принципы, которые определяют поведение бренда</span>
+    </div>
+    <div class="platform-item">
+      <span class="pi-icon">⚡</span>
+      <span class="pi-label">Brand Essense (Суть)</span>
+      <span class="pi-desc">Одна центральная идея, которая пронизывает всё</span>
+    </div>
+    <div class="platform-item">
+      <span class="pi-icon">🎭</span>
+      <span class="pi-label">Архетип бренда</span>
+      <span class="pi-desc">Роль в жизни потребителя — основа эмоциональной связи</span>
+    </div>
+    <div class="platform-item">
+      <span class="pi-icon">✅</span>
+      <span class="pi-label">RTB (Причины верить)</span>
+      <span class="pi-desc">Доказательства, подтверждающие обещание бренда</span>
+    </div>
+    <div class="platform-item">
+      <span class="pi-icon">🗣</span>
+      <span class="pi-label">Tone of Voice</span>
+      <span class="pi-desc">Как бренд говорит с аудиторией в разных каналах</span>
+    </div>
+  </div>
+
+  <div class="archetype-band" style="margin-top:40px;">
+    <div class="arch-left">
+      <h3>Выбор архетипа</h3>
+      <p>Для определения архетипа использовалось «Колесо брендов» — 12 универсальных ролей бренда в жизни потребителя. Выбор архетипа определил tone of voice, визуальный язык и стратегию коммуникаций HiWater.</p>
+    </div>
+    <div class="arch-right">
+      <div class="arch-item"><h5>Мудрец</h5><p>Знание, экспертиза, интеллект — помогает понять мир</p></div>
+      <div class="arch-item"><h5>Заботливый</h5><p>Безопасность, комфорт, здоровье — заботится о других</p></div>
+      <div class="arch-item"><h5>Герой</h5><p>Сила, решительность — помогает преодолеть трудности</p></div>
+      <div class="arch-item"><h5>Творец</h5><p>Инновации, уникальность — создаёт нечто новое</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGY -->
+<section>
+  <div class="section-num">05 / Стратегия коммуникаций</div>
+  <h2>5 каналов — <em>единый голос</em></h2>
+  <p>Контент-стратегия охватывает все ключевые каналы присутствия бренда с единой коммуникационной платформой.</p>
+
+  <div style="display:grid; grid-template-columns: repeat(5,1fr); gap:2px; margin:40px 0;">
+    <div style="background:var(--mid); padding:28px; text-align:center;">
+      <div style="font-size:24px; margin-bottom:12px;">🌐</div>
+      <div style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--yellow); margin-bottom:8px;">Сайт</div>
+      <div style="font-size:12px; color:rgba(244,242,239,0.4); line-height:1.5;">Инструкции, блог, о компании, отзывы, знак качества</div>
+    </div>
+    <div style="background:var(--mid); padding:28px; text-align:center;">
+      <div style="font-size:24px; margin-bottom:12px;">📱</div>
+      <div style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--yellow); margin-bottom:8px;">Медиа</div>
+      <div style="font-size:12px; color:rgba(244,242,239,0.4); line-height:1.5;">Интервью, личный опыт, полезный блог, знак качества</div>
+    </div>
+    <div style="background:var(--mid); padding:28px; text-align:center;">
+      <div style="font-size:24px; margin-bottom:12px;">💬</div>
+      <div style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--yellow); margin-bottom:8px;">Соцсети</div>
+      <div style="font-size:12px; color:rgba(244,242,239,0.4); line-height:1.5;">Анонсы, личный опыт, полезный контент, знак качества</div>
+    </div>
+    <div style="background:var(--mid); padding:28px; text-align:center;">
+      <div style="font-size:24px; margin-bottom:12px;">🏛</div>
+      <div style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--yellow); margin-bottom:8px;">Выставки</div>
+      <div style="font-size:12px; color:rgba(244,242,239,0.4); line-height:1.5;">Знак качества, интервью, полезный блог, личный опыт</div>
+    </div>
+    <div style="background:var(--yellow); padding:28px; text-align:center;">
+      <div style="font-size:24px; margin-bottom:12px;">🖨</div>
+      <div style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--black); margin-bottom:8px;">Принты</div>
+      <div style="font-size:12px; color:rgba(0,0,0,0.5); line-height:1.5;">Знак качества, инструкции — оффлайн точки контакта</div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULT -->
+<section style="padding: 100px 0; border:none;">
+  <div class="result-band" style="padding:80px 48px;">
+    <div class="section-num" style="color:rgba(0,0,0,0.4);">06 / Итог проекта</div>
+    <h2>Полная платформа — <em>готова к внедрению</em></h2>
+    <div class="result-grid">
+      <div><div class="r-val">4</div><div class="r-label">Этапа системной работы с брендом</div></div>
+      <div><div class="r-val">12</div><div class="r-label">Элементов платформы бренда</div></div>
+      <div><div class="r-val">7</div><div class="r-label">Этапов CJM с точками контакта</div></div>
+      <div><div class="r-val">5</div><div class="r-label">Каналов коммуникационной стратегии</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-section">
+  <h2>Нужна <em>платформа бренда</em> с нуля?</h2>
+  <a href="https://t.me/Dmitrii_Diezel" class="btn">Обсудить в Telegram</a>
+  <a href="index.html#cases" class="btn btn-outline">Все кейсы</a>
+</div>
+
+<footer>
+  <span>© 2026 · Дмитрий Москаленко</span>
+  <div style="display:flex;gap:24px;">
+    <a href="privacy.html">Конфиденциальность</a>
+    <a href="cookies.html">Cookie</a>
+    <a href="terms.html">Соглашение</a>
+    <a href="https://t.me/Dmitrii_Diezel">Telegram</a>
+    <a href="https://vk.com/dmitrii_moskalenko">VK</a>
+    <a href="index.html">Главная</a>
+  </div>
+</footer>
+
+
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-text">
+    Мы используем cookies для аналитики (Яндекс.Метрика) и улучшения сайта.
+    Подробнее в <a href="privacy.html">Политике конфиденциальности</a>.
+  </div>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Принять</button>
+    <button class="cookie-btn cookie-decline" onclick="declineCookies()">Отклонить</button>
+  </div>
+</div>
+
+
+<script>
+(function(){
+  try {
+    if (!localStorage.getItem('cookie_consent')) {
+      setTimeout(function(){
+        var b = document.getElementById('cookieBanner');
+        if (b) b.classList.add('show');
+      }, 1500);
+    }
+  } catch(e){}
+})();
+function acceptCookies(){
+  try { localStorage.setItem('cookie_consent','accepted'); } catch(e){}
+  var b = document.getElementById('cookieBanner');
+  if(b) b.classList.remove('show');
+}
+function declineCookies(){
+  try { localStorage.setItem('cookie_consent','declined'); } catch(e){}
+  var b = document.getElementById('cookieBanner');
+  if(b) b.classList.remove('show');
+}
+</script>
+
+<script>
+function toggleMobileMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var burger = document.getElementById('burger');
+  if (!menu || !burger) return;
+  var isOpen = menu.classList.contains('open');
+  if (isOpen) {
+    menu.classList.remove('open');
+    burger.classList.remove('open');
+    document.body.style.overflow = '';
+  } else {
+    menu.classList.add('open');
+    burger.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+function closeMobileMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var burger = document.getElementById('burger');
+  if (menu) menu.classList.remove('open');
+  if (burger) burger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+// Close menu on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+</script>
+<script>
+/* REVEAL_FAILSAFE: гарантированно показываем контент, даже если что-то сломалось */
+(function(){
+  function showAll(){
+    var els=document.querySelectorAll('.reveal:not(.visible)');
+    for(var i=0;i<els.length;i++){els[i].classList.add('visible');}
+  }
+  // если через 1.2с что-то ещё скрыто — показать принудительно
+  setTimeout(showAll,1200);
+  // и на случай полной ошибки — по load
+  window.addEventListener('load',function(){setTimeout(showAll,300);});
+})();
+</script>
+</body>
+</html>

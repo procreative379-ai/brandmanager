@@ -311,30 +311,49 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   }
 
 @media (hover:hover) and (pointer:fine){body{cursor:none}}
+
+  /* ── МОБИЛЬНАЯ ОПТИМИЗАЦИЯ (Яндекс.Вебмастер) ── */
+  @media (max-width: 767px) {
+    html, body { max-width: 100%; overflow-x: hidden; }
+    /* минимальный читаемый размер шрифта на мобильных */
+    body { font-size: 16px; -webkit-text-size-adjust: 100%; }
+    p, li, a, span, div, label, input, textarea, button, td, th { font-size: inherit; }
+    /* мелкие метки/теги — минимум 12px */
+    [class*="label"], [class*="tag"], [class*="cat"], [class*="num"],
+    [class*="date"], [class*="badge"], [class*="note"], [class*="caption"],
+    [class*="meta"], small, .section-num, .pub-badge, .brief-note,
+    .footer-copy, .footer-socials a, .footer-links a, .nav-back {
+      font-size: 12px !important;
+    }
+    /* всё внутри viewport, картинки и таблицы адаптивны */
+    img, video, iframe, svg, table { max-width: 100% !important; height: auto; }
+    table { display: block; overflow-x: auto; }
+    /* элементы не шире экрана */
+    * { max-width: 100%; box-sizing: border-box; }
+    /* кнопки и ссылки — удобные для тапа (минимум 44px по высоте) */
+    .btn, .btn-primary, .btn-secondary, .nav-cta, button[type="submit"],
+    .brief-submit, .form-submit { min-height: 44px; }
+  }
+
 </style>
 
 
-<!-- Yandex.Metrika counter (lazy) -->
+<!-- Yandex.Metrika counter -->
 <script type="text/javascript">
-(function(){
-  var loaded=false;
-  function lazyMetrika(){
-    if(loaded)return; loaded=true;
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();
-    for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
-    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
-    ym(72239779,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:false});
-  }
-  ['scroll','mousemove','touchstart','click','keydown'].forEach(function(ev){
-    window.addEventListener(ev,lazyMetrika,{once:true,passive:true});
-  });
-  setTimeout(lazyMetrika,3500);
-})();
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(72239779, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/72239779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter (lazy) -->
+<!-- /Yandex.Metrika counter -->
 <meta property="og:title" content="Услуги бренд-менеджера · Дмитрий Москаленко · Москва">
 <meta property="og:description" content="Услуги бренд-менеджера: аудит бренда, разработка стратегии, запуск нового бренда, управление портфелем, репозиционирование. Дмитрий Москаленко, Москва.">
 <meta property="og:type" content="website">

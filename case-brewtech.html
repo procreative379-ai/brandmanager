@@ -527,6 +527,42 @@
     .brief-submit, .form-submit { min-height: 44px; }
   }
 
+
+  /* ── УСИЛЕННАЯ МОБИЛЬНАЯ ОПТИМИЗАЦИЯ ── */
+  @media (max-width: 767px) {
+    /* все многоколоночные сетки → одна колонка */
+    .hero, .about, .about-right, .experience, .cta-section,
+    .services-grid, .test-grid, .pub-grid, .form-row,
+    .overview-grid, .pos-grid, .mission-pillars, .results-grid,
+    .audience-grid, .products-grid, .tov-grid, .challenge-block,
+    .diff-grid, .price-grid, .stats-row, .numbers, .process,
+    .id-strip, .identity-strip {
+      grid-template-columns: 1fr !important;
+    }
+    /* сетки с фикс. первой колонкой */
+    .case-item, .timeline-item, .tl-item {
+      grid-template-columns: 1fr !important;
+    }
+    /* огромный фоновый текст — прячем/уменьшаем, чтобы не вылезал */
+    .hero-bg-text {
+      font-size: 22vw !important;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 100vw;
+    }
+    /* убираем nowrap с логотипов/текста, чтобы переносилось */
+    .brand-logo { white-space: normal !important; }
+    /* всё в пределах экрана */
+    body * { max-width: 100%; }
+    /* горизонтальные флексы переносим */
+    .hero-meta, .cta-actions, .success-actions, .footer-socials,
+    .footer-links, .author-links, .nav-links {
+      flex-wrap: wrap;
+    }
+    /* большие фикс. паддинги ужимаем */
+    section, .section, .hero, footer, nav { padding-left: 20px !important; padding-right: 20px !important; }
+  }
+
 </style>
 
 

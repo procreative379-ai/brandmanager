@@ -1,208 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<script>document.documentElement.className=(document.documentElement.className+" js").trim();</script>
-<link rel="dns-prefetch" href="https://mc.yandex.ru">
-<link rel="dns-prefetch" href="https://fonts.gstatic.com">
-<meta name="google-site-verification" content="d0fa0e814302fe56" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Страница не найдена — brandmanager.su. Бренд-менеджер Дмитрий Москаленко, Москва.">
-<meta name="yandex-verification" content="a22af711bd8343d6" />
-<title>404 — Страница не найдена · brandmanager.su</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230a0a0a'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='18' fill='%23c8ff00'>DM</text></svg>">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Страница не найдена — Женя Зайцева</title>
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="Страница не найдена. Вернитесь в каталог авторской керамики Жени Зайцевой — вазы, кашпо, посуда, броши ручной работы.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Geologica:wght@300;400&display=swap">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Geologica:wght@300;400&display=swap" media="print" onload="this.media='all';this.onload=null">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Geologica:wght@300;400&display=swap"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root { --black:#0a0a0a; --white:#f5f2ed; --accent:#c8ff00; --muted:#888; }
-  body {
-    background: var(--black); color: var(--white);
-    font-family: 'Geologica', sans-serif; font-weight: 300;
-    min-height: 100vh; display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    padding: 40px 24px; text-align: center;
-  }
-  .num {
-    font-family: 'Unbounded', sans-serif;
-    font-size: clamp(100px, 20vw, 180px);
-    font-weight: 900; letter-spacing: -0.05em;
-    line-height: 1; color: var(--accent); margin-bottom: 24px;
-  }
-  h1 {
-    font-family: 'Unbounded', sans-serif;
-    font-size: clamp(18px, 4vw, 28px);
-    font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px;
-  }
-  p { font-size: 16px; color: var(--muted); max-width: 400px; line-height: 1.7; margin-bottom: 48px; }
-  .links { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
-  .btn {
-    font-family: 'Unbounded', sans-serif; font-size: 12px; font-weight: 700;
-    letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
-    padding: 16px 32px; border-radius: 2px; transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .btn:hover { transform: translateY(-2px); }
-  .btn-primary { background: var(--accent); color: var(--black); }
-  .btn-primary:hover { box-shadow: 0 8px 24px rgba(200,255,0,0.25); }
-  .btn-secondary { border: 1px solid #2e2e2e; color: var(--white); }
-  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
-
-/* ── COOKIE BANNER ── */
-.cookie-banner {
-  position: fixed; bottom: 24px; left: 24px; right: 24px;
-  max-width: 560px; z-index: 9000;
-  background: #1a1a1a; border: 1px solid #2e2e2e;
-  border-left: 3px solid #c8ff00;
-  padding: 20px 24px; display: flex;
-  align-items: center; gap: 20px; flex-wrap: wrap;
-  transform: translateY(120px); opacity: 0;
-  transition: transform .4s ease, opacity .4s ease;
-}
-.cookie-banner.show { transform: translateY(0); opacity: 1; }
-.cookie-text { font-size: 13px; color: #aaa; line-height: 1.6; flex: 1; min-width: 200px; }
-.cookie-text a { color: #c8ff00; text-decoration: none; }
-.cookie-text a:hover { text-decoration: underline; }
-.cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
-.cookie-btn {
-  font-family: 'Unbounded', sans-serif; font-size: 11px; font-weight: 700;
-  letter-spacing: .08em; text-transform: uppercase;
-  padding: 10px 20px; border: none; border-radius: 2px; cursor: pointer;
-  transition: transform .15s, opacity .2s;
-}
-.cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
-.cookie-accept { background: #c8ff00; color: #0a0a0a; }
-.cookie-decline { background: transparent; color: #666; border: 1px solid #2e2e2e; }
-
-
-  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;position:relative;z-index:200;background:none;border:none}
-  .burger span{display:block;width:24px;height:2px;background:#f5f2ed;transition:transform .3s,opacity .3s;transform-origin:center}
-  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-  .burger.open span:nth-child(2){opacity:0}
-  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  .mobile-menu{display:none;position:fixed;inset:0;background:rgba(10,10,10,.98);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:8px;backdrop-filter:blur(16px)}
-  .mobile-menu.open{display:flex}
-  .mobile-menu a{font-family:'Unbounded',sans-serif;font-size:clamp(22px,6vw,36px);font-weight:900;letter-spacing:-.02em;color:#f5f2ed;text-decoration:none;padding:12px 24px;transition:color .2s}
-  .mobile-menu a:hover{color:#c8ff00}
-  .mobile-menu a.nav-cta{background:#c8ff00;color:#0a0a0a!important;border-radius:2px;margin-top:16px;font-size:clamp(14px,4vw,20px)}
-  .mobile-menu-close{position:absolute;top:24px;right:24px;font-size:28px;color:#f5f2ed;cursor:pointer;background:none;border:none}
-  }
-
-  /* ── MOBILE BURGER & MENU ── */
-  .burger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    cursor: pointer;
-    padding: 8px;
-    background: none;
-    border: none;
-    position: relative;
-    z-index: 200;
-  }
-  .burger span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: #f5f2ed;
-    border-radius: 2px;
-    transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
-    transform-origin: center;
-  }
-  .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .burger.open span:nth-child(2) { opacity: 0; width: 0; }
-  .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-  .mobile-menu {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(10,10,10,0.98);
-    z-index: 150;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-  }
-  .mobile-menu.open { display: flex !important; }
-  .mobile-menu a {
-    font-family: 'Unbounded', sans-serif;
-    font-size: clamp(22px, 6vw, 36px);
-    font-weight: 900;
-    letter-spacing: -0.02em;
-    color: #f5f2ed;
-    text-decoration: none;
-    padding: 12px 24px;
-    transition: color 0.2s;
-    text-align: center;
-  }
-  .mobile-menu a:hover { color: #c8ff00; }
-  .mobile-menu a.nav-cta {
-    background: #c8ff00 !important;
-    color: #0a0a0a !important;
-    border-radius: 2px;
-    margin-top: 16px;
-    font-size: clamp(14px, 4vw, 20px);
-  }
-  .mobile-menu-close {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    font-size: 32px;
-    color: #f5f2ed;
-    cursor: pointer;
-    background: none;
-    border: none;
-    line-height: 1;
-    padding: 8px;
-    z-index: 160;
-  }
-  .mobile-menu-close:hover { color: #c8ff00; }
-  @media (max-width: 1024px) {
-    .burger { display: flex !important; }
-    .nav-links { display: none !important; }
-  }
-
-
-  /* ── КРИТИЧЕСКИЕ МОБИЛЬНЫЕ СТИЛИ ── */
-  @media (max-width: 768px) {
-    html, body { width: 100%; overflow-x: hidden; }
-    img, video, iframe, svg { max-width: 100%; height: auto; }
-    * { word-break: break-word; }
-  }
-  @media (max-width: 1024px) {
-    .nav-links { display: none !important; }
-    .burger { display: flex !important; }
-  }
-
-
-  /* ── МОБИЛЬНАЯ ОПТИМИЗАЦИЯ (Яндекс.Вебмастер) ── */
-  @media (max-width: 767px) {
-    html, body { max-width: 100%; overflow-x: hidden; }
-    /* минимальный читаемый размер шрифта на мобильных */
-    body { font-size: 16px; -webkit-text-size-adjust: 100%; }
-    p, li, a, span, div, label, input, textarea, button, td, th { font-size: inherit; }
-    /* мелкие метки/теги — минимум 12px */
-    [class*="label"], [class*="tag"], [class*="cat"], [class*="num"],
-    [class*="date"], [class*="badge"], [class*="note"], [class*="caption"],
-    [class*="meta"], small, .section-num, .pub-badge, .brief-note,
-    .footer-copy, .footer-socials a, .footer-links a, .nav-back {
-      font-size: 12px !important;
-    }
-    /* всё внутри viewport, картинки и таблицы адаптивны */
-    img, video, iframe, svg, table { max-width: 100% !important; height: auto; }
-    table { display: block; overflow-x: auto; }
-    /* элементы не шире экрана */
-    * { max-width: 100%; box-sizing: border-box; }
-    /* кнопки и ссылки — удобные для тапа (минимум 44px по высоте) */
-    .btn, .btn-primary, .btn-secondary, .nav-cta, button[type="submit"],
-    .brief-submit, .form-submit { min-height: 44px; }
-  }
-
+  :root{ --bg:#FAFAF7; --ink:#1A1A1A; --muted:#6B6B6B; --line:#E8E5DE; --accent:#8B6F47; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif; min-height:100vh; display:flex; flex-direction:column; -webkit-font-smoothing:antialiased; }
+  header{ border-bottom:1px solid var(--line); }
+  .nav{ max-width:1280px; margin:0 auto; padding:18px 24px; }
+  .logo{ font-family:'Lora',serif; font-size:24px; font-weight:500; text-decoration:none; color:var(--ink); }
+  main{ flex:1; display:flex; align-items:center; justify-content:center; padding:48px 24px; }
+  .box{ text-align:center; max-width:520px; }
+  .button-svg{ width:120px; height:120px; margin:0 auto 24px; }
+  .code{ font-family:'Lora',serif; font-weight:500; font-size:clamp(72px,18vw,128px); line-height:1; letter-spacing:-0.03em; color:var(--accent); margin-bottom:12px; }
+  h1{ font-family:'Lora',serif; font-style:italic; font-weight:400; font-size:clamp(24px,4vw,32px); line-height:1.2; margin-bottom:18px; letter-spacing:-0.01em; }
+  p{ color:var(--muted); font-size:16px; line-height:1.6; margin-bottom:36px; }
+  .actions{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+  .btn{ display:inline-block; padding:14px 30px; background:var(--ink); color:var(--bg); font-size:13px; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none; transition:opacity .2s; }
+  .btn:hover{ opacity:0.85; }
+  .btn-outline{ background:transparent; color:var(--ink); border:1px solid var(--ink); }
+  .links{ margin-top:32px; font-size:14px; color:var(--muted); }
+  .links a{ color:var(--ink); border-bottom:1px solid var(--line); text-decoration:none; margin:0 6px; padding-bottom:1px; transition:border-color .2s; }
+  .links a:hover{ border-color:var(--ink); }
+  footer{ border-top:1px solid var(--line); padding:24px; text-align:center; color:var(--muted); font-size:13px; }
+  footer a{ color:var(--muted); text-decoration:none; }
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -210,125 +39,49 @@
    m[i].l=1*new Date();
    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(72239779, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
+   (window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110238099', 'ym');
+   ym(110238099, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/72239779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img src="https://mc.yandex.ru/watch/110238099" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
 </head>
 <body>
-<nav style="position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,.95);">
-  <a href="index.html" style="font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;letter-spacing:.15em;color:#f5f2ed;text-decoration:none;text-transform:uppercase;">DM / Brand</a>
-  <a href="index.html" style="font-size:13px;color:#888;text-decoration:none;">← На главную</a>
-  <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Меню" style="display:none;">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
-  <a href="index.html" onclick="closeMobileMenu()">Главная</a>
-  <a href="services.html" onclick="closeMobileMenu()">Услуги</a>
-  <a href="articles.html" onclick="closeMobileMenu()">Статьи</a>
-  <a href="blog.html" onclick="closeMobileMenu()">Блог</a>
-  <a href="resume.html" onclick="closeMobileMenu()">Резюме</a>
-  <a href="brief.html" onclick="closeMobileMenu()">Бриф</a>
-</div>
-
-  <div class="num">404</div>
-  <h1>Страница не найдена</h1>
-  <p>Такой страницы не существует или она была перемещена. Вернитесь на главную или посмотрите другие разделы.</p>
-  <div class="links">
-    <a href="/" class="btn btn-primary">На главную</a>
-    <a href="/services.html" class="btn btn-secondary">Услуги</a>
-    <a href="/articles.html" class="btn btn-secondary">Статьи</a>
+<header><div class="nav"><a class="logo" href="/">Женя Зайцева</a></div></header>
+<main>
+  <div class="box">
+    <svg class="button-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="60" cy="60" r="54" fill="#8B6F47"/>
+      <circle cx="60" cy="60" r="54" fill="none" stroke="#735834" stroke-width="2"/>
+      <circle cx="60" cy="60" r="40" fill="none" stroke="#FAFAF7" stroke-width="1.5" opacity="0.4"/>
+      <circle cx="48" cy="48" r="6" fill="#FAFAF7"/>
+      <circle cx="72" cy="48" r="6" fill="#FAFAF7"/>
+      <circle cx="48" cy="72" r="6" fill="#FAFAF7"/>
+      <circle cx="72" cy="72" r="6" fill="#FAFAF7"/>
+    </svg>
+    <div class="code">404</div>
+    <h1>Эта страница укатилась, как непришитая пуговица</h1>
+    <p>По этому адресу ничего нет — ссылка устарела или закралась опечатка. Но в мастерской ещё много всего интересного.</p>
+    <div class="actions">
+      <a class="btn" href="/">На главную</a>
+      <a class="btn btn-outline" href="https://t.me/pugovicibroshi" target="_blank" rel="noopener">Telegram-канал</a>
+    </div>
+    <div class="links">
+      <a href="/#catalog">Каталог</a> ·
+      <a href="/#author">Об авторе</a> ·
+      <a href="/#contacts">Контакты</a> ·
+      <a href="/blog.html">Журнал</a>
+    </div>
   </div>
-
-<!-- Cookie Banner -->
-<div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text">
-    Мы используем cookies для аналитики (Яндекс.Метрика) и улучшения сайта.
-    Подробнее в <a href="privacy.html">Политике конфиденциальности</a>.
-  </div>
-  <div class="cookie-actions">
-    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Принять</button>
-    <button class="cookie-btn cookie-decline" onclick="declineCookies()">Отклонить</button>
-  </div>
-</div>
-
-
-<script>
-(function(){
-  try {
-    if (!localStorage.getItem('cookie_consent')) {
-      setTimeout(function(){
-        var b = document.getElementById('cookieBanner');
-        if (b) b.classList.add('show');
-      }, 1500);
-    }
-  } catch(e){}
-})();
-function acceptCookies(){
-  try { localStorage.setItem('cookie_consent','accepted'); } catch(e){}
-  var b = document.getElementById('cookieBanner');
-  if(b) b.classList.remove('show');
-}
-function declineCookies(){
-  try { localStorage.setItem('cookie_consent','declined'); } catch(e){}
-  var b = document.getElementById('cookieBanner');
-  if(b) b.classList.remove('show');
-}
-</script>
-
-<script>
-
-</script>
-
-<script>
-function toggleMobileMenu() {
-  var menu = document.getElementById('mobileMenu');
-  var burger = document.getElementById('burger');
-  if (!menu || !burger) return;
-  var isOpen = menu.classList.contains('open');
-  if (isOpen) {
-    menu.classList.remove('open');
-    burger.classList.remove('open');
-    document.body.style.overflow = '';
-  } else {
-    menu.classList.add('open');
-    burger.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-}
-function closeMobileMenu() {
-  var menu = document.getElementById('mobileMenu');
-  var burger = document.getElementById('burger');
-  if (menu) menu.classList.remove('open');
-  if (burger) burger.classList.remove('open');
-  document.body.style.overflow = '';
-}
-// Close menu on Escape key
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeMobileMenu();
-});
-</script>
-<script>
-/* REVEAL_FAILSAFE: гарантированно показываем контент, даже если что-то сломалось */
-(function(){
-  function showAll(){
-    var els=document.querySelectorAll('.reveal:not(.visible)');
-    for(var i=0;i<els.length;i++){els[i].classList.add('visible');}
-  }
-  // если через 1.2с что-то ещё скрыто — показать принудительно
-  setTimeout(showAll,1200);
-  // и на случай полной ошибки — по load
-  window.addEventListener('load',function(){setTimeout(showAll,300);});
-})();
-</script>
+</main>
+<footer>
+  © 2026 Женя Зайцева · Москва ·
+  <a href="tel:+79260335236">+7 926 033-52-36</a> ·
+  <a href="mailto:zajki@list.ru">zajki@list.ru</a>
+</footer>
 </body>
 </html>

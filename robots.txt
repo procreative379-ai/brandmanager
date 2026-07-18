@@ -1,10 +1,10 @@
 User-agent: *
 Allow: /
-Disallow: /404.html
 
 User-agent: Yandex
 Allow: /
-Clean-param: utm_source&utm_medium&utm_campaign
 
-Sitemap: https://brandmanager.su/sitemap.xml
-Host: https://brandmanager.su
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://ceramick.ru/sitemap.xml

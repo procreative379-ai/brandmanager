@@ -1,320 +1,90 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<script>document.documentElement.className=(document.documentElement.className+" js").trim();</script>
-<link rel="dns-prefetch" href="https://mc.yandex.ru">
-<link rel="dns-prefetch" href="https://fonts.gstatic.com">
-<meta name="google-site-verification" content="d0fa0e814302fe56" />
-<meta name="yandex-verification" content="a22af711bd8343d6" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Блог бренд-стратега · Кейсы и практика · Дмитрий Москаленко</title>
-<meta name="keywords" content="блог бренд-менеджера, кейсы бренд-менеджмента, практика брендинга, бренд-стратегия примеры">
-<meta name="description" content="Блог о практике бренд-менеджмента: реальные кейсы, разборы стратегий, инструменты. Опыт в FMCG, HoReCa, импортных брендах. Дмитрий Москаленко.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230a0a0a'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='18' fill='%23c8ff00'>DM</text></svg>">
+<title>Журнал — Женя Зайцева</title>
+<meta name="description" content="Журнал о керамике ручной работы: как выбрать и носить брошь, ухаживать за посудой, заказать изделие, из чего складывается цена. Статьи от мастера.">
+<link rel="canonical" href="https://ceramick.ru/blog.html">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Женя Зайцева">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Geologica:wght@300;400&display=swap">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Geologica:wght@300;400&display=swap" media="print" onload="this.media='all';this.onload=null">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Geologica:wght@300;400&display=swap"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--black:#0a0a0a;--white:#f5f2ed;--accent:#c8ff00;--grey:#1a1a1a;--mid:#2e2e2e;--muted:#888;--font-display:'Unbounded',sans-serif;--font-body:'Geologica',sans-serif}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300;overflow-x:hidden;}
-.cursor{width:12px;height:12px;background:var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}
-.cursor-ring{width:40px;height:40px;border:1px solid rgba(200,255,0,.4);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .15s ease-out}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 60px;display:flex;justify-content:space-between;align-items:center}
-nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,.95) 0%,transparent 100%);pointer-events:none}
-.nav-logo{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.15em;color:var(--white);text-decoration:none;text-transform:uppercase;position:relative;z-index:1}
-.nav-links{display:flex;gap:40px;list-style:none;position:relative;z-index:1}
-.nav-links a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s}
-.nav-links a:hover,.nav-links a.active{color:var(--accent)}
-.nav-cta{background:var(--accent);color:var(--black)!important;padding:10px 22px;font-weight:500!important;border-radius:2px;transition:opacity .3s!important}
-.nav-cta:hover{opacity:.85}
+  :root{ --bg:#FAFAF7; --paper:#FFFFFF; --ink:#1A1A1A; --muted:#6B6B6B; --line:#E8E5DE; --accent:#8B6F47; --serif:'Lora',Georgia,serif; --sans:'Inter',-apple-system,sans-serif; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ background:var(--bg); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.7; -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; }
+  img{ max-width:100%; height:auto; display:block; }
+  .container{ max-width:760px; margin:0 auto; padding:0 24px; }
+  .wide{ max-width:1280px; }
+  header{ border-bottom:1px solid var(--line); background:#FAFAF7; }
+  .nav{ display:flex; align-items:center; gap:32px; padding:18px 24px; max-width:1280px; margin:0 auto; }
+  .logo{ font-family:var(--serif); font-size:24px; font-weight:500; text-decoration:none; color:var(--ink); margin-right:auto; }
+  .nav-links{ display:flex; gap:28px; font-size:14px; color:var(--muted); }
+  .nav-links a{ text-decoration:none; transition:color .2s; }
+  .nav-links a:hover{ color:var(--ink); }
+  @media (max-width:880px){ .nav-links{ display:none; } }
+  .crumbs{ font-size:13px; color:var(--muted); padding:24px 0; }
+  .crumbs a{ color:var(--muted); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:1px; }
+  .crumbs a:hover{ color:var(--ink); }
+  article{ padding:24px 0 64px; }
+  .eyebrow{ font-size:12px; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:16px; }
+  h1{ font-family:var(--serif); font-weight:500; font-size:clamp(34px,5vw,52px); line-height:1.1; letter-spacing:-0.02em; margin-bottom:24px; }
+  h1 em{ font-style:italic; color:var(--accent); }
+  .lead{ font-family:var(--serif); font-style:italic; font-size:22px; line-height:1.5; color:var(--muted); margin-bottom:36px; }
+  .meta{ font-size:13px; color:var(--muted); margin-bottom:48px; padding-bottom:24px; border-bottom:1px solid var(--line); }
+  h2{ font-family:var(--serif); font-weight:500; font-size:32px; line-height:1.2; margin:48px 0 18px; letter-spacing:-0.01em; }
+  h3{ font-family:var(--serif); font-weight:500; font-size:24px; line-height:1.2; margin:32px 0 14px; }
+  p{ margin-bottom:18px; }
+  ul, ol{ margin:0 0 24px 24px; }
+  li{ margin-bottom:10px; }
+  blockquote{ font-family:var(--serif); font-style:italic; font-size:22px; line-height:1.5; color:var(--accent); border-left:3px solid var(--accent); padding:8px 0 8px 24px; margin:32px 0; }
+  .callout{ background:var(--paper); border:1px solid var(--line); border-radius:4px; padding:24px 28px; margin:32px 0; }
+  .callout h3{ margin-top:0; margin-bottom:12px; font-size:20px; }
+  .cta{ background:var(--paper); border:1px solid var(--line); border-radius:4px; padding:36px 32px; margin:48px 0 0; text-align:center; }
+  .cta h3{ margin:0 0 12px; }
+  .cta p{ color:var(--muted); margin-bottom:24px; }
+  .btn{ display:inline-block; padding:14px 32px; background:var(--ink); color:var(--bg); font-size:14px; font-weight:500; letter-spacing:0.05em; text-transform:uppercase; text-decoration:none; transition:opacity .2s; }
+  .btn:hover{ opacity:0.85; }
+  .btn-outline{ background:transparent; color:var(--ink); border:1px solid var(--ink); }
+  .related{ border-top:1px solid var(--line); padding:48px 0 64px; }
+  .related h2{ margin-top:0; }
+  .related-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  @media (max-width:880px){ .related-grid{ grid-template-columns:1fr; } }
+  .related-item{ display:block; text-decoration:none; color:inherit; padding:24px; border:1px solid var(--line); border-radius:4px; transition:border-color .2s; background:var(--paper); }
+  .related-item:hover{ border-color:var(--ink); }
+  .related-item .eyebrow{ margin-bottom:10px; font-size:11px; }
+  .related-item h4{ font-family:var(--serif); font-size:20px; font-weight:500; line-height:1.2; }
+  footer{ border-top:1px solid var(--line); padding:48px 24px 32px; font-size:13px; color:var(--muted); text-align:center; }
+  footer a{ color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line); margin:0 4px; }
 
-.page-hero{padding:160px 60px 80px;border-bottom:1px solid var(--mid)}
-.hero-label{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;display:flex;align-items:center;gap:12px}
-.hero-label::before{content:'';width:32px;height:1px;background:var(--accent)}
-.page-hero h1{font-family:var(--font-display);font-size:clamp(36px,5vw,72px);font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:24px}
-.page-hero h1 em{font-style:normal;color:var(--accent)}
-.hero-sub{font-size:16px;color:var(--muted);max-width:600px;line-height:1.7}
+  /* blog index */
+  .post-list{ display:grid; grid-template-columns:1fr; gap:0; max-width:760px; margin:0 auto; padding:0 24px 64px; }
+  .post-link{ display:block; text-decoration:none; color:inherit; padding:28px 0; border-bottom:1px solid var(--line); }
+  .post-link:hover h2{ color:var(--accent); }
+  .post-link h2{ font-family:var(--serif); font-weight:500; font-size:28px; line-height:1.2; margin-bottom:10px; transition:color .2s; }
+  .post-link p{ color:var(--muted); margin-bottom:8px; }
+  .post-link .meta{ font-size:12px; letter-spacing:0.1em; text-transform:uppercase; padding:0; border:none; margin:0 0 8px; }
 
-/* FEATURED POST */
-.featured-post{margin:0;border-bottom:1px solid var(--mid)}
-.featured-inner{padding:80px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.featured-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;display:flex;align-items:center;gap:12px}
-.featured-label::before{content:'';width:24px;height:1px;background:var(--accent)}
-.featured-date{font-size:12px;color:var(--muted);letter-spacing:.1em;margin-bottom:16px}
-.featured-title{font-family:var(--font-display);font-size:clamp(22px,2.5vw,36px);font-weight:900;letter-spacing:-.02em;line-height:1.1;margin-bottom:20px}
-.featured-excerpt{font-size:15px;color:#aaa;line-height:1.75;margin-bottom:32px}
-.featured-visual{background:var(--grey);height:400px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.featured-visual-text{font-family:var(--font-display);font-size:120px;font-weight:900;color:rgba(200,255,0,.06);line-height:1;user-select:none}
-.featured-stat{position:absolute;bottom:32px;right:32px;text-align:right}
-.featured-stat-num{font-family:var(--font-display);font-size:40px;font-weight:900;color:var(--accent);line-height:1}
-.featured-stat-label{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
-
-/* POSTS GRID */
-.posts-section{padding:80px 60px}
-.posts-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px}
-.posts-h2{font-family:var(--font-display);font-size:24px;font-weight:900;letter-spacing:-.01em}
-.posts-count{font-size:12px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
-.posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:80px}
-.post-card{background:var(--grey);padding:40px;position:relative;overflow:hidden;transition:background .3s;cursor:pointer}
-.post-card:hover{background:#1e1e1e}
-.post-card:hover .post-arrow{opacity:1;transform:translate(0,0)}
-.post-date{font-size:11px;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;margin-bottom:16px}
-.post-cat{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;font-weight:500}
-.post-title{font-family:var(--font-display);font-size:16px;font-weight:700;letter-spacing:-.01em;line-height:1.3;margin-bottom:14px}
-.post-excerpt{font-size:13px;color:var(--muted);line-height:1.65}
-.post-arrow{position:absolute;top:40px;right:40px;font-size:18px;color:var(--accent);opacity:0;transform:translate(-6px,6px);transition:opacity .3s,transform .3s}
-
-/* CASES SECTION */
-.cases-section{padding:0 60px 80px;border-top:1px solid var(--mid)}
-.cases-header{padding:60px 0 40px;display:flex;justify-content:space-between;align-items:flex-end}
-.cases-h2{font-family:var(--font-display);font-size:24px;font-weight:900;letter-spacing:-.01em}
-.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.case-card{background:var(--grey);padding:48px 40px;transition:background .3s;position:relative;overflow:hidden}
-.case-card:hover{background:#1e1e1e}
-.case-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--accent);transition:width .4s}
-.case-card:hover::after{width:100%}
-.case-date{font-size:11px;color:var(--muted);letter-spacing:.15em;margin-bottom:16px}
-.case-brand{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;font-weight:500}
-.case-title{font-family:var(--font-display);font-size:17px;font-weight:700;letter-spacing:-.01em;line-height:1.3;margin-bottom:14px}
-.case-desc{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:24px}
-.case-link{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;transition:opacity .2s;border-bottom:1px solid rgba(200,255,0,.3);padding-bottom:2px}
-.case-link:hover{opacity:.7}
-
-/* NEWSLETTER */
-.newsletter{margin:0 60px 80px;background:var(--grey);padding:72px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.nl-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
-.nl-title{font-family:var(--font-display);font-size:clamp(22px,2.5vw,36px);font-weight:900;letter-spacing:-.02em;line-height:1.1;margin-bottom:16px}
-.nl-sub{font-size:15px;color:var(--muted);line-height:1.7}
-.nl-form{display:flex;flex-direction:column;gap:16px}
-.nl-input{background:var(--black);border:1px solid var(--mid);padding:16px 20px;font-family:var(--font-body);font-size:15px;color:var(--white);outline:none;border-radius:2px;transition:border-color .2s}
-.nl-input:focus{border-color:var(--accent)}
-.nl-input::placeholder{color:#444}
-.nl-btn{background:var(--accent);color:var(--black);font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:18px 32px;border:none;cursor:pointer;border-radius:2px;transition:transform .2s,box-shadow .2s}
-.nl-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,255,0,.2)}
-.nl-hint{font-size:12px;color:var(--muted)}
-
-footer{padding:40px 60px;border-top:1px solid var(--mid);display:flex;justify-content:space-between;align-items:center}
-.footer-logo{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.15em;color:var(--white);text-decoration:none}
-.footer-copy{font-size:12px;color:var(--muted)}
-.footer-socials{display:flex;gap:24px}
-.footer-socials a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s}
-.footer-socials a:hover{color:var(--accent)}
-
-.btn-outline{font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--white);border:1px solid var(--mid);padding:14px 28px;text-decoration:none;border-radius:2px;transition:border-color .3s,color .3s;display:inline-block}
-.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
-
-.js .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
-.reveal.visible{opacity:1;transform:none}
-
-@media(max-width:1024px){
-nav{padding:20px 24px}.nav-links{display:none}
-.page-hero,.posts-section,.cases-section,.newsletter{padding-left:24px;padding-right:24px}
-.featured-inner{grid-template-columns:1fr;gap:40px;padding:60px 24px}
-.featured-visual{height:240px}
-.posts-grid,.cases-grid{grid-template-columns:1fr}
-.newsletter{grid-template-columns:1fr;gap:40px;margin:0 24px 60px;padding:48px 32px}
-footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
-}
-
-  /* ── BURGER / MOBILE NAV ── */
-  
-  .burger span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: var(--white);
-    transition: transform 0.3s, opacity 0.3s, width 0.3s;
-    transform-origin: center;
-  }
-  .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .burger.open span:nth-child(2) { opacity: 0; width: 0; }
-  .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-  
-  .mobile-menu a {
-    font-family: var(--font-display);
-    font-size: clamp(22px, 6vw, 36px);
-    font-weight: 900;
-    letter-spacing: -0.02em;
-    color: var(--white);
-    text-decoration: none;
-    padding: 12px 24px;
-    transition: color 0.2s;
-    text-align: center;
-  }
-  .mobile-menu a:hover { color: var(--accent); }
-  .mobile-menu a.nav-cta {
-    background: var(--accent);
-    color: var(--black) !important;
-    border-radius: 2px;
-    margin-top: 16px;
-    font-size: clamp(14px, 4vw, 20px);
-  }
-  .mobile-menu-close {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    font-size: 28px;
-    color: var(--white);
-    cursor: pointer;
-    background: none;
-    border: none;
-    line-height: 1;
-    transition: color 0.2s;
-  }
-  .mobile-menu-close:hover { color: var(--accent); }
-
-  
-
-
-/* ── COOKIE BANNER ── */
-.cookie-banner {
-  position: fixed; bottom: 24px; left: 24px; right: 24px;
-  max-width: 560px; z-index: 9000;
-  background: #1a1a1a; border: 1px solid #2e2e2e;
-  border-left: 3px solid #c8ff00;
-  padding: 20px 24px; display: flex;
-  align-items: center; gap: 20px; flex-wrap: wrap;
-  transform: translateY(120px); opacity: 0;
-  transition: transform .4s ease, opacity .4s ease;
-}
-.cookie-banner.show { transform: translateY(0); opacity: 1; }
-.cookie-text { font-size: 13px; color: #aaa; line-height: 1.6; flex: 1; min-width: 200px; }
-.cookie-text a { color: #c8ff00; text-decoration: none; }
-.cookie-text a:hover { text-decoration: underline; }
-.cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
-.cookie-btn {
-  font-family: 'Unbounded', sans-serif; font-size: 11px; font-weight: 700;
-  letter-spacing: .08em; text-transform: uppercase;
-  padding: 10px 20px; border: none; border-radius: 2px; cursor: pointer;
-  transition: transform .15s, opacity .2s;
-}
-.cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
-.cookie-accept { background: #c8ff00; color: #0a0a0a; }
-.cookie-decline { background: transparent; color: #666; border: 1px solid #2e2e2e; }
-
-
-  /* ── MOBILE BURGER & MENU ── */
-  .burger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    cursor: pointer;
-    padding: 8px;
-    background: none;
-    border: none;
-    position: relative;
-    z-index: 200;
-  }
-  .burger span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: #f5f2ed;
-    border-radius: 2px;
-    transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
-    transform-origin: center;
-  }
-  .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .burger.open span:nth-child(2) { opacity: 0; width: 0; }
-  .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-  .mobile-menu {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(10,10,10,0.98);
-    z-index: 150;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-  }
-  .mobile-menu.open { display: flex !important; }
-  .mobile-menu a {
-    font-family: 'Unbounded', sans-serif;
-    font-size: clamp(22px, 6vw, 36px);
-    font-weight: 900;
-    letter-spacing: -0.02em;
-    color: #f5f2ed;
-    text-decoration: none;
-    padding: 12px 24px;
-    transition: color 0.2s;
-    text-align: center;
-  }
-  .mobile-menu a:hover { color: #c8ff00; }
-  .mobile-menu a.nav-cta {
-    background: #c8ff00 !important;
-    color: #0a0a0a !important;
-    border-radius: 2px;
-    margin-top: 16px;
-    font-size: clamp(14px, 4vw, 20px);
-  }
-  .mobile-menu-close {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    font-size: 32px;
-    color: #f5f2ed;
-    cursor: pointer;
-    background: none;
-    border: none;
-    line-height: 1;
-    padding: 8px;
-    z-index: 160;
-  }
-  .mobile-menu-close:hover { color: #c8ff00; }
-  @media (max-width: 1024px) {
-    .burger { display: flex !important; }
-    .nav-links { display: none !important; }
-  }
-
-
-  /* ── КРИТИЧЕСКИЕ МОБИЛЬНЫЕ СТИЛИ ── */
-  @media (max-width: 768px) {
-    html, body { width: 100%; overflow-x: hidden; }
-    img, video, iframe, svg { max-width: 100%; height: auto; }
-    * { word-break: break-word; }
-  }
-  @media (max-width: 1024px) {
-    .nav-links { display: none !important; }
-    .burger { display: flex !important; }
-  }
-
-@media (hover:hover) and (pointer:fine){body{cursor:none}}
-
-  /* ── МОБИЛЬНАЯ ОПТИМИЗАЦИЯ (Яндекс.Вебмастер) ── */
-  @media (max-width: 767px) {
-    html, body { max-width: 100%; overflow-x: hidden; }
-    /* минимальный читаемый размер шрифта на мобильных */
-    body { font-size: 16px; -webkit-text-size-adjust: 100%; }
-    p, li, a, span, div, label, input, textarea, button, td, th { font-size: inherit; }
-    /* мелкие метки/теги — минимум 12px */
-    [class*="label"], [class*="tag"], [class*="cat"], [class*="num"],
-    [class*="date"], [class*="badge"], [class*="note"], [class*="caption"],
-    [class*="meta"], small, .section-num, .pub-badge, .brief-note,
-    .footer-copy, .footer-socials a, .footer-links a, .nav-back {
-      font-size: 12px !important;
-    }
-    /* всё внутри viewport, картинки и таблицы адаптивны */
-    img, video, iframe, svg, table { max-width: 100% !important; height: auto; }
-    table { display: block; overflow-x: auto; }
-    /* элементы не шире экрана */
-    * { max-width: 100%; box-sizing: border-box; }
-    /* кнопки и ссылки — удобные для тапа (минимум 44px по высоте) */
-    .btn, .btn-primary, .btn-secondary, .nav-cta, button[type="submit"],
-    .brief-submit, .form-submit { min-height: 44px; }
-  }
-
+  /* burger + mobile menu */
+  .burger{ position:relative; width:42px; height:42px; padding:0; display:none; flex-direction:column; align-items:center; justify-content:center; z-index:70; background:transparent; border:none; cursor:pointer; }
+  .burger span{ display:block; width:24px; height:2px; background:var(--ink); position:absolute; left:9px; transition:transform .25s, opacity .2s, top .25s; }
+  .burger span:nth-child(1){ top:14px; }
+  .burger span:nth-child(2){ top:20px; }
+  .burger span:nth-child(3){ top:26px; }
+  .burger.open span:nth-child(1){ top:20px; transform:rotate(45deg); }
+  .burger.open span:nth-child(2){ opacity:0; }
+  .burger.open span:nth-child(3){ top:20px; transform:rotate(-45deg); }
+  .mobile-menu{ position:fixed; inset:0; background:#FAFAF7; z-index:65; padding:88px 24px 40px; opacity:0; pointer-events:none; transition:opacity .25s; overflow-y:auto; }
+  .mobile-menu.open{ opacity:1; pointer-events:auto; }
+  .mobile-menu a{ display:block; font-family:var(--serif); font-size:28px; font-weight:500; padding:16px 0; border-bottom:1px solid var(--line); color:var(--ink); text-decoration:none; }
+  .mobile-menu a:last-child{ border-bottom:none; }
+  @media (max-width:880px){ .burger{ display:flex !important; } }
+  body.menu-open{ overflow:hidden; }
 </style>
-
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -322,305 +92,106 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
    m[i].l=1*new Date();
    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(72239779, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
+   (window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110238099', 'ym');
+   ym(110238099, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/72239779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img src="https://mc.yandex.ru/watch/110238099" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-<meta property="og:title" content="Блог бренд-стратега · Кейсы и практика · Дмитрий Москаленко">
-<meta property="og:description" content="Блог о практике бренд-менеджмента: реальные кейсы, разборы стратегий, инструменты. Опыт в FMCG, HoReCa, импортных брендах. Дмитрий Москаленко.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://brandmanager.su/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://brandmanager.su/og-image.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
 </head>
 <body>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 
-<nav id="nav">
-  <a href="index.html" class="nav-logo">DM / Brand</a>
-  <ul class="nav-links">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="services.html">Услуги</a></li>
-    <li><a href="articles.html">Статьи</a></li>
-    <li><a href="blog.html" class="active">Блог</a></li>
-    <li><a href="resume.html">Резюме</a></li>
-    <li><a href="brief.html">Бриф</a></li>
-    <li><a href="index.html#contact" class="nav-cta">Обсудить проект</a></li>
-  </ul>
-  <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Открыть меню">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
-  <a href="index.html" onclick="closeMobileMenu()">Главная</a>
-  <a href="services.html" onclick="closeMobileMenu()">Услуги</a>
-  <a href="articles.html" onclick="closeMobileMenu()">Статьи</a>
-  <a href="blog.html" onclick="closeMobileMenu()">Блог</a>
-  <a href="resume.html" onclick="closeMobileMenu()">Резюме</a>
-  <a href="brief.html" onclick="closeMobileMenu()">Бриф</a>
-  <a href="index.html#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
+<header>
+  <nav class="nav">
+    <a href="/" class="logo">Женя Зайцева</a>
+    <div class="nav-links">
+      <a href="/#catalog">Каталог</a>
+      <a href="/blog.html">Журнал</a>
+      <a href="/#author">Об авторе</a>
+      <a href="/#contacts">Контакты</a>
+    </div>
+    <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="/#catalog">Каталог</a>
+    <a href="/blog.html">Журнал</a>
+    <a href="/#author">Об авторе</a>
+    <a href="/#contacts">Контакты</a>
+  </div>
+</header>
+
+<div class="container">
+  <div class="crumbs"><a href="/">Главная</a> · Журнал</div>
 </div>
-
-<div class="page-hero reveal">
-  <div class="hero-label">Заметки · Кейсы · Наблюдения</div>
-  <h1>Блог<br><em>бренд-стратега</em></h1>
-  <p class="hero-sub">Живые наблюдения из практики управления портфелем брендов. Разбираю рынки, кейсы и инструменты без воды.</p>
-</div>
-
-<!-- FEATURED -->
-<div class="featured-post">
-  <div class="featured-inner reveal">
-    <div>
-      <div class="featured-label">Свежий материал</div>
-      <div class="featured-date">25.06.2023</div>
-      <div class="featured-title">ФУДмашина 2023: аналитика рынка кофейного оборудования</div>
-      <p class="featured-excerpt">Уникальная аналитика по рынку кофейного оборудования России за 2021–2023. Динамика конечно удивляет. Делюсь данными и наблюдениями, которые помогут принять правильные бизнес-решения в этом сегменте.</p>
-      <div style="display:flex;gap:16px;flex-wrap:wrap">
-        <a href="https://disk.yandex.ru/i/zePUHradFFnYbQ" target="_blank" class="btn-outline">Скачать аналитику</a>
-      </div>
-    </div>
-    <div class="featured-visual">
-      <div class="featured-visual-text">FOOD</div>
-      <div class="featured-stat">
-        <div class="featured-stat-num">+3 года</div>
-        <div class="featured-stat-label">динамики рынка</div>
-      </div>
-    </div>
+<article>
+  <div class="container">
+    <div class="eyebrow">Журнал</div>
+    <h1>Про керамику <em>и руки</em></h1>
+    <p class="lead">Статьи о том, как делают авторскую керамику, как с ней жить и за что в ней платят. Без воды.</p>
   </div>
-</div>
-
-<!-- POSTS -->
-<section class="posts-section" style="padding-bottom:0;">
-  <div class="posts-header reveal">
-    <div>
-      <div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Публикации в СМИ</div>
-      <div class="posts-h2">Статьи на Тинькофф Журнале</div>
-    </div>
-    <div class="posts-count">2 статьи</div>
-  </div>
-  <div class="posts-grid reveal" style="margin-bottom:40px;">
-    <a href="https://t-j.ru/strategiya-dlya-obzharshchika/" target="_blank" rel="noopener" class="post-card" style="text-decoration:none;border-left:2px solid var(--accent);display:block;">
-      <div class="post-date" style="color:var(--accent);">Тинькофф Журнал ↗</div>
-      <div class="post-cat">Бренд-стратегия · Кейс</div>
-      <div class="post-title" style="font-family:var(--font-display);font-size:18px;font-weight:700;line-height:1.3;margin:12px 0;color:var(--white);">Стратегия для обжарщика</div>
-      <p class="post-excerpt" style="font-size:14px;color:var(--muted);line-height:1.65;">Как построить бренд кофейной ростерии: позиционирование, миссия и платформа бренда для specialty-сегмента.</p>
-    </a>
-    <a href="https://t-j.ru/proteinovye-batonchiki/" target="_blank" rel="noopener" class="post-card" style="text-decoration:none;border-left:2px solid var(--accent);display:block;">
-      <div class="post-date" style="color:var(--accent);">Тинькофф Журнал ↗</div>
-      <div class="post-cat">Анализ продукта · FMCG</div>
-      <div class="post-title" style="font-family:var(--font-display);font-size:18px;font-weight:700;line-height:1.3;margin:12px 0;color:var(--white);">Протеиновые батончики</div>
-      <p class="post-excerpt" style="font-size:14px;color:var(--muted);line-height:1.65;">Разбор продукта в категории спортпита: состав, позиционирование и конкуренция на полке.</p>
-    </a>
-  </div>
-</section>
-
-<section class="posts-section">
-  <div class="posts-header reveal">
-    <div>
-      <div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Записи</div>
-      <div class="posts-h2">Все публикации</div>
-    </div>
-    <div class="posts-count">3 записи</div>
-  </div>
-  <div class="posts-grid reveal">
-
-    <div class="post-card">
-      <div class="post-date">25.06.2023</div>
-      <div class="post-cat">Аналитика · Рынок</div>
-      <div class="post-title">ФУДмашина 2023: рынок кофейного оборудования</div>
-      <p class="post-excerpt">Уникальная аналитика по рынку кофейного оборудования России. Динамика 2021–2023, ключевые игроки, тренды и неочевидные инсайты для дистрибьюторов и производителей.</p>
-      <a href="https://disk.yandex.ru/i/zePUHradFFnYbQ" target="_blank" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,255,0,.3);padding-bottom:2px">Скачать материал →</a>
-      <span class="post-arrow">↗</span>
-    </div>
-
-    <div class="post-card">
-      <div class="post-date">05.12.2021</div>
-      <div class="post-cat">Выступление · Маркетинг</div>
-      <div class="post-title">Форум «PRO маркетинг» в Пскове</div>
-      <p class="post-excerpt">Молодёжный форум «PRO маркетинг», организованный Российским обществом «Знание» в рамках просветительского проекта «Умный маршрут». Делюсь материалами и наблюдениями с события.</p>
-      <a href="https://loft60.timepad.ru/event/1861639/" target="_blank" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,255,0,.3);padding-bottom:2px">Узнать больше →</a>
-      <span class="post-arrow">↗</span>
-    </div>
-
-    <div class="post-card">
-      <div class="post-date">10.05.2023</div>
-      <div class="post-cat">Аналитика · Китай</div>
-      <div class="post-title">Оборудование из Китая: тренды и реальность рынка</div>
-      <p class="post-excerpt">Китайское оборудование завоёвывает популярность благодаря производительности, цене и ассортименту. Китай — крупнейший производитель и экспортёр в Россию за 2023. Разбираю, что это значит для дистрибьюторов.</p>
-      <a href="https://www.youtube.com/watch?v=Q9DvkVOA4q4&t=143s" target="_blank" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,255,0,.3);padding-bottom:2px">Смотреть видео →</a>
-      <span class="post-arrow">↗</span>
-    </div>
-
-  </div>
-</section>
-
-<!-- CASES -->
-<section class="cases-section">
-  <div class="cases-header reveal">
-    <div>
-      <div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Новые бренды</div>
-      <div class="cases-h2">Кейсы запуска брендов</div>
-    </div>
-  </div>
-  <div class="cases-grid reveal">
-
-    <div class="case-card">
-      <div class="case-date">02.02.2026</div>
-      <div class="case-brand">FORMA · Премиум FMCG</div>
-      <div class="case-title">FORMA: премиальный макаронный бренд «искусство в каждой тарелке»</div>
-      <p class="case-desc">Бренд для креативных профессионалов 25–40 лет (арт-директора, стартаперы), для которых еда — форма самовыражения. Разработка платформы, позиционирования и визуальной концепции.</p>
-      <a href="https://disk.yandex.ru/d/Es3NjyL6zUWsrg" target="_blank" class="case-link">Смотреть кейс →</a>
-    </div>
-
-    <div class="case-card">
-      <div class="case-date">22.06.2023</div>
-      <div class="case-brand">Level Kitchen · FoodTech</div>
-      <div class="case-title">Level Kitchen: цельный бренд с ценностями и характером</div>
-      <p class="case-desc">Как создать узнаваемый бренд? Определяем главные ценности и миссию, выстраиваем отличие от конкурентов, доносим «личность» бренда через стратегию, визуал и контент.</p>
-      <a href="https://disk.yandex.ru/d/gze3aUU46o9TBg" target="_blank" class="case-link">Смотреть кейс →</a>
-    </div>
-
-    <div class="case-card">
-      <div class="case-date">05.03.2023</div>
-      <div class="case-brand">Nedra Water · Вода</div>
-      <div class="case-title">Nedra Water: позиционирование, аудитория и измеримый рост</div>
-      <p class="case-desc">Определяем уникальность бренда, находим свою аудиторию, выбираем площадки для диалога (digital и B2B). Цель — измеримый рост: чаще узнавать, предпочитать, покупать.</p>
-      <a href="https://disk.yandex.ru/d/SqO-VGobNs-YNw" target="_blank" class="case-link">Смотреть кейс →</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- NEWSLETTER / CTA -->
-<div class="newsletter reveal">
-  <div>
-    <div class="nl-label">Оставайтесь в курсе</div>
-    <div class="nl-title">Новые материалы — напрямую</div>
-    <p class="nl-sub">Когда выходят новые статьи, кейсы или аналитика — пишу первым делом в Telegram. Никакого спама, только полезное.</p>
-  </div>
-  <div class="nl-form">
-    <p style="font-size:14px;color:#aaa;line-height:1.7;margin-bottom:8px">Проще всего подписаться в Telegram — там выходят все материалы и заметки из практики:</p>
-    <a href="https://t.me/Dmitrii_Diezel" target="_blank" class="nl-btn" style="display:inline-block;text-align:center;text-decoration:none">Подписаться в Telegram →</a>
-    <p class="nl-hint">Или напишите напрямую — обсудим ваш проект</p>
-    <a href="https://t.me/Dmitrii_Diezel" target="_blank" class="btn-outline" style="text-align:center">Написать в Telegram</a>
-  </div>
-</div>
+</article>
+<div class="post-list">
+<a class="post-link" href="/blog-keramicheskie-pugovicy.html">
+  <div class="meta">8 минут чтения · Авторские пуговицы · 12 марта 2026</div>
+  <h2>Керамические пуговицы: чем они отличаются от обычных и почему стоят дороже</h2>
+  <p>Разбираемся, как делают керамические пуговицы ручной работы, зачем они нужны и сколько стоят. Сравнение с пластиком, металлом и пуговицами из натуральных материалов.</p>
+</a>
+<a class="post-link" href="/blog-kak-uhazhivat-za-keramikoy.html">
+  <div class="meta">6 минут чтения · Уход и хранение · 28 февраля 2026</div>
+  <h2>Уход за керамикой ручной работы: что можно, а что испортит изделие</h2>
+  <p>Как правильно мыть, хранить и использовать авторскую керамику, чтобы она прослужила годы. Посудомоечная машина, микроволновка, морозильник — что разрешено, что запрещено.</p>
+</a>
+<a class="post-link" href="/blog-broshi-iz-keramiki.html">
+  <div class="meta">7 минут чтения · Украшения и стиль · 14 февраля 2026</div>
+  <h2>Броши из керамики: как их носить, с чем сочетать, как закрепить</h2>
+  <p>Гид по керамическим брошам ручной работы: какие бывают, как выбрать, на какую одежду пришить, как ухаживать. С реальными примерами образов.</p>
+</a>
+<a class="post-link" href="/blog-kak-zakazat-keramiku.html">
+  <div class="meta">5 минут чтения · Заказ и доставка · 30 января 2026</div>
+  <h2>Как заказать авторскую керамику: пошагово от выбора до доставки</h2>
+  <p>Подробная инструкция: как выбрать изделие, обсудить детали с мастером, оплатить, получить доставку. Сроки, способы оплаты, возврат и гарантии.</p>
+</a>
+<a class="post-link" href="/blog-skolko-stoit-keramika.html">
+  <div class="meta">7 минут чтения · О работе мастера · 16 января 2026</div>
+  <h2>Сколько стоит керамика ручной работы и почему: разбор ценообразования</h2>
+  <p>Из чего складывается цена авторской керамики: материалы, время мастера, печь, брак, аренда мастерской. Сравнение с массовым производством и магазинной посудой.</p>
+</a></div>
 
 <footer>
-  <a href="index.html" class="footer-logo">DM / Brand Manager</a>
-  <span class="footer-copy">© 2026 · Дмитрий Москаленко</span>
-  <div class="footer-socials">
-    <a href="privacy.html">Конфиденциальность</a>
-    <a href="cookies.html">Cookie</a>
-    <a href="terms.html">Соглашение</a>
-    <a href="https://t.me/Dmitrii_Diezel" target="_blank">Telegram</a>
-    <a href="https://vk.com/dmitrii_moskalenko" target="_blank">VK</a>
-  </div>
+  © 2026 Женя Зайцева · Москва ·
+  <a href="tel:+79260335236">+7 926 033-52-36</a> ·
+  <a href="mailto:zajki@list.ru">zajki@list.ru</a> ·
+  <a href="https://t.me/pugovicibroshi" target="_blank" rel="noopener">Telegram</a> ·
+  <a href="/privacy.html">Политика</a>
 </footer>
 
-<script>
-var _CURSOR_OK=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-if(_CURSOR_OK)document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px'});
-(function animRing(){if(!_CURSOR_OK){var c=document.getElementById('cursor'),r=document.getElementById('cursorRing');if(c)c.style.display='none';if(r)r.style.display='none';return;}rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)})();
-const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.1});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-window.addEventListener('scroll',()=>{
-  const n=document.getElementById('nav');
-  n.style.background=window.scrollY>60?'rgba(10,10,10,.97)':'';
-  n.style.backdropFilter=window.scrollY>60?'blur(12px)':'';
-  n.style.borderBottom=window.scrollY>60?'1px solid #1a1a1a':'';
-});
-
-  
-</script>
-
-<!-- Cookie Banner -->
-<div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text">
-    Мы используем cookies для аналитики (Яндекс.Метрика) и улучшения сайта.
-    Подробнее в <a href="privacy.html">Политике конфиденциальности</a>.
-  </div>
-  <div class="cookie-actions">
-    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Принять</button>
-    <button class="cookie-btn cookie-decline" onclick="declineCookies()">Отклонить</button>
-  </div>
-</div>
-
 
 <script>
-(function(){
-  try {
-    if (!localStorage.getItem('cookie_consent')) {
-      setTimeout(function(){
-        var b = document.getElementById('cookieBanner');
-        if (b) b.classList.add('show');
-      }, 1500);
-    }
-  } catch(e){}
-})();
-function acceptCookies(){
-  try { localStorage.setItem('cookie_consent','accepted'); } catch(e){}
-  var b = document.getElementById('cookieBanner');
-  if(b) b.classList.remove('show');
-}
-function declineCookies(){
-  try { localStorage.setItem('cookie_consent','declined'); } catch(e){}
-  var b = document.getElementById('cookieBanner');
-  if(b) b.classList.remove('show');
-}
-</script>
-
-<script>
-function toggleMobileMenu() {
-  var menu = document.getElementById('mobileMenu');
+function toggleMenu(){
+  var menu = document.getElementById('mobile-menu');
   var burger = document.getElementById('burger');
-  if (!menu || !burger) return;
-  var isOpen = menu.classList.contains('open');
-  if (isOpen) {
-    menu.classList.remove('open');
-    burger.classList.remove('open');
-    document.body.style.overflow = '';
-  } else {
-    menu.classList.add('open');
-    burger.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
+  var isOpen = menu.classList.toggle('open');
+  burger.classList.toggle('open', isOpen);
+  burger.setAttribute('aria-expanded', isOpen);
+  menu.setAttribute('aria-hidden', !isOpen);
+  document.body.classList.toggle('menu-open', isOpen);
 }
-function closeMobileMenu() {
-  var menu = document.getElementById('mobileMenu');
-  var burger = document.getElementById('burger');
-  if (menu) menu.classList.remove('open');
-  if (burger) burger.classList.remove('open');
-  document.body.style.overflow = '';
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+function closeMenu(){
+  var menu = document.getElementById('mobile-menu');
+  if(!menu.classList.contains('open')) return;
+  menu.classList.remove('open');
+  document.getElementById('burger').classList.remove('open');
+  document.getElementById('burger').setAttribute('aria-expanded','false');
+  menu.setAttribute('aria-hidden','true');
+  document.body.classList.remove('menu-open');
 }
-// Close menu on Escape key
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeMobileMenu();
-});
-</script>
-<script>
-/* REVEAL_FAILSAFE: гарантированно показываем контент, даже если что-то сломалось */
-(function(){
-  function showAll(){
-    var els=document.querySelectorAll('.reveal:not(.visible)');
-    for(var i=0;i<els.length;i++){els[i].classList.add('visible');}
-  }
-  // если через 1.2с что-то ещё скрыто — показать принудительно
-  setTimeout(showAll,1200);
-  // и на случай полной ошибки — по load
-  window.addEventListener('load',function(){setTimeout(showAll,300);});
-})();
 </script>
 </body>
 </html>

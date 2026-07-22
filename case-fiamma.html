@@ -500,22 +500,32 @@
 </style>
 
 
-<!-- Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter (загружается только после согласия) -->
 <script type="text/javascript">
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(72239779, "init", {
+(function(){
+  function loadMetrika(){
+    if (window.__ymLoaded) return;
+    window.__ymLoaded = true;
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(72239779, "init", {
         clickmap:true,
         trackLinks:true,
         accurateTrackBounce:true,
         webvisor:true
-   });
+    });
+  }
+  // Загружаем только если пользователь дал согласие
+  try {
+    if (localStorage.getItem('cookie_consent') === 'accepted') { loadMetrika(); }
+  } catch(e){}
+  // Позволяем запустить после нажатия «Принять»
+  window.__loadMetrika = loadMetrika;
+})();
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/72239779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <meta property="og:title" content="Кейс Fiamma Espresso — Ребрендинг · Дмитрий Москаленко">
 <meta property="og:description" content="Кейс Fiamma Espresso: ребрендинг и обновление СТМ. Запуск португальского бренда кофейного оборудования на рынок России. Дмитрий Москаленко.">
@@ -874,6 +884,7 @@ function acceptCookies(){
   try { localStorage.setItem('cookie_consent','accepted'); } catch(e){}
   var b = document.getElementById('cookieBanner');
   if(b) b.classList.remove('show');
+  if (typeof window.__loadMetrika === 'function') window.__loadMetrika();
 }
 function declineCookies(){
   try { localStorage.setItem('cookie_consent','declined'); } catch(e){}

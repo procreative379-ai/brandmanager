@@ -265,22 +265,32 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
   }
 
 </style>
-<!-- Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter (загружается только после согласия) -->
 <script type="text/javascript">
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(72239779, "init", {
+(function(){
+  function loadMetrika(){
+    if (window.__ymLoaded) return;
+    window.__ymLoaded = true;
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(72239779, "init", {
         clickmap:true,
         trackLinks:true,
         accurateTrackBounce:true,
         webvisor:true
-   });
+    });
+  }
+  // Загружаем только если пользователь дал согласие
+  try {
+    if (localStorage.getItem('cookie_consent') === 'accepted') { loadMetrika(); }
+  } catch(e){}
+  // Позволяем запустить после нажатия «Принять»
+  window.__loadMetrika = loadMetrika;
+})();
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/72239779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </head>
 <body>
@@ -408,6 +418,19 @@ window.addEventListener('scroll',()=>{
   <div class="cookie-actions">
     <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Принять</button>
     <button class="cookie-btn cookie-decline" onclick="declineCookies()">Отклонить</button>
+
+    <h2>Сведения об операторе персональных данных</h2>
+    <div class="highlight">
+      <p style="margin:0 0 10px;"><strong>Оператор:</strong> Москаленко Дмитрий Анатольевич</p>
+      <p style="margin:0 0 10px;"><strong>Статус:</strong> физическое лицо / налогоплательщик налога на профессиональный доход (самозанятый)</p>
+      <p style="margin:0 0 10px;"><strong>ИНН:</strong> <span style="color:var(--muted);">указывается по запросу</span></p>
+      <p style="margin:0 0 10px;"><strong>Адрес для корреспонденции:</strong> г. Москва</p>
+      <p style="margin:0 0 10px;"><strong>E-mail:</strong> <a href="mailto:creativedm@yandex.ru">creativedm@yandex.ru</a></p>
+      <p style="margin:0;"><strong>Телефон:</strong> <a href="tel:+79933673178">+7 (993) 367-31-78</a></p>
+    </div>
+    <p>Уведомление об обработке персональных данных направлено в Федеральную службу по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор) в соответствии со ст. 22 Федерального закона от 27.07.2006 № 152-ФЗ.</p>
+    <p>Реестр операторов, осуществляющих обработку персональных данных, доступен на официальном сайте Роскомнадзора: <a href="https://pd.rkn.gov.ru/operators-registry/operators-list/" target="_blank" rel="noopener">pd.rkn.gov.ru</a>.</p>
+
   </div>
 </div>
 
@@ -427,6 +450,7 @@ function acceptCookies(){
   try { localStorage.setItem('cookie_consent','accepted'); } catch(e){}
   var b = document.getElementById('cookieBanner');
   if(b) b.classList.remove('show');
+  if (typeof window.__loadMetrika === 'function') window.__loadMetrika();
 }
 function declineCookies(){
   try { localStorage.setItem('cookie_consent','declined'); } catch(e){}

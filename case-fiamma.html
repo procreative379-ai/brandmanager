@@ -507,7 +507,7 @@
 </style>
 
 
-<!-- Yandex.Metrika counter (загружается только после согласия) -->
+<!-- Yandex.Metrika counter -->
 <script type="text/javascript">
 (function(){
   function loadMetrika(){
@@ -525,14 +525,18 @@
         webvisor:true
     });
   }
-  // Загружаем только если пользователь дал согласие
-  try {
-    if (localStorage.getItem('cookie_consent') === 'accepted') { loadMetrika(); }
-  } catch(e){}
-  // Позволяем запустить после нажатия «Принять»
   window.__loadMetrika = loadMetrika;
+  // Загружаем сразу для всех, КРОМЕ тех, кто явно отклонил
+  try {
+    if (localStorage.getItem('cookie_consent') !== 'declined') {
+      loadMetrika();
+    }
+  } catch(e){
+    loadMetrika();
+  }
 })();
 </script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72239779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <meta property="og:title" content="Кейс Fiamma Espresso — Ребрендинг · Дмитрий Москаленко">
 <meta property="og:description" content="Кейс Fiamma Espresso: ребрендинг и обновление СТМ. Запуск португальского бренда кофейного оборудования на рынок России. Дмитрий Москаленко.">
@@ -894,7 +898,14 @@ function acceptCookies(){
   if (typeof window.__loadMetrika === 'function') window.__loadMetrika();
 }
 function declineCookies(){
-  try { localStorage.setItem('cookie_consent','declined'); } catch(e){}
+  try {
+    localStorage.setItem('cookie_consent','declined');
+    document.cookie = 'ym_disable_72239779=1; path=/; max-age=31536000';
+    window['ym_disable_72239779'] = true;
+  } catch(e){}
+  var b = document.getElementById('cookieBanner');
+  if(b) b.classList.remove('show');
+} catch(e){}
   var b = document.getElementById('cookieBanner');
   if(b) b.classList.remove('show');
 }

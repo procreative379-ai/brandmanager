@@ -395,7 +395,7 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
     img, video, iframe, svg, table { max-width: 100% !important; height: auto; }
     table { display: block; overflow-x: auto; }
     /* элементы не шире экрана */
-    * { max-width: 100%; box-sizing: border-box; }
+    img, svg, video, iframe, table { max-width: 100% !important; }
     /* кнопки и ссылки — удобные для тапа (минимум 44px по высоте) */
     .btn, .btn-primary, .btn-secondary, .nav-cta, button[type="submit"],
     .brief-submit, .form-submit { min-height: 44px; }
@@ -426,8 +426,7 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
     }
     /* убираем nowrap с логотипов/текста, чтобы переносилось */
     .brand-logo { white-space: normal !important; }
-    /* всё в пределах экрана */
-    body * { max-width: 100%; }
+    img, svg, video, iframe, table { max-width: 100% !important; }
     /* горизонтальные флексы переносим */
     .hero-meta, .cta-actions, .success-actions, .footer-socials,
     .footer-links, .author-links, .nav-links {
@@ -435,6 +434,20 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
     }
     /* большие фикс. паддинги ужимаем */
     section, .section, .hero, footer, nav { padding-left: 20px !important; padding-right: 20px !important; }
+  }
+
+
+  /* ── ФИКС СЕТОК КЕЙСА НА МОБИЛЬНЫХ ── */
+  @media (max-width: 767px) {
+    .identity-strip, .overview-grid, .tl-item, .pos-grid, .mission-pillars, .audience-grid, .tov-grid, .palette, .products-grid, .results-grid {
+      grid-template-columns: 1fr !important;
+    }
+    /* флексы в столбик */
+    .archetype-band, .two-col-flex, .hero-meta, .cta-actions {
+      flex-direction: column !important;
+    }
+    /* таблицы и палитры со скроллом если не влезают */
+    .palette { grid-template-columns: repeat(2, 1fr) !important; }
   }
 
 </style>

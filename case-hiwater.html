@@ -246,11 +246,14 @@
     .hero { padding: 100px 24px 60px; }
     .hero-badge { display: none; }
     section { padding: 60px 24px; }
-    .stages, .market-grid { grid-template-columns: 1fr 1fr; }
+    .stages { grid-template-columns: 1fr !important; }
+    .market-grid { grid-template-columns: 1fr !important; }
     .filt-grid, .path { display: none; }
     .result-grid { grid-template-columns: 1fr 1fr; }
     .result-band { padding: 48px 24px; margin: 0 -24px; }
-    .arch-band { flex-direction: column; padding: 40px 24px; }
+    /* архетипы: горизонтальный флекс → вертикальный столбец */
+    .archetype-band { flex-direction: column !important; gap: 32px !important; padding: 40px 24px !important; }
+    .arch-right { grid-template-columns: 1fr !important; }
     .cta-section { padding: 80px 24px; }
     footer { flex-direction: column; gap: 16px; text-align: center; }
     .hero-meta { flex-wrap: wrap; gap: 24px; }
@@ -463,9 +466,11 @@
     .overview-grid, .pos-grid, .mission-pillars, .results-grid,
     .audience-grid, .products-grid, .tov-grid, .challenge-block,
     .diff-grid, .price-grid, .stats-row, .numbers, .process,
-    .id-strip, .identity-strip {
+    .id-strip, .identity-strip,
+    .stages, .market-grid, .arch-right, .result-grid, .filt-grid {
       grid-template-columns: 1fr !important;
     }
+    .archetype-band { flex-direction: column !important; gap: 32px !important; }
     /* сетки с фикс. первой колонкой */
     .case-item, .timeline-item, .tl-item {
       grid-template-columns: 1fr !important;
@@ -479,8 +484,8 @@
     }
     /* убираем nowrap с логотипов/текста, чтобы переносилось */
     .brand-logo { white-space: normal !important; }
-    /* всё в пределах экрана */
-    body * { max-width: 100%; }
+    /* переполнение убираем без max-width на всех детях (это ломало текст) */
+    img, svg, video, iframe, table { max-width: 100% !important; }
     /* горизонтальные флексы переносим */
     .hero-meta, .cta-actions, .success-actions, .footer-socials,
     .footer-links, .author-links, .nav-links {
@@ -488,6 +493,20 @@
     }
     /* большие фикс. паддинги ужимаем */
     section, .section, .hero, footer, nav { padding-left: 20px !important; padding-right: 20px !important; }
+  }
+
+
+  /* ── ФИКС СЕТОК КЕЙСА НА МОБИЛЬНЫХ ── */
+  @media (max-width: 767px) {
+    .stages, .market-grid, .filt-grid, .path, .arch-right, .result-grid {
+      grid-template-columns: 1fr !important;
+    }
+    /* флексы в столбик */
+    .archetype-band, .two-col-flex, .hero-meta, .cta-actions {
+      flex-direction: column !important;
+    }
+    /* таблицы и палитры со скроллом если не влезают */
+    .palette { grid-template-columns: repeat(2, 1fr) !important; }
   }
 
 </style>

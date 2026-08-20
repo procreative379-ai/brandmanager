@@ -12,12 +12,12 @@
 <link rel="dns-prefetch" href="https://mc.yandex.ru">
 <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 <meta name="google-site-verification" content="d0fa0e814302fe56" />
-<meta name="keywords" content="кейс ребрендинг, СТМ бренд, запуск бренда Россия, кофейное оборудование брендинг">
-<meta name="description" content="Кейс Fiamma Espresso: ребрендинг и обновление СТМ. Запуск португальского бренда кофейного оборудования на рынок России. Дмитрий Москаленко.">
+<meta name="keywords" content="кейс брендбук, платформа бренда, кофемашины брендинг, бренд-стратегия B2B">
+<meta name="description" content="Кейс BREW.TECH: разработка платформы бренда и брендбука для производителя кофемашин российской сборки. Дмитрий Москаленко.">
 <meta name="yandex-verification" content="a22af711bd8343d6" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Кейс Fiamma Espresso — Ребрендинг · Дмитрий Москаленко</title>
+<title>Кейс BREW.TECH — Платформа бренда · Дмитрий Москаленко</title>
 <rect width='32' height='32' fill='%230a0a0a'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='18' fill='%23c8ff00'>DM</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Onest:wght@400;600&display=swap">
@@ -28,11 +28,11 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --coral: #EC6C5F;
-    --azure: #142942;
-    --black: #0e0e0e;
-    --white: #faf8f5;
-    --mid: #181818;
+    --black: #0a0a0a;
+    --white: #f5f3ef;
+    --accent: #0066ff;
+    --accent2: #ff6b35;
+    --mid: #1a1a1a;
     --muted: #888;
     --border: rgba(255,255,255,0.08);
   }
@@ -46,11 +46,12 @@
     overflow-x: hidden;
   }
 
+  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
     padding: 20px 48px;
-    background: rgba(14,14,14,0.88);
+    background: rgba(10,10,10,0.85);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
   }
@@ -58,10 +59,11 @@
     font-family: 'Unbounded', sans-serif;
     font-size: 13px; font-weight: 700;
     color: var(--white); text-decoration: none;
+    letter-spacing: 0.05em;
   }
   .nav-back {
     font-size: 13px; color: var(--muted);
-    text-decoration: none;
+    text-decoration: none; letter-spacing: 0.03em;
     transition: color 0.2s;
     display: flex; align-items: center; gap: 8px;
   }
@@ -73,52 +75,59 @@
     min-height: 100vh;
     display: flex; flex-direction: column; justify-content: flex-end;
     padding: 120px 48px 80px;
-    position: relative; overflow: hidden;
-    background: var(--azure);
+    position: relative;
+    overflow: hidden;
   }
-  .hero-wave {
-    position: absolute; bottom: -2px; left: 0; right: 0;
-    height: 6px; background: var(--coral);
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 80% 30%, rgba(0,102,255,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 10% 70%, rgba(0,102,255,0.08) 0%, transparent 60%);
   }
-  .hero-since {
-    position: absolute; top: 50%; right: 48px;
-    transform: translateY(-50%);
-    font-family: 'Unbounded', sans-serif;
-    font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
-    color: rgba(255,255,255,0.15); text-transform: uppercase;
-    writing-mode: vertical-rl; text-orientation: mixed;
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.5) 70%, transparent);
   }
   .hero-tag {
     font-size: 11px; font-weight: 600; letter-spacing: 0.15em;
-    color: var(--coral); text-transform: uppercase;
-    margin-bottom: 24px;
+    color: var(--accent); text-transform: uppercase;
+    margin-bottom: 24px; position: relative;
   }
   .hero-title {
     font-family: 'Unbounded', sans-serif;
-    font-size: clamp(56px, 10vw, 112px);
-    font-weight: 900; line-height: 0.9;
-    letter-spacing: -0.03em;
-    margin-bottom: 32px;
+    font-size: clamp(48px, 8vw, 96px);
+    font-weight: 900; line-height: 0.95;
+    letter-spacing: -0.02em;
+    position: relative; margin-bottom: 32px;
   }
-  .hero-title .sub-word { display: block; color: rgba(255,255,255,0.4); font-size: 0.65em; }
+  .hero-title span { color: var(--accent); }
   .hero-sub {
-    font-size: 18px; color: rgba(250,248,245,0.6);
-    max-width: 520px; line-height: 1.6;
+    font-size: 18px; color: rgba(245,243,239,0.6);
+    max-width: 560px; line-height: 1.6;
+    position: relative;
   }
   .hero-meta {
     display: flex; gap: 48px; margin-top: 60px;
+    position: relative;
   }
   .meta-item label {
     display: block; font-size: 11px; letter-spacing: 0.1em;
-    text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 6px;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 6px;
   }
-  .meta-item span { font-size: 15px; font-weight: 500; }
+  .meta-item span {
+    font-size: 15px; font-weight: 500; color: var(--white);
+  }
 
+  /* SECTION */
   section { padding: 100px 48px; border-top: 1px solid var(--border); }
   .section-num {
     font-family: 'Unbounded', sans-serif;
     font-size: 11px; font-weight: 700; letter-spacing: 0.15em;
-    color: var(--coral); text-transform: uppercase; margin-bottom: 40px;
+    color: var(--accent); text-transform: uppercase; margin-bottom: 40px;
   }
   h2 {
     font-family: 'Unbounded', sans-serif;
@@ -126,131 +135,188 @@
     font-weight: 700; line-height: 1.1;
     letter-spacing: -0.02em; margin-bottom: 40px;
   }
-  h2 em { color: var(--coral); font-style: normal; }
-  p { font-size: 16px; line-height: 1.75; color: rgba(250,248,245,0.7); margin-bottom: 20px; }
+  h2 em { color: var(--accent); font-style: normal; }
+  p { font-size: 16px; line-height: 1.75; color: rgba(245,243,239,0.75); margin-bottom: 20px; }
 
-  /* CARDS */
-  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 40px 0; }
-  .card { background: var(--mid); padding: 40px; }
-  .card.accent-card { background: var(--coral); }
-  .card.azure-card { background: var(--azure); }
-  .card h3 {
+  /* OVERVIEW GRID */
+  .overview-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2px; margin-bottom: 80px;
+  }
+  .overview-card {
+    background: var(--mid); padding: 40px;
+  }
+  .overview-card:first-child { background: var(--accent); }
+  .overview-card h3 {
     font-family: 'Unbounded', sans-serif;
-    font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.1em;
     text-transform: uppercase; margin-bottom: 16px;
     color: rgba(255,255,255,0.5);
   }
-  .card.accent-card h3 { color: rgba(255,255,255,0.6); }
-  .card p { margin: 0; font-size: 15px; }
-  .card.accent-card p { color: var(--white); }
+  .overview-card:first-child h3 { color: rgba(255,255,255,0.7); }
+  .overview-card p { font-size: 15px; color: rgba(245,243,239,0.8); margin: 0; }
+  .overview-card:first-child p { color: var(--white); font-size: 18px; line-height: 1.5; }
+
+  /* VALUES */
+  .values-list {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    margin: 40px 0;
+  }
+  .value-item {
+    background: var(--mid); padding: 36px;
+    border-left: 3px solid var(--accent);
+  }
+  .value-item .val-num {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 40px; font-weight: 900;
+    color: var(--accent); line-height: 1;
+    margin-bottom: 8px;
+  }
+  .value-item .val-label {
+    font-size: 13px; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+  .value-item p { font-size: 14px; margin: 0; color: rgba(245,243,239,0.6); }
 
   /* PALETTE */
-  .palette { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin: 40px 0; }
-  .swatch {
-    height: 160px; display: flex; flex-direction: column;
-    justify-content: flex-end; padding: 20px;
+  .palette {
+    display: flex; gap: 2px; margin: 40px 0;
   }
-  .swatch span { font-size: 13px; font-weight: 600; }
-  .swatch small { font-size: 11px; opacity: 0.6; margin-top: 4px; display: block; }
+  .swatch {
+    flex: 1; height: 120px;
+    display: flex; flex-direction: column;
+    justify-content: flex-end; padding: 16px;
+  }
+  .swatch span { font-size: 12px; font-weight: 600; }
+  .swatch small { font-size: 11px; opacity: 0.7; }
 
-  /* LOGO SIZE */
-  .size-demo {
+  /* AUDIENCE */
+  .audience-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin: 40px 0;
+  }
+  .audience-card {
+    background: var(--mid); padding: 36px;
+  }
+  .audience-card .aud-share {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 36px; font-weight: 900; color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .audience-card h4 {
+    font-size: 14px; font-weight: 600; letter-spacing: 0.05em;
+    text-transform: uppercase; margin-bottom: 12px; color: var(--white);
+  }
+  .audience-card p { font-size: 14px; margin: 0; color: rgba(245,243,239,0.55); }
+
+  /* POSITIONING */
+  .positioning-block {
+    background: var(--mid); padding: 60px;
+    border-left: 4px solid var(--accent);
+    margin: 40px 0;
+  }
+  .positioning-block blockquote {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 700; line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+  .positioning-block cite {
+    display: block; margin-top: 24px;
+    font-size: 13px; color: var(--muted);
+    font-style: normal; letter-spacing: 0.05em;
+  }
+
+  /* SLOGAN */
+  .slogan-list {
     display: flex; flex-direction: column; gap: 2px; margin: 40px 0;
   }
-  .size-row {
-    background: var(--mid); padding: 32px 40px;
-    display: flex; align-items: center; gap: 40px;
+  .slogan-item {
+    background: var(--mid); padding: 28px 36px;
+    display: flex; align-items: center; gap: 24px;
+    transition: background 0.2s;
   }
-  .size-label {
-    font-size: 11px; color: var(--muted); letter-spacing: 0.08em;
-    text-transform: uppercase; min-width: 120px; flex-shrink: 0;
-  }
-  .logo-fiamma {
-    font-family: 'Unbounded', sans-serif; font-weight: 900;
-    color: var(--black); letter-spacing: -0.01em;
-  }
-  .logo-fiamma .flame { color: var(--coral); }
+  .slogan-item:hover { background: #222; }
+  .slogan-item .arrow { color: var(--accent); font-size: 18px; flex-shrink: 0; }
+  .slogan-item span { font-size: 15px; font-weight: 500; }
 
-  /* BG DEMO */
-  .bg-demos {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin: 40px 0;
+  /* RESULT BLOCK */
+  .result-block {
+    background: var(--accent); padding: 80px;
+    margin: 0 -48px;
   }
-  .bg-card {
-    padding: 40px; min-height: 160px;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .bg-inner {
-    text-align: center;
-    font-family: 'Unbounded', sans-serif; font-weight: 900;
-    font-size: 18px; letter-spacing: -0.01em;
-  }
-  .bg-inner .since {
-    display: block; font-size: 10px; font-weight: 400;
-    letter-spacing: 0.2em; margin-top: 4px;
-    font-family: 'Onest', sans-serif;
-  }
-
-  /* RESULT */
-  .result-band {
-    background: var(--coral);
-    padding: 80px 48px; margin: 0 -48px;
-  }
+  .result-block h2 { color: var(--white); }
   .result-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 48px;
   }
-  .r-val {
+  .result-item .r-val {
     font-family: 'Unbounded', sans-serif;
     font-size: 48px; font-weight: 900; line-height: 1;
     color: var(--white); margin-bottom: 8px;
   }
-  .r-label { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.5; }
-
-  /* KEY PRINCIPLES */
-  .principles { display: flex; flex-direction: column; gap: 2px; margin: 40px 0; }
-  .principle {
-    background: var(--mid); padding: 28px 36px;
-    display: flex; gap: 24px; align-items: flex-start;
-  }
-  .p-num {
-    font-family: 'Unbounded', sans-serif; font-size: 11px; font-weight: 700;
-    color: var(--coral); min-width: 24px; padding-top: 2px;
-  }
-  .p-content h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
-  .p-content p { font-size: 14px; margin: 0; color: rgba(250,248,245,0.55); }
-
-  /* FONT */
-  .font-demo {
-    background: var(--azure); padding: 48px; margin: 40px 0;
-  }
-  .font-demo .f-name {
-    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-    color: rgba(255,255,255,0.4); margin-bottom: 32px; display: block;
-  }
-  .font-alpha {
-    font-size: clamp(32px, 5vw, 52px); font-weight: 700; line-height: 1.2;
-    letter-spacing: -0.01em; color: var(--coral);
+  .result-item .r-label {
+    font-size: 14px; color: rgba(255,255,255,0.7);
+    line-height: 1.5;
   }
 
-  .cta-section { padding: 120px 48px; text-align: center; }
+  /* CTA */
+  .cta-section {
+    padding: 120px 48px; text-align: center;
+  }
   .cta-section h2 { max-width: 600px; margin: 0 auto 40px; }
   .btn {
-    display: inline-block; padding: 18px 40px;
-    background: var(--coral); color: var(--white);
+    display: inline-block;
+    padding: 18px 40px;
+    background: var(--accent); color: var(--white);
     font-family: 'Unbounded', sans-serif;
     font-size: 13px; font-weight: 700;
     letter-spacing: 0.08em; text-transform: uppercase;
     text-decoration: none;
     transition: background 0.2s, transform 0.2s;
   }
-  .btn:hover { background: #d45c50; transform: translateY(-2px); }
+  .btn:hover { background: #0052cc; transform: translateY(-2px); }
   .btn-outline {
     background: transparent; border: 1px solid var(--border);
-    margin-left: 16px; color: rgba(250,248,245,0.6);
+    margin-left: 16px;
+    color: rgba(245,243,239,0.6);
   }
   .btn-outline:hover { background: var(--mid); color: var(--white); transform: translateY(-2px); }
 
+  /* TYPOGRAPHY SECTION */
+  .type-demo {
+    background: var(--mid); padding: 48px; margin: 40px 0;
+  }
+  .type-h1 { font-family: 'Unbounded', sans-serif; font-size: 64px; font-weight: 900; letter-spacing: -0.02em; line-height: 1; margin-bottom: 8px; }
+  .type-h2 { font-family: 'Unbounded', sans-serif; font-size: 40px; font-weight: 700; margin-bottom: 8px; }
+  .type-h3 { font-family: 'Unbounded', sans-serif; font-size: 28px; font-weight: 500; margin-bottom: 8px; }
+  .type-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 24px; display: block; }
+
+  /* LOGO GUIDELINES */
+  .logo-demos {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 40px 0;
+  }
+  .logo-card {
+    padding: 48px; display: flex; flex-direction: column;
+    justify-content: space-between; min-height: 200px;
+  }
+  .logo-card.bg-light { background: #f5f5f5; }
+  .logo-card.bg-dark { background: var(--black); border: 1px solid var(--border); }
+  .logo-card.bg-blue { background: var(--accent); }
+  .logo-card label { font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 32px; display: block; }
+  .logo-card.bg-light label, .logo-card.bg-blue label { color: rgba(0,0,0,0.4); }
+  .logo-display {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 32px; font-weight: 900; letter-spacing: -0.01em;
+  }
+  .logo-display .dot-tech { color: var(--accent); }
+  .logo-card.bg-light .logo-display { color: var(--black); }
+  .logo-card.bg-dark .logo-display { color: var(--white); }
+  .logo-card.bg-blue .logo-display { color: var(--white); }
+  .logo-card.bg-blue .dot-tech { color: rgba(255,255,255,0.6); }
+
   footer {
-    padding: 40px 48px; border-top: 1px solid var(--border);
+    padding: 40px 48px;
+    border-top: 1px solid var(--border);
     display: flex; justify-content: space-between; align-items: center;
     font-size: 13px; color: var(--muted);
   }
@@ -260,11 +326,11 @@
   @media (max-width: 768px) {
     nav { padding: 16px 24px; }
     .hero { padding: 100px 24px 60px; }
-    .hero-since { display: none; }
     section { padding: 60px 24px; }
-    .two-col, .palette, .bg-demos { grid-template-columns: 1fr; }
+    .overview-grid, .values-list, .audience-grid, .logo-demos { grid-template-columns: 1fr; }
     .result-grid { grid-template-columns: 1fr 1fr; }
-    .result-band { padding: 48px 24px; margin: 0 -24px; }
+    .palette { flex-wrap: wrap; }
+    .result-block { padding: 48px 24px; margin: 0 -24px; }
     .cta-section { padding: 80px 24px; }
     footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
     .hero-meta { flex-wrap: wrap; gap: 24px; }
@@ -506,7 +572,7 @@
 
   /* ── ФИКС СЕТОК КЕЙСА НА МОБИЛЬНЫХ ── */
   @media (max-width: 767px) {
-    .two-col, .palette, .bg-demos, .result-grid {
+    .overview-grid, .values-list, .audience-grid, .result-grid, .logo-demos {
       grid-template-columns: 1fr !important;
     }
     /* флексы в столбик */
@@ -551,8 +617,8 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/72239779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-<meta property="og:title" content="Кейс Fiamma Espresso — Ребрендинг · Дмитрий Москаленко">
-<meta property="og:description" content="Кейс Fiamma Espresso: ребрендинг и обновление СТМ. Запуск португальского бренда кофейного оборудования на рынок России. Дмитрий Москаленко.">
+<meta property="og:title" content="Кейс BREW.TECH — Платформа бренда · Дмитрий Москаленко">
+<meta property="og:description" content="Кейс BREW.TECH: разработка платформы бренда и брендбука для производителя кофемашин российской сборки. Дмитрий Москаленко.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://brandmanager.su/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -564,7 +630,7 @@
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://brandmanager.su/" },
     { "@type": "ListItem", "position": 2, "name": "Кейсы", "item": "https://brandmanager.su/#cases" },
-    { "@type": "ListItem", "position": 3, "name": "Кейс Fiamma Espresso — Ребрендинг СТМ", "item": "https://brandmanager.su/case-fiamma.html" }
+    { "@type": "ListItem", "position": 3, "name": "Кейс BREW.TECH — Платформа бренда кофемашин", "item": "https://brandmanager.su/case-brewtech.html" }
   ]
 }
 </script>
@@ -598,278 +664,234 @@
   <a href="index.html#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
 </div>
 
+<!-- HERO -->
 <div class="hero">
-  <div class="hero-wave"></div>
-  <div class="hero-since">Since 1977</div>
-  <div class="hero-tag">Кейс · Brand Guidelines · Кофейное оборудование · Португалия</div>
-  <h1 class="hero-title">
-    fiamma
-    <span class="sub-word">Espresso</span>
-  </h1>
-  <p class="hero-sub">Разработка полной системы бренд-гайдлайнов для португальского производителя профессионального кофейного оборудования</p>
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-tag">Кейс · Брендбук · Профессиональное оборудование · <a href="https://brewtechology.ru/" target="_blank" style="color:var(--accent);text-decoration:none;">brewtechology.ru ↗</a></div>
+  <h1 class="hero-title">BREW<span>.</span><span>TECH</span></h1>
+  <p class="hero-sub">Разработка платформы бренда и брендбука для BREW.TECH — производителя профессиональных кофемашин и кофемолок российской сборки</p>
   <div class="hero-meta">
     <div class="meta-item">
       <label>Категория</label>
-      <span>HoReCa / Premium</span>
+      <span>HoReCa / B2B</span>
     </div>
     <div class="meta-item">
       <label>Тип работы</label>
-      <span>Brand Guidelines</span>
+      <span>Брендбук + Стратегия</span>
     </div>
     <div class="meta-item">
       <label>Рынок</label>
-      <span>Европа / Экспорт</span>
+      <span>Россия</span>
     </div>
     <div class="meta-item">
-      <label>Штаб-квартира</label>
-      <span>Авейру, Португалия</span>
+      <label>Статус</label>
+      <span>Завершён</span>
+    </div>
+    <div class="meta-item">
+      <label>Сайт бренда</label>
+      <a href="https://brewtechology.ru/" target="_blank" style="color:var(--accent);text-decoration:none;font-size:14px;">brewtechology.ru ↗</a>
     </div>
   </div>
 </div>
 
 <!-- OVERVIEW -->
 <section>
-  <div class="section-num">01 / О проекте</div>
-  <h2>Бренд с <em>характером</em> и историей</h2>
-  <p>Fiamma — португальский производитель профессионального кофейного оборудования с 1977 года. Задача: создать исчерпывающую систему бренд-гайдлайнов, которая сохранит аутентичность марки и обеспечит единообразие коммуникаций на всех рынках.</p>
-
-  <div class="two-col">
-    <div class="card accent-card">
-      <h3>Задача</h3>
-      <p>Систематизировать визуальный язык бренда и создать руководство для всех носителей — от упаковки до цифровых каналов</p>
+  <div class="section-num">01 / Задача</div>
+  <h2>Новый бренд на <em>конкурентном рынке</em></h2>
+  <div class="overview-grid">
+    <div class="overview-card">
+      <h3>Продукт</h3>
+      <p>Профессиональные кофемашины и кофемолки российской сборки: модель BT-PRO/01, двухгруппные машины, кофемолки с плоскими жёрнами и дозированием по весу</p>
     </div>
-    <div class="card azure-card">
-      <h3>Контекст</h3>
-      <p>Бренд существует с 1977 года, имеет сильный характер и heritage. Нужно зафиксировать правила, не разрушив живость марки</p>
+    <div class="overview-card">
+      <h3>Вызов</h3>
+      <p>Войти на рынок, где доминируют итальянские и немецкие бренды с десятилетиями истории. Доказать, что российская сборка — это технологично, надёжно и честно по цене</p>
     </div>
-    <div class="card">
-      <h3>Аудитория документа</h3>
-      <p>Дистрибьюторы, дизайн-команды, маркетологи — все, кто работает с брендом в разных странах</p>
+    <div class="overview-card">
+      <h3>Аудитория</h3>
+      <p>Кофейни, рестораны и отели. Профессиональные бариста 20–40 лет для которых качество оборудования напрямую влияет на результат в чашке</p>
     </div>
-    <div class="card">
-      <h3>Результат</h3>
-      <p>Полные brand guidelines: логотип, охранная зона, минимальные размеры, цвета, типографика, правила использования на разных фонах</p>
+    <div class="overview-card">
+      <h3>Решение</h3>
+      <p>Платформа бренда + брендбук: позиционирование, миссия, визуальный язык, типографика, палитра, гайдлайны. Сервис в 14 городах РФ, гарантия 12 месяцев</p>
     </div>
   </div>
 </section>
 
-<!-- LOGO -->
+<!-- MISSION -->
 <section>
-  <div class="section-num">02 / Логотип и охранная зона</div>
-  <h2>Два варианта — <em>единая система</em></h2>
-  <p>Логотип Fiamma существует в двух версиях: стандартной и heritage («Since 1977»). Обе версии подчиняются единым правилам охранной зоны — минимальное защитное поле равно высоте иконки бренда.</p>
+  <div class="section-num">02 / Миссия и ценности</div>
+  <h2>Открытая платформа. <em>Прозрачная цена.</em></h2>
+  <p>BREW.TECH строится на трёх столпах: профессиональные кофемашины российской сборки, открытая платформа (сервисный доступ, заменяемые компоненты) и прозрачное ценообразование. В категории где маржа скрыта за премиальным фасадом — BREW.TECH честно объясняет из чего складывается стоимость. Локальный сервис в 14 городах РФ, гарантия 12 месяцев.</p>
 
-  <div class="two-col">
-    <div class="card">
-      <h3>Стандартная версия</h3>
-      <p style="margin-bottom:24px;">Для современных носителей, диджитала и ситуаций, где нет необходимости подчёркивать историю бренда</p>
-      <div style="background:#f5f5f5; padding:32px; text-align:center; border-radius:2px;">
-        <span class="logo-fiamma" style="font-size:28px;">fiamma <span class="flame">&#9607;&#9607;</span></span>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Heritage версия (Since 1977)</h3>
-      <p style="margin-bottom:24px;">Для носителей, где важно подчеркнуть историю и экспертизу бренда</p>
-      <div style="background:#f5f5f5; padding:32px; text-align:center; border-radius:2px;">
-        <span class="logo-fiamma" style="font-size:28px;">fiamma <span class="flame">&#9607;&#9607;</span></span>
-        <div style="font-size:10px; letter-spacing:0.2em; color:#333; margin-top:6px; font-family:'Onest',sans-serif;">SINCE 1977</div>
-      </div>
-    </div>
+  <div class="positioning-block">
+    <blockquote>«Машина, которая судит о кофе»</blockquote>
+    <cite>— Слоган бренда BREW.TECH · brewtechology.ru</cite>
   </div>
 
-  <div class="section-num" style="margin-top:60px;">Минимальные размеры</div>
-  <div class="size-demo">
-    <div class="size-row">
-      <span class="size-label">20mm · Стандарт</span>
-      <span class="logo-fiamma" style="font-size:28px; background:#fff; padding:8px 20px; color:#111;">fiamma <span class="flame">&#9607;&#9607;</span></span>
+  <div class="values-list">
+    <div class="value-item">
+      <div class="val-num">01</div>
+      <div class="val-label">Профессионализм</div>
+      <p>Оборудование для тех, кто воспринимает кофе как ремесло, а не просто напиток</p>
     </div>
-    <div class="size-row">
-      <span class="size-label">15mm</span>
-      <span class="logo-fiamma" style="font-size:22px; background:#fff; padding:6px 16px; color:#111;">fiamma <span class="flame">&#9607;&#9607;</span></span>
+    <div class="value-item">
+      <div class="val-num">02</div>
+      <div class="val-label">Технологичность</div>
+      <p>Доступные решения с реальными инновациями — без переплаты за статус бренда</p>
     </div>
-    <div class="size-row">
-      <span class="size-label">10mm</span>
-      <span class="logo-fiamma" style="font-size:16px; background:#fff; padding:4px 12px; color:#111;">fiamma <span class="flame">&#9607;&#9607;</span></span>
-    </div>
-    <div class="size-row">
-      <span class="size-label">5mm · Минимум</span>
-      <span class="logo-fiamma" style="font-size:11px; background:#fff; padding:3px 10px; color:#111;">fiamma <span class="flame">&#9607;</span></span>
+    <div class="value-item">
+      <div class="val-num">03</div>
+      <div class="val-label">Прозрачность</div>
+      <p>Себестоимость + небольшая честная маржа. Никаких скрытых наценок</p>
     </div>
   </div>
 </section>
 
-<!-- COLORS -->
+<!-- POSITIONING -->
 <section>
-  <div class="section-num">03 / Цветовая система</div>
-  <h2>Coral + Azure — <em>тепло и глубина</em></h2>
-  <p>Четыре цвета образуют полную палитру бренда. Coral — фирменный акцент, носитель энергии и тепла. Azure — глубина, экспертиза, профессионализм. Чёрный и белый дают универсальность.</p>
+  <div class="section-num">03 / Позиционирование</div>
+  <h2>Платформа <em>для экспериментов,</em> а не просто машина</h2>
+  <p>Бренд обращается к четырём ключевым сегментам с разными, но взаимосвязанными посылами.</p>
 
+  <div class="audience-grid">
+    <div class="audience-card">
+      <div class="aud-share">40%</div>
+      <h4>Владельцы кофеен</h4>
+      <p>Возраст 25–50 лет, средний+ доход. Ищут баланс цены и качества. Боятся дорогостоящих простоев оборудования<br><br><em style="color:var(--accent); font-size:13px;">«Машина, которая окупается надёжностью»</em></p>
+    </div>
+    <div class="audience-card">
+      <div class="aud-share">35%</div>
+      <h4>Профессиональные бариста</h4>
+      <p>20–40 лет, 3+ года опыта. Перфекционисты, для которых качество оборудования напрямую влияет на результат<br><br><em style="color:var(--accent); font-size:13px;">«Твой инструмент, твои правила»</em></p>
+    </div>
+    <div class="audience-card">
+      <div class="aud-share">15%</div>
+      <h4>Рестораны и кафе</h4>
+      <p>Малый и средний бизнес. Нужна надёжность и простота в обслуживании без сложных настроек<br><br><em style="color:var(--accent); font-size:13px;">«Кофе, который не требует внимания»</em></p>
+    </div>
+    <div class="audience-card">
+      <div class="aud-share">10%</div>
+      <h4>Гостиницы и отели</h4>
+      <p>3–5 звёзд. Требуется профессиональный уровень без сложности эксплуатации<br><br><em style="color:var(--accent); font-size:13px;">«Лаборатория для экспериментов»</em></p>
+    </div>
+  </div>
+
+  <div class="section-num" style="margin-top: 60px;">Слоганы бренда</div>
+  <div class="slogan-list">
+    <div class="slogan-item">
+      <span class="arrow">→</span>
+      <span>Твоя идея → Наше обновление → Твоя машина</span>
+    </div>
+    <div class="slogan-item">
+      <span class="arrow">→</span>
+      <span>Профессионализм, который не требует сверхбюджета</span>
+    </div>
+    <div class="slogan-item">
+      <span class="arrow">→</span>
+      <span>ТЕХНОЛОГИЯ | МИНИМАЛИЗМ | НАДЁЖНОСТЬ</span>
+    </div>
+  </div>
+</section>
+
+<!-- VISUAL IDENTITY -->
+<section>
+  <div class="section-num">04 / Визуальная идентичность</div>
+  <h2>Чёткость. <em>Технологичность.</em> Минимализм.</h2>
+
+  <p>Визуальный язык BREW.TECH строится на геометрии, чистых линиях и двух доминирующих цветах — чёрном и ярко-синем. Каждый элемент системы несёт смысловую нагрузку.</p>
+
+  <div class="section-num" style="margin-top: 60px; margin-bottom: 16px;">Цветовая палитра</div>
   <div class="palette">
-    <div class="swatch" style="background:#EC6C5F;">
-      <span style="color:#fff;">Coral</span>
-      <small style="color:rgba(255,255,255,0.7);">PANTONE 7416 U<br>#EC6C5F</small>
+    <div class="swatch" style="background:#000000; flex:2;">
+      <span style="color:#fff;">True Black</span>
+      <small style="color:rgba(255,255,255,0.5);">#000000</small>
     </div>
-    <div class="swatch" style="background:#142942;">
-      <span style="color:#fff;">Azure</span>
-      <small style="color:rgba(255,255,255,0.5);">PANTONE 295 U<br>#142942</small>
+    <div class="swatch" style="background:#0066ff; flex:2;">
+      <span style="color:#fff;">Tech Blue</span>
+      <small style="color:rgba(255,255,255,0.6);">#0066ff</small>
     </div>
-    <div class="swatch" style="background:#000000;">
-      <span style="color:#fff;">Black</span>
-      <small style="color:rgba(255,255,255,0.4);">#000000</small>
-    </div>
-    <div class="swatch" style="background:#ffffff; border:1px solid #ddd;">
+    <div class="swatch" style="background:#ffffff; border:1px solid #ddd; flex:1;">
       <span style="color:#000;">White</span>
       <small style="color:#888;">#ffffff</small>
     </div>
-  </div>
-
-  <div class="section-num" style="margin-top:60px;">Логотип на различных фонах</div>
-  <div class="bg-demos">
-    <div class="bg-card" style="background:#ffffff;">
-      <div class="bg-inner" style="color:#111;">
-        fiamma <span style="color:#EC6C5F;">&#9607;&#9607;</span>
-        <span class="since" style="color:#888;">SINCE 1977</span>
-      </div>
+    <div class="swatch" style="background:#f5f5f5; border:1px solid #ddd; flex:1;">
+      <span style="color:#333;">BG Grey</span>
+      <small style="color:#888;">#f5f5f5</small>
     </div>
-    <div class="bg-card" style="background:#000000;">
-      <div class="bg-inner" style="color:#fff;">
-        fiamma <span style="color:#EC6C5F;">&#9607;&#9607;</span>
-        <span class="since" style="color:rgba(255,255,255,0.4);">SINCE 1977</span>
-      </div>
-    </div>
-    <div class="bg-card" style="background:#EC6C5F;">
-      <div class="bg-inner" style="color:#fff;">
-        fiamma <span style="color:#142942;">&#9607;&#9607;</span>
-        <span class="since" style="color:rgba(255,255,255,0.6);">SINCE 1977</span>
-      </div>
-    </div>
-    <div class="bg-card" style="background:#142942;">
-      <div class="bg-inner" style="color:#EC6C5F;">
-        fiamma <span style="color:#EC6C5F;">&#9607;&#9607;</span>
-        <span class="since" style="color:rgba(255,255,255,0.4);">SINCE 1977</span>
-      </div>
-    </div>
-    <div class="bg-card" style="background:#e0d0c8;">
-      <div class="bg-inner" style="color:#111;">
-        fiamma <span style="color:#EC6C5F;">&#9607;&#9607;</span>
-        <span class="since" style="color:#888;">SINCE 1977</span>
-      </div>
-    </div>
-    <div class="bg-card" style="background:#2bbb88;">
-      <div class="bg-inner" style="color:#fff;">
-        fiamma <span style="color:#fff;">&#9607;&#9607;</span>
-        <span class="since" style="color:rgba(255,255,255,0.5);">SINCE 1977</span>
-      </div>
+    <div class="swatch" style="background:#ff6b35; flex:1;">
+      <span style="color:#fff;">Accent</span>
+      <small style="color:rgba(255,255,255,0.7);">#ff6b35</small>
     </div>
   </div>
-</section>
 
-<!-- TYPOGRAPHY -->
-<section>
-  <div class="section-num">04 / Типографика</div>
-  <h2>Averta — <em>шрифт с характером</em></h2>
-  <p>Фирменная гарнитура бренда — Averta, разработанная Косtas Bartsokasом в 2015 году. Несколько начертаний от Regular до Black обеспечивают гибкую типографическую систему для любых носителей.</p>
-
-  <div class="font-demo">
-    <span class="f-name">Averta · Uppercase</span>
-    <div class="font-alpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
-    <div class="font-alpha" style="margin-top:16px;">abcdefghijklmnopqrstuvwxyz</div>
-    <div class="font-alpha" style="margin-top:16px; font-size:clamp(24px,3vw,40px);">01234 56789 ()&#63;! #&#64;&amp;%</div>
+  <div class="section-num" style="margin-top: 60px; margin-bottom: 16px;">Применение логотипа</div>
+  <div class="logo-demos">
+    <div class="logo-card bg-light">
+      <label style="color:#888;">На светлом фоне</label>
+      <div class="logo-display" style="color:#000;">BREW<span class="dot-tech" style="color:#0066ff;">.TECH</span></div>
+    </div>
+    <div class="logo-card bg-dark">
+      <label>На тёмном фоне</label>
+      <div class="logo-display">BREW<span class="dot-tech">.TECH</span></div>
+    </div>
+    <div class="logo-card bg-blue">
+      <label style="color:rgba(255,255,255,0.6);">На фирменном синем</label>
+      <div class="logo-display" style="color:#fff;">BREW<span class="dot-tech" style="color:rgba(255,255,255,0.5);">.TECH</span></div>
+    </div>
+    <div class="logo-card" style="background:#1a1a1a; border: 1px solid #333;">
+      <label>Точка — символ минимализма</label>
+      <p style="font-size:14px; color:rgba(245,243,239,0.6); line-height:1.7; margin:0;">«BREW» — профессиональное слово, ассоциирующееся с кофе. «TECH» — технологичность. Точка между ними — чистота и современность дизайна.</p>
+    </div>
   </div>
 
-  <div class="principles" style="margin-top: 40px;">
-    <div class="principle">
-      <span class="p-num">R</span>
-      <div class="p-content">
-        <h4>Regular — основной текст</h4>
-        <p>Для body-copy, подписей, вспомогательного контента</p>
-      </div>
-    </div>
-    <div class="principle">
-      <span class="p-num">SB</span>
-      <div class="p-content">
-        <h4>Semi-Bold — акценты</h4>
-        <p>Для подзаголовков, выделений, навигации</p>
-      </div>
-    </div>
-    <div class="principle">
-      <span class="p-num">BL</span>
-      <div class="p-content">
-        <h4>Black — заголовки</h4>
-        <p>Для крупных заголовков, hero-блоков, брендинга</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- KEY RULES -->
-<section>
-  <div class="section-num">05 / Ключевые принципы применения</div>
-  <h2>Правила, которые <em>защищают</em> бренд</h2>
-
-  <div class="principles">
-    <div class="principle">
-      <span class="p-num">01</span>
-      <div class="p-content">
-        <h4>Охранная зона логотипа</h4>
-        <p>Вокруг логотипа всегда сохраняется защитная область, равная высоте иконки бренда. Никаких других элементов в этой зоне</p>
-      </div>
-    </div>
-    <div class="principle">
-      <span class="p-num">02</span>
-      <div class="p-content">
-        <h4>Минимальный размер</h4>
-        <p>Стандартная версия — не менее 5mm по высоте. Heritage версия — не менее 10mm. Меньше — потеря читаемости</p>
-      </div>
-    </div>
-    <div class="principle">
-      <span class="p-num">03</span>
-      <div class="p-content">
-        <h4>Coral-on-Azure: только с согласованием</h4>
-        <p>Комбинация фирменных цветов при наложении требует проверки на контрастность. На некоторых носителях видимость может быть недостаточной</p>
-      </div>
-    </div>
-    <div class="principle">
-      <span class="p-num">04</span>
-      <div class="p-content">
-        <h4>Правило тёмных и светлых фонов</h4>
-        <p>На тёмных фонах — белый логотип с цветной иконкой. На светлых — чёрный логотип с цветной иконкой. Монохром допускается</p>
-      </div>
-    </div>
+  <div class="section-num" style="margin-top: 60px; margin-bottom: 16px;">Типографика — Montserrat</div>
+  <div class="type-demo">
+    <span class="type-label">H1 · Extrabold · 70px</span>
+    <div class="type-h1">ЗАГОЛОВОК</div>
+    <span class="type-label" style="margin-top:32px;">H2 · Semibold · 40px</span>
+    <div class="type-h2">Подзаголовок раздела</div>
+    <span class="type-label" style="margin-top:24px;">H3 · Medium · 32px</span>
+    <div class="type-h3">Раздел контента</div>
+    <span class="type-label" style="margin-top:24px;">Body · Regular · 18px</span>
+    <p style="margin:0;">Основной текст для описания продуктов и услуг, используется для основного контента на всех носителях бренда.</p>
   </div>
 </section>
 
 <!-- RESULT -->
 <section style="padding: 100px 48px; border: none;">
-  <div class="result-band" style="padding: 80px 48px;">
-    <div class="section-num" style="color:rgba(255,255,255,0.6);">06 / Итог</div>
-    <h2 style="color:var(--white);">Sistema identità visiva — <em style="color:rgba(255,255,255,0.55);">готова</em></h2>
+  <div class="result-block" style="padding: 80px 48px;">
+    <div class="section-num" style="color: rgba(255,255,255,0.6);">05 / Результат</div>
+    <h2 style="color: var(--white);">Готовая система <em style="color: rgba(255,255,255,0.6);">идентичности</em></h2>
     <div class="result-grid">
-      <div>
-        <div class="r-val">2</div>
-        <div class="r-label">Версии логотипа с полными гайдлайнами</div>
-      </div>
-      <div>
+      <div class="result-item">
         <div class="r-val">4</div>
-        <div class="r-label">Фирменных цвета с PANTONE-кодами</div>
+        <div class="r-label">Целевых сегмента с индивидуальными посылами</div>
       </div>
-      <div>
-        <div class="r-val">1977</div>
-        <div class="r-label">Год основания — зафиксирован в DNA бренда</div>
+      <div class="result-item">
+        <div class="r-val">5</div>
+        <div class="r-label">Фирменных цветов в палитре бренда</div>
+      </div>
+      <div class="result-item">
+        <div class="r-val">1</div>
+        <div class="r-label">Полный брендбук — от концепции до упаковки</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CTA -->
 <div class="cta-section">
-  <h2>Нужна система <em>идентичности</em> для вашего бренда?</h2>
+  <h2>Нужен похожий <em>проект?</em></h2>
   <a href="https://t.me/Dmitrii_Diezel" class="btn">Обсудить в Telegram</a>
+  <a href="https://brewtechology.ru/" target="_blank" class="btn" style="background:var(--accent);color:#0a0a0a;font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:16px 32px;text-decoration:none;border-radius:2px;margin-right:16px;">Посетить сайт ↗</a>
   <a href="index.html#cases" class="btn btn-outline">Все кейсы</a>
 </div>
 
 <footer>
   <span>© 2026 · Дмитрий Москаленко</span>
-  <div style="display:flex;gap:24px;">
+  <div style="display:flex; gap:24px;">
     <a href="privacy.html">Конфиденциальность</a>
     <a href="cookies.html">Cookie</a>
     <a href="terms.html">Соглашение</a>

@@ -1259,6 +1259,26 @@
     section, .section, .hero, footer, nav { padding-left: 20px !important; padding-right: 20px !important; }
   }
 
+
+  /* ── УНИВЕРСАЛЬНЫЙ ПЕРЕХВАТ СЕТОК НА МОБИЛЬНЫХ ── */
+  @media (max-width: 767px) {
+    /* любая сетка (в т.ч. заданная инлайн) → один столбец */
+    [style*="grid-template-columns"],
+    [class*="grid"], [class*="-cols"],
+    .stages, .market-grid, .arch-right, .result-grid, .filt-grid,
+    .two-col, .palette, .bg-demos, .values-list, .logo-demos,
+    .overview-grid, .audience-grid, .challenge-block, .stats-row,
+    .diff-grid, .price-grid, .roadmap, .fin-grid, .pos-grid,
+    .mission-pillars, .tov-grid, .products-grid, .results-grid,
+    .identity-strip, .id-strip {
+      grid-template-columns: 1fr !important;
+    }
+    /* палитра цветов остаётся 2 колонки — так компактнее */
+    .palette { grid-template-columns: repeat(2, 1fr) !important; }
+    /* вертикальные flex-блоки */
+    .archetype-band { flex-direction: column !important; }
+  }
+
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">

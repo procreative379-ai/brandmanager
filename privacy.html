@@ -218,7 +218,7 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
     img, video, iframe, svg, table { max-width: 100% !important; height: auto; }
     table { display: block; overflow-x: auto; }
     /* элементы не шире экрана */
-    * { max-width: 100%; box-sizing: border-box; }
+    img, svg, video, iframe, table { max-width: 100% !important; }
     /* кнопки и ссылки — удобные для тапа (минимум 44px по высоте) */
     .btn, .btn-primary, .btn-secondary, .nav-cta, button[type="submit"],
     .brief-submit, .form-submit { min-height: 44px; }
@@ -249,8 +249,7 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
     }
     /* убираем nowrap с логотипов/текста, чтобы переносилось */
     .brand-logo { white-space: normal !important; }
-    /* всё в пределах экрана */
-    body * { max-width: 100%; }
+    img, svg, video, iframe, table { max-width: 100% !important; }
     /* горизонтальные флексы переносим */
     .hero-meta, .cta-actions, .success-actions, .footer-socials,
     .footer-links, .author-links, .nav-links {
@@ -258,6 +257,26 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
     }
     /* большие фикс. паддинги ужимаем */
     section, .section, .hero, footer, nav { padding-left: 20px !important; padding-right: 20px !important; }
+  }
+
+
+  /* ── УНИВЕРСАЛЬНЫЙ ПЕРЕХВАТ СЕТОК НА МОБИЛЬНЫХ ── */
+  @media (max-width: 767px) {
+    /* любая сетка (в т.ч. заданная инлайн) → один столбец */
+    [style*="grid-template-columns"],
+    [class*="grid"], [class*="-cols"],
+    .stages, .market-grid, .arch-right, .result-grid, .filt-grid,
+    .two-col, .palette, .bg-demos, .values-list, .logo-demos,
+    .overview-grid, .audience-grid, .challenge-block, .stats-row,
+    .diff-grid, .price-grid, .roadmap, .fin-grid, .pos-grid,
+    .mission-pillars, .tov-grid, .products-grid, .results-grid,
+    .identity-strip, .id-strip {
+      grid-template-columns: 1fr !important;
+    }
+    /* палитра цветов остаётся 2 колонки — так компактнее */
+    .palette { grid-template-columns: repeat(2, 1fr) !important; }
+    /* вертикальные flex-блоки */
+    .archetype-band { flex-direction: column !important; }
   }
 
 </style>

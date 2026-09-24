@@ -63,29 +63,7 @@
     overflow-x: hidden;
   }
 
-  /* Custom cursor */
-  .cursor {
-    width: 12px; height: 12px;
-    background: var(--accent);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s, width 0.3s, height 0.3s;
-    mix-blend-mode: difference;
-  }
-  .cursor-ring {
-    width: 40px; height: 40px;
-    border: 1px solid rgba(200,255,0,0.4);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: transform 0.15s ease-out, width 0.3s, height 0.3s;
-  }
-  a:hover ~ .cursor, button:hover ~ .cursor { width: 20px; height: 20px; }
+  
 
   /* NAV */
   nav {
@@ -1173,7 +1151,6 @@
     .back-to-top { bottom: 16px; right: 16px; width: 44px; height: 44px; }
   }
 
-@media (hover:hover) and (pointer:fine){body{cursor:none}}
 
   /* ── PUBLICATIONS ── */
   .pub-section { padding: 100px 60px; border-top: 1px solid var(--mid, #2e2e2e); }
@@ -1400,8 +1377,8 @@
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
+
+
 
 <!-- NAV -->
 <nav>
@@ -1983,28 +1960,7 @@
 <script>
   // Custom cursor
   // CURSOR_GUARD: skip custom cursor on touch / no-hover devices
-  const _canHover = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-  var _CURSOR_OK=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-const cursor = document.getElementById('cursor');
-  const cursorRing = document.getElementById('cursorRing');
-  let mouseX = 0, mouseY = 0;
-  let ringX = 0, ringY = 0;
-
-  if(_canHover) if(_CURSOR_OK)document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursor.style.left = mouseX + 'px';
-    cursor.style.top = mouseY + 'px';
-  });
-
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.15;
-    ringY += (mouseY - ringY) * 0.15;
-    cursorRing.style.left = ringX + 'px';
-    cursorRing.style.top = ringY + 'px';
-    requestAnimationFrame(animateRing);
-  }
-  if(_canHover){ animateRing(); } else { if(cursor)cursor.style.display='none'; if(cursorRing)cursorRing.style.display='none'; }
+  
 
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');

@@ -68,18 +68,18 @@
   --muted:  #777;
   --border: #222;
   /* Brand colours from profile coffee */
-  --pc-bg:    #ECE2CD;
-  --pc-ink:   #1B1410;
-  --pc-red:   #B23A28;
-  --pc-muted: #87705A;
+  --pc-bg:    #FFFFFF;
+  --pc-ink:   #0E1B2E;
+  --pc-navy:  #15315B;
+  --pc-muted: #6b7a90;
   --font-display: 'Unbounded', sans-serif;
   --font-body:    'Geologica', sans-serif;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { background: var(--black); color: var(--white); font-family: var(--font-body); font-weight: 300; overflow-x: hidden; cursor: none; }
-.cursor      { width:10px;height:10px;background:var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference; }
-.cursor-ring { width:36px;height:36px;border:1px solid rgba(200,255,0,.35);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .15s ease-out; }
+body { background: var(--black); color: var(--white); font-family: var(--font-body); font-weight: 300; overflow-x: hidden; }
+
+
 
 /* ── NAV ── */
 nav { position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 60px;display:flex;justify-content:space-between;align-items:center; }
@@ -150,13 +150,13 @@ nav::before { content:'';position:absolute;inset:0;background:linear-gradient(to
   position: relative;
 }
 .id-card.dark { background: var(--pc-ink); }
-.id-card.red  { background: var(--pc-red); }
+.id-card.navy  { background: var(--pc-navy); }
 .id-card-label { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--pc-muted); margin-bottom: 16px; font-family: monospace; }
 .id-card.dark .id-card-label { color: #666; }
-.id-card.red  .id-card-label { color: rgba(250,243,225,.6); }
+.id-card.navy  .id-card-label { color: rgba(250,243,225,.6); }
 .id-card-value { font-size: 15px; font-weight: 600; color: var(--pc-ink); line-height: 1.5; }
 .id-card.dark .id-card-value { color: var(--pc-bg); }
-.id-card.red  .id-card-value { color: #FAF3E1; }
+.id-card.navy  .id-card-value { color: #FAF3E1; }
 .id-brand-name { font-size: 32px; font-weight: 700; letter-spacing: -.02em; color: var(--pc-ink); line-height: 1; }
 .id-tagline { font-size: 12px; color: var(--pc-muted); margin-top: 8px; font-family: monospace; letter-spacing: .06em; text-transform: uppercase; }
 
@@ -230,8 +230,8 @@ h2.section-title em { font-style: normal; color: var(--accent); }
 .palette { display:grid; grid-template-columns:repeat(5,1fr); gap:2px; margin-top:48px; }
 .swatch { height:100px; position:relative; }
 .swatch-label { position:absolute; bottom:0; left:0; right:0; padding:10px 12px; font-size:11px; font-family:monospace; }
-.swatch.light .swatch-label { color: #1B1410; }
-.swatch.dark  .swatch-label { color: #ECE2CD; }
+.swatch.light .swatch-label { color: #0E1B2E; }
+.swatch.dark  .swatch-label { color: #FFFFFF; }
 
 /* ── PRODUCTS ── */
 .products-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--border); margin-top:48px; }
@@ -261,8 +261,8 @@ h2.section-title em { font-style: normal; color: var(--accent); }
 .btn-accent:hover { box-shadow:0 8px 24px rgba(200,255,0,.25); }
 .btn-outline { border:1px solid var(--mid); color:var(--white); }
 .btn-outline:hover { border-color:var(--accent); color:var(--accent); }
-.btn-red { background:var(--pc-red); color:#FAF3E1; }
-.btn-red:hover { box-shadow:0 8px 24px rgba(178,58,40,.3); }
+.btn-navy { background:var(--pc-navy); color:#FAF3E1; }
+.btn-navy:hover { box-shadow:0 8px 24px rgba(178,58,40,.3); }
 
 /* ── FOOTER ── */
 footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
@@ -376,7 +376,6 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
     .burger { display: flex !important; }
   }
 
-@media (hover:hover) and (pointer:fine){body{cursor:none}}
 
   /* ── МОБИЛЬНАЯ ОПТИМИЗАЦИЯ (Яндекс.Вебмастер) ── */
   @media (max-width: 767px) {
@@ -490,8 +489,8 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
 </script>
 </head>
 <body>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
+
+
 
 <nav id="nav">
   <a href="index.html" class="nav-logo">DM / Brand</a>
@@ -529,7 +528,7 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
     <div class="meta-item"><label>Статус</label><span>Завершён</span></div>
     <div class="meta-item">
       <label>Брендбук</label>
-      <a href="https://disk.yandex.ru/i/STvnJfk2mZB4Bg" target="_blank" style="color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:6px;">
+      <a href="https://disk.yandex.ru/d/-9tauXgm8REhzQ" target="_blank" style="color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:6px;">
         Скачать PDF ↓
       </a>
     </div>
@@ -545,9 +544,9 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
   </div>
   <div class="id-card dark">
     <div class="id-card-label">Миссия</div>
-    <div class="id-card-value">Обжарить каждый лот так, чтобы он раскрыл то, что задумали фермер и природа</div>
+    <div class="id-card-value">Мы не самые большие. Мы просто внимательные. Каждый пакет — это сорт, страна, ферма и дата</div>
   </div>
-  <div class="id-card red">
+  <div class="id-card navy">
     <div class="id-card-label">Слоган</div>
     <div class="id-card-value" style="font-size:22px;font-weight:700;line-height:1.2;">Маленькая ростерия, которая обжаривает кофе с именами</div>
   </div>
@@ -757,24 +756,29 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
 <!-- COLOUR PALETTE -->
 <section class="section" style="background:var(--grey2)">
   <span class="section-num">07 / Визуальная система</span>
-  <h2 class="section-title reveal">Тёплая палитра —<br><em>органика и терракота</em></h2>
+  <h2 class="section-title reveal">Тёмно-синий и белый.<br><em>Точка.</em></h2>
 
   <div class="palette reveal">
-    <div class="swatch light" style="background:#ECE2CD">
-      <div class="swatch-label">#ECE2CD<br>Фон основной</div>
+    <div class="swatch dark" style="background:#15315B">
+      <div class="swatch-label">#15315B<br>Акцент · Terracotta</div>
+    </div>
+    <div class="swatch dark" style="background:#0E1B2E">
+      <div class="swatch-label">#0E1B2E<br>Текст · Ink</div>
+    </div>
+    <div class="swatch light" style="background:#FFFFFF;border:1px solid #ddd">
+      <div class="swatch-label">#FFFFFF<br>Фон · Sand</div>
     </div>
     <div class="swatch light" style="background:#FAF3E1">
-      <div class="swatch-label">#FAF3E1<br>Бумага</div>
+      <div class="swatch-label">#FAF3E1<br>Карточки · Paper</div>
     </div>
-    <div class="swatch dark" style="background:#B23A28">
-      <div class="swatch-label">#B23A28<br>Акцент</div>
-    </div>
-    <div class="swatch dark" style="background:#1B1410">
-      <div class="swatch-label">#1B1410<br>Текст</div>
-    </div>
-    <div class="swatch light" style="background:#87705A">
-      <div class="swatch-label">#87705A<br>Muted</div>
-    </div>
+  </div>
+
+  <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:32px 0 16px;" class="reveal">Расширенная — для упаковки и фонов</div>
+  <div class="palette reveal">
+    <div class="swatch dark" style="background:#2D5F4F"><div class="swatch-label">#2D5F4F<br>Forest</div></div>
+    <div class="swatch dark" style="background:#C99553"><div class="swatch-label">#C99553<br>Honey</div></div>
+    <div class="swatch dark" style="background:#6A4E7A"><div class="swatch-label">#6A4E7A<br>Plum</div></div>
+    <div class="swatch dark" style="background:#4B5E92"><div class="swatch-label">#4B5E92<br>Indigo</div></div>
   </div>
 
   <div style="margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:32px" class="reveal">
@@ -786,9 +790,9 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
     <div>
       <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Принципы</div>
       <div style="font-size:14px;color:#bbb;line-height:1.75;">
-        Визуальная система строится на контрасте тёплого бежевого и терракотового акцента.
-        Монospace-шрифт для данных и технических деталей — подчёркивает прецизионность обжарщика.
-        Минимум декора, максимум белого пространства.
+        Визуальная система строится на контрасте белого фона и тёмно-синего акцента.
+        Правило: акцентного цвета — никогда больше 10% полотна. Моноширинный шрифт для данных, цен и меток.
+        Минимум декора, максимум воздуха.
       </div>
     </div>
   </div>
@@ -804,14 +808,14 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
     <div style="background:var(--pc-ink);padding:48px;">
       <div style="font-family:monospace;font-size:11px;letter-spacing:.18em;color:#666;text-transform:uppercase;margin-bottom:24px;">BRAND BOOK · V.1.0 · 2026</div>
       <div style="font-size:32px;font-weight:700;color:var(--pc-bg);line-height:1.1;margin-bottom:8px;">brand</div>
-      <div style="font-size:32px;font-style:italic;font-weight:700;color:var(--pc-red);line-height:1.1;margin-bottom:32px;">book</div>
+      <div style="font-size:32px;font-style:italic;font-weight:700;color:var(--pc-navy);line-height:1.1;margin-bottom:32px;">book</div>
       <div style="font-size:13px;color:#666;line-height:1.7;margin-bottom:32px;">
         Внутреннее руководство по идентичности Profile Coffee для команды, партнёров и подрядчиков.<br><br>
         17 страниц · Антон Карпов, основатель · Май 2026
       </div>
-      <a href="https://disk.yandex.ru/i/STvnJfk2mZB4Bg" target="_blank"
+      <a href="https://disk.yandex.ru/d/-9tauXgm8REhzQ" target="_blank"
          style="display:inline-block;font-family:var(--font-display);font-size:12px;font-weight:700;
-                letter-spacing:.1em;text-transform:uppercase;background:var(--pc-red);color:#FAF3E1;
+                letter-spacing:.1em;text-transform:uppercase;background:var(--pc-navy);color:#FAF3E1;
                 padding:16px 32px;text-decoration:none;border-radius:2px;transition:transform .2s;">
         Скачать брендбук ↓
       </a>
@@ -833,8 +837,8 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
         <div style="padding:10px 0;border-bottom:1px solid rgba(27,20,16,.1);font-size:13px;color:var(--pc-ink);">11 · Упаковка</div>
         <div style="padding:10px 0;border-bottom:1px solid rgba(27,20,16,.1);font-size:13px;color:var(--pc-ink);">12 · Носители</div>
       </div>
-      <div style="margin-top:24px;padding:16px;background:rgba(178,58,40,.08);border-left:3px solid var(--pc-red);">
-        <div style="font-family:monospace;font-size:11px;color:var(--pc-red);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">Манифест бренда</div>
+      <div style="margin-top:24px;padding:16px;background:rgba(178,58,40,.08);border-left:3px solid var(--pc-navy);">
+        <div style="font-family:monospace;font-size:11px;color:var(--pc-navy);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">Манифест бренда</div>
         <div style="font-size:13px;color:var(--pc-ink);line-height:1.65;font-style:italic;">
           «Мы не самые большие. Мы просто внимательные. Каждый пакет — это сорт, страна, ферма и дата.»
         </div>
@@ -851,7 +855,7 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
 
   <div class="products-grid reveal">
     <div class="product-card">
-      <div class="product-accent" style="background:linear-gradient(135deg,#B23A28,#8A2C1F)"></div>
+      <div class="product-accent" style="background:linear-gradient(135deg,#15315B,#0E1B2E)"></div>
       <div class="product-origin">Эфиопия · Йиргачеффе, Гедео</div>
       <div class="product-name">Иргачеффе</div>
       <div class="product-process">Натуральная обработка · Score 87</div>
@@ -949,12 +953,7 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
 </style>
 
 <script>
-var _CURSOR_OK=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-if(_CURSOR_OK)document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px'});
-if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches){var c=document.getElementById('cursor'),r=document.getElementById('cursorRing');if(c)c.style.display='none';if(r)r.style.display='none';}
-(function a(){if(!_CURSOR_OK){var c=document.getElementById('cursor'),r=document.getElementById('cursorRing');if(c)c.style.display='none';if(r)r.style.display='none';return;}if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches)return;rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a)})();
+
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 window.addEventListener('scroll',()=>{

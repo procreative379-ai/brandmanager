@@ -201,7 +201,7 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:920px;margin:
   .recs-grid{grid-template-columns:1fr}
   footer{flex-direction:column;text-align:center;padding:24px}
 }
-@media (hover:hover) and (pointer:fine){body{cursor:none}}
+@media (hover:hover) and (pointer:fine){html.cursor-on body{cursor:none}}
 
   /* ── МОБИЛЬНАЯ ОПТИМИЗАЦИЯ (Яндекс.Вебмастер) ── */
   @media (max-width: 767px) {
@@ -608,7 +608,7 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:920px;margin:
 var _CURSOR_OK=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
 const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
 let mx=0,my=0,rx=0,ry=0;
-if(_CURSOR_OK)document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px'});
+if(_CURSOR_OK)document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';document.documentElement.classList.add('cursor-on')});
 if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches){var c=document.getElementById('cursor'),r=document.getElementById('cursorRing');if(c)c.style.display='none';if(r)r.style.display='none';}
 (function a(){if(!_CURSOR_OK){var c=document.getElementById('cursor'),r=document.getElementById('cursorRing');if(c)c.style.display='none';if(r)r.style.display='none';return;}if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches)return;rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a)})();
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.08});
@@ -632,7 +632,7 @@ function declineCookies(){
   } catch(e){}
   var b = document.getElementById('cookieBanner');
   if(b) b.classList.remove('show');
-}catch(e){}document.getElementById('cookieBanner').classList.remove('show');}
+}
 </script>
 <script>
 /* REVEAL_FAILSAFE: гарантированно показываем контент, даже если что-то сломалось */

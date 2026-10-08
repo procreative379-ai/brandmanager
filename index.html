@@ -15,6 +15,7 @@
 <meta name="yandex-verification" content="a22af711bd8343d6" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://brandmanager.su/">
 <title>Бренд-менеджер Москва · Дмитрий Москаленко · Запуск и управление брендами</title>
 <meta name="keywords" content="бренд-менеджер Москва, заказать бренд-стратегию, услуги бренд-менеджера, запуск бренда под ключ, бренд-менеджмент, разработка бренда, бренд-стратег, управление брендом, FMCG бренд-менеджер, листинг в сетях X5 Лента Метро, позиционирование бренда, бренд-консалтинг, ребрендинг, портфельный менеджмент, вывод бренда на рынок">
 <meta name="description" content="Помогаю импортёрам и дистрибьюторам строить бренды, которые растут в деньгах. Бренд-менеджер и бренд-стратег с 15-летним опытом в FMCG и B2B. Запуск новых брендов.">
@@ -1431,15 +1432,15 @@
     <div class="hero-bg-text">BRAND</div>
     <div class="hero-stats">
       <div class="stat-item">
-        <div class="stat-num">×<span data-target="4">0</span></div>
+        <div class="stat-num">×<span data-target="4">4</span></div>
         <div class="stat-label">Рост выручки<br>с 100 до 400 млн ₽</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num"><span data-target="20">0</span>+</div>
+        <div class="stat-num"><span data-target="20">20</span>+</div>
         <div class="stat-label">Брендов<br>в управлении</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num"><span data-target="15">0</span></div>
+        <div class="stat-num"><span data-target="15">15</span></div>
         <div class="stat-label">Лет<br>на практике</div>
       </div>
     </div>
@@ -2105,10 +2106,24 @@ function declineCookies(){
   } catch(e){}
   var b = document.getElementById('cookieBanner');
   if(b) b.classList.remove('show');
-} catch(e){}
-  var b = document.getElementById('cookieBanner');
-  if(b) b.classList.remove('show');
 }
+</script>
+<script>
+/* Цели Яндекс.Метрики: клики по брифу и контактам */
+(function(){
+  function goal(name){ try { if (window.ym) ym(72239779, 'reachGoal', name); } catch(e){} }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('forms.yandex.ru') !== -1) goal('brief_form_open');
+    else if (/(^|\/)brief\.html/.test(h)) goal('brief_click');
+    else if (h.indexOf('t.me/') !== -1) goal('telegram_click');
+    else if (h.indexOf('tel:') === 0) goal('phone_click');
+    else if (h.indexOf('mailto:') === 0) goal('email_click');
+    else if (h.indexOf('vk.com/') !== -1) goal('vk_click');
+  });
+})();
 </script>
 </body>
 </html>

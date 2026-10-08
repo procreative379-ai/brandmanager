@@ -15,6 +15,8 @@
 <meta name="yandex-verification" content="a22af711bd8343d6" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://brandmanager.su/services.html">
+<meta property="og:url" content="https://brandmanager.su/services.html">
 <title>Услуги бренд-менеджера · Дмитрий Москаленко · Москва</title>
 <meta name="keywords" content="услуги бренд-менеджера, заказать бренд-стратегию, разработка бренд-платформы, аудит бренда цена, запуск нового бренда под ключ, репозиционирование бренда, бренд-консалтинг Москва, стратегический маркетинг, бренд-менеджмент услуги, вывод продукта на рынок">
 <meta name="description" content="Услуги бренд-менеджера: аудит бренда, разработка стратегии, запуск нового бренда, управление портфелем, репозиционирование. Дмитрий Москаленко, Москва.">
@@ -768,9 +770,6 @@ function declineCookies(){
   } catch(e){}
   var b = document.getElementById('cookieBanner');
   if(b) b.classList.remove('show');
-} catch(e){}
-  var b = document.getElementById('cookieBanner');
-  if(b) b.classList.remove('show');
 }
 </script>
 
@@ -813,6 +812,23 @@ document.addEventListener('keydown', function(e) {
   setTimeout(showAll,1200);
   // и на случай полной ошибки — по load
   window.addEventListener('load',function(){setTimeout(showAll,300);});
+})();
+</script>
+<script>
+/* Цели Яндекс.Метрики: клики по брифу и контактам */
+(function(){
+  function goal(name){ try { if (window.ym) ym(72239779, 'reachGoal', name); } catch(e){} }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('forms.yandex.ru') !== -1) goal('brief_form_open');
+    else if (/(^|\/)brief\.html/.test(h)) goal('brief_click');
+    else if (h.indexOf('t.me/') !== -1) goal('telegram_click');
+    else if (h.indexOf('tel:') === 0) goal('phone_click');
+    else if (h.indexOf('mailto:') === 0) goal('email_click');
+    else if (h.indexOf('vk.com/') !== -1) goal('vk_click');
+  });
 })();
 </script>
 </body>

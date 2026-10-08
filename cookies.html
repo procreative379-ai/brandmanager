@@ -14,6 +14,7 @@
 <meta name="google-site-verification" content="d0fa0e814302fe56" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://brandmanager.su/cookies.html">
 <meta name="keywords" content="политика конфиденциальности brandmanager.su">
 <meta name="description-old" content="Политика конфиденциальности сайта brandmanager.su. Обработка персональных данных, cookies, Яндекс.Метрика.">
 <meta name="yandex-verification" content="a22af711bd8343d6" />
@@ -488,9 +489,6 @@ function declineCookies(){
   } catch(e){}
   var b = document.getElementById('cookieBanner');
   if(b) b.classList.remove('show');
-} catch(e){}
-  var b = document.getElementById('cookieBanner');
-  if(b) b.classList.remove('show');
 }
 </script>
 
@@ -540,6 +538,23 @@ function resetCookies(){
   setTimeout(showAll,1200);
   // и на случай полной ошибки — по load
   window.addEventListener('load',function(){setTimeout(showAll,300);});
+})();
+</script>
+<script>
+/* Цели Яндекс.Метрики: клики по брифу и контактам */
+(function(){
+  function goal(name){ try { if (window.ym) ym(72239779, 'reachGoal', name); } catch(e){} }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('forms.yandex.ru') !== -1) goal('brief_form_open');
+    else if (/(^|\/)brief\.html/.test(h)) goal('brief_click');
+    else if (h.indexOf('t.me/') !== -1) goal('telegram_click');
+    else if (h.indexOf('tel:') === 0) goal('phone_click');
+    else if (h.indexOf('mailto:') === 0) goal('email_click');
+    else if (h.indexOf('vk.com/') !== -1) goal('vk_click');
+  });
 })();
 </script>
 </body>

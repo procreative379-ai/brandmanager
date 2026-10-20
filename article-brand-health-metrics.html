@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="120x120" href="/favicon-120.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script>document.documentElement.className=(document.documentElement.className+" js").trim();</script>
+<link rel="dns-prefetch" href="https://mc.yandex.ru">
+<meta name="google-site-verification" content="d0fa0e814302fe56" />
+<meta name="yandex-verification" content="a22af711bd8343d6" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://brandmanager.su/article-brand-health-metrics.html">
+<meta property="og:url" content="https://brandmanager.su/article-brand-health-metrics.html">
+<title>Метрики здоровья бренда: как измерить силу бренда · Дмитрий Москаленко</title>
+<meta name="description" content="Знание, NPS, брендовый поисковый спрос, повторные покупки: какие метрики бренда отслеживать, как построить воронку бренда и что доступно малому бизнесу.">
+<link rel="preload" href="/fonts/unbounded-cyrillic-c86556.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/geologica-cyrillic-f28b2b.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+:root{--black:#0a0a0a;--white:#f5f2ed;--accent:#c8ff00;--grey:#1a1a1a;--mid:#2e2e2e;--muted:#888;--font-display:'Unbounded',sans-serif;--font-body:'Geologica',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300;overflow-x:hidden;}
+.cursor{width:12px;height:12px;background:var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .3s,height .3s;mix-blend-mode:difference}
+.cursor-ring{width:40px;height:40px;border:1px solid rgba(200,255,0,.4);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .15s ease-out}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 60px;display:flex;justify-content:space-between;align-items:center}
+nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,.95) 0%,transparent 100%);pointer-events:none}
+.nav-logo{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.15em;color:var(--white);text-decoration:none;text-transform:uppercase;position:relative;z-index:1}
+.nav-links{display:flex;gap:40px;list-style:none;position:relative;z-index:1}
+.nav-links a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s}
+.nav-links a:hover,.nav-links a.active{color:var(--accent)}
+.nav-cta{background:var(--accent);color:var(--black)!important;padding:10px 22px;font-weight:500!important;border-radius:2px;transition:opacity .3s!important}
+.nav-cta:hover{opacity:.85}
+
+/* HERO */
+.page-hero{padding:160px 60px 80px;border-bottom:1px solid var(--mid)}
+.page-hero-label{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;display:flex;align-items:center;gap:12px}
+.page-hero-label::before{content:'';width:32px;height:1px;background:var(--accent)}
+.page-hero h1{font-family:var(--font-display);font-size:clamp(36px,5vw,72px);font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:24px}
+.page-hero h1 em{font-style:normal;color:var(--accent)}
+.page-hero-sub{font-size:16px;color:var(--muted);max-width:600px;line-height:1.7}
+
+/* FILTER */
+.filter-bar{padding:40px 60px;border-bottom:1px solid var(--mid);display:flex;gap:12px;flex-wrap:wrap}
+.filter-btn{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:10px 20px;border:1px solid var(--mid);background:transparent;color:var(--muted);cursor:pointer;border-radius:2px;transition:all .2s}
+.filter-btn:hover,.filter-btn.active{background:var(--accent);color:var(--black);border-color:var(--accent)}
+
+/* ARTICLES GRID */
+.articles-section{padding:80px 60px}
+.articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.article-card{background:var(--grey);padding:48px 40px;position:relative;overflow:hidden;transition:background .3s;cursor:pointer}
+.article-card:hover{background:#1e1e1e}
+.article-card:hover .article-arrow{opacity:1;transform:translate(0,0)}
+.article-num{font-family:var(--font-display);font-size:11px;color:var(--muted);letter-spacing:.2em;margin-bottom:24px}
+.article-cat{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;font-weight:500}
+.article-title{font-family:var(--font-display);font-size:17px;font-weight:700;letter-spacing:-.01em;line-height:1.3;margin-bottom:16px;color:var(--white)}
+.article-excerpt{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px}
+.article-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.tag{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px solid var(--mid);padding:5px 10px;border-radius:2px}
+.article-arrow{position:absolute;top:48px;right:40px;font-size:20px;color:var(--accent);opacity:0;transform:translate(-8px,8px);transition:opacity .3s,transform .3s}
+.article-card.featured{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.article-card.featured .article-title{font-size:24px}
+.article-card.featured .article-excerpt{font-size:15px}
+
+/* ARTICLE MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:500;opacity:0;pointer-events:none;transition:opacity .3s;overflow-y:auto}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal{max-width:800px;margin:80px auto;background:var(--grey);padding:80px;position:relative}
+.modal-close{position:absolute;top:32px;right:32px;font-size:24px;color:var(--muted);cursor:pointer;background:none;border:none;transition:color .2s}
+.modal-close:hover{color:var(--accent)}
+.modal-cat{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
+.modal-title{font-family:var(--font-display);font-size:clamp(24px,3vw,40px);font-weight:900;letter-spacing:-.02em;line-height:1.1;margin-bottom:32px}
+.modal-body{font-size:16px;line-height:1.85;color:#ccc}
+.modal-body p{margin-bottom:20px}
+.modal-body h3{font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--white);margin:36px 0 16px;letter-spacing:-.01em}
+.modal-body ul,.modal-body ol{padding-left:24px;margin-bottom:20px}
+.modal-body li{margin-bottom:10px;color:#bbb}
+.modal-body strong{color:var(--white);font-weight:500}
+.modal-body .highlight{background:rgba(200,255,0,.08);border-left:3px solid var(--accent);padding:20px 24px;margin:24px 0;color:var(--white)}
+
+/* BLOG POSTS */
+.blog-section{padding:0 60px 80px;border-top:1px solid var(--mid);margin-top:80px}
+.blog-header{padding:60px 0 40px;display:flex;justify-content:space-between;align-items:flex-end}
+.blog-h2{font-family:var(--font-display);font-size:32px;font-weight:900;letter-spacing:-.02em}
+.blog-list{display:flex;flex-direction:column;gap:2px}
+.blog-item{background:var(--grey);padding:40px 48px;display:grid;grid-template-columns:120px 1fr auto;gap:40px;align-items:center;transition:background .3s;cursor:pointer;position:relative;overflow:hidden}
+.blog-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:var(--accent);transition:width .4s cubic-bezier(.4,0,.2,1)}
+.blog-item:hover{background:#1c1c1c}
+.blog-item:hover::before{width:3px}
+.blog-date{font-family:var(--font-display);font-size:12px;color:var(--muted);letter-spacing:.1em}
+.blog-title{font-family:var(--font-display);font-size:18px;font-weight:700;letter-spacing:-.01em;margin-bottom:8px}
+.blog-desc{font-size:14px;color:var(--muted);line-height:1.6}
+.blog-link{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);text-decoration:none;white-space:nowrap;transition:opacity .2s}
+.blog-link:hover{opacity:.7}
+
+footer{padding:40px 60px;border-top:1px solid var(--mid);display:flex;justify-content:space-between;align-items:center}
+.footer-logo{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.15em;color:var(--white);text-decoration:none}
+.footer-copy{font-size:12px;color:var(--muted)}
+.footer-socials{display:flex;gap:24px}
+.footer-socials a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s}
+.footer-socials a:hover{color:var(--accent)}
+
+.js .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:1024px){
+nav{padding:20px 24px}.nav-links{display:none}
+.page-hero,.articles-section,.blog-section,.filter-bar{padding-left:24px;padding-right:24px}
+.articles-grid{grid-template-columns:1fr}
+.article-card.featured{grid-column:span 1;grid-template-columns:1fr}
+.blog-item{grid-template-columns:1fr;gap:16px}
+.modal{margin:40px 20px;padding:40px 24px}
+footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
+}
+
+  /* ── BURGER / MOBILE NAV ── */
+  
+  .burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    transition: transform 0.3s, opacity 0.3s, width 0.3s;
+    transform-origin: center;
+  }
+  .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity: 0; width: 0; }
+  .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  
+  .mobile-menu a {
+    font-family: var(--font-display);
+    font-size: clamp(22px, 6vw, 36px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 24px;
+    transition: color 0.2s;
+    text-align: center;
+  }
+  .mobile-menu a:hover { color: var(--accent); }
+  .mobile-menu a.nav-cta {
+    background: var(--accent);
+    color: var(--black) !important;
+    border-radius: 2px;
+    margin-top: 16px;
+    font-size: clamp(14px, 4vw, 20px);
+  }
+  .mobile-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 28px;
+    color: var(--white);
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+    transition: color 0.2s;
+  }
+  .mobile-menu-close:hover { color: var(--accent); }
+
+  
+
+
+/* ── COOKIE BANNER ── */
+.cookie-banner {
+  position: fixed; bottom: 24px; left: 24px; right: 24px;
+  max-width: 560px; z-index: 9000;
+  background: #1a1a1a; border: 1px solid #2e2e2e;
+  border-left: 3px solid #c8ff00;
+  padding: 20px 24px; display: flex;
+  align-items: center; gap: 20px; flex-wrap: wrap;
+  transform: translateY(120px); opacity: 0;
+  transition: transform .4s ease, opacity .4s ease;
+}
+.cookie-banner.show { transform: translateY(0); opacity: 1; }
+.cookie-text { font-size: 13px; color: #aaa; line-height: 1.6; flex: 1; min-width: 200px; }
+.cookie-text a { color: #c8ff00; text-decoration: none; }
+.cookie-text a:hover { text-decoration: underline; }
+.cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.cookie-btn {
+  font-family: 'Unbounded', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  padding: 10px 20px; border: none; border-radius: 2px; cursor: pointer;
+  transition: transform .15s, opacity .2s;
+}
+.cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
+.cookie-accept { background: #c8ff00; color: #0a0a0a; }
+.cookie-decline { background: transparent; color: #666; border: 1px solid #2e2e2e; }
+
+
+  /* ── MOBILE BURGER & MENU ── */
+  .burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 200;
+  }
+  .burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #f5f2ed;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+    transform-origin: center;
+  }
+  .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity: 0; width: 0; }
+  .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,10,10,0.98);
+    z-index: 150;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .mobile-menu.open { display: flex !important; }
+  .mobile-menu a {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(22px, 6vw, 36px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #f5f2ed;
+    text-decoration: none;
+    padding: 12px 24px;
+    transition: color 0.2s;
+    text-align: center;
+  }
+  .mobile-menu a:hover { color: #c8ff00; }
+  .mobile-menu a.nav-cta {
+    background: #c8ff00 !important;
+    color: #0a0a0a !important;
+    border-radius: 2px;
+    margin-top: 16px;
+    font-size: clamp(14px, 4vw, 20px);
+  }
+  .mobile-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 32px;
+    color: #f5f2ed;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+    padding: 8px;
+    z-index: 160;
+  }
+  .mobile-menu-close:hover { color: #c8ff00; }
+  @media (max-width: 1024px) {
+    .burger { display: flex !important; }
+    .nav-links { display: none !important; }
+  }
+
+
+  /* ── КРИТИЧЕСКИЕ МОБИЛЬНЫЕ СТИЛИ ── */
+  @media (max-width: 768px) {
+    html, body { width: 100%; overflow-x: hidden; }
+    img, video, iframe, svg { max-width: 100%; height: auto; }
+    * { word-break: break-word; }
+  }
+  @media (max-width: 1024px) {
+    .nav-links { display: none !important; }
+    .burger { display: flex !important; }
+  }
+
+@media (hover:hover) and (pointer:fine){body{cursor:none}}
+
+.article-card.published{border-left:2px solid var(--accent);}
+.article-card.published:hover{background:#1e1e1e;}
+.pub-badge{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--black);background:var(--accent);padding:4px 10px;border-radius:2px;margin-bottom:20px;}
+
+
+  /* ── МОБИЛЬНАЯ ОПТИМИЗАЦИЯ (Яндекс.Вебмастер) ── */
+  @media (max-width: 767px) {
+    html, body { max-width: 100%; overflow-x: hidden; }
+    /* минимальный читаемый размер шрифта на мобильных */
+    body { font-size: 16px; -webkit-text-size-adjust: 100%; }
+    p, li, a, span, div, label, input, textarea, button, td, th { font-size: inherit; }
+    /* мелкие метки/теги — минимум 12px */
+    [class*="label"], [class*="tag"], [class*="cat"], [class*="num"],
+    [class*="date"], [class*="badge"], [class*="note"], [class*="caption"],
+    [class*="meta"], small, .section-num, .pub-badge, .brief-note,
+    .footer-copy, .footer-socials a, .footer-links a, .nav-back {
+      font-size: 12px !important;
+    }
+    /* всё внутри viewport, картинки и таблицы адаптивны */
+    img, video, iframe, svg, table { max-width: 100% !important; height: auto; }
+    table { display: block; overflow-x: auto; }
+    /* элементы не шире экрана */
+    img, svg, video, iframe, table { max-width: 100% !important; }
+    /* кнопки и ссылки — удобные для тапа (минимум 44px по высоте) */
+    .btn, .btn-primary, .btn-secondary, .nav-cta, button[type="submit"],
+    .brief-submit, .form-submit { min-height: 44px; }
+  }
+
+
+  /* ── УСИЛЕННАЯ МОБИЛЬНАЯ ОПТИМИЗАЦИЯ ── */
+  @media (max-width: 767px) {
+    /* все многоколоночные сетки → одна колонка */
+    .hero, .about, .about-right, .experience, .cta-section,
+    .services-grid, .test-grid, .pub-grid, .form-row,
+    .overview-grid, .pos-grid, .mission-pillars, .results-grid,
+    .audience-grid, .products-grid, .tov-grid, .challenge-block,
+    .diff-grid, .price-grid, .stats-row, .numbers, .process,
+    .id-strip, .identity-strip {
+      grid-template-columns: 1fr !important;
+    }
+    /* сетки с фикс. первой колонкой */
+    .case-item, .timeline-item, .tl-item {
+      grid-template-columns: 1fr !important;
+    }
+    /* огромный фоновый текст — прячем/уменьшаем, чтобы не вылезал */
+    .hero-bg-text {
+      font-size: 22vw !important;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 100vw;
+    }
+    /* убираем nowrap с логотипов/текста, чтобы переносилось */
+    .brand-logo { white-space: normal !important; }
+    img, svg, video, iframe, table { max-width: 100% !important; }
+    /* горизонтальные флексы переносим */
+    .hero-meta, .cta-actions, .success-actions, .footer-socials,
+    .footer-links, .author-links, .nav-links {
+      flex-wrap: wrap;
+    }
+    /* большие фикс. паддинги ужимаем */
+    section, .section, .hero, footer, nav { padding-left: 20px !important; padding-right: 20px !important; }
+  }
+
+
+  /* ── УНИВЕРСАЛЬНЫЙ ПЕРЕХВАТ СЕТОК НА МОБИЛЬНЫХ ── */
+  @media (max-width: 767px) {
+    /* любая сетка (в т.ч. заданная инлайн) → один столбец */
+    [style*="grid-template-columns"],
+    [class*="grid"], [class*="-cols"],
+    .stages, .market-grid, .arch-right, .result-grid, .filt-grid,
+    .two-col, .palette, .bg-demos, .values-list, .logo-demos,
+    .overview-grid, .audience-grid, .challenge-block, .stats-row,
+    .diff-grid, .price-grid, .roadmap, .fin-grid, .pos-grid,
+    .mission-pillars, .tov-grid, .products-grid, .results-grid,
+    .identity-strip, .id-strip {
+      grid-template-columns: 1fr !important;
+    }
+    /* палитра цветов остаётся 2 колонки — так компактнее */
+    .palette { grid-template-columns: repeat(2, 1fr) !important; }
+    /* вертикальные flex-блоки */
+    .archetype-band { flex-direction: column !important; }
+  }
+
+</style>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function(){
+  function loadMetrika(){
+    if (window.__ymLoaded) return;
+    window.__ymLoaded = true;
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(72239779, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+  }
+  window.__loadMetrika = loadMetrika;
+  // Метрика работает для всех посетителей; снимаем отказ, сохранённый старой версией баннера
+  try {
+    document.cookie = 'ym_disable_72239779=; path=/; max-age=0';
+    if (localStorage.getItem('cookie_consent') === 'declined') localStorage.removeItem('cookie_consent');
+  } catch(e){}
+  loadMetrika();
+})();
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72239779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<meta property="og:title" content="Метрики здоровья бренда: как измерить силу бренда">
+<meta property="og:description" content="Знание, NPS, брендовый поисковый спрос, повторные покупки: какие метрики бренда отслеживать, как построить воронку бренда и что доступно малому бизнесу.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://brandmanager.su/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://brandmanager.su/og-image.jpg">
+<style>
+.article-page{max-width:800px;margin:0 auto;padding:160px 24px 80px}
+.article-crumbs{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:32px}
+.article-crumbs a{color:var(--muted);text-decoration:none}.article-crumbs a:hover{color:var(--accent)}
+.article-page h1{font-family:var(--font-display);font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-.02em;line-height:1.1;margin-bottom:24px}
+.article-meta{font-size:13px;color:var(--muted);margin-bottom:40px}
+.article-cta{margin-top:64px;padding:40px;background:var(--grey);border-left:3px solid var(--accent)}
+.article-cta h2{font-family:var(--font-display);font-size:20px;font-weight:900;margin-bottom:12px}
+.article-cta p{color:#bbb;line-height:1.7;margin-bottom:24px}
+.article-cta a{display:inline-block;margin:0 12px 12px 0;padding:14px 24px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-radius:2px}
+.article-cta .primary{background:var(--accent);color:var(--black);font-weight:500}
+.article-cta .secondary{border:1px solid var(--mid);color:var(--white)}
+.article-more{margin-top:64px}
+.article-more h2{font-family:var(--font-display);font-size:16px;font-weight:700;margin-bottom:20px}
+.article-more a{display:block;padding:16px 0;border-top:1px solid var(--mid);color:var(--white);text-decoration:none;line-height:1.5}
+.article-more a:hover{color:var(--accent)}
+.modal-body a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,255,0,.3)}
+.modal-body a:hover{border-bottom-color:var(--accent)}
+@media(max-width:1024px){.article-page{padding-top:120px}.article-cta{padding:28px 20px}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Метрики здоровья бренда: как измерить силу бренда",
+  "description": "Знание, NPS, брендовый поисковый спрос, повторные покупки: какие метрики бренда отслеживать, как построить воронку бренда и что доступно малому бизнесу.",
+  "inLanguage": "ru",
+  "datePublished": "2026-10-20",
+  "mainEntityOfPage": "https://brandmanager.su/article-brand-health-metrics.html",
+  "image": "https://brandmanager.su/og-image.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Дмитрий Москаленко",
+    "url": "https://brandmanager.su/"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Дмитрий Москаленко",
+    "url": "https://brandmanager.su/"
+  }
+}
+</script>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">DM / Brand</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="services.html">Услуги</a></li>
+    <li><a href="articles.html" class="active">Статьи</a></li>
+    <li><a href="blog.html">Блог</a></li>
+    <li><a href="resume.html">Резюме</a></li>
+    <li><a href="brief.html">Бриф</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Обсудить проект</a></li>
+  </ul>
+  <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Открыть меню">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
+  <a href="index.html" onclick="closeMobileMenu()">Главная</a>
+  <a href="services.html" onclick="closeMobileMenu()">Услуги</a>
+  <a href="articles.html" onclick="closeMobileMenu()">Статьи</a>
+  <a href="blog.html" onclick="closeMobileMenu()">Блог</a>
+  <a href="resume.html" onclick="closeMobileMenu()">Резюме</a>
+  <a href="brief.html" onclick="closeMobileMenu()">Бриф</a>
+  <a href="index.html#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
+</div>
+
+<main class="article-page">
+  <div class="article-crumbs"><a href="index.html">Главная</a> / <a href="articles.html">Статьи</a> / Метрики бренда</div>
+  <article>
+    <h1>Метрики здоровья бренда: как измерить силу бренда</h1>
+    <div class="article-meta">Управление брендом · Аналитика · Дмитрий Москаленко, бренд-менеджер</div>
+    <div class="modal-body">
+
+      <div class="highlight">Бренд нельзя улучшить, если его не измерять. Метрики здоровья бренда показывают, знают ли вас, выбирают ли и возвращаются ли — и позволяют заметить проблему до того, как она отразится на продажах.</div>
+      <p>Частая ситуация: продажи растут благодаря скидкам и рекламе, а сам бренд при этом слабеет. Узнаваемость не растёт, лояльность держится только на акциях, и стоит остановить промо — выручка проседает. Отследить это по отчёту о продажах невозможно, нужны отдельные метрики бренда.</p>
+
+      <h3>Воронка бренда: от знания к лояльности</h3>
+      <p>Самый понятный способ измерять бренд — воронка, которая показывает, сколько людей из целевой аудитории проходят каждый этап:</p>
+      <ol>
+        <li><strong>Спонтанное знание.</strong> Человек называет бренд сам, без подсказки, когда его спрашивают о категории: «Какие бренды кофе вы знаете?».</li>
+        <li><strong>Знание с подсказкой.</strong> Человек узнаёт бренд, когда видит название или логотип в списке.</li>
+        <li><strong>Рассмотрение.</strong> Готов рассматривать бренд при следующей покупке.</li>
+        <li><strong>Покупка.</strong> Покупал бренд за последний период.</li>
+        <li><strong>Лояльность.</strong> Покупает его чаще других и не уходит к конкуренту при первой скидке.</li>
+      </ol>
+      <p>Главная ценность воронки — в переходах между этапами. Если бренд знают многие, а рассматривают немногие — проблема в восприятии или позиционировании. Если рассматривают, но не покупают — ищите барьер в цене, доступности или упаковке на полке. Если покупают, но не возвращаются — вопрос к продукту и клиентскому опыту.</p>
+
+      <h3>Ключевые метрики здоровья бренда</h3>
+      <p><strong>Знание бренда (awareness).</strong> Спонтанное и с подсказкой — измеряется опросами целевой аудитории. Спонтанное знание обычно важнее: бренд, который вспоминают первым, чаще попадает в корзину.</p>
+      <p><strong>NPS (индекс готовности рекомендовать).</strong> Клиентам задают вопрос: «Насколько вероятно, что вы порекомендуете нас друзьям?» по шкале от 0 до 10. Доля ответивших 9–10 (промоутеры) минус доля ответивших 0–6 (критики) — это и есть NPS. Сама цифра мало что значит без динамики и сравнения с конкурентами, но падение NPS — ранний сигнал проблем.</p>
+      <p><strong>Ассоциации и восприятие.</strong> С какими словами и качествами связывают бренд. Задача — проверить, совпадают ли они с тем, что заложено в <a href="article-brand-platform-vs-strategy.html">платформе бренда</a>.</p>
+      <p><strong>Брендовый поисковый спрос.</strong> Сколько людей ищут вас по названию. В России это удобно смотреть в Яндекс Вордстате, а по собственному сайту — в разделе поисковых запросов Яндекс Вебмастера. Рост брендовых запросов — один из самых доступных и честных индикаторов растущего интереса к бренду.</p>
+      <p><strong>Доля повторных покупок и удержание.</strong> Какая часть клиентов возвращается. Эту метрику можно считать по собственной CRM без опросов.</p>
+      <p><strong>Ценовая премия.</strong> Готовы ли покупатели платить за ваш бренд больше, чем за аналог без имени. Сильный бренд позволяет держать цену без постоянных скидок.</p>
+      <p><strong>Отзывы и тональность упоминаний.</strong> Рейтинг на маркетплейсах и картах, соотношение позитивных и негативных отзывов, темы, на которые чаще всего жалуются.</p>
+
+      <h3>Как наладить регулярное измерение</h3>
+      <ul>
+        <li><strong>Выберите 4–6 метрик, а не двадцать.</strong> Лучше несколько показателей, которые вы действительно смотрите каждый квартал, чем большой дашборд, который никто не открывает.</li>
+        <li><strong>Зафиксируйте точку отсчёта.</strong> Первое измерение — база, с которой сравниваются все следующие. Хорошо, если оно совпадает с <a href="article-brand-audit.html">аудитом бренда</a>.</li>
+        <li><strong>Измеряйте с одинаковой методикой.</strong> Те же вопросы, та же аудитория, тот же период. Иначе цифры нельзя сравнивать.</li>
+        <li><strong>Смотрите на конкурентов.</strong> Знание бренда в 30% — это много или мало, зависит от того, сколько у лидера категории.</li>
+        <li><strong>Связывайте с бизнес-показателями.</strong> Метрики бренда нужны, чтобы объяснять и прогнозировать продажи, а не ради отчёта.</li>
+      </ul>
+
+      <h3>Какие метрики доступны малому бизнесу</h3>
+      <p>Масштабные трекинговые исследования стоят дорого, но базовую картину можно собрать почти бесплатно: брендовые запросы в Вордстате, доля повторных покупок из CRM, рейтинг и отзывы на площадках, короткий NPS-опрос после покупки. Этого уже достаточно, чтобы видеть тренд и не управлять брендом вслепую.</p>
+
+      <h3>Частые вопросы</h3>
+      <p><strong>Как часто измерять метрики бренда?</strong><br>Метрики из собственных данных — поисковый спрос, повторные покупки, отзывы — можно смотреть ежемесячно. Опросы о знании и восприятии обычно проводят раз в квартал, полгода или год: бренд меняется медленно.</p>
+      <p><strong>Кто в компании должен отвечать за метрики бренда?</strong><br>Тот, кто управляет брендом, — <a href="article-brand-manager.html">бренд-менеджер</a> или маркетинг-директор. Важно, чтобы метрики бренда входили в его KPI наравне с продажами.</p>
+
+      <p><strong>Вывод:</strong> продажи показывают, что произошло вчера, а метрики бренда — что произойдёт завтра. Компания, которая отслеживает знание, лояльность и брендовый спрос, видит проблемы раньше, чем они превращаются в падение выручки.</p>
+
+    </div>
+  </article>
+  <div class="article-cta">
+    <h2>Нужна помощь с брендом?</h2>
+    <p>Разберём вашу задачу на бесплатной 30-минутной консультации: где точки роста и что нужно в первую очередь — стратегия, аудит или запуск.</p>
+    <a href="brief.html" class="primary">Заполнить бриф</a>
+    <a href="https://t.me/Dmitrii_Diezel" class="secondary" target="_blank" rel="noopener">Написать в Telegram</a>
+  </div>
+  <div class="article-more">
+    <h2>Читайте также</h2>
+    <a href="article-brand-audit.html">Аудит бренда: что проверить и как провести</a>
+    <a href="article-brand-manager.html">Кто такой бренд-менеджер и зачем он нужен компании</a>
+    <a href="article-marketing-in-russia.html">Почему маркетинг не рулит бизнесом в России</a>
+    <a href="articles.html">Все статьи →</a>
+  </div>
+</main>
+
+<footer>
+  <a href="index.html" class="footer-logo">DM / Brand Manager</a>
+  <span class="footer-copy">© 2026 · Дмитрий Москаленко</span>
+  <div class="footer-socials">
+    <a href="privacy.html">Конфиденциальность</a>
+    <a href="cookies.html">Cookie</a>
+    <a href="terms.html">Соглашение</a>
+    <a href="https://t.me/Dmitrii_Diezel" target="_blank">Telegram</a>
+    <a href="https://vk.com/dmitrii_moskalenko" target="_blank">VK</a>
+  </div>
+</footer>
+
+<script>
+var _CURSOR_OK=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+if(_CURSOR_OK)document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px'});
+(function animRing(){if(!_CURSOR_OK){var c=document.getElementById('cursor'),r=document.getElementById('cursorRing');if(c)c.style.display='none';if(r)r.style.display='none';return;}rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)})();
+
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+window.addEventListener('scroll',()=>{
+  const n=document.getElementById('nav');
+  n.style.background=window.scrollY>60?'rgba(10,10,10,.97)':'';
+  n.style.backdropFilter=window.scrollY>60?'blur(12px)':'';
+  n.style.borderBottom=window.scrollY>60?'1px solid #1a1a1a':'';
+});
+
+
+
+  
+</script>
+
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="cookies.html">Политике cookie</a>.</div>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Понятно</button>
+  </div>
+</div>
+
+
+<script>
+(function(){
+  try {
+    if (!localStorage.getItem('cookie_consent')) {
+      setTimeout(function(){
+        var b = document.getElementById('cookieBanner');
+        if (b) b.classList.add('show');
+      }, 1500);
+    }
+  } catch(e){}
+})();
+function acceptCookies(){
+  try { localStorage.setItem('cookie_consent','accepted'); } catch(e){}
+  var b = document.getElementById('cookieBanner');
+  if(b) b.classList.remove('show');
+  if (typeof window.__loadMetrika === 'function') window.__loadMetrika();
+}
+</script>
+
+<script>
+function toggleMobileMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var burger = document.getElementById('burger');
+  if (!menu || !burger) return;
+  var isOpen = menu.classList.contains('open');
+  if (isOpen) {
+    menu.classList.remove('open');
+    burger.classList.remove('open');
+    document.body.style.overflow = '';
+  } else {
+    menu.classList.add('open');
+    burger.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+function closeMobileMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var burger = document.getElementById('burger');
+  if (menu) menu.classList.remove('open');
+  if (burger) burger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+// Close menu on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+</script>
+<script>
+/* REVEAL_FAILSAFE: гарантированно показываем контент, даже если что-то сломалось */
+(function(){
+  function showAll(){
+    var els=document.querySelectorAll('.reveal:not(.visible)');
+    for(var i=0;i<els.length;i++){els[i].classList.add('visible');}
+  }
+  // если через 1.2с что-то ещё скрыто — показать принудительно
+  setTimeout(showAll,1200);
+  // и на случай полной ошибки — по load
+  window.addEventListener('load',function(){setTimeout(showAll,300);});
+})();
+</script>
+<script>
+/* Цели Яндекс.Метрики: клики по брифу и контактам */
+(function(){
+  function goal(name){ try { if (window.ym) ym(72239779, 'reachGoal', name); } catch(e){} }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('forms.yandex.ru') !== -1) goal('brief_form_open');
+    else if (/(^|\/)brief\.html/.test(h)) goal('brief_click');
+    else if (h.indexOf('t.me/') !== -1) goal('telegram_click');
+    else if (h.indexOf('tel:') === 0) goal('phone_click');
+    else if (h.indexOf('mailto:') === 0) goal('email_click');
+    else if (h.indexOf('vk.com/') !== -1) goal('vk_click');
+  });
+})();
+</script>
+</body>
+</html>

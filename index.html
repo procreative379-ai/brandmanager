@@ -22,7 +22,7 @@
 <meta property="og:description" content="Помогаю импортёрам и дистрибьюторам строить бренды, которые растут в деньгах.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://brandmanager.su/">
-<meta property="og:image" content="https://brandmanager.su/og-image.jpg">
+<meta property="og:image" content="https://brandmanager.su/og-image.jpg?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Дмитрий Москаленко — Бренд-стратег">
@@ -30,7 +30,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Дмитрий Москаленко — Бренд-стратег, Москва">
 <meta name="twitter:description" content="Помогаю импортёрам и дистрибьюторам строить бренды, которые растут в деньгах. 10 лет в бренд-менеджменте, 20+ брендов.">
-<meta name="twitter:image" content="https://brandmanager.su/og-image.jpg">
+<meta name="twitter:image" content="https://brandmanager.su/og-image.jpg?v=2">
 
 <link rel="preload" href="/fonts/unbounded-cyrillic-c86556.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/geologica-cyrillic-f28b2b.woff2" as="font" type="font/woff2" crossorigin>
@@ -229,6 +229,27 @@
     background: linear-gradient(135deg, rgba(200,255,0,0.05) 0%, transparent 60%);
     z-index: 1;
   }
+  .hero-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    filter: brightness(0.9);
+    z-index: 0;
+  }
+  .hero-right::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to right, var(--black) 0%, rgba(10,10,10,0) 35%),
+      linear-gradient(to left, rgba(10,10,10,0.8) 0%, rgba(10,10,10,0) 32%),
+      linear-gradient(to top, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0) 50%);
+    z-index: 1;
+  }
+  .hero-avatar { display: none; }
   .hero-bg-text {
     position: absolute;
     top: 50%;
@@ -932,6 +953,8 @@
     .hero { grid-template-columns: 1fr; }
     .hero-left { padding: 140px 30px 80px; }
     .hero-right { display: none; }
+    .hero-avatar { display: block; width: 112px; height: 112px; margin-bottom: 28px; }
+    .hero-avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); }
     .about, .experience, .cta-section { grid-template-columns: 1fr; gap: 60px; padding: 80px 30px; }
     .services, .cases, .brands, .testimonials { padding: 80px 30px; }
     .services-grid { grid-template-columns: 1fr; }
@@ -1299,6 +1322,7 @@
   "@type": "Person",
   "name": "Дмитрий Москаленко",
   "jobTitle": "Бренд-менеджер",
+  "image": "https://brandmanager.su/img/dmitry-moskalenko-900.jpg",
   "description": "Бренд-менеджер и стратег, 10 лет в бренд-менеджменте FMCG и B2B. Запуск брендов, управление портфелем, листинг в федеральных сетях.",
   "url": "https://brandmanager.su",
   "sameAs": [
@@ -1415,6 +1439,10 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
+    <picture class="hero-avatar">
+      <source type="image/webp" srcset="img/dmitry-moskalenko-480.webp">
+      <img src="img/dmitry-moskalenko-900.jpg" alt="Дмитрий Москаленко" width="112" height="112" loading="lazy">
+    </picture>
     <div class="hero-label">Бренд-стратег · Москва · с 2016 года</div>
     <h1 class="hero-h1">
       Строю бренды,<br>
@@ -1434,6 +1462,10 @@
   <div class="hero-right">
     <div class="hero-line"></div>
     <div class="hero-bg-text">BRAND</div>
+    <picture class="hero-photo">
+      <source type="image/webp" srcset="img/dmitry-moskalenko-480.webp 480w, img/dmitry-moskalenko-900.webp 900w" sizes="50vw">
+      <img src="img/dmitry-moskalenko-900.jpg" alt="Дмитрий Москаленко, бренд-менеджер" width="900" height="900" fetchpriority="high">
+    </picture>
     <div class="hero-stats">
       <div class="stat-item">
         <div class="stat-num">×<span data-target="4">4</span></div>
@@ -1758,7 +1790,7 @@
       <div class="timeline-content">
         <div class="timeline-company">Торговый Дизайн</div>
         <div class="timeline-role">Бренд-менеджер · Оборудование HoReCa</div>
-        <div class="timeline-desc">Перевод категории из эконома в средний+: выручка с 10 до 70 млн ₽, маржа с 17% до 28% за 2,5 года. СТМ EKSI от выбора фабрики до полки за 7 месяцев, листинг в X5, «Ленте», METRO, «Азбуке Вкуса».</div>
+        <div class="timeline-desc">Перевод категории из эконома в средний+: выручка с 10 до 70 млн ₽, маржа с 17% до 28% за 2,5 года. СТМ EKSI от выбора фабрики до полки за 7 месяцев, включая сертификацию.</div>
       </div>
     </div>
     <div class="timeline-item">
@@ -1766,7 +1798,7 @@
       <div class="timeline-content">
         <div class="timeline-company">SVAM Group</div>
         <div class="timeline-role">Бренд-менеджер · Питьевая вода</div>
-        <div class="timeline-desc">Удержание доли Harrogate 2% (~240 млн ₽ по Nielsen) при выходе трёх конкурентов без роста бюджета. Запуск Gletcher Water с нуля до федерального листинга.</div>
+        <div class="timeline-desc">Удержание доли Harrogate 2% (~240 млн ₽ по Nielsen) при выходе трёх конкурентов без роста бюджета. Запуск Gletcher Water с нуля до федерального листинга: X5, METRO, «Азбука Вкуса».</div>
       </div>
     </div>
     <div class="timeline-item">

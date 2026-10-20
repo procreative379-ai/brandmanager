@@ -42,14 +42,12 @@
     });
   }
   window.__loadMetrika = loadMetrika;
-  // Загружаем сразу для всех, КРОМЕ тех, кто явно отклонил
+  // Метрика работает для всех посетителей; снимаем отказ, сохранённый старой версией баннера
   try {
-    if (localStorage.getItem('cookie_consent') !== 'declined') {
-      loadMetrika();
-    }
-  } catch(e){
-    loadMetrika();
-  }
+    document.cookie = 'ym_disable_72239779=; path=/; max-age=0';
+    if (localStorage.getItem('cookie_consent') === 'declined') localStorage.removeItem('cookie_consent');
+  } catch(e){}
+  loadMetrika();
 })();
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/72239779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
@@ -932,10 +930,9 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
 </footer>
 
 <div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text">Мы используем cookies для аналитики. <a href="cookies.html">Политика cookie</a></div>
+  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="cookies.html">Политике cookie</a>.</div>
   <div class="cookie-actions">
-    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Принять</button>
-    <button class="cookie-btn cookie-decline" onclick="declineCookies()">Отклонить</button>
+    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Понятно</button>
   </div>
 </div>
 
@@ -963,15 +960,6 @@ window.addEventListener('scroll',()=>{
 
 (function(){try{if(!localStorage.getItem('cookie_consent')){setTimeout(function(){var b=document.getElementById('cookieBanner');if(b)b.classList.add('show');},1500);}}catch(e){}})();
 function acceptCookies(){try{localStorage.setItem('cookie_consent','accepted');}catch(e){}document.getElementById('cookieBanner').classList.remove('show');}
-function declineCookies(){
-  try {
-    localStorage.setItem('cookie_consent','declined');
-    document.cookie = 'ym_disable_72239779=1; path=/; max-age=31536000';
-    window['ym_disable_72239779'] = true;
-  } catch(e){}
-  var b = document.getElementById('cookieBanner');
-  if(b) b.classList.remove('show');
-}
 </script>
 
 <script>

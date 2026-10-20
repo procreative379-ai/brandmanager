@@ -308,14 +308,12 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
     });
   }
   window.__loadMetrika = loadMetrika;
-  // Загружаем сразу для всех, КРОМЕ тех, кто явно отклонил
+  // Метрика работает для всех посетителей; снимаем отказ, сохранённый старой версией баннера
   try {
-    if (localStorage.getItem('cookie_consent') !== 'declined') {
-      loadMetrika();
-    }
-  } catch(e){
-    loadMetrika();
-  }
+    document.cookie = 'ym_disable_72239779=; path=/; max-age=0';
+    if (localStorage.getItem('cookie_consent') === 'declined') localStorage.removeItem('cookie_consent');
+  } catch(e){}
+  loadMetrika();
 })();
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/72239779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
@@ -393,13 +391,12 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
     <p style="font-size:13px;color:var(--muted);">Яндекс.Метрика — сервис веб-аналитики ООО «Яндекс» (119021, Россия, Москва, ул. Льва Толстого, 16). Счётчик на сайте: 72239779. <a href="https://yandex.ru/legal/confidential/" target="_blank">Политика конфиденциальности Яндекса</a>.</p>
 
     <h2>3. Управление cookie</h2>
-    <p>При первом посещении сайта вам показывается баннер с предложением принять или отклонить аналитические cookie. Технические cookie устанавливаются в любом случае, так как без них сайт не сможет работать.</p>
-    <p>Вы можете изменить свой выбор в любой момент:</p>
+    <p>При первом посещении сайта показывается уведомление об использовании cookie. Аналитические cookie Яндекс.Метрики устанавливаются для всех посетителей сайта, технические — в любом случае, так как без них сайт не сможет работать.</p>
+    <p>Если вы не хотите, чтобы Яндекс.Метрика собирала данные о ваших посещениях:</p>
     <ul>
-      <li>Нажмите кнопку ниже, чтобы сбросить настройки cookie</li>
-      <li>Очистите cookie в настройках вашего браузера</li>
+      <li>Запретите или очистите cookie в настройках вашего браузера</li>
+      <li>Установите <a href="https://yandex.ru/support/metrica/general/opt-out.html" target="_blank" rel="noopener">блокировщик Яндекс.Метрики</a></li>
     </ul>
-    <button class="reset-cookie-btn" onclick="resetCookies()">🔄 Сбросить настройки cookie</button>
     <p style="margin-top:20px;">Настройки cookie в популярных браузерах: <a href="https://support.google.com/chrome/answer/95647" target="_blank">Google Chrome</a>, <a href="https://support.mozilla.org/ru/kb/udalenie-kukov" target="_blank">Mozilla Firefox</a>, <a href="https://support.apple.com/ru-ru/guide/safari/sfri11471/mac" target="_blank">Safari</a>, <a href="https://browser.yandex.ru/help/personal-data-protection/cookies.html" target="_blank">Яндекс.Браузер</a>.</p>
 
     <h2>4. Последствия отключения cookie</h2>
@@ -408,7 +405,7 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
 
     <h2>5. Правовое основание</h2>
     <p>Обработка данных через технические cookie основана на законном интересе оператора (обеспечение работоспособности сервиса).</p>
-    <p>Аналитические cookie устанавливаются на основании вашего явного согласия в соответствии с Федеральным законом от 27.07.2006 N 152-ФЗ «О персональных данных» и рекомендациями Роскомнадзора.</p>
+    <p>Аналитические cookie устанавливаются для обезличенного анализа посещаемости сайта. Продолжая пользоваться сайтом, вы соглашаетесь с их использованием в соответствии с Федеральным законом от 27.07.2006 N 152-ФЗ «О персональных данных».</p>
 
     <h2>6. Контакты</h2>
     <p>По вопросам использования cookie вы можете обратиться:</p>
@@ -450,13 +447,9 @@ window.addEventListener('scroll',()=>{
 
 <!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text">
-    Мы используем cookies для аналитики (Яндекс.Метрика) и улучшения сайта.
-    Подробнее в <a href="privacy.html">Политике конфиденциальности</a>.
-  </div>
+  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="cookies.html">Политике cookie</a>.</div>
   <div class="cookie-actions">
-    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Принять</button>
-    <button class="cookie-btn cookie-decline" onclick="declineCookies()">Отклонить</button>
+    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Понятно</button>
   </div>
 </div>
 
@@ -477,15 +470,6 @@ function acceptCookies(){
   var b = document.getElementById('cookieBanner');
   if(b) b.classList.remove('show');
   if (typeof window.__loadMetrika === 'function') window.__loadMetrika();
-}
-function declineCookies(){
-  try {
-    localStorage.setItem('cookie_consent','declined');
-    document.cookie = 'ym_disable_72239779=1; path=/; max-age=31536000';
-    window['ym_disable_72239779'] = true;
-  } catch(e){}
-  var b = document.getElementById('cookieBanner');
-  if(b) b.classList.remove('show');
 }
 </script>
 
@@ -519,10 +503,6 @@ document.addEventListener('keydown', function(e) {
 </script>
 
 <script>
-function resetCookies(){
-  try { localStorage.removeItem('cookie_consent'); } catch(e){}
-  alert('Настройки cookie сброшены. Баннер появится снова при следующем посещении.');
-}
 </script>
 <script>
 /* REVEAL_FAILSAFE: гарантированно показываем контент, даже если что-то сломалось */

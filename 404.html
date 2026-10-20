@@ -281,14 +281,12 @@
     });
   }
   window.__loadMetrika = loadMetrika;
-  // Загружаем сразу для всех, КРОМЕ тех, кто явно отклонил
+  // Метрика работает для всех посетителей; снимаем отказ, сохранённый старой версией баннера
   try {
-    if (localStorage.getItem('cookie_consent') !== 'declined') {
-      loadMetrika();
-    }
-  } catch(e){
-    loadMetrika();
-  }
+    document.cookie = 'ym_disable_72239779=; path=/; max-age=0';
+    if (localStorage.getItem('cookie_consent') === 'declined') localStorage.removeItem('cookie_consent');
+  } catch(e){}
+  loadMetrika();
 })();
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/72239779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
@@ -323,13 +321,9 @@
 
 <!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text">
-    Мы используем cookies для аналитики (Яндекс.Метрика) и улучшения сайта.
-    Подробнее в <a href="privacy.html">Политике конфиденциальности</a>.
-  </div>
+  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="cookies.html">Политике cookie</a>.</div>
   <div class="cookie-actions">
-    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Принять</button>
-    <button class="cookie-btn cookie-decline" onclick="declineCookies()">Отклонить</button>
+    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Понятно</button>
   </div>
 </div>
 
@@ -350,15 +344,6 @@ function acceptCookies(){
   var b = document.getElementById('cookieBanner');
   if(b) b.classList.remove('show');
   if (typeof window.__loadMetrika === 'function') window.__loadMetrika();
-}
-function declineCookies(){
-  try {
-    localStorage.setItem('cookie_consent','declined');
-    document.cookie = 'ym_disable_72239779=1; path=/; max-age=31536000';
-    window['ym_disable_72239779'] = true;
-  } catch(e){}
-  var b = document.getElementById('cookieBanner');
-  if(b) b.classList.remove('show');
 }
 </script>
 

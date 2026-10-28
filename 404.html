@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="/fonts/fonts.css">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root { --black:#0a0a0a; --white:#f5f2ed; --accent:var(--site-accent); --muted:#888; }
+  :root { --black:var(--site-bg); --white:var(--site-text); --accent:var(--site-accent); --muted:var(--site-muted); }
   body {
     background: var(--black); color: var(--white);
     font-family: 'Geologica', sans-serif; font-weight: 300;
@@ -50,14 +50,14 @@
   .btn:hover { transform: translateY(-2px); }
   .btn-primary { background: var(--accent); color: var(--black); }
   .btn-primary:hover { box-shadow: 0 8px 24px rgba(var(--site-accent-rgb),0.25); }
-  .btn-secondary { border: 1px solid #2e2e2e; color: var(--white); }
+  .btn-secondary { border: 1px solid var(--site-rule); color: var(--white); }
   .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
 
 /* ── COOKIE BANNER ── */
 .cookie-banner {
   position: fixed; bottom: 24px; left: 24px; right: 24px;
   max-width: 560px; z-index: 9000;
-  background: #1a1a1a; border: 1px solid #2e2e2e;
+  background: var(--site-surface); border: 1px solid var(--site-rule);
   border-left: 3px solid var(--site-accent);
   padding: 20px 24px; display: flex;
   align-items: center; gap: 20px; flex-wrap: wrap;
@@ -65,7 +65,7 @@
   transition: transform .4s ease, opacity .4s ease;
 }
 .cookie-banner.show { transform: translateY(0); opacity: 1; }
-.cookie-text { font-size: 13px; color: #aaa; line-height: 1.6; flex: 1; min-width: 200px; }
+.cookie-text { font-size: 13px; color: var(--site-muted-2); line-height: 1.6; flex: 1; min-width: 200px; }
 .cookie-text a { color: var(--site-accent); text-decoration: none; }
 .cookie-text a:hover { text-decoration: underline; }
 .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
@@ -76,21 +76,21 @@
   transition: transform .15s, opacity .2s;
 }
 .cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
-.cookie-accept { background: var(--site-accent); color: #0a0a0a; }
-.cookie-decline { background: transparent; color: #666; border: 1px solid #2e2e2e; }
+.cookie-accept { background: var(--site-accent); color: var(--site-bg); }
+.cookie-decline { background: transparent; color: #666; border: 1px solid var(--site-rule); }
 
 
   .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;position:relative;z-index:200;background:none;border:none}
-  .burger span{display:block;width:24px;height:2px;background:#f5f2ed;transition:transform .3s,opacity .3s;transform-origin:center}
+  .burger span{display:block;width:24px;height:2px;background:var(--site-text);transition:transform .3s,opacity .3s;transform-origin:center}
   .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .burger.open span:nth-child(2){opacity:0}
   .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  .mobile-menu{display:none;position:fixed;inset:0;background:rgba(10,10,10,.98);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:8px;backdrop-filter:blur(16px)}
+  .mobile-menu{display:none;position:fixed;inset:0;background:rgba(var(--site-bg-rgb),.98);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:8px;backdrop-filter:blur(16px)}
   .mobile-menu.open{display:flex}
-  .mobile-menu a{font-family:'Unbounded',sans-serif;font-size:clamp(22px,6vw,36px);font-weight:900;letter-spacing:-.02em;color:#f5f2ed;text-decoration:none;padding:12px 24px;transition:color .2s}
+  .mobile-menu a{font-family:'Unbounded',sans-serif;font-size:clamp(22px,6vw,36px);font-weight:900;letter-spacing:-.02em;color:var(--site-text);text-decoration:none;padding:12px 24px;transition:color .2s}
   .mobile-menu a:hover{color:var(--site-accent)}
-  .mobile-menu a.nav-cta{background:var(--site-accent);color:#0a0a0a!important;border-radius:2px;margin-top:16px;font-size:clamp(14px,4vw,20px)}
-  .mobile-menu-close{position:absolute;top:24px;right:24px;font-size:28px;color:#f5f2ed;cursor:pointer;background:none;border:none}
+  .mobile-menu a.nav-cta{background:var(--site-accent);color:var(--site-bg)!important;border-radius:2px;margin-top:16px;font-size:clamp(14px,4vw,20px)}
+  .mobile-menu-close{position:absolute;top:24px;right:24px;font-size:28px;color:var(--site-text);cursor:pointer;background:none;border:none}
   }
 
   /* ── MOBILE BURGER & MENU ── */
@@ -110,7 +110,7 @@
     display: block;
     width: 24px;
     height: 2px;
-    background: #f5f2ed;
+    background: var(--site-text);
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
     transform-origin: center;
@@ -122,7 +122,7 @@
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(10,10,10,0.98);
+    background: rgba(var(--site-bg-rgb),0.98);
     z-index: 150;
     flex-direction: column;
     align-items: center;
@@ -137,7 +137,7 @@
     font-size: clamp(22px, 6vw, 36px);
     font-weight: 900;
     letter-spacing: -0.02em;
-    color: #f5f2ed;
+    color: var(--site-text);
     text-decoration: none;
     padding: 12px 24px;
     transition: color 0.2s;
@@ -146,7 +146,7 @@
   .mobile-menu a:hover { color: var(--site-accent); }
   .mobile-menu a.nav-cta {
     background: var(--site-accent) !important;
-    color: #0a0a0a !important;
+    color: var(--site-bg) !important;
     border-radius: 2px;
     margin-top: 16px;
     font-size: clamp(14px, 4vw, 20px);
@@ -156,7 +156,7 @@
     top: 24px;
     right: 24px;
     font-size: 32px;
-    color: #f5f2ed;
+    color: var(--site-text);
     cursor: pointer;
     background: none;
     border: none;
@@ -297,9 +297,9 @@
 <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-<nav style="position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,.95);">
-  <a href="/" style="font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;letter-spacing:.15em;color:#f5f2ed;text-decoration:none;text-transform:uppercase;">DM / Brand</a>
-  <a href="/" style="font-size:13px;color:#888;text-decoration:none;">На главную</a>
+<nav style="position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;background:rgba(var(--site-bg-rgb),.95);">
+  <a href="/" style="font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;letter-spacing:.15em;color:var(--site-text);text-decoration:none;text-transform:uppercase;">DM / Brand</a>
+  <a href="/" style="font-size:13px;color:var(--site-muted);text-decoration:none;">На главную</a>
   <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Меню" style="display:none;">
     <span></span><span></span><span></span>
   </button>

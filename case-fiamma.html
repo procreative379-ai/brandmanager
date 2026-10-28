@@ -31,7 +31,7 @@
     --black: #0e0e0e;
     --white: #faf8f5;
     --mid: #181818;
-    --muted: #888;
+    --muted: var(--site-muted);
     --border: rgba(255,255,255,0.08);
   }
 
@@ -273,7 +273,7 @@
   .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .burger.open span:nth-child(2){opacity:0;width:0}
   .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  .mobile-menu{display:none;position:fixed;inset:0;background:rgba(10,10,10,.98);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:8px;backdrop-filter:blur(16px)}
+  .mobile-menu{display:none;position:fixed;inset:0;background:rgba(var(--site-bg-rgb),.98);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:8px;backdrop-filter:blur(16px)}
   .mobile-menu.open{display:flex}
   .mobile-menu a{font-family:var(--font-display);font-size:clamp(22px,6vw,36px);font-weight:900;letter-spacing:-.02em;color:var(--white);text-decoration:none;padding:12px 24px;transition:color .2s;text-align:center}
   .mobile-menu a:hover{color:var(--accent)}
@@ -293,14 +293,14 @@
     font-size: 12px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--muted, #888);
+    color: var(--muted, var(--site-muted));
     text-decoration: none;
     transition: color 0.3s;
   }
   .nav-links a:hover { color: var(--accent); }
   .nav-cta {
     background: var(--accent) !important;
-    color: #0a0a0a !important;
+    color: var(--site-bg) !important;
     padding: 10px 22px !important;
     border-radius: 2px !important;
     font-weight: 600 !important;
@@ -330,7 +330,7 @@
 .cookie-banner {
   position: fixed; bottom: 24px; left: 24px; right: 24px;
   max-width: 560px; z-index: 9000;
-  background: #1a1a1a; border: 1px solid #2e2e2e;
+  background: var(--site-surface); border: 1px solid var(--site-rule);
   border-left: 3px solid var(--site-accent);
   padding: 20px 24px; display: flex;
   align-items: center; gap: 20px; flex-wrap: wrap;
@@ -338,7 +338,7 @@
   transition: transform .4s ease, opacity .4s ease;
 }
 .cookie-banner.show { transform: translateY(0); opacity: 1; }
-.cookie-text { font-size: 13px; color: #aaa; line-height: 1.6; flex: 1; min-width: 200px; }
+.cookie-text { font-size: 13px; color: var(--site-muted-2); line-height: 1.6; flex: 1; min-width: 200px; }
 .cookie-text a { color: var(--site-accent); text-decoration: none; }
 .cookie-text a:hover { text-decoration: underline; }
 .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
@@ -349,8 +349,8 @@
   transition: transform .15s, opacity .2s;
 }
 .cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
-.cookie-accept { background: var(--site-accent); color: #0a0a0a; }
-.cookie-decline { background: transparent; color: #666; border: 1px solid #2e2e2e; }
+.cookie-accept { background: var(--site-accent); color: var(--site-bg); }
+.cookie-decline { background: transparent; color: #666; border: 1px solid var(--site-rule); }
 
 
   /* ── MOBILE BURGER & MENU ── */
@@ -370,7 +370,7 @@
     display: block;
     width: 24px;
     height: 2px;
-    background: #f5f2ed;
+    background: var(--site-text);
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
     transform-origin: center;
@@ -382,7 +382,7 @@
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(10,10,10,0.98);
+    background: rgba(var(--site-bg-rgb),0.98);
     z-index: 150;
     flex-direction: column;
     align-items: center;
@@ -397,7 +397,7 @@
     font-size: clamp(22px, 6vw, 36px);
     font-weight: 900;
     letter-spacing: -0.02em;
-    color: #f5f2ed;
+    color: var(--site-text);
     text-decoration: none;
     padding: 12px 24px;
     transition: color 0.2s;
@@ -406,7 +406,7 @@
   .mobile-menu a:hover { color: var(--site-accent); }
   .mobile-menu a.nav-cta {
     background: var(--site-accent) !important;
-    color: #0a0a0a !important;
+    color: var(--site-bg) !important;
     border-radius: 2px;
     margin-top: 16px;
     font-size: clamp(14px, 4vw, 20px);
@@ -416,7 +416,7 @@
     top: 24px;
     right: 24px;
     font-size: 32px;
-    color: #f5f2ed;
+    color: var(--site-text);
     cursor: pointer;
     background: none;
     border: none;
@@ -712,19 +712,19 @@
   <div class="size-demo">
     <div class="size-row">
       <span class="size-label">20mm, Стандарт</span>
-      <span class="logo-fiamma" style="font-size:28px; background:#fff; padding:8px 20px; color:#111;">fiamma <span class="flame">&#9607;&#9607;</span></span>
+      <span class="logo-fiamma" style="font-size:28px; background:#fff; padding:8px 20px; color:var(--site-surface-2);">fiamma <span class="flame">&#9607;&#9607;</span></span>
     </div>
     <div class="size-row">
       <span class="size-label">15mm</span>
-      <span class="logo-fiamma" style="font-size:22px; background:#fff; padding:6px 16px; color:#111;">fiamma <span class="flame">&#9607;&#9607;</span></span>
+      <span class="logo-fiamma" style="font-size:22px; background:#fff; padding:6px 16px; color:var(--site-surface-2);">fiamma <span class="flame">&#9607;&#9607;</span></span>
     </div>
     <div class="size-row">
       <span class="size-label">10mm</span>
-      <span class="logo-fiamma" style="font-size:16px; background:#fff; padding:4px 12px; color:#111;">fiamma <span class="flame">&#9607;&#9607;</span></span>
+      <span class="logo-fiamma" style="font-size:16px; background:#fff; padding:4px 12px; color:var(--site-surface-2);">fiamma <span class="flame">&#9607;&#9607;</span></span>
     </div>
     <div class="size-row">
       <span class="size-label">5mm, Минимум</span>
-      <span class="logo-fiamma" style="font-size:11px; background:#fff; padding:3px 10px; color:#111;">fiamma <span class="flame">&#9607;</span></span>
+      <span class="logo-fiamma" style="font-size:11px; background:#fff; padding:3px 10px; color:var(--site-surface-2);">fiamma <span class="flame">&#9607;</span></span>
     </div>
   </div>
 </section>
@@ -750,16 +750,16 @@
     </div>
     <div class="swatch" style="background:#ffffff; border:1px solid #ddd;">
       <span style="color:#000;">White</span>
-      <small style="color:#888;">#ffffff</small>
+      <small style="color:var(--site-muted);">#ffffff</small>
     </div>
   </div>
 
   <div class="section-num" style="margin-top:60px;">Логотип на различных фонах</div>
   <div class="bg-demos">
     <div class="bg-card" style="background:#ffffff;">
-      <div class="bg-inner" style="color:#111;">
+      <div class="bg-inner" style="color:var(--site-surface-2);">
         fiamma <span style="color:#EC6C5F;">&#9607;&#9607;</span>
-        <span class="since" style="color:#888;">SINCE 1977</span>
+        <span class="since" style="color:var(--site-muted);">SINCE 1977</span>
       </div>
     </div>
     <div class="bg-card" style="background:#000000;">
@@ -781,9 +781,9 @@
       </div>
     </div>
     <div class="bg-card" style="background:#e0d0c8;">
-      <div class="bg-inner" style="color:#111;">
+      <div class="bg-inner" style="color:var(--site-surface-2);">
         fiamma <span style="color:#EC6C5F;">&#9607;&#9607;</span>
-        <span class="since" style="color:#888;">SINCE 1977</span>
+        <span class="since" style="color:var(--site-muted);">SINCE 1977</span>
       </div>
     </div>
     <div class="bg-card" style="background:#2bbb88;">

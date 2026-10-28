@@ -1,9 +1,20 @@
 /* Общие настройки сайта: цвет акцента задаётся здесь один раз для всех страниц. */
 :root {
-  --site-accent: #c8ff00;
-  --site-accent-rgb: 200,255,0;
-  --site-on-accent: #0a0a0a;
+  --site-accent: #d4693f;
+  --site-accent-rgb: 212,105,63;
+  --site-on-accent: #141210;
+  --site-bg: #141210;
+  --site-bg-rgb: 20,18,16;
+  --site-surface: #1e1b18;
+  --site-surface-2: #1a1715;
+  --site-surface-3: #25211d;
+  --site-rule: #34302b;
+  --site-text: #f2ece3;
+  --site-text-2: #d6cfc4;
+  --site-muted: #9a9187;
+  --site-muted-2: #b5ada2;
 }
+html { background: var(--site-bg); }
 
 /* Подписи и кнопки: обычный регистр, без разрядки. */
 .arch-item h5,
@@ -127,3 +138,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* Декоративные стрелки у ссылок убраны: ссылка и так ведёт дальше. */
 .article-arrow, .post-arrow, .bstep-arrow, .service-arrow, a .arrow { display: none !important; }
 .btn-ghost::after, .nav-back::before { content: none !important; }
+
+/* Узкие экраны: колонки не распирают страницу. */
+@media (max-width: 767px) {
+  .page-hero { grid-template-columns: minmax(0, 1fr) !important; }
+  .hero-stats-row { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .hero-tag, .hero-meta { overflow-wrap: anywhere; }
+}
+footer div, footer nav { flex-wrap: wrap; }
+
+/* Значки-символы вместо иконок убраны: заголовок и так всё говорит. */
+.service-icon, .step-icon, .cta-contact-icon, .brief-cta-icon, .pi-icon, .pillar-icon, .diff-icon, .cta-icon { display: none !important; }
+.hero-label::before, .page-label::before, .page-hero-label::before { content: none !important; display: none !important; }
+
+.cookie-banner { background: var(--site-surface) !important; border: 1px solid var(--site-rule) !important; }

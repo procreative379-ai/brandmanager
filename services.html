@@ -23,7 +23,7 @@
 <link rel="preload" href="/fonts/geologica-cyrillic-f28b2b.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css">
 <style>
-:root{--black:#0a0a0a;--white:#f5f2ed;--accent:#c8ff00;--grey:#1a1a1a;--mid:#2e2e2e;--muted:#888;--font-display:'Unbounded',sans-serif;--font-body:'Geologica',sans-serif}
+:root{--black:#0a0a0a;--white:#f5f2ed;--accent:var(--site-accent);--grey:#1a1a1a;--mid:#2e2e2e;--muted:#888;--font-display:'Unbounded',sans-serif;--font-body:'Geologica',sans-serif}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300;overflow-x:hidden;}
@@ -62,7 +62,7 @@ nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to b
 .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
 .step-card{background:var(--grey);padding:48px 36px;position:relative;overflow:hidden;transition:background .3s}
 .step-card:hover{background:#1e1e1e}
-.step-num{font-family:var(--font-display);font-size:64px;font-weight:900;color:rgba(200,255,0,.06);line-height:1;margin-bottom:32px}
+.step-num{font-family:var(--font-display);font-size:64px;font-weight:900;color:rgba(var(--site-accent-rgb),.06);line-height:1;margin-bottom:32px}
 .step-icon{font-size:28px;margin-bottom:20px;display:block}
 .step-title{font-family:var(--font-display);font-size:15px;font-weight:700;letter-spacing:-.01em;margin-bottom:14px;line-height:1.3}
 .step-desc{font-size:13px;color:var(--muted);line-height:1.65}
@@ -119,7 +119,7 @@ nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to b
 .cta-icon{width:44px;height:44px;background:var(--grey);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
 .cta-actions{display:flex;gap:16px;flex-wrap:wrap}
 .btn-primary{background:var(--accent);color:var(--black);font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:18px 36px;text-decoration:none;border-radius:2px;transition:transform .2s,box-shadow .2s;display:inline-block}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(200,255,0,.25)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(var(--site-accent-rgb),.25)}
 .btn-secondary{font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--white);border:1px solid var(--mid);padding:18px 32px;text-decoration:none;border-radius:2px;transition:border-color .3s,color .3s;display:inline-block}
 .btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
 
@@ -202,7 +202,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   position: fixed; bottom: 24px; left: 24px; right: 24px;
   max-width: 560px; z-index: 9000;
   background: #1a1a1a; border: 1px solid #2e2e2e;
-  border-left: 3px solid #c8ff00;
+  border-left: 3px solid var(--site-accent);
   padding: 20px 24px; display: flex;
   align-items: center; gap: 20px; flex-wrap: wrap;
   transform: translateY(120px); opacity: 0;
@@ -210,7 +210,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 }
 .cookie-banner.show { transform: translateY(0); opacity: 1; }
 .cookie-text { font-size: 13px; color: #aaa; line-height: 1.6; flex: 1; min-width: 200px; }
-.cookie-text a { color: #c8ff00; text-decoration: none; }
+.cookie-text a { color: var(--site-accent); text-decoration: none; }
 .cookie-text a:hover { text-decoration: underline; }
 .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
 .cookie-btn {
@@ -220,7 +220,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   transition: transform .15s, opacity .2s;
 }
 .cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
-.cookie-accept { background: #c8ff00; color: #0a0a0a; }
+.cookie-accept { background: var(--site-accent); color: #0a0a0a; }
 .cookie-decline { background: transparent; color: #666; border: 1px solid #2e2e2e; }
 
 
@@ -274,9 +274,9 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     transition: color 0.2s;
     text-align: center;
   }
-  .mobile-menu a:hover { color: #c8ff00; }
+  .mobile-menu a:hover { color: var(--site-accent); }
   .mobile-menu a.nav-cta {
-    background: #c8ff00 !important;
+    background: var(--site-accent) !important;
     color: #0a0a0a !important;
     border-radius: 2px;
     margin-top: 16px;
@@ -295,7 +295,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     padding: 8px;
     z-index: 160;
   }
-  .mobile-menu-close:hover { color: #c8ff00; }
+  .mobile-menu-close:hover { color: var(--site-accent); }
   @media (max-width: 1024px) {
     .burger { display: flex !important; }
     .nav-links { display: none !important; }
@@ -433,6 +433,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 <meta property="og:image" content="https://brandmanager.su/og-image.jpg?v=2">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://brandmanager.su/og-image.jpg?v=2">
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
 
@@ -465,7 +466,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 <!-- HERO -->
 <div class="page-hero">
   <div class="reveal">
-    <div class="hero-label">Бренд-стратег · 10 лет практики</div>
+    <div class="hero-label">Бренд-стратег, 10 лет практики</div>
     <h1>Услуги<br>по работе<br>с <em>брендом</em></h1>
     <p class="hero-sub">Работаю с импортёрами, дистрибьюторами и производителями. Ниже — что я умею делать и как обычно устроена работа.</p>
     <a href="#contact" class="btn-primary">Обсудить задачу</a>
@@ -691,7 +692,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 
 <footer>
   <a href="/" class="footer-logo">DM / Brand Manager</a>
-  <span class="footer-copy">© 2026 · Дмитрий Москаленко</span>
+  <span class="footer-copy">© 2026, Дмитрий Москаленко</span>
   <div class="footer-socials">
     <a href="/privacy">Конфиденциальность</a>
     <a href="/cookies">Cookie</a>

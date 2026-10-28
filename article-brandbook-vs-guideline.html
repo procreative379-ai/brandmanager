@@ -22,7 +22,7 @@
 <link rel="preload" href="/fonts/geologica-cyrillic-f28b2b.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css">
 <style>
-:root{--black:#0a0a0a;--white:#f5f2ed;--accent:#c8ff00;--grey:#1a1a1a;--mid:#2e2e2e;--muted:#888;--font-display:'Unbounded',sans-serif;--font-body:'Geologica',sans-serif}
+:root{--black:#0a0a0a;--white:#f5f2ed;--accent:var(--site-accent);--grey:#1a1a1a;--mid:#2e2e2e;--muted:#888;--font-display:'Unbounded',sans-serif;--font-body:'Geologica',sans-serif}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300;overflow-x:hidden;}
@@ -79,7 +79,7 @@ nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to b
 .modal-body ul,.modal-body ol{padding-left:24px;margin-bottom:20px}
 .modal-body li{margin-bottom:10px;color:#bbb}
 .modal-body strong{color:var(--white);font-weight:500}
-.modal-body .highlight{background:rgba(200,255,0,.08);border-left:3px solid var(--accent);padding:20px 24px;margin:24px 0;color:var(--white)}
+.modal-body .highlight{background:rgba(var(--site-accent-rgb),.08);border-left:3px solid var(--accent);padding:20px 24px;margin:24px 0;color:var(--white)}
 
 /* BLOG POSTS */
 .blog-section{padding:0 60px 80px;border-top:1px solid var(--mid);margin-top:80px}
@@ -172,7 +172,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   position: fixed; bottom: 24px; left: 24px; right: 24px;
   max-width: 560px; z-index: 9000;
   background: #1a1a1a; border: 1px solid #2e2e2e;
-  border-left: 3px solid #c8ff00;
+  border-left: 3px solid var(--site-accent);
   padding: 20px 24px; display: flex;
   align-items: center; gap: 20px; flex-wrap: wrap;
   transform: translateY(120px); opacity: 0;
@@ -180,7 +180,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 }
 .cookie-banner.show { transform: translateY(0); opacity: 1; }
 .cookie-text { font-size: 13px; color: #aaa; line-height: 1.6; flex: 1; min-width: 200px; }
-.cookie-text a { color: #c8ff00; text-decoration: none; }
+.cookie-text a { color: var(--site-accent); text-decoration: none; }
 .cookie-text a:hover { text-decoration: underline; }
 .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
 .cookie-btn {
@@ -190,7 +190,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   transition: transform .15s, opacity .2s;
 }
 .cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
-.cookie-accept { background: #c8ff00; color: #0a0a0a; }
+.cookie-accept { background: var(--site-accent); color: #0a0a0a; }
 .cookie-decline { background: transparent; color: #666; border: 1px solid #2e2e2e; }
 
 
@@ -244,9 +244,9 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     transition: color 0.2s;
     text-align: center;
   }
-  .mobile-menu a:hover { color: #c8ff00; }
+  .mobile-menu a:hover { color: var(--site-accent); }
   .mobile-menu a.nav-cta {
-    background: #c8ff00 !important;
+    background: var(--site-accent) !important;
     color: #0a0a0a !important;
     border-radius: 2px;
     margin-top: 16px;
@@ -265,7 +265,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     padding: 8px;
     z-index: 160;
   }
-  .mobile-menu-close:hover { color: #c8ff00; }
+  .mobile-menu-close:hover { color: var(--site-accent); }
   @media (max-width: 1024px) {
     .burger { display: flex !important; }
     .nav-links { display: none !important; }
@@ -447,6 +447,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   }
 }
 </script>
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
 
@@ -480,7 +481,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   <div class="article-crumbs"><a href="/">Главная</a> / <a href="/articles">Статьи</a> / Документация бренда</div>
   <article>
     <h1>Брендбук vs Гайдлайн: что нужно вашему бизнесу</h1>
-    <div class="article-meta">Документация бренда · Дмитрий Москаленко, бренд-менеджер</div>
+    <div class="article-meta">Документация бренда, Дмитрий Москаленко, бренд-менеджер</div>
     <div class="modal-body">
 
       <div class="highlight">Брендбук — «душа» и стратегия бренда. Гайдлайн — инструкция по его визуальному применению. Они решают разные задачи, но работают в паре.</div>
@@ -512,13 +513,13 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     <a href="/article-descriptor-vs-positioning">Дескриптор и позиционирование: не путайте эти два понятия</a>
     <a href="/article-brand-platform-vs-strategy">Бренд-платформа и бренд-стратегия: фундамент vs план</a>
     <a href="/article-rebranding">Ребрендинг: когда менять и когда это ошибка</a>
-    <a href="/articles">Все статьи →</a>
+    <a href="/articles">Все статьи</a>
   </div>
 </main>
 
 <footer>
   <a href="/" class="footer-logo">DM / Brand Manager</a>
-  <span class="footer-copy">© 2026 · Дмитрий Москаленко</span>
+  <span class="footer-copy">© 2026, Дмитрий Москаленко</span>
   <div class="footer-socials">
     <a href="/privacy">Конфиденциальность</a>
     <a href="/cookies">Cookie</a>

@@ -40,7 +40,7 @@
   :root {
     --black: #0a0a0a;
     --white: #f5f2ed;
-    --accent: #c8ff00;
+    --accent: var(--site-accent);
     --grey: #1a1a1a;
     --mid: #2e2e2e;
     --text-muted: #888;
@@ -198,7 +198,7 @@
   }
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(200,255,0,0.25);
+    box-shadow: 0 12px 40px rgba(var(--site-accent-rgb),0.25);
   }
   .btn-ghost {
     font-size: 13px;
@@ -226,7 +226,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(200,255,0,0.05) 0%, transparent 60%);
+    background: linear-gradient(135deg, rgba(var(--site-accent-rgb),0.05) 0%, transparent 60%);
     z-index: 1;
   }
   .hero-photo img {
@@ -296,7 +296,7 @@
     top: 0; bottom: 0;
     left: 0;
     width: 1px;
-    background: linear-gradient(to bottom, transparent, rgba(200,255,0,0.3), transparent);
+    background: linear-gradient(to bottom, transparent, rgba(var(--site-accent-rgb),0.3), transparent);
   }
   .hero-scroll-hint {
     position: absolute;
@@ -1026,7 +1026,7 @@
     text-transform: uppercase;
     color: var(--accent);
     text-decoration: none;
-    border-bottom: 1px solid rgba(200,255,0,0.3);
+    border-bottom: 1px solid rgba(var(--site-accent-rgb),0.3);
     padding-bottom: 2px;
     transition: opacity 0.2s;
   }
@@ -1082,9 +1082,9 @@
     transition: color 0.2s;
     text-align: center;
   }
-  .mobile-menu a:hover { color: #c8ff00; }
+  .mobile-menu a:hover { color: var(--site-accent); }
   .mobile-menu a.nav-cta {
-    background: #c8ff00 !important;
+    background: var(--site-accent) !important;
     color: #0a0a0a !important;
     border-radius: 2px;
     margin-top: 16px;
@@ -1103,7 +1103,7 @@
     padding: 8px;
     z-index: 160;
   }
-  .mobile-menu-close:hover { color: #c8ff00; }
+  .mobile-menu-close:hover { color: var(--site-accent); }
   @media (max-width: 1024px) {
     .burger { display: flex !important; }
     .nav-links { display: none !important; }
@@ -1134,34 +1134,34 @@
     padding: 14px 16px; color: #f5f2ed; font-family: inherit; font-size: 14px;
     transition: border-color .2s; resize: vertical;
   }
-  .feedback-form input:focus, .feedback-form textarea:focus { outline: none; border-color: #c8ff00; }
+  .feedback-form input:focus, .feedback-form textarea:focus { outline: none; border-color: var(--site-accent); }
   .feedback-form textarea { margin-bottom: 12px; }
   .form-submit {
     font-family: 'Unbounded', sans-serif; font-size: 12px; font-weight: 700;
-    letter-spacing: .1em; text-transform: uppercase; background: #c8ff00; color: #0a0a0a;
+    letter-spacing: .1em; text-transform: uppercase; background: var(--site-accent); color: #0a0a0a;
     border: none; padding: 16px 32px; border-radius: 2px; cursor: pointer;
     transition: transform .2s, box-shadow .2s; width: 100%;
   }
-  .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,255,0,.25); }
+  .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(var(--site-accent-rgb),.25); }
   .form-note { font-size: 13px; margin-top: 12px; min-height: 18px; }
-  .form-note.success { color: #c8ff00; }
+  .form-note.success { color: var(--site-accent); }
   .form-note.error { color: #e06060; }
   .form-consent { display:flex; align-items:flex-start; gap:9px; margin:14px 0 4px; }
-  .form-consent input[type=checkbox]{ width:17px; height:17px; margin-top:2px; accent-color:var(--accent,#c8ff00); flex-shrink:0; cursor:pointer; }
+  .form-consent input[type=checkbox]{ width:17px; height:17px; margin-top:2px; accent-color:var(--accent,var(--site-accent)); flex-shrink:0; cursor:pointer; }
   .form-consent label{ font-size:12px; color:var(--muted,#888); line-height:1.55; cursor:pointer; }
-  .form-consent a{ color:var(--accent,#c8ff00); text-decoration:none; }
+  .form-consent a{ color:var(--accent,var(--site-accent)); text-decoration:none; }
 
 
   /* ── FAQ ── */
   .faq-section { padding: 100px 60px; border-top: 1px solid var(--mid, #2e2e2e); }
   .faq-h2 { font-family: 'Unbounded', sans-serif; font-size: clamp(28px,4vw,52px); font-weight: 900; letter-spacing: -.03em; margin-bottom: 48px; }
-  .faq-h2 em { font-style: normal; color: #c8ff00; }
+  .faq-h2 em { font-style: normal; color: var(--site-accent); }
   .faq-list { display: flex; flex-direction: column; gap: 2px; }
   .faq-item { background: #141414; border-left: 2px solid transparent; padding: 24px 28px; cursor: pointer; transition: border-color .3s, background .3s; }
   .faq-item:hover { background: #1a1a1a; }
-  .faq-item.open { border-left-color: #c8ff00; }
+  .faq-item.open { border-left-color: var(--site-accent); }
   .faq-q { display: flex; justify-content: space-between; align-items: center; gap: 20px; font-size: 17px; font-weight: 500; color: #f5f2ed; }
-  .faq-toggle { font-family: 'Unbounded', sans-serif; font-size: 24px; color: #c8ff00; flex-shrink: 0; transition: transform .3s; line-height: 1; }
+  .faq-toggle { font-family: 'Unbounded', sans-serif; font-size: 24px; color: var(--site-accent); flex-shrink: 0; transition: transform .3s; line-height: 1; }
   .faq-item.open .faq-toggle { transform: rotate(45deg); }
   .faq-a { max-height: 0; overflow: hidden; transition: max-height .4s ease, margin .3s, opacity .3s; opacity: 0; font-size: 15px; line-height: 1.7; color: #aaa; }
   .faq-item.open .faq-a { max-height: 400px; margin-top: 16px; opacity: 1; }
@@ -1170,7 +1170,7 @@
   .back-to-top {
     position: fixed; bottom: 24px; right: 24px; z-index: 90;
     width: 48px; height: 48px; border-radius: 50%;
-    background: #c8ff00; color: #0a0a0a; border: none; cursor: pointer;
+    background: var(--site-accent); color: #0a0a0a; border: none; cursor: pointer;
     font-size: 20px; display: flex; align-items: center; justify-content: center;
     opacity: 0; pointer-events: none; transition: opacity .3s, transform .2s;
     box-shadow: 0 4px 20px rgba(0,0,0,.4);
@@ -1415,6 +1415,7 @@
   "serviceType": ["Разработка бренд-стратегии", "Запуск нового бренда", "Управление портфелем брендов", "Репозиционирование бренда", "Аудит бренда"]
 }
 </script>
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
 
@@ -1455,7 +1456,7 @@
       <source type="image/webp" srcset="img/dmitry-moskalenko-480.webp">
       <img src="img/dmitry-moskalenko-900.jpg" alt="Дмитрий Москаленко" width="112" height="112" loading="lazy">
     </picture>
-    <div class="hero-label">Бренд-стратег · Москва · с 2016 года</div>
+    <div class="hero-label">Бренд-стратег, Москва, с 2016 года</div>
     <h1 class="hero-h1">
       Строю бренды,<br>
       которые растут<br>
@@ -1636,10 +1637,10 @@
     <div class="case-item" onclick="location.href='/case-hiwater'" style="cursor:pointer">
       <div class="case-num">01</div>
       <div class="case-content">
-        <div class="case-brand">Hiwater · Позиционирование</div>
+        <div class="case-brand">Hiwater, Позиционирование</div>
         <div class="case-title">Бренд-стратегия для нового игрока на рынке воды</div>
         <p class="case-desc">Стратегия бренда Hiwater: позиционирование среди конкурентов, главные сообщения, визуальная концепция и контент для выхода в онлайн.</p>
-        <a href="/case-hiwater" class="case-link-btn">Смотреть кейс →</a>
+        <a href="/case-hiwater" class="case-link-btn">Смотреть кейс</a>
       </div>
       <div class="case-result">
         <div class="case-result-val">↑ <span>доля</span></div>
@@ -1649,10 +1650,10 @@
     <div class="case-item" onclick="location.href='/case-fiamma'" style="cursor:pointer">
       <div class="case-num">02</div>
       <div class="case-content">
-        <div class="case-brand">Fiamma Espresso · Ребрендинг</div>
+        <div class="case-brand">Fiamma Espresso, Ребрендинг</div>
         <div class="case-title">Обновление СТМ бренда Fiamma Espresso</div>
         <p class="case-desc">Обновили визуальный стиль и позиционирование СТМ Fiamma. Марка стала выглядеть современнее, а клиентам стало проще понять, что им предлагают.</p>
-        <a href="/case-fiamma" class="case-link-btn">Смотреть кейс →</a>
+        <a href="/case-fiamma" class="case-link-btn">Смотреть кейс</a>
       </div>
       <div class="case-result">
         <div class="case-result-val">+<span>40%</span></div>
@@ -1662,10 +1663,10 @@
     <div class="case-item" onclick="location.href='/case-brewtech'" style="cursor:pointer">
       <div class="case-num">03</div>
       <div class="case-content">
-        <div class="case-brand">BREW.TECH · Платформа бренда</div>
+        <div class="case-brand">BREW.TECH, Платформа бренда</div>
         <div class="case-title">Новый дизайн и платформа бренда BREW.TECH</div>
         <p class="case-desc">Кофемашины и кофемолки российской сборки, которым надо стоять рядом с итальянцами и немцами. Сделали платформу бренда, визуальную систему и брендбук.</p>
-        <a href="/case-brewtech" class="case-link-btn">Смотреть кейс →</a>
+        <a href="/case-brewtech" class="case-link-btn">Смотреть кейс</a>
       </div>
       <div class="case-result">
         <div class="case-result-val">×<span>2</span></div>
@@ -1675,10 +1676,10 @@
     <div class="case-item" onclick="location.href='/case-water-strategy'" style="cursor:pointer">
       <div class="case-num">04</div>
       <div class="case-content">
-        <div class="case-brand">Svam Group · Запуск бренда воды</div>
+        <div class="case-brand">Svam Group, Запуск бренда воды</div>
         <div class="case-title">Запуск Gletcher Water — от концепции до федеральных сетей</div>
         <p class="case-desc">Свой бренд воды у производителя напитков: позиционирование, упаковка, сертификация и переговоры с сетями. Gletcher попал на полки X5, «Ленты», METRO и «Азбуки Вкуса» и держал 2% рынка объёмом 12 млрд рублей.</p>
-        <a href="/case-water-strategy" class="case-link-btn">Смотреть кейс →</a>
+        <a href="/case-water-strategy" class="case-link-btn">Смотреть кейс</a>
       </div>
       <div class="case-result">
         <div class="case-result-val">2<span>%</span></div>
@@ -1688,10 +1689,10 @@
     <div class="case-item" onclick="location.href='/case-profile-coffee'" style="cursor:pointer">
       <div class="case-num">05</div>
       <div class="case-content">
-        <div class="case-brand">Profile Coffee · Платформа бренда</div>
+        <div class="case-brand">Profile Coffee, Платформа бренда</div>
         <div class="case-title">Позиционирование и миссия для московской specialty-ростерии</div>
         <p class="case-desc">Ростерия выросла без платформы бренда, и сайт, упаковка и соцсети говорили каждый своё. Сделали позиционирование «Кофе с именами», миссию, ценности и тон — теперь всё звучит одинаково.</p>
-        <a href="/case-profile-coffee" class="case-link-btn">Смотреть кейс →</a>
+        <a href="/case-profile-coffee" class="case-link-btn">Смотреть кейс</a>
       </div>
       <div class="case-result">
         <div class="case-result-val">40+</div>
@@ -1794,7 +1795,7 @@
       <div class="timeline-years">2025–2026</div>
       <div class="timeline-content">
         <div class="timeline-company">Эквип Групп</div>
-        <div class="timeline-role">Бренд-менеджер · Оборудование HoReCa</div>
+        <div class="timeline-role">Бренд-менеджер, Оборудование HoReCa</div>
         <div class="timeline-desc">Портфель импортных брендов с оборотом 125 млн ₽ (2025). Запуск собственной марки TAOLIN: фабрика в Китае, позиционирование, брендбук, первые отгрузки. Неликвидный сток снижен с 13 до 5 млн ₽ за год.</div>
       </div>
     </div>
@@ -1802,7 +1803,7 @@
       <div class="timeline-years">2022–2025</div>
       <div class="timeline-content">
         <div class="timeline-company">Торговый Дизайн</div>
-        <div class="timeline-role">Бренд-менеджер · Оборудование HoReCa</div>
+        <div class="timeline-role">Бренд-менеджер, Оборудование HoReCa</div>
         <div class="timeline-desc">Перевод категории из эконома в средний+: выручка с 10 до 70 млн ₽, маржа с 17% до 28% за 2,5 года. СТМ EKSI от выбора фабрики до полки за 7 месяцев, включая сертификацию.</div>
       </div>
     </div>
@@ -1810,7 +1811,7 @@
       <div class="timeline-years">2020–2022</div>
       <div class="timeline-content">
         <div class="timeline-company">SVAM Group</div>
-        <div class="timeline-role">Бренд-менеджер · Питьевая вода</div>
+        <div class="timeline-role">Бренд-менеджер, Питьевая вода</div>
         <div class="timeline-desc">Удержание доли Harrogate 2% (~240 млн ₽ по Nielsen) при выходе трёх конкурентов без роста бюджета. Запуск Gletcher Water с нуля до федерального листинга: X5, METRO, «Азбука Вкуса».</div>
       </div>
     </div>
@@ -1818,7 +1819,7 @@
       <div class="timeline-years">2018–2019</div>
       <div class="timeline-content">
         <div class="timeline-company">Gorizia Company</div>
-        <div class="timeline-role">Бренд-менеджер · Кофе</div>
+        <div class="timeline-role">Бренд-менеджер, Кофе</div>
         <div class="timeline-desc">Четыре бренда с оборотом ~80 млн ₽, продажи за год +30%. Интернет-канал с нуля: маржинальность с 12% до 27% за 8 месяцев.</div>
       </div>
     </div>
@@ -1826,11 +1827,11 @@
       <div class="timeline-years">2016–2018</div>
       <div class="timeline-content">
         <div class="timeline-company">Торговый Дизайн</div>
-        <div class="timeline-role">Бренд-менеджер · Оборудование HoReCa</div>
+        <div class="timeline-role">Бренд-менеджер, Оборудование HoReCa</div>
         <div class="timeline-desc">Вывод португальской Fiamma на рынок РФ: локализация, сертификация, три дистрибьютора. Выручка категории с 10 до 60 млн ₽ за два года.</div>
       </div>
     </div>
-    <a href="/resume" class="timeline-more">Полное резюме →</a>
+    <a href="/resume" class="timeline-more">Полное резюме</a>
   </div>
 </section>
 
@@ -1892,13 +1893,13 @@
       <div class="pub-card-source">Тинькофф Журнал</div>
       <div class="pub-card-title">Стратегия для обжарщика: как построить бренд кофейной ростерии</div>
       <div class="pub-card-desc">Кейс разработки позиционирования и платформы бренда для specialty-ростерии.</div>
-      <div class="pub-card-link">Читать на Т—Ж ↗</div>
+      <div class="pub-card-link">Читать на Т—Ж</div>
     </a>
     <a href="https://t-j.ru/proteinovye-batonchiki/" target="_blank" rel="noopener" class="pub-card">
       <div class="pub-card-source">Тинькофф Журнал</div>
       <div class="pub-card-title">Протеиновые батончики: разбор продукта в категории спортпита</div>
       <div class="pub-card-desc">Анализ продукта: состав, позиционирование и конкуренция на полке в категории спортивного питания.</div>
-      <div class="pub-card-link">Читать на Т—Ж ↗</div>
+      <div class="pub-card-link">Читать на Т—Ж</div>
     </a>
   </div>
 </section>
@@ -2003,7 +2004,7 @@
 
 <footer>
   <a href="/" class="footer-logo">DM / Brand Manager</a>
-  <span class="footer-copy">© 2026 · Дмитрий Москаленко · Москва</span>
+  <span class="footer-copy">© 2026, Дмитрий Москаленко, Москва</span>
   <div class="footer-socials">
     <a href="/privacy">Конфиденциальность</a>
     <a href="/cookies">Cookie</a>
@@ -2139,13 +2140,13 @@ document.querySelectorAll('[data-target]').forEach(function(el){ counterObserver
   </div>
 </div>
 <style>
-.cookie-banner{position:fixed;bottom:24px;left:24px;max-width:480px;z-index:9000;background:#161616;border:1px solid #2e2e2e;border-left:3px solid #c8ff00;padding:20px 24px;transform:translateY(160px);opacity:0;transition:transform .45s cubic-bezier(.4,0,.2,1),opacity .45s ease;box-shadow:0 8px 40px rgba(0,0,0,.6);}
+.cookie-banner{position:fixed;bottom:24px;left:24px;max-width:480px;z-index:9000;background:#161616;border:1px solid #2e2e2e;border-left:3px solid var(--site-accent);padding:20px 24px;transform:translateY(160px);opacity:0;transition:transform .45s cubic-bezier(.4,0,.2,1),opacity .45s ease;box-shadow:0 8px 40px rgba(0,0,0,.6);}
 .cookie-banner.show{transform:translateY(0);opacity:1;}
 .cookie-text{font-size:13px;color:#999;line-height:1.65;margin-bottom:16px;}
-.cookie-text a{color:#c8ff00;text-decoration:none;}
+.cookie-text a{color:var(--site-accent);text-decoration:none;}
 .cookie-actions{display:flex;gap:10px;flex-wrap:wrap;}
 .cookie-btn{font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:10px 20px;border:none;border-radius:2px;cursor:pointer;}
-.cookie-accept{background:#c8ff00;color:#0a0a0a;}
+.cookie-accept{background:var(--site-accent);color:#0a0a0a;}
 .cookie-decline{background:transparent;color:#888;border:1px solid #2e2e2e;}
 @media(max-width:600px){.cookie-banner{left:12px;right:12px;bottom:12px;max-width:none;padding:16px;}}
 </style>

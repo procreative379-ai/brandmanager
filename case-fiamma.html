@@ -331,7 +331,7 @@
   position: fixed; bottom: 24px; left: 24px; right: 24px;
   max-width: 560px; z-index: 9000;
   background: #1a1a1a; border: 1px solid #2e2e2e;
-  border-left: 3px solid #c8ff00;
+  border-left: 3px solid var(--site-accent);
   padding: 20px 24px; display: flex;
   align-items: center; gap: 20px; flex-wrap: wrap;
   transform: translateY(120px); opacity: 0;
@@ -339,7 +339,7 @@
 }
 .cookie-banner.show { transform: translateY(0); opacity: 1; }
 .cookie-text { font-size: 13px; color: #aaa; line-height: 1.6; flex: 1; min-width: 200px; }
-.cookie-text a { color: #c8ff00; text-decoration: none; }
+.cookie-text a { color: var(--site-accent); text-decoration: none; }
 .cookie-text a:hover { text-decoration: underline; }
 .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
 .cookie-btn {
@@ -349,7 +349,7 @@
   transition: transform .15s, opacity .2s;
 }
 .cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
-.cookie-accept { background: #c8ff00; color: #0a0a0a; }
+.cookie-accept { background: var(--site-accent); color: #0a0a0a; }
 .cookie-decline { background: transparent; color: #666; border: 1px solid #2e2e2e; }
 
 
@@ -403,9 +403,9 @@
     transition: color 0.2s;
     text-align: center;
   }
-  .mobile-menu a:hover { color: #c8ff00; }
+  .mobile-menu a:hover { color: var(--site-accent); }
   .mobile-menu a.nav-cta {
-    background: #c8ff00 !important;
+    background: var(--site-accent) !important;
     color: #0a0a0a !important;
     border-radius: 2px;
     margin-top: 16px;
@@ -424,7 +424,7 @@
     padding: 8px;
     z-index: 160;
   }
-  .mobile-menu-close:hover { color: #c8ff00; }
+  .mobile-menu-close:hover { color: var(--site-accent); }
   @media (max-width: 1024px) {
     .burger { display: flex !important; }
     .nav-links { display: none !important; }
@@ -598,6 +598,7 @@
   ]
 }
 </script>
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
 
@@ -631,7 +632,7 @@
 <div class="hero">
   <div class="hero-wave"></div>
   <div class="hero-since">Since 1977</div>
-  <div class="hero-tag">Кейс · Brand Guidelines · Кофейное оборудование · Португалия</div>
+  <div class="hero-tag">Кейс, Brand Guidelines, Кофейное оборудование, Португалия</div>
   <h1 class="hero-title">
     fiamma
     <span class="sub-word">Espresso</span>
@@ -710,7 +711,7 @@
   <div class="section-num" style="margin-top:60px;">Минимальные размеры</div>
   <div class="size-demo">
     <div class="size-row">
-      <span class="size-label">20mm · Стандарт</span>
+      <span class="size-label">20mm, Стандарт</span>
       <span class="logo-fiamma" style="font-size:28px; background:#fff; padding:8px 20px; color:#111;">fiamma <span class="flame">&#9607;&#9607;</span></span>
     </div>
     <div class="size-row">
@@ -722,7 +723,7 @@
       <span class="logo-fiamma" style="font-size:16px; background:#fff; padding:4px 12px; color:#111;">fiamma <span class="flame">&#9607;&#9607;</span></span>
     </div>
     <div class="size-row">
-      <span class="size-label">5mm · Минимум</span>
+      <span class="size-label">5mm, Минимум</span>
       <span class="logo-fiamma" style="font-size:11px; background:#fff; padding:3px 10px; color:#111;">fiamma <span class="flame">&#9607;</span></span>
     </div>
   </div>
@@ -898,7 +899,7 @@
 </div>
 
 <footer>
-  <span>© 2026 · Дмитрий Москаленко</span>
+  <span>© 2026 Дмитрий Москаленко</span>
   <div style="display:flex;gap:24px;">
     <a href="/privacy">Конфиденциальность</a>
     <a href="/cookies">Cookie</a>

@@ -1,0 +1,129 @@
+/* Общие настройки сайта: цвет акцента задаётся здесь один раз для всех страниц. */
+:root {
+  --site-accent: #c8ff00;
+  --site-accent-rgb: 200,255,0;
+  --site-on-accent: #0a0a0a;
+}
+
+/* Подписи и кнопки: обычный регистр, без разрядки. */
+.arch-item h5,
+.article-cat,
+.article-crumbs,
+.article-num,
+.aud-tag,
+.audience-card h4,
+.blog-date,
+.blog-link,
+.brand-logo,
+.brands-count,
+.brief-hero .section-num,
+.brief-step-num,
+.bstep-num,
+.card h3,
+.case-brand,
+.case-date,
+.case-link,
+.case-num,
+.case-result-label,
+.cert-badge-text,
+.cert-row-label,
+.cv-role,
+.cv-section-title,
+.diff-card h4,
+.exp-role,
+.featured-date,
+.featured-label,
+.featured-stat-label,
+.filt-header,
+.footer-copy,
+.footer-links a,
+.footer-socials a,
+.hero-label,
+.hero-promise-label,
+.hero-scroll-hint,
+.hero-stat-label,
+.hero-tag,
+.lang-lvl,
+.m-unit,
+.meta-item label,
+.metric-desc,
+.mission-source,
+.modal-cat,
+.nav-back,
+.nav-links a,
+.nl-label,
+.overview-card h3,
+.page-hero-label,
+.page-label,
+.path-step h4,
+.phase-period,
+.post-cat,
+.post-date,
+.posts-count,
+.price-tag,
+.product-origin,
+.pub-badge,
+.pub-card-link,
+.pub-card-source,
+.section-label,
+.section-num,
+.serv-for,
+.serv-num,
+.serv-result-label,
+.serv-tag,
+.service-num,
+.stage h3,
+.stat-label,
+.stat-unit,
+.tag,
+.test-pos,
+.timeline-company,
+.timeline-more,
+.timeline-role,
+.timeline-years,
+.tov-col-title,
+.utp-block .utp-label,
+.value-item .val-label {
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-size: 13px !important;
+}
+.article-cta a,
+.brief-cta-btn,
+.brief-submit,
+.btn,
+.btn-ghost,
+.btn-outline,
+.btn-primary,
+.btn-secondary,
+.case-link-btn,
+.cookie-btn,
+.dl-btn,
+.filter-btn,
+.form-submit,
+.nav-cta,
+.nl-btn,
+.success-btn {
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-size: 14px !important;
+}
+
+/* Нумерация разделов вида «01 / Кто я» и подписи над заголовками убраны. */
+.section-num, .section-label, .hero-scroll-hint, .service-arrow, .hero-bg-text { display: none !important; }
+
+/* Видимый фокус для клавиатуры. */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--site-accent);
+  outline-offset: 3px;
+}
+
+/* Без анимаций для тех, кто их отключил. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  .reveal, .js .reveal { opacity: 1 !important; transform: none !important; }
+}
+
+/* Декоративные стрелки у ссылок убраны: ссылка и так ведёт дальше. */
+.article-arrow, .post-arrow, .bstep-arrow, .service-arrow, a .arrow { display: none !important; }
+.btn-ghost::after, .nav-back::before { content: none !important; }

@@ -57,7 +57,7 @@
 :root {
   --black:  #0a0a0a;
   --white:  #f5f2ed;
-  --accent: #c8ff00;
+  --accent: var(--site-accent);
   --grey:   #141414;
   --grey2:  #1a1a1a;
   --mid:    #2e2e2e;
@@ -254,7 +254,7 @@ h2.section-title em { font-style: normal; color: var(--accent); }
 .btn { font-family:var(--font-display); font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:16px 32px; text-decoration:none; border-radius:2px; transition:transform .2s, box-shadow .2s; display:inline-block; }
 .btn:hover { transform:translateY(-2px); }
 .btn-accent { background:var(--accent); color:var(--black); }
-.btn-accent:hover { box-shadow:0 8px 24px rgba(200,255,0,.25); }
+.btn-accent:hover { box-shadow:0 8px 24px rgba(var(--site-accent-rgb),.25); }
 .btn-outline { border:1px solid var(--mid); color:var(--white); }
 .btn-outline:hover { border-color:var(--accent); color:var(--accent); }
 .btn-navy { background:var(--pc-navy); color:#FAF3E1; }
@@ -333,9 +333,9 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
     transition: color 0.2s;
     text-align: center;
   }
-  .mobile-menu a:hover { color: #c8ff00; }
+  .mobile-menu a:hover { color: var(--site-accent); }
   .mobile-menu a.nav-cta {
-    background: #c8ff00 !important;
+    background: var(--site-accent) !important;
     color: #0a0a0a !important;
     border-radius: 2px;
     margin-top: 16px;
@@ -354,7 +354,7 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
     padding: 8px;
     z-index: 160;
   }
-  .mobile-menu-close:hover { color: #c8ff00; }
+  .mobile-menu-close:hover { color: var(--site-accent); }
   @media (max-width: 1024px) {
     .burger { display: flex !important; }
     .nav-links { display: none !important; }
@@ -497,6 +497,7 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
   ]
 }
 </script>
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
 
@@ -504,7 +505,7 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
 
 <nav id="nav">
   <a href="/" class="nav-logo">DM / Brand</a>
-  <a href="/#cases" class="nav-back">← Все кейсы</a>
+  <a href="/#cases" class="nav-back">Все кейсы</a>
   <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Меню">
     <span></span><span></span><span></span>
   </button>
@@ -524,7 +525,7 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
 <div class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <div class="hero-tag reveal">Кейс · Позиционирование · Платформа бренда · Specialty Coffee · Москва</div>
+  <div class="hero-tag reveal">Кейс, Позиционирование, Платформа бренда, Specialty Coffee, Москва</div>
   <h1 class="hero-title reveal">
     <span class="line1">PROFILE</span><br>
     <span class="line2">COFFEE</span>
@@ -534,13 +535,12 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
     <div class="meta-item"><label>Клиент</label><span>Profile Coffee</span></div>
     <div class="meta-item"><label>Категория</label><span>Specialty кофе / Ростерия</span></div>
     <div class="meta-item"><label>Задача</label><span>Позиционирование, миссия, TOV</span></div>
-    <div class="meta-item"><label>Сайт</label><a href="https://procreative379-ai.github.io/profileroasters/" target="_blank">profileroasters ↗</a></div>
+    <div class="meta-item"><label>Сайт</label><a href="https://procreative379-ai.github.io/profileroasters/" target="_blank">profileroasters</a></div>
     <div class="meta-item"><label>Статус</label><span>Завершён</span></div>
     <div class="meta-item">
       <label>Брендбук</label>
       <a href="https://disk.yandex.ru/d/-9tauXgm8REhzQ" target="_blank" style="color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:6px;">
-        Скачать PDF ↓
-      </a>
+        Скачать PDF</a>
     </div>
   </div>
 </div>
@@ -550,7 +550,7 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
   <div class="id-card">
     <div class="id-card-label">Бренд</div>
     <div class="id-brand-name">profile<br>coffee</div>
-    <div class="id-tagline">specialty · score 85+</div>
+    <div class="id-tagline">specialty, score 85+</div>
   </div>
   <div class="id-card dark">
     <div class="id-card-label">Миссия</div>
@@ -827,8 +827,7 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
          style="display:inline-block;font-family:var(--font-display);font-size:12px;font-weight:700;
                 letter-spacing:.1em;text-transform:uppercase;background:var(--pc-navy);color:#FAF3E1;
                 padding:16px 32px;text-decoration:none;border-radius:2px;transition:transform .2s;">
-        Скачать брендбук ↓
-      </a>
+        Скачать брендбук</a>
     </div>
     <!-- Right: contents -->
     <div style="background:var(--pc-bg);padding:48px;">
@@ -934,7 +933,7 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
 
 <footer>
   <a href="/" class="footer-logo">DM / Brand Manager</a>
-  <span class="footer-copy">© 2026 · Дмитрий Москаленко</span>
+  <span class="footer-copy">© 2026, Дмитрий Москаленко</span>
   <div class="footer-links">
     <a href="/privacy">Конфиденциальность</a>
     <a href="/terms">Соглашение</a>
@@ -951,13 +950,13 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
 </div>
 
 <style>
-.cookie-banner{position:fixed;bottom:24px;left:24px;max-width:480px;z-index:9000;background:#161616;border:1px solid #2e2e2e;border-left:3px solid #c8ff00;padding:20px 24px;transform:translateY(140px);opacity:0;transition:transform .45s cubic-bezier(.4,0,.2,1),opacity .45s ease;box-shadow:0 8px 40px rgba(0,0,0,.6);}
+.cookie-banner{position:fixed;bottom:24px;left:24px;max-width:480px;z-index:9000;background:#161616;border:1px solid #2e2e2e;border-left:3px solid var(--site-accent);padding:20px 24px;transform:translateY(140px);opacity:0;transition:transform .45s cubic-bezier(.4,0,.2,1),opacity .45s ease;box-shadow:0 8px 40px rgba(0,0,0,.6);}
 .cookie-banner.show{transform:translateY(0);opacity:1;}
 .cookie-text{font-family:var(--font-body);font-size:13px;color:#999;line-height:1.65;margin-bottom:16px;}
-.cookie-text a{color:#c8ff00;text-decoration:none;}
+.cookie-text a{color:var(--site-accent);text-decoration:none;}
 .cookie-actions{display:flex;gap:10px;}
 .cookie-btn{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:10px 20px;border:none;border-radius:2px;cursor:pointer;}
-.cookie-accept{background:#c8ff00;color:#0a0a0a;}
+.cookie-accept{background:var(--site-accent);color:#0a0a0a;}
 .cookie-decline{background:transparent;color:#666;border:1px solid #2e2e2e;}
 </style>
 

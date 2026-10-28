@@ -13,7 +13,7 @@
 <meta name="google-site-verification" content="d0fa0e814302fe56" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://brandmanager.su/privacy.html">
+<link rel="canonical" href="https://brandmanager.su/privacy">
 <meta name="keywords" content="политика конфиденциальности brandmanager.su">
 <meta name="description" content="Политика конфиденциальности сайта brandmanager.su. Обработка персональных данных, cookies, Яндекс.Метрика.">
 <meta name="yandex-verification" content="a22af711bd8343d6" />
@@ -24,17 +24,15 @@
 <link rel="stylesheet" href="/fonts/fonts.css">
 <style>
 :root {
-  --black:#0a0a0a; --white:#f0ede8; --accent:#c8ff00;
-  --grey:#141414; --grey2:#1c1c1c; --mid:#2a2a2a; --muted:#666;
+  --black:var(--site-bg); --white:#f0ede8; --accent:var(--site-accent);
+  --grey:var(--site-surface-2); --grey2:var(--site-surface-3); --mid:var(--site-rule); --muted:#666;
   --font-display:'Unbounded',sans-serif; --font-body:'Geologica',sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300;overflow-x:hidden;}
-.cursor{width:10px;height:10px;background:var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}
-.cursor-ring{width:36px;height:36px;border:1px solid rgba(200,255,0,.35);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .15s ease-out}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 60px;display:flex;justify-content:space-between;align-items:center}
-nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,.95) 0%,transparent 100%);pointer-events:none}
+nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(var(--site-bg-rgb),.95) 0%,transparent 100%);pointer-events:none}
 .nav-logo{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.15em;color:var(--white);text-decoration:none;text-transform:uppercase;position:relative;z-index:1}
 .nav-links{display:flex;gap:36px;list-style:none;position:relative;z-index:1}
 .nav-links a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s}
@@ -45,7 +43,7 @@ nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to b
 .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .burger.open span:nth-child(2){opacity:0}
 .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mobile-menu{display:none;position:fixed;inset:0;background:rgba(10,10,10,.98);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:8px;backdrop-filter:blur(16px)}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(var(--site-bg-rgb),.98);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:8px;backdrop-filter:blur(16px)}
 .mobile-menu.open{display:flex}
 .mobile-menu a{font-family:var(--font-display);font-size:clamp(22px,6vw,36px);font-weight:900;letter-spacing:-.02em;color:var(--white);text-decoration:none;padding:12px 24px;transition:color .2s}
 .mobile-menu a:hover{color:var(--accent)}
@@ -60,13 +58,13 @@ nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to b
 .page-date span{color:var(--accent)}
 
 .doc h2{font-family:var(--font-display);font-size:14px;font-weight:700;letter-spacing:.04em;color:var(--white);margin:40px 0 16px;padding-left:16px;border-left:3px solid var(--accent)}
-.doc p{font-size:15px;color:#aaa;line-height:1.8;margin-bottom:16px}
+.doc p{font-size:15px;color:var(--site-muted-2);line-height:1.8;margin-bottom:16px}
 .doc ul{list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:10px}
-.doc ul li{font-size:15px;color:#aaa;line-height:1.7;padding-left:20px;position:relative}
+.doc ul li{font-size:15px;color:var(--site-muted-2);line-height:1.7;padding-left:20px;position:relative}
 .doc ul li::before{content:'—';position:absolute;left:0;color:var(--accent)}
 .doc a{color:var(--accent);text-decoration:none}
 .doc a:hover{text-decoration:underline}
-.doc .highlight{background:var(--grey2);border-left:3px solid var(--accent);padding:20px 24px;margin:24px 0;font-size:14px;color:#bbb;line-height:1.75}
+.doc .highlight{background:var(--grey2);border-left:3px solid var(--accent);padding:20px 24px;margin:24px 0;font-size:14px;color:var(--site-muted-2);line-height:1.75}
 
 footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
 .footer-logo{font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.15em;color:var(--white);text-decoration:none}
@@ -85,16 +83,16 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
 .cookie-banner {
   position: fixed; bottom: 24px; left: 24px; right: 24px;
   max-width: 560px; z-index: 9000;
-  background: #1a1a1a; border: 1px solid #2e2e2e;
-  border-left: 3px solid #c8ff00;
+  background: var(--site-surface); border: 1px solid var(--site-rule);
+  border-left: 3px solid var(--site-accent);
   padding: 20px 24px; display: flex;
   align-items: center; gap: 20px; flex-wrap: wrap;
   transform: translateY(120px); opacity: 0;
   transition: transform .4s ease, opacity .4s ease;
 }
 .cookie-banner.show { transform: translateY(0); opacity: 1; }
-.cookie-text { font-size: 13px; color: #aaa; line-height: 1.6; flex: 1; min-width: 200px; }
-.cookie-text a { color: #c8ff00; text-decoration: none; }
+.cookie-text { font-size: 13px; color: var(--site-muted-2); line-height: 1.6; flex: 1; min-width: 200px; }
+.cookie-text a { color: var(--site-accent); text-decoration: none; }
 .cookie-text a:hover { text-decoration: underline; }
 .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
 .cookie-btn {
@@ -104,8 +102,8 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
   transition: transform .15s, opacity .2s;
 }
 .cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
-.cookie-accept { background: #c8ff00; color: #0a0a0a; }
-.cookie-decline { background: transparent; color: #666; border: 1px solid #2e2e2e; }
+.cookie-accept { background: var(--site-accent); color: var(--site-bg); }
+.cookie-decline { background: transparent; color: #666; border: 1px solid var(--site-rule); }
 
 
   /* ── MOBILE BURGER & MENU ── */
@@ -125,7 +123,7 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
     display: block;
     width: 24px;
     height: 2px;
-    background: #f5f2ed;
+    background: var(--site-text);
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
     transform-origin: center;
@@ -137,7 +135,7 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(10,10,10,0.98);
+    background: rgba(var(--site-bg-rgb),0.98);
     z-index: 150;
     flex-direction: column;
     align-items: center;
@@ -152,16 +150,16 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
     font-size: clamp(22px, 6vw, 36px);
     font-weight: 900;
     letter-spacing: -0.02em;
-    color: #f5f2ed;
+    color: var(--site-text);
     text-decoration: none;
     padding: 12px 24px;
     transition: color 0.2s;
     text-align: center;
   }
-  .mobile-menu a:hover { color: #c8ff00; }
+  .mobile-menu a:hover { color: var(--site-accent); }
   .mobile-menu a.nav-cta {
-    background: #c8ff00 !important;
-    color: #0a0a0a !important;
+    background: var(--site-accent) !important;
+    color: var(--site-bg) !important;
     border-radius: 2px;
     margin-top: 16px;
     font-size: clamp(14px, 4vw, 20px);
@@ -171,7 +169,7 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
     top: 24px;
     right: 24px;
     font-size: 32px;
-    color: #f5f2ed;
+    color: var(--site-text);
     cursor: pointer;
     background: none;
     border: none;
@@ -179,7 +177,7 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
     padding: 8px;
     z-index: 160;
   }
-  .mobile-menu-close:hover { color: #c8ff00; }
+  .mobile-menu-close:hover { color: var(--site-accent); }
   @media (max-width: 1024px) {
     .burger { display: flex !important; }
     .nav-links { display: none !important; }
@@ -190,14 +188,16 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
   @media (max-width: 768px) {
     html, body { width: 100%; overflow-x: hidden; }
     img, video, iframe, svg { max-width: 100%; height: auto; }
-    * { word-break: break-word; }
+    * { overflow-wrap: break-word; }
+    h1, h2, h3, [class*="title"] { -webkit-hyphens: auto; hyphens: auto; }
+    .hero-actions, .cta-actions { flex-wrap: wrap; }
+    .btn-primary, .btn-ghost, .btn-secondary, .nav-cta { white-space: nowrap; }
   }
   @media (max-width: 1024px) {
     .nav-links { display: none !important; }
     .burger { display: flex !important; }
   }
 
-@media (hover:hover) and (pointer:fine){body{cursor:none}}
 
   /* ── МОБИЛЬНАЯ ОПТИМИЗАЦИЯ (Яндекс.Вебмастер) ── */
   @media (max-width: 767px) {
@@ -307,20 +307,19 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/72239779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 
 <nav id="nav">
   <a href="/" class="nav-logo">DM / Brand</a>
   <ul class="nav-links">
     <li><a href="/">Главная</a></li>
-    <li><a href="services.html">Услуги</a></li>
-    <li><a href="articles.html">Статьи</a></li>
-    <li><a href="blog.html">Блог</a></li>
-    <li><a href="resume.html">Резюме</a></li>
-    <li><a href="brief.html">Бриф</a></li>
+    <li><a href="/services">Услуги</a></li>
+    <li><a href="/articles">Статьи</a></li>
+    <li><a href="/blog">Блог</a></li>
+    <li><a href="/resume">Резюме</a></li>
+    <li><a href="/brief">Бриф</a></li>
     <li><a href="/#contact" class="nav-cta">Обсудить проект</a></li>
   </ul>
   <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Меню">
@@ -331,11 +330,11 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
   <a href="/" onclick="closeMobileMenu()">Главная</a>
-  <a href="services.html" onclick="closeMobileMenu()">Услуги</a>
-  <a href="articles.html" onclick="closeMobileMenu()">Статьи</a>
-  <a href="blog.html" onclick="closeMobileMenu()">Блог</a>
-  <a href="resume.html" onclick="closeMobileMenu()">Резюме</a>
-  <a href="brief.html" onclick="closeMobileMenu()">Бриф</a>
+  <a href="/services" onclick="closeMobileMenu()">Услуги</a>
+  <a href="/articles" onclick="closeMobileMenu()">Статьи</a>
+  <a href="/blog" onclick="closeMobileMenu()">Блог</a>
+  <a href="/resume" onclick="closeMobileMenu()">Резюме</a>
+  <a href="/brief" onclick="closeMobileMenu()">Бриф</a>
   <a href="/#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
 </div>
 
@@ -426,43 +425,6 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
       <li>Telegram: <a href="https://t.me/Dmitrii_Diezel" target="_blank">@Dmitrii_Diezel</a></li>
     </ul>
 
-  </div>
-</div>
-
-<footer>
-  <a href="/" class="footer-logo">DM / Brand Manager</a>
-  <span class="footer-copy">© 2026 · Дмитрий Москаленко</span>
-  <div class="footer-links">
-    <a href="privacy.html">Конфиденциальность</a>
-    <a href="cookies.html">Cookie</a>
-    <a href="terms.html">Соглашение</a>
-    <a href="https://t.me/Dmitrii_Diezel" target="_blank">Telegram</a>
-    <a href="https://vk.com/dmitrii_moskalenko" target="_blank">VK</a>
-  </div>
-</footer>
-
-<script>
-var _CURSOR_OK=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-if(_CURSOR_OK)document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px'});
-if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches){var c=document.getElementById('cursor'),r=document.getElementById('cursorRing');if(c)c.style.display='none';if(r)r.style.display='none';}
-(function a(){if(!_CURSOR_OK){var c=document.getElementById('cursor'),r=document.getElementById('cursorRing');if(c)c.style.display='none';if(r)r.style.display='none';return;}if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches)return;rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a)})();
-window.addEventListener('scroll',()=>{
-  const n=document.getElementById('nav');
-  n.style.background=window.scrollY>60?'rgba(10,10,10,.97)':'';
-  n.style.backdropFilter=window.scrollY>60?'blur(12px)':'';
-  n.style.borderBottom=window.scrollY>60?'1px solid #2a2a2a':'';
-});
-
-</script>
-
-<!-- Cookie Banner -->
-<div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="cookies.html">Политике cookie</a>.</div>
-  <div class="cookie-actions">
-    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Понятно</button>
-
     <h2>Сведения об операторе персональных данных</h2>
     <div class="highlight">
       <p style="margin:0 0 10px;"><strong>Оператор:</strong> Москаленко Дмитрий Анатольевич</p>
@@ -474,6 +436,37 @@ window.addEventListener('scroll',()=>{
     </div>
     <p>Уведомление об обработке персональных данных направлено в Федеральную службу по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор) в соответствии со ст. 22 Федерального закона от 27.07.2006 № 152-ФЗ.</p>
     <p>Реестр операторов, осуществляющих обработку персональных данных, доступен на официальном сайте Роскомнадзора: <a href="https://pd.rkn.gov.ru/operators-registry/operators-list/" target="_blank" rel="noopener">pd.rkn.gov.ru</a>.</p>
+
+  </div>
+</div>
+
+<footer>
+  <a href="/" class="footer-logo">DM / Brand Manager</a>
+  <span class="footer-copy">© 2026, Дмитрий Москаленко</span>
+  <div class="footer-links">
+    <a href="/privacy">Конфиденциальность</a>
+    <a href="/cookies">Cookie</a>
+    <a href="/terms">Соглашение</a>
+    <a href="https://t.me/Dmitrii_Diezel" target="_blank">Telegram</a>
+    <a href="https://vk.com/dmitrii_moskalenko" target="_blank">VK</a>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  const n=document.getElementById('nav');
+  n.style.background=window.scrollY>60?'rgba(var(--site-bg-rgb),.97)':'';
+  n.style.backdropFilter=window.scrollY>60?'blur(12px)':'';
+  n.style.borderBottom=window.scrollY>60?'1px solid var(--site-rule)':'';
+});
+
+</script>
+
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="/cookies">Политике cookie</a>.</div>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Понятно</button>
 
   </div>
 </div>

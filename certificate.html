@@ -13,8 +13,8 @@
 <meta name="google-site-verification" content="d0fa0e814302fe56" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://brandmanager.su/certificate.html">
-<meta property="og:url" content="https://brandmanager.su/certificate.html">
+<link rel="canonical" href="https://brandmanager.su/certificate">
+<meta property="og:url" content="https://brandmanager.su/certificate">
 <meta name="yandex-verification" content="a22af711bd8343d6" />
 <title>Сертификат Wordshop Academy · Дмитрий Москаленко</title>
 <meta name="keywords" content="Wordshop Academy сертификат, стратегия брендинг, бренд-стратег сертификат">
@@ -55,13 +55,13 @@
 
 <style>
 :root {
-  --black: #0a0a0a;
-  --white: #f5f2ed;
-  --accent: #c8ff00;
-  --grey: #1a1a1a;
-  --grey2: #222222;
-  --mid: #2e2e2e;
-  --muted: #777777;
+  --black: var(--site-bg);
+  --white: var(--site-text);
+  --accent: var(--site-accent);
+  --grey: var(--site-surface);
+  --grey2: var(--site-surface-3);
+  --mid: var(--site-rule);
+  --muted: var(--site-muted);
   --font-display: 'Unbounded', sans-serif;
   --font-body: 'Geologica', sans-serif;
 }
@@ -73,10 +73,7 @@ body {
   font-family: var(--font-body);
   font-weight: 300;
   overflow-x: hidden;
-  cursor: none;
 }
-.cursor { width: 12px; height: 12px; background: var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); mix-blend-mode: difference; }
-.cursor-ring { width: 40px; height: 40px; border: 1px solid rgba(200,255,0,.4); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: transform .15s ease-out; }
 
 /* NAV */
 nav {
@@ -86,7 +83,7 @@ nav {
 }
 nav::before {
   content: ''; position: absolute; inset: 0;
-  background: linear-gradient(to bottom, rgba(10,10,10,.95) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(var(--site-bg-rgb),.95) 0%, transparent 100%);
   pointer-events: none;
 }
 .nav-logo { font-family: var(--font-display); font-size: 13px; font-weight: 700; letter-spacing: .15em; color: var(--white); text-decoration: none; text-transform: uppercase; position: relative; z-index: 1; }
@@ -128,7 +125,7 @@ nav::before {
   padding: 16px 32px; text-decoration: none; border-radius: 2px;
   transition: transform .2s, box-shadow .2s; display: inline-block;
 }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,255,0,.25); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(var(--site-accent-rgb),.25); }
 .btn-outline {
   font-family: var(--font-display); font-size: 12px; font-weight: 700;
   letter-spacing: .1em; text-transform: uppercase;
@@ -149,7 +146,7 @@ nav::before {
 .hero-cert-preview::before {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(200,255,0,.04) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(var(--site-accent-rgb),.04) 0%, transparent 60%);
 }
 .cert-badge {
   display: flex; align-items: center; gap: 16px;
@@ -234,16 +231,16 @@ footer { padding: 40px 60px; border-top: 1px solid var(--mid); display: flex; ju
 .cookie-banner {
   position: fixed; bottom: 24px; left: 24px; right: 24px;
   max-width: 560px; z-index: 9000;
-  background: #1a1a1a; border: 1px solid #2e2e2e;
-  border-left: 3px solid #c8ff00;
+  background: var(--site-surface); border: 1px solid var(--site-rule);
+  border-left: 3px solid var(--site-accent);
   padding: 20px 24px; display: flex;
   align-items: center; gap: 20px; flex-wrap: wrap;
   transform: translateY(120px); opacity: 0;
   transition: transform .4s ease, opacity .4s ease;
 }
 .cookie-banner.show { transform: translateY(0); opacity: 1; }
-.cookie-text { font-size: 13px; color: #aaa; line-height: 1.6; flex: 1; min-width: 200px; }
-.cookie-text a { color: #c8ff00; text-decoration: none; }
+.cookie-text { font-size: 13px; color: var(--site-muted-2); line-height: 1.6; flex: 1; min-width: 200px; }
+.cookie-text a { color: var(--site-accent); text-decoration: none; }
 .cookie-text a:hover { text-decoration: underline; }
 .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
 .cookie-btn {
@@ -253,8 +250,8 @@ footer { padding: 40px 60px; border-top: 1px solid var(--mid); display: flex; ju
   transition: transform .15s, opacity .2s;
 }
 .cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
-.cookie-accept { background: #c8ff00; color: #0a0a0a; }
-.cookie-decline { background: transparent; color: #666; border: 1px solid #2e2e2e; }
+.cookie-accept { background: var(--site-accent); color: var(--site-bg); }
+.cookie-decline { background: transparent; color: #666; border: 1px solid var(--site-rule); }
 
 
   /* ── MOBILE BURGER & MENU ── */
@@ -274,7 +271,7 @@ footer { padding: 40px 60px; border-top: 1px solid var(--mid); display: flex; ju
     display: block;
     width: 24px;
     height: 2px;
-    background: #f5f2ed;
+    background: var(--site-text);
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
     transform-origin: center;
@@ -286,7 +283,7 @@ footer { padding: 40px 60px; border-top: 1px solid var(--mid); display: flex; ju
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(10,10,10,0.98);
+    background: rgba(var(--site-bg-rgb),0.98);
     z-index: 150;
     flex-direction: column;
     align-items: center;
@@ -301,16 +298,16 @@ footer { padding: 40px 60px; border-top: 1px solid var(--mid); display: flex; ju
     font-size: clamp(22px, 6vw, 36px);
     font-weight: 900;
     letter-spacing: -0.02em;
-    color: #f5f2ed;
+    color: var(--site-text);
     text-decoration: none;
     padding: 12px 24px;
     transition: color 0.2s;
     text-align: center;
   }
-  .mobile-menu a:hover { color: #c8ff00; }
+  .mobile-menu a:hover { color: var(--site-accent); }
   .mobile-menu a.nav-cta {
-    background: #c8ff00 !important;
-    color: #0a0a0a !important;
+    background: var(--site-accent) !important;
+    color: var(--site-bg) !important;
     border-radius: 2px;
     margin-top: 16px;
     font-size: clamp(14px, 4vw, 20px);
@@ -320,7 +317,7 @@ footer { padding: 40px 60px; border-top: 1px solid var(--mid); display: flex; ju
     top: 24px;
     right: 24px;
     font-size: 32px;
-    color: #f5f2ed;
+    color: var(--site-text);
     cursor: pointer;
     background: none;
     border: none;
@@ -328,7 +325,7 @@ footer { padding: 40px 60px; border-top: 1px solid var(--mid); display: flex; ju
     padding: 8px;
     z-index: 160;
   }
-  .mobile-menu-close:hover { color: #c8ff00; }
+  .mobile-menu-close:hover { color: var(--site-accent); }
   @media (max-width: 1024px) {
     .burger { display: flex !important; }
     .nav-links { display: none !important; }
@@ -339,14 +336,16 @@ footer { padding: 40px 60px; border-top: 1px solid var(--mid); display: flex; ju
   @media (max-width: 768px) {
     html, body { width: 100%; overflow-x: hidden; }
     img, video, iframe, svg { max-width: 100%; height: auto; }
-    * { word-break: break-word; }
+    * { overflow-wrap: break-word; }
+    h1, h2, h3, [class*="title"] { -webkit-hyphens: auto; hyphens: auto; }
+    .hero-actions, .cta-actions { flex-wrap: wrap; }
+    .btn-primary, .btn-ghost, .btn-secondary, .nav-cta { white-space: nowrap; }
   }
   @media (max-width: 1024px) {
     .nav-links { display: none !important; }
     .burger { display: flex !important; }
   }
 
-@media (hover:hover) and (pointer:fine){body{cursor:none}}
 
   /* ── МОБИЛЬНАЯ ОПТИМИЗАЦИЯ (Яндекс.Вебмастер) ── */
   @media (max-width: 767px) {
@@ -433,21 +432,20 @@ footer { padding: 40px 60px; border-top: 1px solid var(--mid); display: flex; ju
 <meta property="og:image" content="https://brandmanager.su/og-image.jpg?v=2">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://brandmanager.su/og-image.jpg?v=2">
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 
 <nav id="nav">
   <a href="/" class="nav-logo">DM / Brand</a>
   <ul class="nav-links">
     <li><a href="/">Главная</a></li>
-    <li><a href="services.html">Услуги</a></li>
-    <li><a href="articles.html">Статьи</a></li>
-    <li><a href="blog.html">Блог</a></li>
-    <li><a href="resume.html">Резюме</a></li>
-    <li><a href="brief.html">Бриф</a></li>
+    <li><a href="/services">Услуги</a></li>
+    <li><a href="/articles">Статьи</a></li>
+    <li><a href="/blog">Блог</a></li>
+    <li><a href="/resume">Резюме</a></li>
+    <li><a href="/brief">Бриф</a></li>
     <li><a href="/#contact" class="nav-cta">Обсудить проект</a></li>
   </ul>
   <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Меню">
@@ -458,18 +456,18 @@ footer { padding: 40px 60px; border-top: 1px solid var(--mid); display: flex; ju
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
   <a href="/" onclick="closeMobileMenu()">Главная</a>
-  <a href="services.html" onclick="closeMobileMenu()">Услуги</a>
-  <a href="articles.html" onclick="closeMobileMenu()">Статьи</a>
-  <a href="blog.html" onclick="closeMobileMenu()">Блог</a>
-  <a href="resume.html" onclick="closeMobileMenu()">Резюме</a>
-  <a href="brief.html" onclick="closeMobileMenu()">Бриф</a>
+  <a href="/services" onclick="closeMobileMenu()">Услуги</a>
+  <a href="/articles" onclick="closeMobileMenu()">Статьи</a>
+  <a href="/blog" onclick="closeMobileMenu()">Блог</a>
+  <a href="/resume" onclick="closeMobileMenu()">Резюме</a>
+  <a href="/brief" onclick="closeMobileMenu()">Бриф</a>
   <a href="/#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
 </div>
 
 <!-- HERO -->
 <div class="hero">
   <div class="reveal">
-    <div class="hero-label">Образование · Сертификат · 2019</div>
+    <div class="hero-label">Образование, Сертификат, 2019</div>
     <h1>Wordshop<br><em>Academy</em></h1>
     <p class="hero-sub">
       Сертификат об успешном завершении программы
@@ -566,30 +564,17 @@ footer { padding: 40px 60px; border-top: 1px solid var(--mid); display: flex; ju
 
 <footer>
   <a href="/" class="footer-logo">DM / Brand Manager</a>
-  <span class="footer-copy">© 2026 · Дмитрий Москаленко</span>
+  <span class="footer-copy">© 2026, Дмитрий Москаленко</span>
   <div class="footer-links">
-    <a href="privacy.html">Конфиденциальность</a>
-    <a href="cookies.html">Cookie</a>
-    <a href="terms.html">Соглашение</a>
+    <a href="/privacy">Конфиденциальность</a>
+    <a href="/cookies">Cookie</a>
+    <a href="/terms">Соглашение</a>
     <a href="https://t.me/Dmitrii_Diezel" target="_blank">Telegram</a>
     <a href="https://vk.com/dmitrii_moskalenko" target="_blank">VK</a>
   </div>
 </footer>
 
 <script>
-// CURSOR_GUARD: skip custom cursor on touch / no-hover devices
-  const _canHover = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-  var _CURSOR_OK=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-if(_CURSOR_OK)document.addEventListener('mousemove', e => {
-  mx=e.clientX; my=e.clientY;
-  cursor.style.left=mx+'px'; cursor.style.top=my+'px';
-});
-(function animRing(){if(!_CURSOR_OK){var c=document.getElementById('cursor'),r=document.getElementById('cursorRing');if(c)c.style.display='none';if(r)r.style.display='none';return;} rx+=(mx-rx)*.15; ry+=(my-ry)*.15;
-  ring.style.left=rx+'px'; ring.style.top=ry+'px';
-  requestAnimationFrame(animRing); })();
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }});
@@ -598,9 +583,9 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 window.addEventListener('scroll', () => {
   const n = document.getElementById('nav');
-  n.style.background = window.scrollY > 60 ? 'rgba(10,10,10,.97)' : '';
+  n.style.background = window.scrollY > 60 ? 'rgba(var(--site-bg-rgb),.97)' : '';
   n.style.backdropFilter = window.scrollY > 60 ? 'blur(12px)' : '';
-  n.style.borderBottom = window.scrollY > 60 ? '1px solid #2e2e2e' : '';
+  n.style.borderBottom = window.scrollY > 60 ? '1px solid var(--site-rule)' : '';
 });
 
 
@@ -617,7 +602,7 @@ if(iframe){
 
 <!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="cookies.html">Политике cookie</a>.</div>
+  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="/cookies">Политике cookie</a>.</div>
   <div class="cookie-actions">
     <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Понятно</button>
   </div>

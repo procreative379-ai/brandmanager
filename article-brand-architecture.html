@@ -14,22 +14,20 @@
 <meta name="yandex-verification" content="a22af711bd8343d6" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://brandmanager.su/article-brand-architecture.html">
-<meta property="og:url" content="https://brandmanager.su/article-brand-architecture.html">
+<link rel="canonical" href="https://brandmanager.su/article-brand-architecture">
+<meta property="og:url" content="https://brandmanager.su/article-brand-architecture">
 <title>Архитектура бренда: как управлять портфелем брендов · Дмитрий Москаленко</title>
 <meta name="description" content="Монолитный бренд, дом брендов или поддерживающий бренд: как выбрать архитектуру, когда запускать суббренд и как навести порядок в портфеле.">
 <link rel="preload" href="/fonts/unbounded-cyrillic-c86556.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/geologica-cyrillic-f28b2b.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css">
 <style>
-:root{--black:#0a0a0a;--white:#f5f2ed;--accent:#c8ff00;--grey:#1a1a1a;--mid:#2e2e2e;--muted:#888;--font-display:'Unbounded',sans-serif;--font-body:'Geologica',sans-serif}
+:root{--black:var(--site-bg);--white:var(--site-text);--accent:var(--site-accent);--grey:var(--site-surface);--mid:var(--site-rule);--muted:var(--site-muted);--font-display:'Unbounded',sans-serif;--font-body:'Geologica',sans-serif}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300;overflow-x:hidden;}
-.cursor{width:12px;height:12px;background:var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .3s,height .3s;mix-blend-mode:difference}
-.cursor-ring{width:40px;height:40px;border:1px solid rgba(200,255,0,.4);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .15s ease-out}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 60px;display:flex;justify-content:space-between;align-items:center}
-nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,.95) 0%,transparent 100%);pointer-events:none}
+nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(var(--site-bg-rgb),.95) 0%,transparent 100%);pointer-events:none}
 .nav-logo{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.15em;color:var(--white);text-decoration:none;text-transform:uppercase;position:relative;z-index:1}
 .nav-links{display:flex;gap:40px;list-style:none;position:relative;z-index:1}
 .nav-links a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s}
@@ -54,7 +52,7 @@ nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to b
 .articles-section{padding:80px 60px}
 .articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 .article-card{background:var(--grey);padding:48px 40px;position:relative;overflow:hidden;transition:background .3s;cursor:pointer}
-.article-card:hover{background:#1e1e1e}
+.article-card:hover{background:var(--site-surface-3)}
 .article-card:hover .article-arrow{opacity:1;transform:translate(0,0)}
 .article-num{font-family:var(--font-display);font-size:11px;color:var(--muted);letter-spacing:.2em;margin-bottom:24px}
 .article-cat{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;font-weight:500}
@@ -75,13 +73,13 @@ nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to b
 .modal-close:hover{color:var(--accent)}
 .modal-cat{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
 .modal-title{font-family:var(--font-display);font-size:clamp(24px,3vw,40px);font-weight:900;letter-spacing:-.02em;line-height:1.1;margin-bottom:32px}
-.modal-body{font-size:16px;line-height:1.85;color:#ccc}
+.modal-body{font-size:16px;line-height:1.85;color:var(--site-text-2)}
 .modal-body p{margin-bottom:20px}
 .modal-body h3{font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--white);margin:36px 0 16px;letter-spacing:-.01em}
 .modal-body ul,.modal-body ol{padding-left:24px;margin-bottom:20px}
-.modal-body li{margin-bottom:10px;color:#bbb}
+.modal-body li{margin-bottom:10px;color:var(--site-muted-2)}
 .modal-body strong{color:var(--white);font-weight:500}
-.modal-body .highlight{background:rgba(200,255,0,.08);border-left:3px solid var(--accent);padding:20px 24px;margin:24px 0;color:var(--white)}
+.modal-body .highlight{background:rgba(var(--site-accent-rgb),.08);border-left:3px solid var(--accent);padding:20px 24px;margin:24px 0;color:var(--white)}
 
 /* BLOG POSTS */
 .blog-section{padding:0 60px 80px;border-top:1px solid var(--mid);margin-top:80px}
@@ -90,7 +88,7 @@ nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to b
 .blog-list{display:flex;flex-direction:column;gap:2px}
 .blog-item{background:var(--grey);padding:40px 48px;display:grid;grid-template-columns:120px 1fr auto;gap:40px;align-items:center;transition:background .3s;cursor:pointer;position:relative;overflow:hidden}
 .blog-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:var(--accent);transition:width .4s cubic-bezier(.4,0,.2,1)}
-.blog-item:hover{background:#1c1c1c}
+.blog-item:hover{background:var(--site-surface-3)}
 .blog-item:hover::before{width:3px}
 .blog-date{font-family:var(--font-display);font-size:12px;color:var(--muted);letter-spacing:.1em}
 .blog-title{font-family:var(--font-display);font-size:18px;font-weight:700;letter-spacing:-.01em;margin-bottom:8px}
@@ -173,16 +171,16 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 .cookie-banner {
   position: fixed; bottom: 24px; left: 24px; right: 24px;
   max-width: 560px; z-index: 9000;
-  background: #1a1a1a; border: 1px solid #2e2e2e;
-  border-left: 3px solid #c8ff00;
+  background: var(--site-surface); border: 1px solid var(--site-rule);
+  border-left: 3px solid var(--site-accent);
   padding: 20px 24px; display: flex;
   align-items: center; gap: 20px; flex-wrap: wrap;
   transform: translateY(120px); opacity: 0;
   transition: transform .4s ease, opacity .4s ease;
 }
 .cookie-banner.show { transform: translateY(0); opacity: 1; }
-.cookie-text { font-size: 13px; color: #aaa; line-height: 1.6; flex: 1; min-width: 200px; }
-.cookie-text a { color: #c8ff00; text-decoration: none; }
+.cookie-text { font-size: 13px; color: var(--site-muted-2); line-height: 1.6; flex: 1; min-width: 200px; }
+.cookie-text a { color: var(--site-accent); text-decoration: none; }
 .cookie-text a:hover { text-decoration: underline; }
 .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
 .cookie-btn {
@@ -192,8 +190,8 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   transition: transform .15s, opacity .2s;
 }
 .cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
-.cookie-accept { background: #c8ff00; color: #0a0a0a; }
-.cookie-decline { background: transparent; color: #666; border: 1px solid #2e2e2e; }
+.cookie-accept { background: var(--site-accent); color: var(--site-bg); }
+.cookie-decline { background: transparent; color: #666; border: 1px solid var(--site-rule); }
 
 
   /* ── MOBILE BURGER & MENU ── */
@@ -213,7 +211,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     display: block;
     width: 24px;
     height: 2px;
-    background: #f5f2ed;
+    background: var(--site-text);
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
     transform-origin: center;
@@ -225,7 +223,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(10,10,10,0.98);
+    background: rgba(var(--site-bg-rgb),0.98);
     z-index: 150;
     flex-direction: column;
     align-items: center;
@@ -240,16 +238,16 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     font-size: clamp(22px, 6vw, 36px);
     font-weight: 900;
     letter-spacing: -0.02em;
-    color: #f5f2ed;
+    color: var(--site-text);
     text-decoration: none;
     padding: 12px 24px;
     transition: color 0.2s;
     text-align: center;
   }
-  .mobile-menu a:hover { color: #c8ff00; }
+  .mobile-menu a:hover { color: var(--site-accent); }
   .mobile-menu a.nav-cta {
-    background: #c8ff00 !important;
-    color: #0a0a0a !important;
+    background: var(--site-accent) !important;
+    color: var(--site-bg) !important;
     border-radius: 2px;
     margin-top: 16px;
     font-size: clamp(14px, 4vw, 20px);
@@ -259,7 +257,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     top: 24px;
     right: 24px;
     font-size: 32px;
-    color: #f5f2ed;
+    color: var(--site-text);
     cursor: pointer;
     background: none;
     border: none;
@@ -267,7 +265,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     padding: 8px;
     z-index: 160;
   }
-  .mobile-menu-close:hover { color: #c8ff00; }
+  .mobile-menu-close:hover { color: var(--site-accent); }
   @media (max-width: 1024px) {
     .burger { display: flex !important; }
     .nav-links { display: none !important; }
@@ -278,17 +276,19 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   @media (max-width: 768px) {
     html, body { width: 100%; overflow-x: hidden; }
     img, video, iframe, svg { max-width: 100%; height: auto; }
-    * { word-break: break-word; }
+    * { overflow-wrap: break-word; }
+    h1, h2, h3, [class*="title"] { -webkit-hyphens: auto; hyphens: auto; }
+    .hero-actions, .cta-actions { flex-wrap: wrap; }
+    .btn-primary, .btn-ghost, .btn-secondary, .nav-cta { white-space: nowrap; }
   }
   @media (max-width: 1024px) {
     .nav-links { display: none !important; }
     .burger { display: flex !important; }
   }
 
-@media (hover:hover) and (pointer:fine){body{cursor:none}}
 
 .article-card.published{border-left:2px solid var(--accent);}
-.article-card.published:hover{background:#1e1e1e;}
+.article-card.published:hover{background:var(--site-surface-3);}
 .pub-badge{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--black);background:var(--accent);padding:4px 10px;border-radius:2px;margin-bottom:20px;}
 
 
@@ -416,7 +416,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 .article-meta{font-size:13px;color:var(--muted);margin-bottom:40px}
 .article-cta{margin-top:64px;padding:40px;background:var(--grey);border-left:3px solid var(--accent)}
 .article-cta h2{font-family:var(--font-display);font-size:20px;font-weight:900;margin-bottom:12px}
-.article-cta p{color:#bbb;line-height:1.7;margin-bottom:24px}
+.article-cta p{color:var(--site-muted-2);line-height:1.7;margin-bottom:24px}
 .article-cta a{display:inline-block;margin:0 12px 12px 0;padding:14px 24px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-radius:2px}
 .article-cta .primary{background:var(--accent);color:var(--black);font-weight:500}
 .article-cta .secondary{border:1px solid var(--mid);color:var(--white)}
@@ -424,7 +424,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 .article-more h2{font-family:var(--font-display);font-size:16px;font-weight:700;margin-bottom:20px}
 .article-more a{display:block;padding:16px 0;border-top:1px solid var(--mid);color:var(--white);text-decoration:none;line-height:1.5}
 .article-more a:hover{color:var(--accent)}
-.modal-body a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,255,0,.3)}
+.modal-body a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(var(--site-accent-rgb),.3)}
 .modal-body a:hover{border-bottom-color:var(--accent)}
 @media(max-width:1024px){.article-page{padding-top:120px}.article-cta{padding:28px 20px}}
 </style>
@@ -436,7 +436,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   "description": "Монолитный бренд, дом брендов или поддерживающий бренд: как выбрать архитектуру, когда запускать суббренд и как навести порядок в портфеле.",
   "inLanguage": "ru",
   "datePublished": "2026-10-20",
-  "mainEntityOfPage": "https://brandmanager.su/article-brand-architecture.html",
+  "mainEntityOfPage": "https://brandmanager.su/article-brand-architecture",
   "image": "https://brandmanager.su/og-image.jpg?v=2",
   "author": {
     "@type": "Person",
@@ -450,20 +450,19 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   }
 }
 </script>
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 
 <nav id="nav">
   <a href="/" class="nav-logo">DM / Brand</a>
   <ul class="nav-links">
     <li><a href="/">Главная</a></li>
-    <li><a href="services.html">Услуги</a></li>
-    <li><a href="articles.html" class="active">Статьи</a></li>
-    <li><a href="blog.html">Блог</a></li>
-    <li><a href="resume.html">Резюме</a></li>
-    <li><a href="brief.html">Бриф</a></li>
+    <li><a href="/services">Услуги</a></li>
+    <li><a href="/articles" class="active">Статьи</a></li>
+    <li><a href="/blog">Блог</a></li>
+    <li><a href="/resume">Резюме</a></li>
+    <li><a href="/brief">Бриф</a></li>
     <li><a href="/#contact" class="nav-cta">Обсудить проект</a></li>
   </ul>
   <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Открыть меню">
@@ -473,19 +472,19 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
   <a href="/" onclick="closeMobileMenu()">Главная</a>
-  <a href="services.html" onclick="closeMobileMenu()">Услуги</a>
-  <a href="articles.html" onclick="closeMobileMenu()">Статьи</a>
-  <a href="blog.html" onclick="closeMobileMenu()">Блог</a>
-  <a href="resume.html" onclick="closeMobileMenu()">Резюме</a>
-  <a href="brief.html" onclick="closeMobileMenu()">Бриф</a>
+  <a href="/services" onclick="closeMobileMenu()">Услуги</a>
+  <a href="/articles" onclick="closeMobileMenu()">Статьи</a>
+  <a href="/blog" onclick="closeMobileMenu()">Блог</a>
+  <a href="/resume" onclick="closeMobileMenu()">Резюме</a>
+  <a href="/brief" onclick="closeMobileMenu()">Бриф</a>
   <a href="/#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
 </div>
 
 <main class="article-page">
-  <div class="article-crumbs"><a href="/">Главная</a> / <a href="articles.html">Статьи</a> / Архитектура бренда</div>
+  <div class="article-crumbs"><a href="/">Главная</a> / <a href="/articles">Статьи</a> / Архитектура бренда</div>
   <article>
     <h1>Архитектура бренда: как управлять портфелем брендов</h1>
-    <div class="article-meta">Стратегия · Портфель брендов · Дмитрий Москаленко, бренд-менеджер</div>
+    <div class="article-meta">Стратегия, Портфель брендов, Дмитрий Москаленко, бренд-менеджер</div>
     <div class="modal-body">
 
       <div class="highlight">Архитектура бренда — это правила, по которым компания связывает между собой свои бренды, суббренды и продукты. Она отвечает на вопрос: новый продукт выходит под главным именем, под своим собственным или под связкой из двух?</div>
@@ -530,7 +529,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
       </ul>
 
       <h3>Как навести порядок</h3>
-      <p>Начинается всё с инвентаризации: выписать все бренды, суббренды, линейки и продукты, их аудиторию, цену и вклад в выручку. Затем решить, какие бренды несут основную ценность и в какую модель их собрать. Часть суббрендов обычно стоит объединить или вывести с рынка, а для остальных прописать правила именования и визуальной связи с материнским брендом. Эти правила фиксируются в <a href="article-brandbook.html">брендбуке</a> и <a href="article-brandbook-vs-guideline.html">гайдлайнах</a>, чтобы следующий продукт не запустили «по наитию».</p>
+      <p>Начинается всё с инвентаризации: выписать все бренды, суббренды, линейки и продукты, их аудиторию, цену и вклад в выручку. Затем решить, какие бренды несут основную ценность и в какую модель их собрать. Часть суббрендов обычно стоит объединить или вывести с рынка, а для остальных прописать правила именования и визуальной связи с материнским брендом. Эти правила фиксируются в <a href="/article-brandbook">брендбуке</a> и <a href="/article-brandbook-vs-guideline">гайдлайнах</a>, чтобы следующий продукт не запустили «по наитию».</p>
 
       <h3>Частые вопросы</h3>
       <p><strong>Чем архитектура бренда отличается от бренд-стратегии?</strong><br>Стратегия отвечает, куда и как движется бренд. Архитектура — как устроены отношения между несколькими брендами одной компании. Архитектура — часть стратегии, когда брендов больше одного.</p>
@@ -543,45 +542,40 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   <div class="article-cta">
     <h2>Нужна помощь с брендом?</h2>
     <p>Если хотите обсудить свой бренд, напишите. Первые полчаса разговора бесплатно: разберёмся, с чего вам лучше начать — со стратегии, аудита или запуска.</p>
-    <a href="brief.html" class="primary">Заполнить бриф</a>
+    <a href="/brief" class="primary">Заполнить бриф</a>
     <a href="https://t.me/Dmitrii_Diezel" class="secondary" target="_blank" rel="noopener">Написать в Telegram</a>
   </div>
   <div class="article-more">
     <h2>Читайте также</h2>
-    <a href="article-brand-strategy-vs-branding.html">Бренд-стратегия и брендинг: в чём разница и зачем нужны оба</a>
-    <a href="article-descriptor-vs-positioning.html">Дескриптор и позиционирование: не путайте эти два понятия</a>
-    <a href="article-brand-audit.html">Аудит бренда: что проверить и как провести</a>
-    <a href="articles.html">Все статьи →</a>
+    <a href="/article-brand-strategy-vs-branding">Бренд-стратегия и брендинг: в чём разница и зачем нужны оба</a>
+    <a href="/article-descriptor-vs-positioning">Дескриптор и позиционирование: не путайте эти два понятия</a>
+    <a href="/article-brand-audit">Аудит бренда: что проверить и как провести</a>
+    <a href="/articles">Все статьи</a>
   </div>
 </main>
 
 <footer>
   <a href="/" class="footer-logo">DM / Brand Manager</a>
-  <span class="footer-copy">© 2026 · Дмитрий Москаленко</span>
+  <span class="footer-copy">© 2026, Дмитрий Москаленко</span>
   <div class="footer-socials">
-    <a href="privacy.html">Конфиденциальность</a>
-    <a href="cookies.html">Cookie</a>
-    <a href="terms.html">Соглашение</a>
+    <a href="/privacy">Конфиденциальность</a>
+    <a href="/cookies">Cookie</a>
+    <a href="/terms">Соглашение</a>
     <a href="https://t.me/Dmitrii_Diezel" target="_blank">Telegram</a>
     <a href="https://vk.com/dmitrii_moskalenko" target="_blank">VK</a>
   </div>
 </footer>
 
 <script>
-var _CURSOR_OK=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-if(_CURSOR_OK)document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px'});
-(function animRing(){if(!_CURSOR_OK){var c=document.getElementById('cursor'),r=document.getElementById('cursorRing');if(c)c.style.display='none';if(r)r.style.display='none';return;}rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)})();
 
 const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 window.addEventListener('scroll',()=>{
   const n=document.getElementById('nav');
-  n.style.background=window.scrollY>60?'rgba(10,10,10,.97)':'';
+  n.style.background=window.scrollY>60?'rgba(var(--site-bg-rgb),.97)':'';
   n.style.backdropFilter=window.scrollY>60?'blur(12px)':'';
-  n.style.borderBottom=window.scrollY>60?'1px solid #1a1a1a':'';
+  n.style.borderBottom=window.scrollY>60?'1px solid var(--site-surface)':'';
 });
 
 
@@ -591,7 +585,7 @@ window.addEventListener('scroll',()=>{
 
 <!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="cookies.html">Политике cookie</a>.</div>
+  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="/cookies">Политике cookie</a>.</div>
   <div class="cookie-actions">
     <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Понятно</button>
   </div>

@@ -14,8 +14,8 @@
 <meta name="yandex-verification" content="a22af711bd8343d6" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://brandmanager.su/blog.html">
-<meta property="og:url" content="https://brandmanager.su/blog.html">
+<link rel="canonical" href="https://brandmanager.su/blog">
+<meta property="og:url" content="https://brandmanager.su/blog">
 <title>Блог бренд-стратега · Кейсы и практика · Дмитрий Москаленко</title>
 <meta name="keywords" content="блог бренд-менеджера, кейсы бренд-менеджмента, практика брендинга, бренд-стратегия примеры">
 <meta name="description" content="Блог о практике бренд-менеджмента: реальные кейсы, разборы стратегий, инструменты. Опыт в FMCG, HoReCa, импортных брендах. Дмитрий Москаленко.">
@@ -23,14 +23,12 @@
 <link rel="preload" href="/fonts/geologica-cyrillic-f28b2b.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css">
 <style>
-:root{--black:#0a0a0a;--white:#f5f2ed;--accent:#c8ff00;--grey:#1a1a1a;--mid:#2e2e2e;--muted:#888;--font-display:'Unbounded',sans-serif;--font-body:'Geologica',sans-serif}
+:root{--black:var(--site-bg);--white:var(--site-text);--accent:var(--site-accent);--grey:var(--site-surface);--mid:var(--site-rule);--muted:var(--site-muted);--font-display:'Unbounded',sans-serif;--font-body:'Geologica',sans-serif}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300;overflow-x:hidden;}
-.cursor{width:12px;height:12px;background:var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}
-.cursor-ring{width:40px;height:40px;border:1px solid rgba(200,255,0,.4);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .15s ease-out}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 60px;display:flex;justify-content:space-between;align-items:center}
-nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,.95) 0%,transparent 100%);pointer-events:none}
+nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(var(--site-bg-rgb),.95) 0%,transparent 100%);pointer-events:none}
 .nav-logo{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.15em;color:var(--white);text-decoration:none;text-transform:uppercase;position:relative;z-index:1}
 .nav-links{display:flex;gap:40px;list-style:none;position:relative;z-index:1}
 .nav-links a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s}
@@ -52,9 +50,9 @@ nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to b
 .featured-label::before{content:'';width:24px;height:1px;background:var(--accent)}
 .featured-date{font-size:12px;color:var(--muted);letter-spacing:.1em;margin-bottom:16px}
 .featured-title{font-family:var(--font-display);font-size:clamp(22px,2.5vw,36px);font-weight:900;letter-spacing:-.02em;line-height:1.1;margin-bottom:20px}
-.featured-excerpt{font-size:15px;color:#aaa;line-height:1.75;margin-bottom:32px}
+.featured-excerpt{font-size:15px;color:var(--site-muted-2);line-height:1.75;margin-bottom:32px}
 .featured-visual{background:var(--grey);height:400px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.featured-visual-text{font-family:var(--font-display);font-size:120px;font-weight:900;color:rgba(200,255,0,.06);line-height:1;user-select:none}
+.featured-visual-text{font-family:var(--font-display);font-size:120px;font-weight:900;color:rgba(var(--site-accent-rgb),.06);line-height:1;user-select:none}
 .featured-stat{position:absolute;bottom:32px;right:32px;text-align:right}
 .featured-stat-num{font-family:var(--font-display);font-size:40px;font-weight:900;color:var(--accent);line-height:1}
 .featured-stat-label{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
@@ -66,7 +64,7 @@ nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to b
 .posts-count{font-size:12px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
 .posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:80px}
 .post-card{background:var(--grey);padding:40px;position:relative;overflow:hidden;transition:background .3s;cursor:pointer}
-.post-card:hover{background:#1e1e1e}
+.post-card:hover{background:var(--site-surface-3)}
 .post-card:hover .post-arrow{opacity:1;transform:translate(0,0)}
 .post-date{font-size:11px;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;margin-bottom:16px}
 .post-cat{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;font-weight:500}
@@ -80,14 +78,14 @@ nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to b
 .cases-h2{font-family:var(--font-display);font-size:24px;font-weight:900;letter-spacing:-.01em}
 .cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 .case-card{background:var(--grey);padding:48px 40px;transition:background .3s;position:relative;overflow:hidden}
-.case-card:hover{background:#1e1e1e}
+.case-card:hover{background:var(--site-surface-3)}
 .case-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--accent);transition:width .4s}
 .case-card:hover::after{width:100%}
 .case-date{font-size:11px;color:var(--muted);letter-spacing:.15em;margin-bottom:16px}
 .case-brand{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;font-weight:500}
 .case-title{font-family:var(--font-display);font-size:17px;font-weight:700;letter-spacing:-.01em;line-height:1.3;margin-bottom:14px}
 .case-desc{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:24px}
-.case-link{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;transition:opacity .2s;border-bottom:1px solid rgba(200,255,0,.3);padding-bottom:2px}
+.case-link{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;transition:opacity .2s;border-bottom:1px solid rgba(var(--site-accent-rgb),.3);padding-bottom:2px}
 .case-link:hover{opacity:.7}
 
 /* NEWSLETTER */
@@ -100,7 +98,7 @@ nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to b
 .nl-input:focus{border-color:var(--accent)}
 .nl-input::placeholder{color:#444}
 .nl-btn{background:var(--accent);color:var(--black);font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:18px 32px;border:none;cursor:pointer;border-radius:2px;transition:transform .2s,box-shadow .2s}
-.nl-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,255,0,.2)}
+.nl-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(var(--site-accent-rgb),.2)}
 .nl-hint{font-size:12px;color:var(--muted)}
 
 footer{padding:40px 60px;border-top:1px solid var(--mid);display:flex;justify-content:space-between;align-items:center}
@@ -181,16 +179,16 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 .cookie-banner {
   position: fixed; bottom: 24px; left: 24px; right: 24px;
   max-width: 560px; z-index: 9000;
-  background: #1a1a1a; border: 1px solid #2e2e2e;
-  border-left: 3px solid #c8ff00;
+  background: var(--site-surface); border: 1px solid var(--site-rule);
+  border-left: 3px solid var(--site-accent);
   padding: 20px 24px; display: flex;
   align-items: center; gap: 20px; flex-wrap: wrap;
   transform: translateY(120px); opacity: 0;
   transition: transform .4s ease, opacity .4s ease;
 }
 .cookie-banner.show { transform: translateY(0); opacity: 1; }
-.cookie-text { font-size: 13px; color: #aaa; line-height: 1.6; flex: 1; min-width: 200px; }
-.cookie-text a { color: #c8ff00; text-decoration: none; }
+.cookie-text { font-size: 13px; color: var(--site-muted-2); line-height: 1.6; flex: 1; min-width: 200px; }
+.cookie-text a { color: var(--site-accent); text-decoration: none; }
 .cookie-text a:hover { text-decoration: underline; }
 .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
 .cookie-btn {
@@ -200,8 +198,8 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   transition: transform .15s, opacity .2s;
 }
 .cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
-.cookie-accept { background: #c8ff00; color: #0a0a0a; }
-.cookie-decline { background: transparent; color: #666; border: 1px solid #2e2e2e; }
+.cookie-accept { background: var(--site-accent); color: var(--site-bg); }
+.cookie-decline { background: transparent; color: #666; border: 1px solid var(--site-rule); }
 
 
   /* ── MOBILE BURGER & MENU ── */
@@ -221,7 +219,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     display: block;
     width: 24px;
     height: 2px;
-    background: #f5f2ed;
+    background: var(--site-text);
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
     transform-origin: center;
@@ -233,7 +231,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(10,10,10,0.98);
+    background: rgba(var(--site-bg-rgb),0.98);
     z-index: 150;
     flex-direction: column;
     align-items: center;
@@ -248,16 +246,16 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     font-size: clamp(22px, 6vw, 36px);
     font-weight: 900;
     letter-spacing: -0.02em;
-    color: #f5f2ed;
+    color: var(--site-text);
     text-decoration: none;
     padding: 12px 24px;
     transition: color 0.2s;
     text-align: center;
   }
-  .mobile-menu a:hover { color: #c8ff00; }
+  .mobile-menu a:hover { color: var(--site-accent); }
   .mobile-menu a.nav-cta {
-    background: #c8ff00 !important;
-    color: #0a0a0a !important;
+    background: var(--site-accent) !important;
+    color: var(--site-bg) !important;
     border-radius: 2px;
     margin-top: 16px;
     font-size: clamp(14px, 4vw, 20px);
@@ -267,7 +265,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     top: 24px;
     right: 24px;
     font-size: 32px;
-    color: #f5f2ed;
+    color: var(--site-text);
     cursor: pointer;
     background: none;
     border: none;
@@ -275,7 +273,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     padding: 8px;
     z-index: 160;
   }
-  .mobile-menu-close:hover { color: #c8ff00; }
+  .mobile-menu-close:hover { color: var(--site-accent); }
   @media (max-width: 1024px) {
     .burger { display: flex !important; }
     .nav-links { display: none !important; }
@@ -286,14 +284,16 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   @media (max-width: 768px) {
     html, body { width: 100%; overflow-x: hidden; }
     img, video, iframe, svg { max-width: 100%; height: auto; }
-    * { word-break: break-word; }
+    * { overflow-wrap: break-word; }
+    h1, h2, h3, [class*="title"] { -webkit-hyphens: auto; hyphens: auto; }
+    .hero-actions, .cta-actions { flex-wrap: wrap; }
+    .btn-primary, .btn-ghost, .btn-secondary, .nav-cta { white-space: nowrap; }
   }
   @media (max-width: 1024px) {
     .nav-links { display: none !important; }
     .burger { display: flex !important; }
   }
 
-@media (hover:hover) and (pointer:fine){body{cursor:none}}
 
   /* ── МОБИЛЬНАЯ ОПТИМИЗАЦИЯ (Яндекс.Вебмастер) ── */
   @media (max-width: 767px) {
@@ -411,20 +411,19 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 <meta property="og:image" content="https://brandmanager.su/og-image.jpg?v=2">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://brandmanager.su/og-image.jpg?v=2">
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 
 <nav id="nav">
   <a href="/" class="nav-logo">DM / Brand</a>
   <ul class="nav-links">
     <li><a href="/">Главная</a></li>
-    <li><a href="services.html">Услуги</a></li>
-    <li><a href="articles.html">Статьи</a></li>
-    <li><a href="blog.html" class="active">Блог</a></li>
-    <li><a href="resume.html">Резюме</a></li>
-    <li><a href="brief.html">Бриф</a></li>
+    <li><a href="/services">Услуги</a></li>
+    <li><a href="/articles">Статьи</a></li>
+    <li><a href="/blog" class="active">Блог</a></li>
+    <li><a href="/resume">Резюме</a></li>
+    <li><a href="/brief">Бриф</a></li>
     <li><a href="/#contact" class="nav-cta">Обсудить проект</a></li>
   </ul>
   <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Открыть меню">
@@ -434,16 +433,16 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
   <a href="/" onclick="closeMobileMenu()">Главная</a>
-  <a href="services.html" onclick="closeMobileMenu()">Услуги</a>
-  <a href="articles.html" onclick="closeMobileMenu()">Статьи</a>
-  <a href="blog.html" onclick="closeMobileMenu()">Блог</a>
-  <a href="resume.html" onclick="closeMobileMenu()">Резюме</a>
-  <a href="brief.html" onclick="closeMobileMenu()">Бриф</a>
+  <a href="/services" onclick="closeMobileMenu()">Услуги</a>
+  <a href="/articles" onclick="closeMobileMenu()">Статьи</a>
+  <a href="/blog" onclick="closeMobileMenu()">Блог</a>
+  <a href="/resume" onclick="closeMobileMenu()">Резюме</a>
+  <a href="/brief" onclick="closeMobileMenu()">Бриф</a>
   <a href="/#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
 </div>
 
 <div class="page-hero reveal">
-  <div class="hero-label">Заметки · Кейсы · Наблюдения</div>
+  <div class="hero-label">Заметки, Кейсы, Наблюдения</div>
   <h1>Блог<br><em>бренд-стратега</em></h1>
   <p class="hero-sub">Заметки из работы с брендами: рынки, кейсы, выставки, цифры.</p>
 </div>
@@ -482,13 +481,13 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   <div class="posts-grid reveal" style="margin-bottom:40px;">
     <a href="https://t-j.ru/strategiya-dlya-obzharshchika/" target="_blank" rel="noopener" class="post-card" style="text-decoration:none;border-left:2px solid var(--accent);display:block;">
       <div class="post-date" style="color:var(--accent);">Тинькофф Журнал ↗</div>
-      <div class="post-cat">Бренд-стратегия · Кейс</div>
+      <div class="post-cat">Бренд-стратегия, Кейс</div>
       <div class="post-title" style="font-family:var(--font-display);font-size:18px;font-weight:700;line-height:1.3;margin:12px 0;color:var(--white);">Стратегия для обжарщика</div>
       <p class="post-excerpt" style="font-size:14px;color:var(--muted);line-height:1.65;">Как построить бренд кофейной ростерии: позиционирование, миссия и платформа бренда для specialty-сегмента.</p>
     </a>
     <a href="https://t-j.ru/proteinovye-batonchiki/" target="_blank" rel="noopener" class="post-card" style="text-decoration:none;border-left:2px solid var(--accent);display:block;">
       <div class="post-date" style="color:var(--accent);">Тинькофф Журнал ↗</div>
-      <div class="post-cat">Анализ продукта · FMCG</div>
+      <div class="post-cat">Анализ продукта, FMCG</div>
       <div class="post-title" style="font-family:var(--font-display);font-size:18px;font-weight:700;line-height:1.3;margin:12px 0;color:var(--white);">Протеиновые батончики</div>
       <p class="post-excerpt" style="font-size:14px;color:var(--muted);line-height:1.65;">Разбор продукта в категории спортпита: состав, позиционирование и конкуренция на полке.</p>
     </a>
@@ -510,16 +509,16 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
       <div class="post-cat">Аудит</div>
       <div class="post-title">Аудит бренда: что проверить и как провести</div>
       <p class="post-excerpt">5 блоков аудита бренда, порядок проведения и ошибки, из-за которых аудит превращается в красивую презентацию.</p>
-      <a href="article-brand-audit.html" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,255,0,.3);padding-bottom:2px">Читать статью →</a>
+      <a href="/article-brand-audit" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(var(--site-accent-rgb),.3);padding-bottom:2px">Читать статью</a>
       <span class="post-arrow">↗</span>
     </div>
 
     <div class="post-card">
       <div class="post-date">20.10.2026</div>
-      <div class="post-cat">Стратегия · Портфель</div>
+      <div class="post-cat">Стратегия, Портфель</div>
       <div class="post-title">Архитектура бренда: как управлять портфелем</div>
       <p class="post-excerpt">Монолитный бренд, дом брендов или поддерживающий бренд — как выбрать модель и когда запускать суббренд.</p>
-      <a href="article-brand-architecture.html" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,255,0,.3);padding-bottom:2px">Читать статью →</a>
+      <a href="/article-brand-architecture" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(var(--site-accent-rgb),.3);padding-bottom:2px">Читать статью</a>
       <span class="post-arrow">↗</span>
     </div>
 
@@ -528,7 +527,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
       <div class="post-cat">Аналитика бренда</div>
       <div class="post-title">Метрики здоровья бренда</div>
       <p class="post-excerpt">Воронка бренда, NPS и брендовый поисковый спрос: что измерять, чтобы видеть проблемы раньше, чем упадут продажи.</p>
-      <a href="article-brand-health-metrics.html" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,255,0,.3);padding-bottom:2px">Читать статью →</a>
+      <a href="/article-brand-health-metrics" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(var(--site-accent-rgb),.3);padding-bottom:2px">Читать статью</a>
       <span class="post-arrow">↗</span>
     </div>
 
@@ -537,7 +536,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
       <div class="post-cat">Ребрендинг</div>
       <div class="post-title">Ребрендинг: когда менять и когда это ошибка</div>
       <p class="post-excerpt">Когда ребрендинг действительно нужен, а когда это дорогая косметика. Разбор на примерах Сбера, VK и других.</p>
-      <a href="article-rebranding.html" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,255,0,.3);padding-bottom:2px">Читать статью →</a>
+      <a href="/article-rebranding" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(var(--site-accent-rgb),.3);padding-bottom:2px">Читать статью</a>
       <span class="post-arrow">↗</span>
     </div>
 
@@ -546,7 +545,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
       <div class="post-cat">Стратегия</div>
       <div class="post-title">Бренд-стратегия и брендинг: в чём разница</div>
       <p class="post-excerpt">Чем стратегия отличается от логотипа и фирменного стиля и зачем бизнесу и то и другое.</p>
-      <a href="article-brand-strategy-vs-branding.html" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,255,0,.3);padding-bottom:2px">Читать статью →</a>
+      <a href="/article-brand-strategy-vs-branding" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(var(--site-accent-rgb),.3);padding-bottom:2px">Читать статью</a>
       <span class="post-arrow">↗</span>
     </div>
 
@@ -555,34 +554,34 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
       <div class="post-cat">Документация</div>
       <div class="post-title">Брендбук vs гайдлайн: что нужно вашему бизнесу</div>
       <p class="post-excerpt">Их постоянно путают, но они решают разные задачи. Разбираю, какой документ нужен и когда.</p>
-      <a href="article-brandbook-vs-guideline.html" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,255,0,.3);padding-bottom:2px">Читать статью →</a>
+      <a href="/article-brandbook-vs-guideline" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(var(--site-accent-rgb),.3);padding-bottom:2px">Читать статью</a>
       <span class="post-arrow">↗</span>
     </div>
 
     <div class="post-card">
       <div class="post-date">25.06.2023</div>
-      <div class="post-cat">Аналитика · Рынок</div>
+      <div class="post-cat">Аналитика, Рынок</div>
       <div class="post-title">ФУДмашина 2023: рынок кофейного оборудования</div>
       <p class="post-excerpt">Рынок кофейного оборудования России в 2021–2023: кто растёт, кто уходит и что это значит для дистрибьюторов и производителей.</p>
-      <a href="https://disk.yandex.ru/i/zePUHradFFnYbQ" target="_blank" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,255,0,.3);padding-bottom:2px">Скачать материал →</a>
+      <a href="https://disk.yandex.ru/i/zePUHradFFnYbQ" target="_blank" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(var(--site-accent-rgb),.3);padding-bottom:2px">Скачать материал</a>
       <span class="post-arrow">↗</span>
     </div>
 
     <div class="post-card">
       <div class="post-date">10.05.2023</div>
-      <div class="post-cat">Аналитика · Китай</div>
+      <div class="post-cat">Аналитика, Китай</div>
       <div class="post-title">Оборудование из Китая: тренды и реальность рынка</div>
       <p class="post-excerpt">Китайское оборудование завоёвывает популярность благодаря производительности, цене и ассортименту. Китай — крупнейший производитель и экспортёр в Россию за 2023. Разбираю, что это значит для дистрибьюторов.</p>
-      <a href="https://www.youtube.com/watch?v=Q9DvkVOA4q4&t=143s" target="_blank" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,255,0,.3);padding-bottom:2px">Смотреть видео →</a>
+      <a href="https://www.youtube.com/watch?v=Q9DvkVOA4q4&t=143s" target="_blank" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(var(--site-accent-rgb),.3);padding-bottom:2px">Смотреть видео</a>
       <span class="post-arrow">↗</span>
     </div>
 
     <div class="post-card">
       <div class="post-date">05.12.2021</div>
-      <div class="post-cat">Выступление · Маркетинг</div>
+      <div class="post-cat">Выступление, Маркетинг</div>
       <div class="post-title">Форум «PRO маркетинг» в Пскове</div>
       <p class="post-excerpt">Молодёжный форум «PRO маркетинг», организованный Российским обществом «Знание» в рамках просветительского проекта «Умный маршрут». Делюсь материалами и наблюдениями с события.</p>
-      <a href="https://loft60.timepad.ru/event/1861639/" target="_blank" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,255,0,.3);padding-bottom:2px">Узнать больше →</a>
+      <a href="https://loft60.timepad.ru/event/1861639/" target="_blank" style="display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(var(--site-accent-rgb),.3);padding-bottom:2px">Узнать больше</a>
       <span class="post-arrow">↗</span>
     </div>
 
@@ -601,26 +600,26 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 
     <div class="case-card">
       <div class="case-date">02.02.2026</div>
-      <div class="case-brand">FORMA · Премиум FMCG</div>
+      <div class="case-brand">FORMA, Премиум FMCG</div>
       <div class="case-title">FORMA: премиальный макаронный бренд «искусство в каждой тарелке»</div>
       <p class="case-desc">Бренд для креативных профессионалов 25–40 лет (арт-директора, стартаперы), для которых еда — форма самовыражения. Разработка платформы, позиционирования и визуальной концепции.</p>
-      <a href="https://disk.yandex.ru/d/Es3NjyL6zUWsrg" target="_blank" class="case-link">Смотреть кейс →</a>
+      <a href="https://disk.yandex.ru/d/Es3NjyL6zUWsrg" target="_blank" class="case-link">Смотреть кейс</a>
     </div>
 
     <div class="case-card">
       <div class="case-date">22.06.2023</div>
-      <div class="case-brand">Level Kitchen · FoodTech</div>
+      <div class="case-brand">Level Kitchen, FoodTech</div>
       <div class="case-title">Level Kitchen: цельный бренд с ценностями и характером</div>
       <p class="case-desc">Ценности, миссия, отличие от конкурентов и характер бренда — и как всё это перенести в визуал и контент.</p>
-      <a href="https://disk.yandex.ru/d/gze3aUU46o9TBg" target="_blank" class="case-link">Смотреть кейс →</a>
+      <a href="https://disk.yandex.ru/d/gze3aUU46o9TBg" target="_blank" class="case-link">Смотреть кейс</a>
     </div>
 
     <div class="case-card">
       <div class="case-date">05.03.2023</div>
-      <div class="case-brand">Nedra Water · Вода</div>
+      <div class="case-brand">Nedra Water, Вода</div>
       <div class="case-title">Nedra Water: позиционирование, аудитория и измеримый рост</div>
       <p class="case-desc">Чем бренд отличается от других, кто его покупает и где с этими людьми разговаривать — в digital и в B2B.</p>
-      <a href="https://disk.yandex.ru/d/SqO-VGobNs-YNw" target="_blank" class="case-link">Смотреть кейс →</a>
+      <a href="https://disk.yandex.ru/d/SqO-VGobNs-YNw" target="_blank" class="case-link">Смотреть кейс</a>
     </div>
 
   </div>
@@ -634,8 +633,8 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     <p class="nl-sub">Когда выходят новые статьи, кейсы или аналитика — пишу первым делом в Telegram. Пишу редко и по делу.</p>
   </div>
   <div class="nl-form">
-    <p style="font-size:14px;color:#aaa;line-height:1.7;margin-bottom:8px">Проще всего подписаться в Telegram — там выходят все материалы и заметки из практики:</p>
-    <a href="https://t.me/Dmitrii_Diezel" target="_blank" class="nl-btn" style="display:inline-block;text-align:center;text-decoration:none">Подписаться в Telegram →</a>
+    <p style="font-size:14px;color:var(--site-muted-2);line-height:1.7;margin-bottom:8px">Проще всего подписаться в Telegram — там выходят все материалы и заметки из практики:</p>
+    <a href="https://t.me/Dmitrii_Diezel" target="_blank" class="nl-btn" style="display:inline-block;text-align:center;text-decoration:none">Подписаться в Telegram</a>
     <p class="nl-hint">Или напишите напрямую — обсудим ваш проект</p>
     <a href="https://t.me/Dmitrii_Diezel" target="_blank" class="btn-outline" style="text-align:center">Написать в Telegram</a>
   </div>
@@ -643,29 +642,24 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 
 <footer>
   <a href="/" class="footer-logo">DM / Brand Manager</a>
-  <span class="footer-copy">© 2026 · Дмитрий Москаленко</span>
+  <span class="footer-copy">© 2026, Дмитрий Москаленко</span>
   <div class="footer-socials">
-    <a href="privacy.html">Конфиденциальность</a>
-    <a href="cookies.html">Cookie</a>
-    <a href="terms.html">Соглашение</a>
+    <a href="/privacy">Конфиденциальность</a>
+    <a href="/cookies">Cookie</a>
+    <a href="/terms">Соглашение</a>
     <a href="https://t.me/Dmitrii_Diezel" target="_blank">Telegram</a>
     <a href="https://vk.com/dmitrii_moskalenko" target="_blank">VK</a>
   </div>
 </footer>
 
 <script>
-var _CURSOR_OK=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-if(_CURSOR_OK)document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px'});
-(function animRing(){if(!_CURSOR_OK){var c=document.getElementById('cursor'),r=document.getElementById('cursorRing');if(c)c.style.display='none';if(r)r.style.display='none';return;}rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)})();
 const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 window.addEventListener('scroll',()=>{
   const n=document.getElementById('nav');
-  n.style.background=window.scrollY>60?'rgba(10,10,10,.97)':'';
+  n.style.background=window.scrollY>60?'rgba(var(--site-bg-rgb),.97)':'';
   n.style.backdropFilter=window.scrollY>60?'blur(12px)':'';
-  n.style.borderBottom=window.scrollY>60?'1px solid #1a1a1a':'';
+  n.style.borderBottom=window.scrollY>60?'1px solid var(--site-surface)':'';
 });
 
   
@@ -673,7 +667,7 @@ window.addEventListener('scroll',()=>{
 
 <!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="cookies.html">Политике cookie</a>.</div>
+  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="/cookies">Политике cookie</a>.</div>
   <div class="cookie-actions">
     <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Понятно</button>
   </div>

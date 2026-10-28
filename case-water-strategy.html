@@ -16,8 +16,8 @@
 <meta name="yandex-verification" content="a22af711bd8343d6" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://brandmanager.su/case-water-strategy.html">
-<meta property="og:url" content="https://brandmanager.su/case-water-strategy.html">
+<link rel="canonical" href="https://brandmanager.su/case-water-strategy">
+<meta property="og:url" content="https://brandmanager.su/case-water-strategy">
 <title>Кейс Gletcher Water — Запуск бренда воды · Дмитрий Москаленко</title>
 <link rel="preload" href="/fonts/unbounded-cyrillic-c86556.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/onest-cyrillic-4c7562.woff2" as="font" type="font/woff2" crossorigin>
@@ -225,7 +225,7 @@
     .stats-row, .diff-grid, .price-grid, .roadmap, .fin-grid { grid-template-columns: 1fr; }
     .challenge-block { grid-template-columns: 1fr; padding: 40px 24px; gap: 32px; }
     .result-grid { grid-template-columns: 1fr 1fr; }
-    .result-band { padding: 48px 24px; margin: 0 -24px; }
+    .result-band { padding: 48px 24px; margin: 0 -20px; }
     .cta-section { padding: 80px 24px; }
     footer { flex-direction: column; gap: 16px; text-align: center; }
     .dist-vis { display: none; }
@@ -236,7 +236,7 @@
   .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .burger.open span:nth-child(2){opacity:0;width:0}
   .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  .mobile-menu{display:none;position:fixed;inset:0;background:rgba(10,10,10,.98);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:8px;backdrop-filter:blur(16px)}
+  .mobile-menu{display:none;position:fixed;inset:0;background:rgba(var(--site-bg-rgb),.98);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:8px;backdrop-filter:blur(16px)}
   .mobile-menu.open{display:flex}
   .mobile-menu a{font-family:var(--font-display);font-size:clamp(22px,6vw,36px);font-weight:900;letter-spacing:-.02em;color:var(--white);text-decoration:none;padding:12px 24px;transition:color .2s;text-align:center}
   .mobile-menu a:hover{color:var(--accent)}
@@ -256,14 +256,14 @@
     font-size: 12px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--muted, #888);
+    color: var(--muted, var(--site-muted));
     text-decoration: none;
     transition: color 0.3s;
   }
   .nav-links a:hover { color: var(--accent); }
   .nav-cta {
     background: var(--accent) !important;
-    color: #0a0a0a !important;
+    color: var(--site-bg) !important;
     padding: 10px 22px !important;
     border-radius: 2px !important;
     font-weight: 600 !important;
@@ -293,16 +293,16 @@
 .cookie-banner {
   position: fixed; bottom: 24px; left: 24px; right: 24px;
   max-width: 560px; z-index: 9000;
-  background: #1a1a1a; border: 1px solid #2e2e2e;
-  border-left: 3px solid #c8ff00;
+  background: var(--site-surface); border: 1px solid var(--site-rule);
+  border-left: 3px solid var(--site-accent);
   padding: 20px 24px; display: flex;
   align-items: center; gap: 20px; flex-wrap: wrap;
   transform: translateY(120px); opacity: 0;
   transition: transform .4s ease, opacity .4s ease;
 }
 .cookie-banner.show { transform: translateY(0); opacity: 1; }
-.cookie-text { font-size: 13px; color: #aaa; line-height: 1.6; flex: 1; min-width: 200px; }
-.cookie-text a { color: #c8ff00; text-decoration: none; }
+.cookie-text { font-size: 13px; color: var(--site-muted-2); line-height: 1.6; flex: 1; min-width: 200px; }
+.cookie-text a { color: var(--site-accent); text-decoration: none; }
 .cookie-text a:hover { text-decoration: underline; }
 .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
 .cookie-btn {
@@ -312,8 +312,8 @@
   transition: transform .15s, opacity .2s;
 }
 .cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
-.cookie-accept { background: #c8ff00; color: #0a0a0a; }
-.cookie-decline { background: transparent; color: #666; border: 1px solid #2e2e2e; }
+.cookie-accept { background: var(--site-accent); color: var(--site-bg); }
+.cookie-decline { background: transparent; color: #666; border: 1px solid var(--site-rule); }
 
 
   /* ── MOBILE BURGER & MENU ── */
@@ -333,7 +333,7 @@
     display: block;
     width: 24px;
     height: 2px;
-    background: #f5f2ed;
+    background: var(--site-text);
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
     transform-origin: center;
@@ -345,7 +345,7 @@
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(10,10,10,0.98);
+    background: rgba(var(--site-bg-rgb),0.98);
     z-index: 150;
     flex-direction: column;
     align-items: center;
@@ -360,16 +360,16 @@
     font-size: clamp(22px, 6vw, 36px);
     font-weight: 900;
     letter-spacing: -0.02em;
-    color: #f5f2ed;
+    color: var(--site-text);
     text-decoration: none;
     padding: 12px 24px;
     transition: color 0.2s;
     text-align: center;
   }
-  .mobile-menu a:hover { color: #c8ff00; }
+  .mobile-menu a:hover { color: var(--site-accent); }
   .mobile-menu a.nav-cta {
-    background: #c8ff00 !important;
-    color: #0a0a0a !important;
+    background: var(--site-accent) !important;
+    color: var(--site-bg) !important;
     border-radius: 2px;
     margin-top: 16px;
     font-size: clamp(14px, 4vw, 20px);
@@ -379,7 +379,7 @@
     top: 24px;
     right: 24px;
     font-size: 32px;
-    color: #f5f2ed;
+    color: var(--site-text);
     cursor: pointer;
     background: none;
     border: none;
@@ -387,7 +387,7 @@
     padding: 8px;
     z-index: 160;
   }
-  .mobile-menu-close:hover { color: #c8ff00; }
+  .mobile-menu-close:hover { color: var(--site-accent); }
   @media (max-width: 1024px) {
     .burger { display: flex !important; }
     .nav-links { display: none !important; }
@@ -398,7 +398,10 @@
   @media (max-width: 768px) {
     html, body { width: 100%; overflow-x: hidden; }
     img, video, iframe, svg { max-width: 100%; height: auto; }
-    * { word-break: break-word; }
+    * { overflow-wrap: break-word; }
+    h1, h2, h3, [class*="title"] { -webkit-hyphens: auto; hyphens: auto; }
+    .hero-actions, .cta-actions { flex-wrap: wrap; }
+    .btn-primary, .btn-ghost, .btn-secondary, .nav-cta { white-space: nowrap; }
   }
   @media (max-width: 1024px) {
     .nav-links { display: none !important; }
@@ -498,6 +501,17 @@
     .archetype-band { flex-direction: column !important; }
   }
 
+
+  /* ── MOBILE: первый экран без пустоты сверху ── */
+  @media (max-width: 1024px) {
+    .hero { min-height: auto !important; justify-content: flex-start !important; }
+    .hero-left { justify-content: flex-start !important; }
+    .hero-scroll-hint { display: none !important; }
+  }
+  @media (max-width: 480px) {
+    .hero-title, .hero-title * { word-break: normal !important; }
+    .hero-title { font-size: 13vw !important; }
+  }
 </style>
 
 
@@ -543,10 +557,11 @@
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://brandmanager.su/" },
     { "@type": "ListItem", "position": 2, "name": "Кейсы", "item": "https://brandmanager.su/#cases" },
-    { "@type": "ListItem", "position": 3, "name": "Кейс Gletcher Water — Запуск бренда воды", "item": "https://brandmanager.su/case-water-strategy.html" }
+    { "@type": "ListItem", "position": 3, "name": "Кейс Gletcher Water — Запуск бренда воды", "item": "https://brandmanager.su/case-water-strategy" }
   ]
 }
 </script>
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
 
@@ -554,11 +569,11 @@
   <a href="/" class="nav-logo">DM / Brand</a>
   <ul class="nav-links">
     <li><a href="/">Главная</a></li>
-    <li><a href="services.html">Услуги</a></li>
-    <li><a href="articles.html">Статьи</a></li>
-    <li><a href="blog.html">Блог</a></li>
-    <li><a href="resume.html">Резюме</a></li>
-    <li><a href="brief.html">Бриф</a></li>
+    <li><a href="/services">Услуги</a></li>
+    <li><a href="/articles">Статьи</a></li>
+    <li><a href="/blog">Блог</a></li>
+    <li><a href="/resume">Резюме</a></li>
+    <li><a href="/brief">Бриф</a></li>
     <li><a href="/#contact" class="nav-cta">Обсудить проект</a></li>
   </ul>
   <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Открыть меню">
@@ -569,11 +584,11 @@
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
   <a href="/" onclick="closeMobileMenu()">Главная</a>
-  <a href="services.html" onclick="closeMobileMenu()">Услуги</a>
-  <a href="articles.html" onclick="closeMobileMenu()">Статьи</a>
-  <a href="blog.html" onclick="closeMobileMenu()">Блог</a>
-  <a href="resume.html" onclick="closeMobileMenu()">Резюме</a>
-  <a href="brief.html" onclick="closeMobileMenu()">Бриф</a>
+  <a href="/services" onclick="closeMobileMenu()">Услуги</a>
+  <a href="/articles" onclick="closeMobileMenu()">Статьи</a>
+  <a href="/blog" onclick="closeMobileMenu()">Блог</a>
+  <a href="/resume" onclick="closeMobileMenu()">Резюме</a>
+  <a href="/brief" onclick="closeMobileMenu()">Бриф</a>
   <a href="/#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
 </div>
 
@@ -588,7 +603,7 @@
     <div class="kpi-chip"><span class="kpi-val">2%</span>Доля рынка</div>
     <div class="kpi-chip"><span class="kpi-val">X5 · Лента · Метро</span>Листинг</div>
   </div>
-  <div class="hero-tag">Кейс · Запуск бренда · FMCG / Вода · Svam Group</div>
+  <div class="hero-tag">Кейс, Запуск бренда, FMCG / Вода, Svam Group</div>
   <h1 class="hero-title">Запуск<br>Gletcher<br><em>Water</em></h1>
   <p class="hero-sub">Запуск бренда питьевой воды Gletcher Water под ключ — от концепции и платформы бренда до листинга в X5, Лента, Метро, Азбука Вкуса. Svam Group, 2020–2022.</p>
   <div class="hero-meta">
@@ -816,11 +831,11 @@
 </div>
 
 <footer>
-  <span>© 2026 · Дмитрий Москаленко</span>
+  <span>© 2026 Дмитрий Москаленко</span>
   <div style="display:flex;gap:24px;">
-    <a href="privacy.html">Конфиденциальность</a>
-    <a href="cookies.html">Cookie</a>
-    <a href="terms.html">Соглашение</a>
+    <a href="/privacy">Конфиденциальность</a>
+    <a href="/cookies">Cookie</a>
+    <a href="/terms">Соглашение</a>
     <a href="https://t.me/Dmitrii_Diezel">Telegram</a>
     <a href="https://vk.com/dmitrii_moskalenko">VK</a>
     <a href="/">Главная</a>
@@ -830,7 +845,7 @@
 
 <!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="cookies.html">Политике cookie</a>.</div>
+  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="/cookies">Политике cookie</a>.</div>
   <div class="cookie-actions">
     <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Понятно</button>
   </div>

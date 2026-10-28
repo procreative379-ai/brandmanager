@@ -1,18 +1,18 @@
 /* Общие настройки сайта: цвет акцента задаётся здесь один раз для всех страниц. */
 :root {
-  --site-accent: #d4693f;
-  --site-accent-rgb: 212,105,63;
-  --site-on-accent: #141210;
-  --site-bg: #141210;
-  --site-bg-rgb: 20,18,16;
-  --site-surface: #1e1b18;
-  --site-surface-2: #1a1715;
-  --site-surface-3: #25211d;
-  --site-rule: #34302b;
-  --site-text: #f2ece3;
-  --site-text-2: #d6cfc4;
-  --site-muted: #9a9187;
-  --site-muted-2: #b5ada2;
+  --site-accent: #b8542c;
+  --site-accent-rgb: 184,84,44;
+  --site-on-accent: #fffaf3;
+  --site-bg: #f4efe6;
+  --site-bg-rgb: 244,239,230;
+  --site-surface: #ebe4d8;
+  --site-surface-2: #efe9df;
+  --site-surface-3: #e3dbcd;
+  --site-rule: #d5cbbb;
+  --site-text: #1f1b17;
+  --site-text-2: #3b352e;
+  --site-muted: #6b6259;
+  --site-muted-2: #544c44;
 }
 html { background: var(--site-bg); }
 
@@ -152,3 +152,20 @@ footer div, footer nav { flex-wrap: wrap; }
 .hero-label::before, .page-label::before, .page-hero-label::before { content: none !important; display: none !important; }
 
 .cookie-banner { background: var(--site-surface) !important; border: 1px solid var(--site-rule) !important; }
+
+/* Страницы кейсов остаются тёмными: это презентации брендов клиентов со своими цветами. */
+html.case-dark {
+  --site-accent: #d4693f;
+  --site-accent-rgb: 212,105,63;
+  --site-on-accent: #141210;
+  --site-bg: #141210;
+  --site-bg-rgb: 20,18,16;
+  --site-surface: #1e1b18;
+  --site-surface-2: #1a1715;
+  --site-surface-3: #25211d;
+  --site-rule: #34302b;
+  --site-text: #f2ece3;
+  --site-text-2: #d6cfc4;
+  --site-muted: #9a9187;
+  --site-muted-2: #b5ada2;
+}

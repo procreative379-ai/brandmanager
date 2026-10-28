@@ -53,8 +53,8 @@
 <!-- /Yandex.Metrika counter -->
 <style>
 :root {
-  --black:var(--site-bg); --white:#f0ede8; --accent:var(--site-accent);
-  --grey:var(--site-surface-2); --grey2:var(--site-surface-3); --mid:var(--site-rule); --muted:#666;
+  --black:var(--site-bg); --white:var(--site-text); --accent:var(--site-accent);
+  --grey:var(--site-surface-2); --grey2:var(--site-surface-3); --mid:var(--site-rule); --muted:var(--site-muted);
   --font-display:'Unbounded',sans-serif; --font-body:'Geologica',sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -122,7 +122,7 @@ nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to b
 .exp-item{display:grid;grid-template-columns:145px 1fr;gap:24px;padding-bottom:28px;margin-bottom:28px;border-bottom:1px solid var(--grey2)}
 .exp-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .exp-dates{font-size:12px;color:var(--muted);line-height:1.6;padding-top:3px}
-.exp-duration{font-size:11px;color:#444;margin-top:4px}
+.exp-duration{font-size:11px;color:var(--site-muted);margin-top:4px}
 .exp-company{font-family:var(--font-display);font-size:15px;font-weight:700;letter-spacing:-.01em;margin-bottom:3px}
 .exp-role{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
 .exp-bullets{list-style:none;display:flex;flex-direction:column;gap:9px}
@@ -177,7 +177,7 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:920px;margin:
 .cookie-actions{display:flex;gap:10px}
 .cookie-btn{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:10px 20px;border:none;border-radius:2px;cursor:pointer}
 .cookie-accept{background:var(--site-accent);color:var(--site-bg)}
-.cookie-decline{background:transparent;color:#666;border:1px solid var(--site-rule)}
+.cookie-decline{background:transparent;color:var(--site-muted);border:1px solid var(--site-rule)}
 
 .js .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
 .reveal.visible{opacity:1;transform:none}

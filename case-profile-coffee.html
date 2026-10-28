@@ -12,8 +12,8 @@
 <link rel="dns-prefetch" href="https://mc.yandex.ru">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://brandmanager.su/case-profile-coffee.html">
-<meta property="og:url" content="https://brandmanager.su/case-profile-coffee.html">
+<link rel="canonical" href="https://brandmanager.su/case-profile-coffee">
+<meta property="og:url" content="https://brandmanager.su/case-profile-coffee">
 <meta name="yandex-verification" content="a22af711bd8343d6" />
 <meta name="google-site-verification" content="d0fa0e814302fe56" />
 <title>Кейс Profile Coffee — Позиционирование бренда · Дмитрий Москаленко</title>
@@ -365,7 +365,10 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
   @media (max-width: 768px) {
     html, body { width: 100%; overflow-x: hidden; }
     img, video, iframe, svg { max-width: 100%; height: auto; }
-    * { word-break: break-word; }
+    * { overflow-wrap: break-word; }
+    h1, h2, h3, [class*="title"] { -webkit-hyphens: auto; hyphens: auto; }
+    .hero-actions, .cta-actions { flex-wrap: wrap; }
+    .btn-primary, .btn-ghost, .btn-secondary, .nav-cta { white-space: nowrap; }
   }
   @media (max-width: 1024px) {
     .nav-links { display: none !important; }
@@ -465,6 +468,17 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
     .archetype-band { flex-direction: column !important; }
   }
 
+
+  /* ── MOBILE: первый экран без пустоты сверху ── */
+  @media (max-width: 1024px) {
+    .hero { min-height: auto !important; justify-content: flex-start !important; }
+    .hero-left { justify-content: flex-start !important; }
+    .hero-scroll-hint { display: none !important; }
+  }
+  @media (max-width: 480px) {
+    .hero-title, .hero-title * { word-break: normal !important; }
+    .hero-title { font-size: 13vw !important; }
+  }
 </style>
 <meta property="og:title" content="Кейс Profile Coffee — Позиционирование бренда · Дмитрий Москаленко">
 <meta property="og:description" content="Кейс Profile Coffee: позиционирование, миссия и платформа бренда для specialty-ростерии. Tone of Voice, ценности, аудитория. Дмитрий Москаленко.">
@@ -479,7 +493,7 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://brandmanager.su/" },
     { "@type": "ListItem", "position": 2, "name": "Кейсы", "item": "https://brandmanager.su/#cases" },
-    { "@type": "ListItem", "position": 3, "name": "Кейс Profile Coffee — Позиционирование ростерии", "item": "https://brandmanager.su/case-profile-coffee.html" }
+    { "@type": "ListItem", "position": 3, "name": "Кейс Profile Coffee — Позиционирование ростерии", "item": "https://brandmanager.su/case-profile-coffee" }
   ]
 }
 </script>
@@ -499,10 +513,10 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
   <a href="/" onclick="closeMobileMenu()">Главная</a>
-  <a href="services.html" onclick="closeMobileMenu()">Услуги</a>
+  <a href="/services" onclick="closeMobileMenu()">Услуги</a>
   <a href="/#cases" onclick="closeMobileMenu()">Кейсы</a>
-  <a href="resume.html" onclick="closeMobileMenu()">Резюме</a>
-  <a href="brief.html" onclick="closeMobileMenu()">Бриф</a>
+  <a href="/resume" onclick="closeMobileMenu()">Резюме</a>
+  <a href="/brief" onclick="closeMobileMenu()">Бриф</a>
   <a href="/#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
 </div>
 
@@ -922,15 +936,15 @@ footer { border-top:1px solid var(--border); padding:32px 60px; display:flex; ju
   <a href="/" class="footer-logo">DM / Brand Manager</a>
   <span class="footer-copy">© 2026 · Дмитрий Москаленко</span>
   <div class="footer-links">
-    <a href="privacy.html">Конфиденциальность</a>
-    <a href="terms.html">Соглашение</a>
+    <a href="/privacy">Конфиденциальность</a>
+    <a href="/terms">Соглашение</a>
     <a href="https://t.me/Dmitrii_Diezel" target="_blank">Telegram</a>
     <a href="https://vk.com/dmitrii_moskalenko" target="_blank">VK</a>
   </div>
 </footer>
 
 <div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="cookies.html">Политике cookie</a>.</div>
+  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="/cookies">Политике cookie</a>.</div>
   <div class="cookie-actions">
     <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Понятно</button>
   </div>

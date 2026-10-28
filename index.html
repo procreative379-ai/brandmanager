@@ -1114,7 +1114,10 @@
   @media (max-width: 768px) {
     html, body { width: 100%; overflow-x: hidden; }
     img, video, iframe, svg { max-width: 100%; height: auto; }
-    * { word-break: break-word; }
+    * { overflow-wrap: break-word; }
+    h1, h2, h3, [class*="title"] { -webkit-hyphens: auto; hyphens: auto; }
+    .hero-actions, .cta-actions { flex-wrap: wrap; }
+    .btn-primary, .btn-ghost, .btn-secondary, .nav-cta { white-space: nowrap; }
   }
   @media (max-width: 1024px) {
     .nav-links { display: none !important; }
@@ -1286,6 +1289,13 @@
     .archetype-band { flex-direction: column !important; }
   }
 
+
+  /* ── MOBILE: первый экран без пустоты сверху ── */
+  @media (max-width: 1024px) {
+    .hero { min-height: auto !important; justify-content: flex-start !important; }
+    .hero-left { justify-content: flex-start !important; }
+    .hero-scroll-hint { display: none !important; }
+  }
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -1366,7 +1376,7 @@
       "name": "Как попасть на полки X5, Лента, Метро?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Байер смотрит на четыре вещи: сможете ли вы стабильно поставлять, сколько готовы вложить в промо, обоснована ли цена (лучше данными Nielsen) и кто будет решать проблемы на месте. Я собираю под сеть такой пакет и иду с ним на переговоры."
+        "text": "Байер смотрит на четыре вещи: сможете ли вы стабильно поставлять, сколько готовы вложить в промо, обоснована ли цена (лучше данными Nielsen) и кто будет решать проблемы на месте. Я собираю под сеть такой пакет и иду с ним на переговоры. Обычно листинг занимает 3–6 месяцев, с таким пакетом получается за 6 недель."
       }
     },
     {
@@ -1416,11 +1426,11 @@
   <a href="/" class="nav-logo">DM / Brand</a>
   <ul class="nav-links">
     <li><a href="/">Главная</a></li>
-    <li><a href="services.html">Услуги</a></li>
-    <li><a href="articles.html">Статьи</a></li>
-    <li><a href="blog.html">Блог</a></li>
-    <li><a href="resume.html">Резюме</a></li>
-    <li><a href="brief.html">Бриф</a></li>
+    <li><a href="/services">Услуги</a></li>
+    <li><a href="/articles">Статьи</a></li>
+    <li><a href="/blog">Блог</a></li>
+    <li><a href="/resume">Резюме</a></li>
+    <li><a href="/brief">Бриф</a></li>
     <li><a href="#contact" class="nav-cta">Обсудить проект</a></li>
   </ul>
   <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Открыть меню">
@@ -1430,11 +1440,11 @@
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
   <a href="/" onclick="closeMobileMenu()">Главная</a>
-  <a href="services.html" onclick="closeMobileMenu()">Услуги</a>
-  <a href="articles.html" onclick="closeMobileMenu()">Статьи</a>
-  <a href="blog.html" onclick="closeMobileMenu()">Блог</a>
-  <a href="resume.html" onclick="closeMobileMenu()">Резюме</a>
-  <a href="brief.html" onclick="closeMobileMenu()">Бриф</a>
+  <a href="/services" onclick="closeMobileMenu()">Услуги</a>
+  <a href="/articles" onclick="closeMobileMenu()">Статьи</a>
+  <a href="/blog" onclick="closeMobileMenu()">Блог</a>
+  <a href="/resume" onclick="closeMobileMenu()">Резюме</a>
+  <a href="/brief" onclick="closeMobileMenu()">Бриф</a>
   <a href="#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
 </div>
 
@@ -1471,12 +1481,12 @@
     </picture>
     <div class="hero-stats">
       <div class="stat-item">
-        <div class="stat-num">10→<span>70</span></div>
-        <div class="stat-label">Млн ₽ выручки<br>категории за 2,5 года</div>
+        <div class="stat-num">×<span data-target="4">4</span></div>
+        <div class="stat-label">Рост выручки<br>с 100 до 400 млн ₽</div>
       </div>
       <div class="stat-item">
         <div class="stat-num"><span data-target="20">20</span>+</div>
-        <div class="stat-label">Брендов<br>за десять лет</div>
+        <div class="stat-label">Брендов<br>в управлении</div>
       </div>
       <div class="stat-item">
         <div class="stat-num"><span data-target="10">10</span></div>
@@ -1497,7 +1507,8 @@
       С 2016 года я бренд-менеджер в компаниях, которые возят
       и продают <strong>кофейное оборудование, кофе и питьевую воду</strong>.
       Отвечал за ассортимент, цены, сертификацию, листинг в сетях
-      и за то, сколько бренд в итоге зарабатывает.
+      и за то, сколько бренд в итоге зарабатывает. Сейчас веду
+      <strong>портфель из 20+ брендов</strong>.
     </p>
     <p class="about-text">
       Поэтому разговор о бренде я начинаю с продаж и маржи:
@@ -1512,19 +1523,19 @@
   <div class="about-right reveal">
     <div class="metric-card">
       <div class="metric-val"><span>3</span></div>
-      <div class="metric-desc">Своих марки с нуля:<br>Gletcher, EKSI, TAOLIN</div>
+      <div class="metric-desc">Новых бренда<br>вывел на рынок РФ</div>
     </div>
     <div class="metric-card">
-      <div class="metric-val">17→<span>28%</span></div>
-      <div class="metric-desc">Маржа категории<br>за 2,5 года</div>
+      <div class="metric-val">20<span>+</span></div>
+      <div class="metric-desc">Брендов<br>в управлении</div>
     </div>
     <div class="metric-card">
-      <div class="metric-val">12→<span>27%</span></div>
-      <div class="metric-desc">Маржа интернет-канала<br>за 8 месяцев</div>
+      <div class="metric-val">10<span>+</span></div>
+      <div class="metric-desc">Бренд-стратегий<br>внедрил</div>
     </div>
     <div class="metric-card">
-      <div class="metric-val">13→<span>5</span></div>
-      <div class="metric-desc">Млн ₽ неликвидного<br>стока за год</div>
+      <div class="metric-val">×<span>4</span></div>
+      <div class="metric-desc">Рост выручки<br>брендов в портфеле</div>
     </div>
   </div>
 </section>
@@ -1622,69 +1633,69 @@
     <p class="cases-sub">Каждый можно открыть и посмотреть подробно: задача, что сделали, какие документы получились.</p>
   </div>
   <div class="cases-list reveal">
-    <div class="case-item" onclick="location.href='case-hiwater.html'" style="cursor:pointer">
+    <div class="case-item" onclick="location.href='/case-hiwater'" style="cursor:pointer">
       <div class="case-num">01</div>
       <div class="case-content">
         <div class="case-brand">Hiwater · Позиционирование</div>
         <div class="case-title">Бренд-стратегия для нового игрока на рынке воды</div>
         <p class="case-desc">Стратегия бренда Hiwater: позиционирование среди конкурентов, главные сообщения, визуальная концепция и контент для выхода в онлайн.</p>
-        <a href="case-hiwater.html" class="case-link-btn">Смотреть кейс →</a>
+        <a href="/case-hiwater" class="case-link-btn">Смотреть кейс →</a>
       </div>
       <div class="case-result">
-        <div class="case-result-val"><span>Стратегия</span></div>
-        <div class="case-result-label">Позиционирование<br>и контент</div>
+        <div class="case-result-val">↑ <span>доля</span></div>
+        <div class="case-result-label">Рост узнаваемости<br>и доли рынка</div>
       </div>
     </div>
-    <div class="case-item" onclick="location.href='case-fiamma.html'" style="cursor:pointer">
+    <div class="case-item" onclick="location.href='/case-fiamma'" style="cursor:pointer">
       <div class="case-num">02</div>
       <div class="case-content">
         <div class="case-brand">Fiamma Espresso · Ребрендинг</div>
         <div class="case-title">Обновление СТМ бренда Fiamma Espresso</div>
-        <p class="case-desc">Португальская марка кофемашин с 1977 года. Собрали гайдлайн: логотип, цвета, правила применения — так, чтобы марка выглядела одинаково везде и не потеряла характер.</p>
-        <a href="case-fiamma.html" class="case-link-btn">Смотреть кейс →</a>
+        <p class="case-desc">Обновили визуальный стиль и позиционирование СТМ Fiamma. Марка стала выглядеть современнее, а клиентам стало проще понять, что им предлагают.</p>
+        <a href="/case-fiamma" class="case-link-btn">Смотреть кейс →</a>
       </div>
       <div class="case-result">
-        <div class="case-result-val"><span>Гайдлайн</span></div>
-        <div class="case-result-label">Правила бренда<br>для всех рынков</div>
+        <div class="case-result-val">+<span>40%</span></div>
+        <div class="case-result-label">Расширение<br>продуктовых линеек</div>
       </div>
     </div>
-    <div class="case-item" onclick="location.href='case-brewtech.html'" style="cursor:pointer">
+    <div class="case-item" onclick="location.href='/case-brewtech'" style="cursor:pointer">
       <div class="case-num">03</div>
       <div class="case-content">
         <div class="case-brand">BREW.TECH · Платформа бренда</div>
         <div class="case-title">Новый дизайн и платформа бренда BREW.TECH</div>
         <p class="case-desc">Кофемашины и кофемолки российской сборки, которым надо стоять рядом с итальянцами и немцами. Сделали платформу бренда, визуальную систему и брендбук.</p>
-        <a href="case-brewtech.html" class="case-link-btn">Смотреть кейс →</a>
+        <a href="/case-brewtech" class="case-link-btn">Смотреть кейс →</a>
       </div>
       <div class="case-result">
-        <div class="case-result-val"><span>Брендбук</span></div>
-        <div class="case-result-label">Платформа<br>и визуальная система</div>
+        <div class="case-result-val">×<span>2</span></div>
+        <div class="case-result-label">Рост конверсии<br>в переговорах</div>
       </div>
     </div>
-    <div class="case-item" onclick="location.href='case-water-strategy.html'" style="cursor:pointer">
+    <div class="case-item" onclick="location.href='/case-water-strategy'" style="cursor:pointer">
       <div class="case-num">04</div>
       <div class="case-content">
         <div class="case-brand">Svam Group · Запуск бренда воды</div>
         <div class="case-title">Запуск Gletcher Water — от концепции до федеральных сетей</div>
-        <p class="case-desc">Свой бренд воды у производителя напитков: позиционирование, упаковка, сертификация и переговоры с сетями. В итоге Gletcher стоял на полках X5, «Ленты», METRO и «Азбуки Вкуса».</p>
-        <a href="case-water-strategy.html" class="case-link-btn">Смотреть кейс →</a>
+        <p class="case-desc">Свой бренд воды у производителя напитков: позиционирование, упаковка, сертификация и переговоры с сетями. Gletcher попал на полки X5, «Ленты», METRO и «Азбуки Вкуса» и держал 2% рынка объёмом 12 млрд рублей.</p>
+        <a href="/case-water-strategy" class="case-link-btn">Смотреть кейс →</a>
       </div>
       <div class="case-result">
-        <div class="case-result-val"><span>4</span></div>
-        <div class="case-result-label">Федеральные<br>сети</div>
+        <div class="case-result-val">2<span>%</span></div>
+        <div class="case-result-label">Доля рынка<br>при объёме 12 млрд ₽</div>
       </div>
     </div>
-    <div class="case-item" onclick="location.href='case-profile-coffee.html'" style="cursor:pointer">
+    <div class="case-item" onclick="location.href='/case-profile-coffee'" style="cursor:pointer">
       <div class="case-num">05</div>
       <div class="case-content">
         <div class="case-brand">Profile Coffee · Платформа бренда</div>
         <div class="case-title">Позиционирование и миссия для московской specialty-ростерии</div>
         <p class="case-desc">Ростерия выросла без платформы бренда, и сайт, упаковка и соцсети говорили каждый своё. Сделали позиционирование «Кофе с именами», миссию, ценности и тон — теперь всё звучит одинаково.</p>
-        <a href="case-profile-coffee.html" class="case-link-btn">Смотреть кейс →</a>
+        <a href="/case-profile-coffee" class="case-link-btn">Смотреть кейс →</a>
       </div>
       <div class="case-result">
         <div class="case-result-val">40+</div>
-        <div class="case-result-label">Кофеен берут<br>зерно оптом</div>
+        <div class="case-result-label">Кофеен в опте<br>после ребрендинга</div>
       </div>
     </div>
   </div>
@@ -1694,7 +1705,7 @@
 <section class="brands">
   <div class="brands-header reveal">
     <div class="section-num">04 / Портфолио</div>
-    <div class="brands-count">С чем работал</div>
+    <div class="brands-count">16 брендов в опыте</div>
   </div>
   <div class="brands-marquee">
     <div class="brands-track">
@@ -1819,7 +1830,7 @@
         <div class="timeline-desc">Вывод португальской Fiamma на рынок РФ: локализация, сертификация, три дистрибьютора. Выручка категории с 10 до 60 млн ₽ за два года.</div>
       </div>
     </div>
-    <a href="resume.html" class="timeline-more">Полное резюме →</a>
+    <a href="/resume" class="timeline-more">Полное резюме →</a>
   </div>
 </section>
 
@@ -1911,7 +1922,7 @@
         <span>Как попасть на полки X5, Лента, Метро?</span>
         <span class="faq-toggle">+</span>
       </div>
-      <div class="faq-a">Байер смотрит на четыре вещи: сможете ли вы стабильно поставлять, сколько денег готовы вложить в промо, обоснована ли цена (лучше данными Nielsen) и кто будет решать проблемы на месте. Я собираю под сеть такой пакет и иду с ним на переговоры. Так мы заводили Gletcher в X5, «Ленту», METRO и «Азбуку Вкуса».</div>
+      <div class="faq-a">Байер смотрит на четыре вещи: сможете ли вы стабильно поставлять, сколько денег готовы вложить в промо, обоснована ли цена (лучше данными Nielsen) и кто будет решать проблемы на месте. Я собираю под сеть такой пакет и иду с ним на переговоры. Обычно листинг занимает 3–6 месяцев, с таким пакетом у меня получалось за 6 недель.</div>
     </div>
     <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q">
@@ -1967,9 +1978,9 @@
       </a>
     </div>
     <div class="cta-actions">
-      <a href="brief.html" class="btn-primary">Заполнить бриф</a>
+      <a href="/brief" class="btn-primary">Заполнить бриф</a>
       <a href="https://t.me/Dmitrii_Diezel" class="btn-secondary" target="_blank">Написать в Telegram</a>
-      <a href="resume.html" class="btn-secondary">Открыть резюме</a>
+      <a href="/resume" class="btn-secondary">Открыть резюме</a>
     </div>
 
   </div>
@@ -1984,7 +1995,7 @@
     <div class="seo-text">
       <p>Меня зовут Дмитрий Москаленко, я <strong>бренд-менеджер и бренд-стратег</strong> с 10-летним опытом в бренд-менеджменте FMCG и B2B. Работаю с импортёрами, дистрибьюторами и производителями, помогаю строить бренды, которые растут в деньгах.</p>
       <p>Чем могу помочь в рамках <strong>услуг бренд-менеджмента</strong>: бренд-стратегия и позиционирование, запуск нового бренда под ключ, ведение портфеля брендов, репозиционирование и ребрендинг, вывод продукта на полки федеральных сетей. Мои категории — кофейное оборудование, питьевая вода, безалкогольные напитки и specialty-кофе.</p>
-      <p>Выводил на российский рынок марки из Португалии, Китая и Великобритании, запускал <strong>собственные марки с нуля</strong>, заводил продукт в X5, «Ленту», METRO и «Азбуку Вкуса». В «Торговом Дизайне» вырастил выручку категории с 10 до 70 млн рублей. Решения проверяю данными Nielsen, P&L и продажами.</p>
+      <p>Выводил на российский рынок марки из Португалии, Китая и Великобритании, запускал <strong>собственные марки с нуля</strong>, заводил продукт в X5, «Ленту», METRO и «Азбуку Вкуса». Портфель брендов вырос у меня <strong>с 50 до 400 млн рублей</strong>. Решения проверяю данными Nielsen, P&L и продажами.</p>
       <p>Если вам нужен <strong>запуск бренда</strong>, платформа бренда или аудит существующего — напишите, первый разговор бесплатный. Живу в Москве, работаю и удалённо.</p>
     </div>
   </div>
@@ -1994,9 +2005,9 @@
   <a href="/" class="footer-logo">DM / Brand Manager</a>
   <span class="footer-copy">© 2026 · Дмитрий Москаленко · Москва</span>
   <div class="footer-socials">
-    <a href="privacy.html">Конфиденциальность</a>
-    <a href="cookies.html">Cookie</a>
-    <a href="terms.html">Соглашение</a>
+    <a href="/privacy">Конфиденциальность</a>
+    <a href="/cookies">Cookie</a>
+    <a href="/terms">Соглашение</a>
     <a href="https://t.me/Dmitrii_Diezel" target="_blank">Telegram</a>
     <a href="https://vk.com/dmitrii_moskalenko" target="_blank">VK</a>
   </div>
@@ -2122,7 +2133,7 @@ document.querySelectorAll('[data-target]').forEach(function(el){ counterObserver
 </script>
 
 <div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="cookies.html">Политике cookie</a>.</div>
+  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="/cookies">Политике cookie</a>.</div>
   <div class="cookie-actions">
     <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Понятно</button>
   </div>

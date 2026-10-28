@@ -14,8 +14,8 @@
 <meta name="yandex-verification" content="a22af711bd8343d6" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://brandmanager.su/article-brand-health-metrics.html">
-<meta property="og:url" content="https://brandmanager.su/article-brand-health-metrics.html">
+<link rel="canonical" href="https://brandmanager.su/article-brand-health-metrics">
+<meta property="og:url" content="https://brandmanager.su/article-brand-health-metrics">
 <title>Метрики здоровья бренда: как измерить силу бренда · Дмитрий Москаленко</title>
 <meta name="description" content="Знание, NPS, брендовый поисковый спрос, повторные покупки: какие метрики бренда отслеживать, как построить воронку бренда и что доступно малому бизнесу.">
 <link rel="preload" href="/fonts/unbounded-cyrillic-c86556.woff2" as="font" type="font/woff2" crossorigin>
@@ -26,8 +26,6 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300;overflow-x:hidden;}
-.cursor{width:12px;height:12px;background:var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .3s,height .3s;mix-blend-mode:difference}
-.cursor-ring{width:40px;height:40px;border:1px solid rgba(200,255,0,.4);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .15s ease-out}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 60px;display:flex;justify-content:space-between;align-items:center}
 nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,.95) 0%,transparent 100%);pointer-events:none}
 .nav-logo{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.15em;color:var(--white);text-decoration:none;text-transform:uppercase;position:relative;z-index:1}
@@ -278,14 +276,16 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   @media (max-width: 768px) {
     html, body { width: 100%; overflow-x: hidden; }
     img, video, iframe, svg { max-width: 100%; height: auto; }
-    * { word-break: break-word; }
+    * { overflow-wrap: break-word; }
+    h1, h2, h3, [class*="title"] { -webkit-hyphens: auto; hyphens: auto; }
+    .hero-actions, .cta-actions { flex-wrap: wrap; }
+    .btn-primary, .btn-ghost, .btn-secondary, .nav-cta { white-space: nowrap; }
   }
   @media (max-width: 1024px) {
     .nav-links { display: none !important; }
     .burger { display: flex !important; }
   }
 
-@media (hover:hover) and (pointer:fine){body{cursor:none}}
 
 .article-card.published{border-left:2px solid var(--accent);}
 .article-card.published:hover{background:#1e1e1e;}
@@ -436,7 +436,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   "description": "Знание, NPS, брендовый поисковый спрос, повторные покупки: какие метрики бренда отслеживать, как построить воронку бренда и что доступно малому бизнесу.",
   "inLanguage": "ru",
   "datePublished": "2026-10-20",
-  "mainEntityOfPage": "https://brandmanager.su/article-brand-health-metrics.html",
+  "mainEntityOfPage": "https://brandmanager.su/article-brand-health-metrics",
   "image": "https://brandmanager.su/og-image.jpg?v=2",
   "author": {
     "@type": "Person",
@@ -452,18 +452,16 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 </script>
 </head>
 <body>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 
 <nav id="nav">
   <a href="/" class="nav-logo">DM / Brand</a>
   <ul class="nav-links">
     <li><a href="/">Главная</a></li>
-    <li><a href="services.html">Услуги</a></li>
-    <li><a href="articles.html" class="active">Статьи</a></li>
-    <li><a href="blog.html">Блог</a></li>
-    <li><a href="resume.html">Резюме</a></li>
-    <li><a href="brief.html">Бриф</a></li>
+    <li><a href="/services">Услуги</a></li>
+    <li><a href="/articles" class="active">Статьи</a></li>
+    <li><a href="/blog">Блог</a></li>
+    <li><a href="/resume">Резюме</a></li>
+    <li><a href="/brief">Бриф</a></li>
     <li><a href="/#contact" class="nav-cta">Обсудить проект</a></li>
   </ul>
   <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Открыть меню">
@@ -473,16 +471,16 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
   <a href="/" onclick="closeMobileMenu()">Главная</a>
-  <a href="services.html" onclick="closeMobileMenu()">Услуги</a>
-  <a href="articles.html" onclick="closeMobileMenu()">Статьи</a>
-  <a href="blog.html" onclick="closeMobileMenu()">Блог</a>
-  <a href="resume.html" onclick="closeMobileMenu()">Резюме</a>
-  <a href="brief.html" onclick="closeMobileMenu()">Бриф</a>
+  <a href="/services" onclick="closeMobileMenu()">Услуги</a>
+  <a href="/articles" onclick="closeMobileMenu()">Статьи</a>
+  <a href="/blog" onclick="closeMobileMenu()">Блог</a>
+  <a href="/resume" onclick="closeMobileMenu()">Резюме</a>
+  <a href="/brief" onclick="closeMobileMenu()">Бриф</a>
   <a href="/#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
 </div>
 
 <main class="article-page">
-  <div class="article-crumbs"><a href="/">Главная</a> / <a href="articles.html">Статьи</a> / Метрики бренда</div>
+  <div class="article-crumbs"><a href="/">Главная</a> / <a href="/articles">Статьи</a> / Метрики бренда</div>
   <article>
     <h1>Метрики здоровья бренда: как измерить силу бренда</h1>
     <div class="article-meta">Управление брендом · Аналитика · Дмитрий Москаленко, бренд-менеджер</div>
@@ -505,7 +503,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
       <h3>Ключевые метрики здоровья бренда</h3>
       <p><strong>Знание бренда (awareness).</strong> Спонтанное и с подсказкой — измеряется опросами целевой аудитории. Спонтанное знание обычно важнее: бренд, который вспоминают первым, чаще попадает в корзину.</p>
       <p><strong>NPS (индекс готовности рекомендовать).</strong> Клиентам задают вопрос: «Насколько вероятно, что вы порекомендуете нас друзьям?» по шкале от 0 до 10. Доля ответивших 9–10 (промоутеры) минус доля ответивших 0–6 (критики) — это и есть NPS. Сама цифра мало что значит без динамики и сравнения с конкурентами, но падение NPS — ранний сигнал проблем.</p>
-      <p><strong>Ассоциации и восприятие.</strong> С какими словами и качествами связывают бренд. Задача — проверить, совпадают ли они с тем, что заложено в <a href="article-brand-platform-vs-strategy.html">платформе бренда</a>.</p>
+      <p><strong>Ассоциации и восприятие.</strong> С какими словами и качествами связывают бренд. Задача — проверить, совпадают ли они с тем, что заложено в <a href="/article-brand-platform-vs-strategy">платформе бренда</a>.</p>
       <p><strong>Брендовый поисковый спрос.</strong> Сколько людей ищут вас по названию. В России это удобно смотреть в Яндекс Вордстате, а по собственному сайту — в разделе поисковых запросов Яндекс Вебмастера. Рост брендовых запросов — один из самых доступных и честных индикаторов растущего интереса к бренду.</p>
       <p><strong>Доля повторных покупок и удержание.</strong> Какая часть клиентов возвращается. Эту метрику можно считать по собственной CRM без опросов.</p>
       <p><strong>Ценовая премия.</strong> Готовы ли покупатели платить за ваш бренд больше, чем за аналог без имени. Сильный бренд позволяет держать цену без постоянных скидок.</p>
@@ -514,7 +512,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
       <h3>Как наладить регулярное измерение</h3>
       <ul>
         <li><strong>Выберите 4–6 метрик, а не двадцать.</strong> Лучше несколько показателей, которые вы действительно смотрите каждый квартал, чем большой дашборд, который никто не открывает.</li>
-        <li><strong>Зафиксируйте точку отсчёта.</strong> Первое измерение — база, с которой сравниваются все следующие. Хорошо, если оно совпадает с <a href="article-brand-audit.html">аудитом бренда</a>.</li>
+        <li><strong>Зафиксируйте точку отсчёта.</strong> Первое измерение — база, с которой сравниваются все следующие. Хорошо, если оно совпадает с <a href="/article-brand-audit">аудитом бренда</a>.</li>
         <li><strong>Измеряйте с одинаковой методикой.</strong> Те же вопросы, та же аудитория, тот же период. Иначе цифры нельзя сравнивать.</li>
         <li><strong>Смотрите на конкурентов.</strong> Знание бренда в 30% — это много или мало, зависит от того, сколько у лидера категории.</li>
         <li><strong>Связывайте с бизнес-показателями.</strong> Метрики бренда нужны, чтобы объяснять и прогнозировать продажи, а не ради отчёта.</li>
@@ -525,7 +523,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 
       <h3>Частые вопросы</h3>
       <p><strong>Как часто измерять метрики бренда?</strong><br>Метрики из собственных данных — поисковый спрос, повторные покупки, отзывы — можно смотреть ежемесячно. Опросы о знании и восприятии обычно проводят раз в квартал, полгода или год: бренд меняется медленно.</p>
-      <p><strong>Кто в компании должен отвечать за метрики бренда?</strong><br>Тот, кто управляет брендом, — <a href="article-brand-manager.html">бренд-менеджер</a> или маркетинг-директор. Важно, чтобы метрики бренда входили в его KPI наравне с продажами.</p>
+      <p><strong>Кто в компании должен отвечать за метрики бренда?</strong><br>Тот, кто управляет брендом, — <a href="/article-brand-manager">бренд-менеджер</a> или маркетинг-директор. Важно, чтобы метрики бренда входили в его KPI наравне с продажами.</p>
 
       <p><strong>Вывод:</strong> продажи показывают, что произошло вчера, а метрики бренда — что произойдёт завтра. Компания, которая отслеживает знание, лояльность и брендовый спрос, видит проблемы раньше, чем они превращаются в падение выручки.</p>
 
@@ -534,15 +532,15 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   <div class="article-cta">
     <h2>Нужна помощь с брендом?</h2>
     <p>Если хотите обсудить свой бренд, напишите. Первые полчаса разговора бесплатно: разберёмся, с чего вам лучше начать — со стратегии, аудита или запуска.</p>
-    <a href="brief.html" class="primary">Заполнить бриф</a>
+    <a href="/brief" class="primary">Заполнить бриф</a>
     <a href="https://t.me/Dmitrii_Diezel" class="secondary" target="_blank" rel="noopener">Написать в Telegram</a>
   </div>
   <div class="article-more">
     <h2>Читайте также</h2>
-    <a href="article-brand-audit.html">Аудит бренда: что проверить и как провести</a>
-    <a href="article-brand-manager.html">Кто такой бренд-менеджер и зачем он нужен компании</a>
-    <a href="article-marketing-in-russia.html">Почему маркетинг не рулит бизнесом в России</a>
-    <a href="articles.html">Все статьи →</a>
+    <a href="/article-brand-audit">Аудит бренда: что проверить и как провести</a>
+    <a href="/article-brand-manager">Кто такой бренд-менеджер и зачем он нужен компании</a>
+    <a href="/article-marketing-in-russia">Почему маркетинг не рулит бизнесом в России</a>
+    <a href="/articles">Все статьи →</a>
   </div>
 </main>
 
@@ -550,20 +548,15 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   <a href="/" class="footer-logo">DM / Brand Manager</a>
   <span class="footer-copy">© 2026 · Дмитрий Москаленко</span>
   <div class="footer-socials">
-    <a href="privacy.html">Конфиденциальность</a>
-    <a href="cookies.html">Cookie</a>
-    <a href="terms.html">Соглашение</a>
+    <a href="/privacy">Конфиденциальность</a>
+    <a href="/cookies">Cookie</a>
+    <a href="/terms">Соглашение</a>
     <a href="https://t.me/Dmitrii_Diezel" target="_blank">Telegram</a>
     <a href="https://vk.com/dmitrii_moskalenko" target="_blank">VK</a>
   </div>
 </footer>
 
 <script>
-var _CURSOR_OK=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-if(_CURSOR_OK)document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px'});
-(function animRing(){if(!_CURSOR_OK){var c=document.getElementById('cursor'),r=document.getElementById('cursorRing');if(c)c.style.display='none';if(r)r.style.display='none';return;}rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)})();
 
 const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
@@ -582,7 +575,7 @@ window.addEventListener('scroll',()=>{
 
 <!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="cookies.html">Политике cookie</a>.</div>
+  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="/cookies">Политике cookie</a>.</div>
   <div class="cookie-actions">
     <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Понятно</button>
   </div>

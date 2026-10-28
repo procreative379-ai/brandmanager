@@ -16,8 +16,8 @@
 <meta name="yandex-verification" content="a22af711bd8343d6" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://brandmanager.su/case-hiwater.html">
-<meta property="og:url" content="https://brandmanager.su/case-hiwater.html">
+<link rel="canonical" href="https://brandmanager.su/case-hiwater">
+<meta property="og:url" content="https://brandmanager.su/case-hiwater">
 <title>Кейс HiWater — Бренд-стратегия · Дмитрий Москаленко</title>
 <link rel="preload" href="/fonts/unbounded-cyrillic-c86556.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/onest-cyrillic-4c7562.woff2" as="font" type="font/woff2" crossorigin>
@@ -424,7 +424,10 @@
   @media (max-width: 768px) {
     html, body { width: 100%; overflow-x: hidden; }
     img, video, iframe, svg { max-width: 100%; height: auto; }
-    * { word-break: break-word; }
+    * { overflow-wrap: break-word; }
+    h1, h2, h3, [class*="title"] { -webkit-hyphens: auto; hyphens: auto; }
+    .hero-actions, .cta-actions { flex-wrap: wrap; }
+    .btn-primary, .btn-ghost, .btn-secondary, .nav-cta { white-space: nowrap; }
   }
   @media (max-width: 1024px) {
     .nav-links { display: none !important; }
@@ -527,6 +530,17 @@
     .archetype-band { flex-direction: column !important; }
   }
 
+
+  /* ── MOBILE: первый экран без пустоты сверху ── */
+  @media (max-width: 1024px) {
+    .hero { min-height: auto !important; justify-content: flex-start !important; }
+    .hero-left { justify-content: flex-start !important; }
+    .hero-scroll-hint { display: none !important; }
+  }
+  @media (max-width: 480px) {
+    .hero-title, .hero-title * { word-break: normal !important; }
+    .hero-title { font-size: 13vw !important; }
+  }
 </style>
 
 
@@ -572,7 +586,7 @@
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://brandmanager.su/" },
     { "@type": "ListItem", "position": 2, "name": "Кейсы", "item": "https://brandmanager.su/#cases" },
-    { "@type": "ListItem", "position": 3, "name": "Кейс HiWater — Бренд-стратегия для бренда воды", "item": "https://brandmanager.su/case-hiwater.html" }
+    { "@type": "ListItem", "position": 3, "name": "Кейс HiWater — Бренд-стратегия для бренда воды", "item": "https://brandmanager.su/case-hiwater" }
   ]
 }
 </script>
@@ -583,11 +597,11 @@
   <a href="/" class="nav-logo">DM / Brand</a>
   <ul class="nav-links">
     <li><a href="/">Главная</a></li>
-    <li><a href="services.html">Услуги</a></li>
-    <li><a href="articles.html">Статьи</a></li>
-    <li><a href="blog.html">Блог</a></li>
-    <li><a href="resume.html">Резюме</a></li>
-    <li><a href="brief.html">Бриф</a></li>
+    <li><a href="/services">Услуги</a></li>
+    <li><a href="/articles">Статьи</a></li>
+    <li><a href="/blog">Блог</a></li>
+    <li><a href="/resume">Резюме</a></li>
+    <li><a href="/brief">Бриф</a></li>
     <li><a href="/#contact" class="nav-cta">Обсудить проект</a></li>
   </ul>
   <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Открыть меню">
@@ -598,11 +612,11 @@
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
   <a href="/" onclick="closeMobileMenu()">Главная</a>
-  <a href="services.html" onclick="closeMobileMenu()">Услуги</a>
-  <a href="articles.html" onclick="closeMobileMenu()">Статьи</a>
-  <a href="blog.html" onclick="closeMobileMenu()">Блог</a>
-  <a href="resume.html" onclick="closeMobileMenu()">Резюме</a>
-  <a href="brief.html" onclick="closeMobileMenu()">Бриф</a>
+  <a href="/services" onclick="closeMobileMenu()">Услуги</a>
+  <a href="/articles" onclick="closeMobileMenu()">Статьи</a>
+  <a href="/blog" onclick="closeMobileMenu()">Блог</a>
+  <a href="/resume" onclick="closeMobileMenu()">Резюме</a>
+  <a href="/brief" onclick="closeMobileMenu()">Бриф</a>
   <a href="/#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
 </div>
 
@@ -871,9 +885,9 @@
 <footer>
   <span>© 2026 · Дмитрий Москаленко</span>
   <div style="display:flex;gap:24px;">
-    <a href="privacy.html">Конфиденциальность</a>
-    <a href="cookies.html">Cookie</a>
-    <a href="terms.html">Соглашение</a>
+    <a href="/privacy">Конфиденциальность</a>
+    <a href="/cookies">Cookie</a>
+    <a href="/terms">Соглашение</a>
     <a href="https://t.me/Dmitrii_Diezel">Telegram</a>
     <a href="https://vk.com/dmitrii_moskalenko">VK</a>
     <a href="/">Главная</a>
@@ -883,7 +897,7 @@
 
 <!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="cookies.html">Политике cookie</a>.</div>
+  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="/cookies">Политике cookie</a>.</div>
   <div class="cookie-actions">
     <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Понятно</button>
   </div>

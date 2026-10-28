@@ -14,8 +14,8 @@
 <meta name="yandex-verification" content="a22af711bd8343d6" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://brandmanager.su/article-brand-platform-vs-strategy.html">
-<meta property="og:url" content="https://brandmanager.su/article-brand-platform-vs-strategy.html">
+<link rel="canonical" href="https://brandmanager.su/article-brand-platform-vs-strategy">
+<meta property="og:url" content="https://brandmanager.su/article-brand-platform-vs-strategy">
 <title>Бренд-платформа и бренд-стратегия: фундамент vs план · Дмитрий Москаленко</title>
 <meta name="description" content="Платформа — кто вы. Стратегия — как этого добьётесь. Компании без первого теряют суть. Компании без второго теряют деньги на хаотичных действиях.">
 <link rel="preload" href="/fonts/unbounded-cyrillic-c86556.woff2" as="font" type="font/woff2" crossorigin>
@@ -26,8 +26,6 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300;overflow-x:hidden;}
-.cursor{width:12px;height:12px;background:var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .3s,height .3s;mix-blend-mode:difference}
-.cursor-ring{width:40px;height:40px;border:1px solid rgba(200,255,0,.4);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .15s ease-out}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 60px;display:flex;justify-content:space-between;align-items:center}
 nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,.95) 0%,transparent 100%);pointer-events:none}
 .nav-logo{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.15em;color:var(--white);text-decoration:none;text-transform:uppercase;position:relative;z-index:1}
@@ -278,14 +276,16 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   @media (max-width: 768px) {
     html, body { width: 100%; overflow-x: hidden; }
     img, video, iframe, svg { max-width: 100%; height: auto; }
-    * { word-break: break-word; }
+    * { overflow-wrap: break-word; }
+    h1, h2, h3, [class*="title"] { -webkit-hyphens: auto; hyphens: auto; }
+    .hero-actions, .cta-actions { flex-wrap: wrap; }
+    .btn-primary, .btn-ghost, .btn-secondary, .nav-cta { white-space: nowrap; }
   }
   @media (max-width: 1024px) {
     .nav-links { display: none !important; }
     .burger { display: flex !important; }
   }
 
-@media (hover:hover) and (pointer:fine){body{cursor:none}}
 
 .article-card.published{border-left:2px solid var(--accent);}
 .article-card.published:hover{background:#1e1e1e;}
@@ -433,7 +433,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   "headline": "Бренд-платформа и бренд-стратегия: фундамент vs план",
   "description": "Платформа — кто вы. Стратегия — как этого добьётесь. Компании без первого теряют суть. Компании без второго теряют деньги на хаотичных действиях.",
   "inLanguage": "ru",
-  "mainEntityOfPage": "https://brandmanager.su/article-brand-platform-vs-strategy.html",
+  "mainEntityOfPage": "https://brandmanager.su/article-brand-platform-vs-strategy",
   "image": "https://brandmanager.su/og-image.jpg?v=2",
   "author": {
     "@type": "Person",
@@ -449,18 +449,16 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 </script>
 </head>
 <body>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 
 <nav id="nav">
   <a href="/" class="nav-logo">DM / Brand</a>
   <ul class="nav-links">
     <li><a href="/">Главная</a></li>
-    <li><a href="services.html">Услуги</a></li>
-    <li><a href="articles.html" class="active">Статьи</a></li>
-    <li><a href="blog.html">Блог</a></li>
-    <li><a href="resume.html">Резюме</a></li>
-    <li><a href="brief.html">Бриф</a></li>
+    <li><a href="/services">Услуги</a></li>
+    <li><a href="/articles" class="active">Статьи</a></li>
+    <li><a href="/blog">Блог</a></li>
+    <li><a href="/resume">Резюме</a></li>
+    <li><a href="/brief">Бриф</a></li>
     <li><a href="/#contact" class="nav-cta">Обсудить проект</a></li>
   </ul>
   <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Открыть меню">
@@ -470,16 +468,16 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
   <a href="/" onclick="closeMobileMenu()">Главная</a>
-  <a href="services.html" onclick="closeMobileMenu()">Услуги</a>
-  <a href="articles.html" onclick="closeMobileMenu()">Статьи</a>
-  <a href="blog.html" onclick="closeMobileMenu()">Блог</a>
-  <a href="resume.html" onclick="closeMobileMenu()">Резюме</a>
-  <a href="brief.html" onclick="closeMobileMenu()">Бриф</a>
+  <a href="/services" onclick="closeMobileMenu()">Услуги</a>
+  <a href="/articles" onclick="closeMobileMenu()">Статьи</a>
+  <a href="/blog" onclick="closeMobileMenu()">Блог</a>
+  <a href="/resume" onclick="closeMobileMenu()">Резюме</a>
+  <a href="/brief" onclick="closeMobileMenu()">Бриф</a>
   <a href="/#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
 </div>
 
 <main class="article-page">
-  <div class="article-crumbs"><a href="/">Главная</a> / <a href="articles.html">Статьи</a> / Стратегия</div>
+  <div class="article-crumbs"><a href="/">Главная</a> / <a href="/articles">Статьи</a> / Стратегия</div>
   <article>
     <h1>Бренд-платформа и бренд-стратегия: фундамент vs план</h1>
     <div class="article-meta">Стратегия · Дмитрий Москаленко, бренд-менеджер</div>
@@ -500,16 +498,16 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   <div class="article-cta">
     <h2>Нужна помощь с брендом?</h2>
     <p>Если хотите обсудить свой бренд, напишите. Первые полчаса разговора бесплатно: разберёмся, с чего вам лучше начать — со стратегии, аудита или запуска.</p>
-    <a href="brief.html" class="primary">Заполнить бриф</a>
+    <a href="/brief" class="primary">Заполнить бриф</a>
     <a href="https://t.me/Dmitrii_Diezel" class="secondary" target="_blank" rel="noopener">Написать в Telegram</a>
   </div>
   <div class="article-more">
     <h2>Читайте также</h2>
-    <a href="article-rebranding.html">Ребрендинг: когда менять и когда это ошибка</a>
-    <a href="article-marketing-in-russia.html">Почему маркетинг не рулит бизнесом в России</a>
-    <a href="article-brandbook.html">Брендбук: что внутри и зачем он нужен компании</a>
-    <a href="article-brand-architecture.html">Архитектура бренда: как управлять портфелем брендов</a>
-    <a href="articles.html">Все статьи →</a>
+    <a href="/article-rebranding">Ребрендинг: когда менять и когда это ошибка</a>
+    <a href="/article-marketing-in-russia">Почему маркетинг не рулит бизнесом в России</a>
+    <a href="/article-brandbook">Брендбук: что внутри и зачем он нужен компании</a>
+    <a href="/article-brand-architecture">Архитектура бренда: как управлять портфелем брендов</a>
+    <a href="/articles">Все статьи →</a>
   </div>
 </main>
 
@@ -517,20 +515,15 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   <a href="/" class="footer-logo">DM / Brand Manager</a>
   <span class="footer-copy">© 2026 · Дмитрий Москаленко</span>
   <div class="footer-socials">
-    <a href="privacy.html">Конфиденциальность</a>
-    <a href="cookies.html">Cookie</a>
-    <a href="terms.html">Соглашение</a>
+    <a href="/privacy">Конфиденциальность</a>
+    <a href="/cookies">Cookie</a>
+    <a href="/terms">Соглашение</a>
     <a href="https://t.me/Dmitrii_Diezel" target="_blank">Telegram</a>
     <a href="https://vk.com/dmitrii_moskalenko" target="_blank">VK</a>
   </div>
 </footer>
 
 <script>
-var _CURSOR_OK=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-if(_CURSOR_OK)document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px'});
-(function animRing(){if(!_CURSOR_OK){var c=document.getElementById('cursor'),r=document.getElementById('cursorRing');if(c)c.style.display='none';if(r)r.style.display='none';return;}rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)})();
 
 const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
@@ -549,7 +542,7 @@ window.addEventListener('scroll',()=>{
 
 <!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="cookies.html">Политике cookie</a>.</div>
+  <div class="cookie-text">Мы используем cookie и Яндекс.Метрику для анализа посещаемости. Подробнее — в <a href="/cookies">Политике cookie</a>.</div>
   <div class="cookie-actions">
     <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Понятно</button>
   </div>

@@ -169,3 +169,8 @@ html.case-dark {
   --site-muted: #9a9187;
   --site-muted-2: #b5ada2;
 }
+
+/* Переключатель языка RU / EN */
+a.lang-switch { font-size: 12px; letter-spacing: .1em; color: var(--site-muted); text-decoration: none; position: relative; z-index: 1; transition: color .3s; }
+a.lang-switch:hover, a.lang-switch:focus-visible { color: var(--site-accent); }
+.mobile-menu a.lang-switch { font-size: clamp(14px, 4vw, 18px); letter-spacing: .1em; margin-top: 8px; color: var(--site-muted); }

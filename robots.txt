@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /404.html
+Disallow: /en/404.html
 
 User-agent: Yandex
 Allow: /

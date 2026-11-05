@@ -9,6 +9,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <script>document.documentElement.className=(document.documentElement.className+" js").trim();</script>
+<script>/* EN: несуществующие адреса /en/... ведут на английскую 404 */ (function(p){if(/^\/en(\/|$)/.test(p)&&!/^\/en\/404/.test(p))location.replace('/en/404');})(location.pathname);</script>
 <link rel="dns-prefetch" href="https://mc.yandex.ru">
 <meta name="google-site-verification" content="d0fa0e814302fe56" />
 <meta charset="UTF-8">
@@ -299,6 +300,7 @@
 <body>
 <nav style="position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;background:rgba(var(--site-bg-rgb),.95);">
   <a href="/" style="font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;letter-spacing:.15em;color:var(--site-text);text-decoration:none;text-transform:uppercase;">DM / Brand</a>
+  <a href="/en/" class="lang-switch" style="margin-left:auto;margin-right:24px;" hreflang="en" lang="en" aria-label="English version">EN</a>
   <a href="/" style="font-size:13px;color:var(--site-muted);text-decoration:none;">На главную</a>
   <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Меню" style="display:none;">
     <span></span><span></span><span></span>
@@ -312,6 +314,7 @@
   <a href="/blog" onclick="closeMobileMenu()">Блог</a>
   <a href="/resume" onclick="closeMobileMenu()">Резюме</a>
   <a href="/brief" onclick="closeMobileMenu()">Бриф</a>
+  <a href="/en/" class="lang-switch" hreflang="en" lang="en" onclick="closeMobileMenu()">EN</a>
 </div>
 
   <div class="num">404</div>

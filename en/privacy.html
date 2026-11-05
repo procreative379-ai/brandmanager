@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="120x120" href="/favicon-120.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script>document.documentElement.className=(document.documentElement.className+" js").trim();</script>
+<link rel="dns-prefetch" href="https://mc.yandex.ru">
+<meta name="google-site-verification" content="d0fa0e814302fe56" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://brandmanager.su/en/privacy">
+<link rel="alternate" hreflang="ru" href="https://brandmanager.su/privacy">
+<link rel="alternate" hreflang="en" href="https://brandmanager.su/en/privacy">
+<link rel="alternate" hreflang="x-default" href="https://brandmanager.su/privacy">
+<meta name="keywords" content="brandmanager.su privacy policy">
+<meta name="description" content="Privacy policy of brandmanager.su. Processing of personal data, cookies, Yandex Metrica.">
+<meta name="yandex-verification" content="a22af711bd8343d6" />
+<meta name="robots" content="noindex, follow">
+<title>Privacy Policy · brandmanager.su</title>
+<link rel="preload" href="/fonts/unbounded-latin-06f2e4.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/geologica-latin-6e7c82.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+:root {
+  --black:var(--site-bg); --white:var(--site-text); --accent:var(--site-accent);
+  --grey:var(--site-surface-2); --grey2:var(--site-surface-3); --mid:var(--site-rule); --muted:var(--site-muted);
+  --font-display:'Unbounded',sans-serif; --font-body:'Geologica',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 60px;display:flex;justify-content:space-between;align-items:center}
+nav::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(var(--site-bg-rgb),.95) 0%,transparent 100%);pointer-events:none}
+.nav-logo{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.15em;color:var(--white);text-decoration:none;text-transform:uppercase;position:relative;z-index:1}
+.nav-links{display:flex;gap:36px;list-style:none;position:relative;z-index:1}
+.nav-links a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent)!important;color:var(--black)!important;padding:10px 22px!important;border-radius:2px!important;font-weight:500!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;position:relative;z-index:200;background:none;border:none}
+.burger span{display:block;width:24px;height:2px;background:var(--white);transition:transform .3s,opacity .3s;transform-origin:center}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(var(--site-bg-rgb),.98);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:8px;backdrop-filter:blur(16px)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:var(--font-display);font-size:clamp(22px,6vw,36px);font-weight:900;letter-spacing:-.02em;color:var(--white);text-decoration:none;padding:12px 24px;transition:color .2s}
+.mobile-menu a:hover{color:var(--accent)}
+.mobile-menu a.nav-cta{background:var(--accent);color:var(--black)!important;border-radius:2px;margin-top:16px;font-size:clamp(14px,4vw,20px)}
+.mobile-menu-close{position:absolute;top:24px;right:24px;font-size:28px;color:var(--white);cursor:pointer;background:none;border:none}
+
+.page-wrap{max-width:800px;margin:0 auto;padding:120px 40px 80px}
+.page-label{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.page-label::before{content:'';width:32px;height:1px;background:var(--accent)}
+.page-title{font-family:var(--font-display);font-size:clamp(24px,4vw,42px);font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:12px}
+.page-date{font-size:13px;color:var(--muted);margin-bottom:48px}
+.page-date span{color:var(--accent)}
+
+.doc h2{font-family:var(--font-display);font-size:14px;font-weight:700;letter-spacing:.04em;color:var(--white);margin:40px 0 16px;padding-left:16px;border-left:3px solid var(--accent)}
+.doc p{font-size:15px;color:var(--site-muted-2);line-height:1.8;margin-bottom:16px}
+.doc ul{list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:10px}
+.doc ul li{font-size:15px;color:var(--site-muted-2);line-height:1.7;padding-left:20px;position:relative}
+.doc ul li::before{content:'—';position:absolute;left:0;color:var(--accent)}
+.doc a{color:var(--accent);text-decoration:none}
+.doc a:hover{text-decoration:underline}
+.doc .highlight{background:var(--grey2);border-left:3px solid var(--accent);padding:20px 24px;margin:24px 0;font-size:14px;color:var(--site-muted-2);line-height:1.75}
+
+footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.footer-logo{font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.15em;color:var(--white);text-decoration:none}
+.footer-copy{font-size:11px;color:var(--muted)}
+.footer-links{display:flex;gap:20px}
+.footer-links a{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s}
+.footer-links a:hover{color:var(--accent)}
+
+@media(max-width:768px){
+  nav{padding:18px 24px}.burger{display:flex}.nav-links{display:none}
+  .page-wrap{padding:100px 20px 60px}
+  footer{flex-direction:column;gap:16px;text-align:center;padding:24px}
+}
+
+/* ── COOKIE BANNER ── */
+.cookie-banner {
+  position: fixed; bottom: 24px; left: 24px; right: 24px;
+  max-width: 560px; z-index: 9000;
+  background: var(--site-surface); border: 1px solid var(--site-rule);
+  border-left: 3px solid var(--site-accent);
+  padding: 20px 24px; display: flex;
+  align-items: center; gap: 20px; flex-wrap: wrap;
+  transform: translateY(120px); opacity: 0;
+  transition: transform .4s ease, opacity .4s ease;
+}
+.cookie-banner.show { transform: translateY(0); opacity: 1; }
+.cookie-text { font-size: 13px; color: var(--site-muted-2); line-height: 1.6; flex: 1; min-width: 200px; }
+.cookie-text a { color: var(--site-accent); text-decoration: none; }
+.cookie-text a:hover { text-decoration: underline; }
+.cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.cookie-btn {
+  font-family: 'Unbounded', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  padding: 10px 20px; border: none; border-radius: 2px; cursor: pointer;
+  transition: transform .15s, opacity .2s;
+}
+.cookie-btn:hover { transform: translateY(-1px); opacity: .9; }
+.cookie-accept { background: var(--site-accent); color: var(--site-bg); }
+.cookie-decline { background: transparent; color: var(--site-muted); border: 1px solid var(--site-rule); }
+
+
+  /* ── MOBILE BURGER & MENU ── */
+  .burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 200;
+  }
+  .burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--site-text);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+    transform-origin: center;
+  }
+  .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity: 0; width: 0; }
+  .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(var(--site-bg-rgb),0.98);
+    z-index: 150;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .mobile-menu.open { display: flex !important; }
+  .mobile-menu a {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(22px, 6vw, 36px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: var(--site-text);
+    text-decoration: none;
+    padding: 12px 24px;
+    transition: color 0.2s;
+    text-align: center;
+  }
+  .mobile-menu a:hover { color: var(--site-accent); }
+  .mobile-menu a.nav-cta {
+    background: var(--site-accent) !important;
+    color: var(--site-bg) !important;
+    border-radius: 2px;
+    margin-top: 16px;
+    font-size: clamp(14px, 4vw, 20px);
+  }
+  .mobile-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 32px;
+    color: var(--site-text);
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+    padding: 8px;
+    z-index: 160;
+  }
+  .mobile-menu-close:hover { color: var(--site-accent); }
+  @media (max-width: 1024px) {
+    .burger { display: flex !important; }
+    .nav-links { display: none !important; }
+  }
+
+
+  /* ── КРИТИЧЕСКИЕ МОБИЛЬНЫЕ СТИЛИ ── */
+  @media (max-width: 768px) {
+    html, body { width: 100%; overflow-x: hidden; }
+    img, video, iframe, svg { max-width: 100%; height: auto; }
+    * { overflow-wrap: break-word; }
+    h1, h2, h3, [class*="title"] { -webkit-hyphens: auto; hyphens: auto; }
+    .hero-actions, .cta-actions { flex-wrap: wrap; }
+    .btn-primary, .btn-ghost, .btn-secondary, .nav-cta { white-space: nowrap; }
+  }
+  @media (max-width: 1024px) {
+    .nav-links { display: none !important; }
+    .burger { display: flex !important; }
+  }
+
+
+  /* ── МОБИЛЬНАЯ ОПТИМИЗАЦИЯ (Яндекс.Вебмастер) ── */
+  @media (max-width: 767px) {
+    html, body { max-width: 100%; overflow-x: hidden; }
+    /* минимальный читаемый размер шрифта на мобильных */
+    body { font-size: 16px; -webkit-text-size-adjust: 100%; }
+    p, li, a, span, div, label, input, textarea, button, td, th { font-size: inherit; }
+    /* мелкие метки/теги — минимум 12px */
+    [class*="label"], [class*="tag"], [class*="cat"], [class*="num"],
+    [class*="date"], [class*="badge"], [class*="note"], [class*="caption"],
+    [class*="meta"], small, .section-num, .pub-badge, .brief-note,
+    .footer-copy, .footer-socials a, .footer-links a, .nav-back {
+      font-size: 12px !important;
+    }
+    /* всё внутри viewport, картинки и таблицы адаптивны */
+    img, video, iframe, svg, table { max-width: 100% !important; height: auto; }
+    table { display: block; overflow-x: auto; }
+    /* элементы не шире экрана */
+    img, svg, video, iframe, table { max-width: 100% !important; }
+    /* кнопки и ссылки — удобные для тапа (минимум 44px по высоте) */
+    .btn, .btn-primary, .btn-secondary, .nav-cta, button[type="submit"],
+    .brief-submit, .form-submit { min-height: 44px; }
+  }
+
+
+  /* ── УСИЛЕННАЯ МОБИЛЬНАЯ ОПТИМИЗАЦИЯ ── */
+  @media (max-width: 767px) {
+    /* все многоколоночные сетки → одна колонка */
+    .hero, .about, .about-right, .experience, .cta-section,
+    .services-grid, .test-grid, .pub-grid, .form-row,
+    .overview-grid, .pos-grid, .mission-pillars, .results-grid,
+    .audience-grid, .products-grid, .tov-grid, .challenge-block,
+    .diff-grid, .price-grid, .stats-row, .numbers, .process,
+    .id-strip, .identity-strip {
+      grid-template-columns: 1fr !important;
+    }
+    /* сетки с фикс. первой колонкой */
+    .case-item, .timeline-item, .tl-item {
+      grid-template-columns: 1fr !important;
+    }
+    /* огромный фоновый текст — прячем/уменьшаем, чтобы не вылезал */
+    .hero-bg-text {
+      font-size: 22vw !important;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 100vw;
+    }
+    /* убираем nowrap с логотипов/текста, чтобы переносилось */
+    .brand-logo { white-space: normal !important; }
+    img, svg, video, iframe, table { max-width: 100% !important; }
+    /* горизонтальные флексы переносим */
+    .hero-meta, .cta-actions, .success-actions, .footer-socials,
+    .footer-links, .author-links, .nav-links {
+      flex-wrap: wrap;
+    }
+    /* большие фикс. паддинги ужимаем */
+    section, .section, .hero, footer, nav { padding-left: 20px !important; padding-right: 20px !important; }
+  }
+
+
+  /* ── УНИВЕРСАЛЬНЫЙ ПЕРЕХВАТ СЕТОК НА МОБИЛЬНЫХ ── */
+  @media (max-width: 767px) {
+    /* любая сетка (в т.ч. заданная инлайн) → один столбец */
+    [style*="grid-template-columns"],
+    [class*="grid"], [class*="-cols"],
+    .stages, .market-grid, .arch-right, .result-grid, .filt-grid,
+    .two-col, .palette, .bg-demos, .values-list, .logo-demos,
+    .overview-grid, .audience-grid, .challenge-block, .stats-row,
+    .diff-grid, .price-grid, .roadmap, .fin-grid, .pos-grid,
+    .mission-pillars, .tov-grid, .products-grid, .results-grid,
+    .identity-strip, .id-strip {
+      grid-template-columns: 1fr !important;
+    }
+    /* палитра цветов остаётся 2 колонки — так компактнее */
+    .palette { grid-template-columns: repeat(2, 1fr) !important; }
+    /* вертикальные flex-блоки */
+    .archetype-band { flex-direction: column !important; }
+  }
+
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function(){
+  function loadMetrika(){
+    if (window.__ymLoaded) return;
+    window.__ymLoaded = true;
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(72239779, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+  }
+  window.__loadMetrika = loadMetrika;
+  // Метрика работает для всех посетителей; снимаем отказ, сохранённый старой версией баннера
+  try {
+    document.cookie = 'ym_disable_72239779=; path=/; max-age=0';
+    if (localStorage.getItem('cookie_consent') === 'declined') localStorage.removeItem('cookie_consent');
+  } catch(e){}
+  loadMetrika();
+})();
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72239779" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a href="/en/" class="nav-logo">DM / Brand</a>
+  <ul class="nav-links">
+    <li><a href="/en/">Home</a></li>
+    <li><a href="/en/services">Services</a></li>
+    <li><a href="/en/articles">Articles</a></li>
+    <li><a href="/en/blog">Blog</a></li>
+    <li><a href="/en/resume">Resume</a></li>
+    <li><a href="/en/brief">Brief</a></li>
+    <li><a href="/privacy" class="lang-switch" hreflang="ru" lang="ru" aria-label="Русская версия">RU</a></li>
+    <li><a href="/en/#contact" class="nav-cta">Discuss a project</a></li>
+  </ul>
+  <button class="burger" id="burger" onclick="toggleMobileMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
+  <a href="/en/" onclick="closeMobileMenu()">Home</a>
+  <a href="/en/services" onclick="closeMobileMenu()">Services</a>
+  <a href="/en/articles" onclick="closeMobileMenu()">Articles</a>
+  <a href="/en/blog" onclick="closeMobileMenu()">Blog</a>
+  <a href="/en/resume" onclick="closeMobileMenu()">Resume</a>
+  <a href="/en/brief" onclick="closeMobileMenu()">Brief</a>
+  <a href="/en/#contact" class="nav-cta" onclick="closeMobileMenu()">Discuss a project</a>
+  <a href="/privacy" class="lang-switch" hreflang="ru" lang="ru" onclick="closeMobileMenu()">RU</a>
+</div>
+
+<div class="page-wrap">
+  <div class="page-label">Documents</div>
+  <h1 class="page-title">Privacy Policy</h1>
+  <div class="page-date">Last updated: <span>1 May 2026</span></div>
+  <p class="page-date" style="margin-top:-8px;">This is an English translation provided for convenience. If it differs from the <a href="/privacy" lang="ru" hreflang="ru" style="color:var(--accent);">Russian original</a>, the Russian version applies.</p>
+
+  <div class="doc">
+
+    <div class="highlight">
+      This privacy policy describes how the website brandmanager.su collects, uses and protects users' personal data. By using the website, you agree to the terms of this policy.
+    </div>
+
+    <h2>1. Personal data operator</h2>
+    <p>The personal data operator is an individual providing brand management and brand strategy services:</p>
+    <ul>
+      <li>Website: brandmanager.su</li>
+      <li>E-mail: <a href="mailto:i@creativedm.ru">i@creativedm.ru</a></li>
+      <li>Phone: <a href="tel:+79933673178">+7 (993) 367-31-78</a></li>
+    </ul>
+
+    <h2>2. What data we collect</h2>
+    <p>The following categories of data may be collected when you use the website:</p>
+    <ul>
+      <li><strong>Data from the contact form:</strong> name, phone number, email address, company name, message text</li>
+      <li><strong>Technical data:</strong> IP address, browser type, operating system, pages visited, time and duration of the visit</li>
+      <li><strong>Cookie data:</strong> session identifiers, user preferences, analytics data</li>
+    </ul>
+
+    <h2>3. Purposes of processing personal data</h2>
+    <p>The data collected is used only for the following purposes:</p>
+    <ul>
+      <li>Responding to users' requests and enquiries</li>
+      <li>Contacting potential clients about working together</li>
+      <li>Analysing website traffic statistics to improve the website</li>
+      <li>Detecting and fixing technical problems</li>
+    </ul>
+
+    <h2>4. Legal basis for processing</h2>
+    <p>Personal data is processed on the basis of:</p>
+    <ul>
+      <li>The consent of the data subject (Article 6 of Russian Federal Law No. 152-FZ)</li>
+      <li>Performance of a contract or taking steps to enter into a contract</li>
+      <li>The operator's legitimate interests in analysing how the website works</li>
+    </ul>
+
+    <h2>5. Use of cookies</h2>
+    <p>The website uses cookies, small text files stored in your browser. They are used for:</p>
+    <ul>
+      <li><strong>Technical cookies:</strong> make the website work correctly (sessions, authorisation)</li>
+      <li><strong>Analytics cookies:</strong> Yandex Metrica (counter 72239779) collects statistics on traffic and user behaviour, including Webvisor session recording</li>
+    </ul>
+    <p>You can disable cookies in your browser settings. Some website features may then not work correctly. By continuing to use the website, you consent to the use of cookies.</p>
+
+    <h2>6. Yandex Metrica</h2>
+    <p>The website uses a Yandex Metrica counter (ID: 72239779). The service collects anonymised statistics about visitors, including page views, traffic sources and on-site behaviour. The data is sent to Yandex servers and processed in accordance with the <a href="https://yandex.ru/legal/confidential/" target="_blank">Yandex Privacy Policy</a>. To opt out of data collection, follow the <a href="https://yandex.ru/support/metrica/general/opt-out.html" target="_blank">Yandex instructions</a>.</p>
+
+    <h2>7. Disclosure of data to third parties</h2>
+    <p>Users' personal data is not disclosed to third parties, except:</p>
+    <ul>
+      <li>In cases provided for by the current legislation of the Russian Federation</li>
+      <li>To analytics services (Yandex Metrica), and only anonymised statistical data</li>
+    </ul>
+    <p>The data is not sold, not shared for advertising purposes and not used to build user profiles.</p>
+
+    <h2>8. Data storage and protection</h2>
+    <p>Personal data is stored only for as long as needed to achieve the purposes for which it was collected. Data from contact forms is stored until the request has been dealt with, and for no more than 3 years. Technical and organisational measures are taken to protect the data from unauthorised access.</p>
+
+    <h2>9. Rights of data subjects</h2>
+    <p>Under Russian Federal Law No. 152-FZ "On Personal Data", you have the right to:</p>
+    <ul>
+      <li>Receive information about the processing of your personal data</li>
+      <li>Request that your data be corrected, blocked or destroyed</li>
+      <li>Withdraw your consent to the processing of personal data</li>
+      <li>Appeal the operator's actions to Roskomnadzor</li>
+    </ul>
+    <p>To exercise these rights, write to: <a href="mailto:i@creativedm.ru">i@creativedm.ru</a></p>
+
+    <h2>10. Changes to the policy</h2>
+    <p>The operator reserves the right to make changes to this policy. The current version is always available on this page. The date of the last update is given at the top of the document.</p>
+
+    <h2>11. Contact</h2>
+    <p>For questions about the processing of personal data:</p>
+    <ul>
+      <li>E-mail: <a href="mailto:i@creativedm.ru">i@creativedm.ru</a></li>
+      <li>Phone: <a href="tel:+79933673178">+7 (993) 367-31-78</a></li>
+      <li>Telegram: <a href="https://t.me/Dmitrii_Diezel" target="_blank">@Dmitrii_Diezel</a></li>
+    </ul>
+
+    <h2>Personal data operator details</h2>
+    <div class="highlight">
+      <p style="margin:0 0 10px;"><strong>Operator:</strong> Dmitry Anatolyevich Moskalenko</p>
+      <p style="margin:0 0 10px;"><strong>Status:</strong> individual / payer of the professional income tax (self-employed)</p>
+      <p style="margin:0 0 10px;"><strong>Taxpayer ID (INN):</strong> <span style="color:var(--muted);">available on request</span></p>
+      <p style="margin:0 0 10px;"><strong>Postal address:</strong> Moscow</p>
+      <p style="margin:0 0 10px;"><strong>E-mail:</strong> <a href="mailto:i@creativedm.ru">i@creativedm.ru</a></p>
+      <p style="margin:0;"><strong>Phone:</strong> <a href="tel:+79933673178">+7 (993) 367-31-78</a></p>
+    </div>
+    <p>A notification of personal data processing has been sent to the Federal Service for Supervision of Communications, Information Technology and Mass Media (Roskomnadzor) in accordance with Article 22 of Federal Law No. 152-FZ of 27.07.2006.</p>
+    <p>The register of personal data operators is available on the official Roskomnadzor website: <a href="https://pd.rkn.gov.ru/operators-registry/operators-list/" target="_blank" rel="noopener">pd.rkn.gov.ru</a>.</p>
+
+  </div>
+</div>
+
+<footer>
+  <a href="/en/" class="footer-logo">DM / Brand Manager</a>
+  <span class="footer-copy">© 2026, Dmitry Moskalenko</span>
+  <div class="footer-links">
+    <a href="/en/privacy">Privacy</a>
+    <a href="/en/cookies">Cookies</a>
+    <a href="/en/terms">Terms</a>
+    <a href="https://t.me/Dmitrii_Diezel" target="_blank">Telegram</a>
+    <a href="https://vk.com/dmitrii_moskalenko" target="_blank">VK</a>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  const n=document.getElementById('nav');
+  n.style.background=window.scrollY>60?'rgba(var(--site-bg-rgb),.97)':'';
+  n.style.backdropFilter=window.scrollY>60?'blur(12px)':'';
+  n.style.borderBottom=window.scrollY>60?'1px solid var(--site-rule)':'';
+});
+
+</script>
+
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-text">We use cookies and Yandex Metrica to analyse traffic. See the <a href="/en/cookies">Cookie Policy</a> for details.</div>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Got it</button>
+
+  </div>
+</div>
+
+
+<script>
+(function(){
+  try {
+    if (!localStorage.getItem('cookie_consent')) {
+      setTimeout(function(){
+        var b = document.getElementById('cookieBanner');
+        if (b) b.classList.add('show');
+      }, 1500);
+    }
+  } catch(e){}
+})();
+function acceptCookies(){
+  try { localStorage.setItem('cookie_consent','accepted'); } catch(e){}
+  var b = document.getElementById('cookieBanner');
+  if(b) b.classList.remove('show');
+  if (typeof window.__loadMetrika === 'function') window.__loadMetrika();
+}
+</script>
+
+<script>
+function toggleMobileMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var burger = document.getElementById('burger');
+  if (!menu || !burger) return;
+  var isOpen = menu.classList.contains('open');
+  if (isOpen) {
+    menu.classList.remove('open');
+    burger.classList.remove('open');
+    document.body.style.overflow = '';
+  } else {
+    menu.classList.add('open');
+    burger.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+function closeMobileMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var burger = document.getElementById('burger');
+  if (menu) menu.classList.remove('open');
+  if (burger) burger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+// Close menu on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+</script>
+<script>
+/* REVEAL_FAILSAFE: гарантированно показываем контент, даже если что-то сломалось */
+(function(){
+  function showAll(){
+    var els=document.querySelectorAll('.reveal:not(.visible)');
+    for(var i=0;i<els.length;i++){els[i].classList.add('visible');}
+  }
+  // если через 1.2с что-то ещё скрыто — показать принудительно
+  setTimeout(showAll,1200);
+  // и на случай полной ошибки — по load
+  window.addEventListener('load',function(){setTimeout(showAll,300);});
+})();
+</script>
+<script>
+/* Цели Яндекс.Метрики: клики по брифу и контактам */
+(function(){
+  function goal(name){ try { if (window.ym) ym(72239779, 'reachGoal', name); } catch(e){} }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('forms.yandex.ru') !== -1) goal('brief_form_open');
+    else if (/(^|\/)brief\.html/.test(h)) goal('brief_click');
+    else if (h.indexOf('t.me/') !== -1) goal('telegram_click');
+    else if (h.indexOf('tel:') === 0) goal('phone_click');
+    else if (h.indexOf('mailto:') === 0) goal('email_click');
+    else if (h.indexOf('vk.com/') !== -1) goal('vk_click');
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,7 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
-  <rect width="120" height="120" fill="#0a0a0a"/>
-  <rect x="0" y="0" width="120" height="5" fill="#c8ff00"/>
-  <text x="60" y="72" font-family="Arial Black, Arial, sans-serif" font-weight="900"
-        font-size="52" fill="#f5f2ed" text-anchor="middle">DM</text>
-  <circle cx="60" cy="90" r="4" fill="#c8ff00"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="12" fill="#b8542c"/>
+  <path fill="#fffaf3" transform="translate(5.56 41.01) scale(0.02403)" d="M458 -750Q595 -750 697.5 -703.5Q800 -657 857.0 -573.0Q914 -489 914 -375Q914 -262 857.0 -177.5Q800 -93 697.5 -46.5Q595 0 458 0H60V-750ZM316 -115 200 -230H478Q533 -230 572.5 -247.5Q612 -265 633.0 -297.5Q654 -330 654 -375Q654 -421 633.0 -453.0Q612 -485 572.5 -502.5Q533 -520 478 -520H200L316 -635Z M2141.0 -750V0H1896.0V-653L1943.0 -647L1691.0 0H1436.0L1184.0 -644L1231.0 -651V0H986.0V-750H1385.0L1609.0 -139H1520.0L1742.0 -750Z"/>
 </svg>

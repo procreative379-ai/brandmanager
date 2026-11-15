@@ -337,7 +337,7 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
     <li><a href="/services">Услуги</a></li>
     <li><a href="/articles">Статьи</a></li>
     <li><a href="/blog">Блог</a></li>
-    <li><a href="/resume">Резюме</a></li>
+    <li><a href="/services#prices">Цены</a></li>
     <li><a href="/brief">Бриф</a></li>
     <li><a href="/en/cookies" class="lang-switch" hreflang="en" lang="en" aria-label="English version">EN</a></li>
     <li><a href="/#contact" class="nav-cta">Обсудить проект</a></li>
@@ -353,7 +353,7 @@ footer{border-top:1px solid var(--mid);padding:32px 40px;max-width:800px;margin:
   <a href="/services" onclick="closeMobileMenu()">Услуги</a>
   <a href="/articles" onclick="closeMobileMenu()">Статьи</a>
   <a href="/blog" onclick="closeMobileMenu()">Блог</a>
-  <a href="/resume" onclick="closeMobileMenu()">Резюме</a>
+  <a href="/services#prices" onclick="closeMobileMenu()">Цены</a>
   <a href="/brief" onclick="closeMobileMenu()">Бриф</a>
   <a href="/#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
   <a href="/en/cookies" class="lang-switch" hreflang="en" lang="en" onclick="closeMobileMenu()">EN</a>
@@ -529,7 +529,7 @@ document.addEventListener('keydown', function(e) {
     if (!a) return;
     var h = a.getAttribute('href') || '';
     if (h.indexOf('forms.yandex.ru') !== -1) goal('brief_form_open');
-    else if (/(^|\/)brief\.html/.test(h)) goal('brief_click');
+    else if (/(^|\/)brief(\.html)?([?#]|$)/.test(h)) goal('brief_click');
     else if (h.indexOf('t.me/') !== -1) goal('telegram_click');
     else if (h.indexOf('tel:') === 0) goal('phone_click');
     else if (h.indexOf('mailto:') === 0) goal('email_click');

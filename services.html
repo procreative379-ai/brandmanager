@@ -449,7 +449,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     <li><a href="/services" class="active">Услуги</a></li>
     <li><a href="/articles">Статьи</a></li>
     <li><a href="/blog">Блог</a></li>
-    <li><a href="/resume">Резюме</a></li>
+    <li><a href="/services#prices">Цены</a></li>
     <li><a href="/brief">Бриф</a></li>
     <li><a href="/en/services" class="lang-switch" hreflang="en" lang="en" aria-label="English version">EN</a></li>
     <li><a href="#contact" class="nav-cta">Обсудить проект</a></li>
@@ -464,7 +464,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   <a href="/services" onclick="closeMobileMenu()">Услуги</a>
   <a href="/articles" onclick="closeMobileMenu()">Статьи</a>
   <a href="/blog" onclick="closeMobileMenu()">Блог</a>
-  <a href="/resume" onclick="closeMobileMenu()">Резюме</a>
+  <a href="/services#prices" onclick="closeMobileMenu()">Цены</a>
   <a href="/brief" onclick="closeMobileMenu()">Бриф</a>
   <a href="#contact" class="nav-cta" onclick="closeMobileMenu()">Обсудить проект</a>
   <a href="/en/services" class="lang-switch" hreflang="en" lang="en" onclick="closeMobileMenu()">EN</a>
@@ -629,6 +629,38 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   </div>
 </section>
 
+<!-- PRICES -->
+<section class="services-section" id="prices">
+  <div class="services-header reveal">
+    <div>
+      <div class="section-label">Цены</div>
+      <div class="services-h2">Сколько стоит</div>
+    </div>
+    <p class="services-sub">Точную сумму называю после первого созвона, когда понятна задача. Здесь нижняя граница по каждому формату.</p>
+  </div>
+  <div class="price-cards reveal">
+    <div class="price-card">
+      <h3>Консультация</h3>
+      <div class="price-sum">от 15 000 ₽</div>
+      <p>Встреча на 2–3 часа с владельцем или маркетологом. Разбираем ситуацию, после встречи присылаю короткий план: что делать первым.</p>
+      <div class="price-term">Одна встреча, онлайн или в Москве</div>
+    </div>
+    <div class="price-card">
+      <h3>Аудит бренда</h3>
+      <div class="price-sum">от 80 000 ₽</div>
+      <p>Продажи, аудитория, конкуренты, упаковка, сайт. В конце документ: что мешает бренду продавать и что исправлять в первую очередь.</p>
+      <div class="price-term">От 2 недель</div>
+    </div>
+    <div class="price-card">
+      <h3>Бренд-стратегия</h3>
+      <div class="price-sum">от 200 000 ₽</div>
+      <p>Платформа бренда, позиционирование, ключевые сообщения и план действий. Документ можно отдать команде и дизайнеру и начинать работать.</p>
+      <div class="price-term">4–8 недель</div>
+    </div>
+  </div>
+  <p class="price-foot reveal">Первый созвон на 30 минут бесплатный. Запуск нового бренда и ведение бренда считаю отдельно: объём там сильно зависит от категории, каналов и того, что у вас уже есть.</p>
+</section>
+
 <!-- FAQ -->
 <section class="faq-section">
   <div class="faq-left reveal">
@@ -643,7 +675,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
         <div class="faq-q-text">Сколько стоят услуги?</div>
         <div class="faq-icon">+</div>
       </div>
-      <div class="faq-a"><div class="faq-a-inner">Зависит от задачи и объёма. Разовая встреча стоит одних денег, полная стратегия с исследованием — других. Опишите задачу, и я в течение дня пришлю оценку. Первая консультация бесплатная.</div></div>
+      <div class="faq-a"><div class="faq-a-inner">Консультация от 15 000 ₽, аудит бренда от 80 000 ₽, бренд-стратегия от 200 000 ₽. Подробнее в разделе <a href="#prices">«Цены»</a>. Опишите задачу, и я в течение дня пришлю оценку. Первый созвон на полчаса бесплатный.</div></div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">
@@ -681,18 +713,25 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   <div class="reveal">
     <div class="section-label">Начнём</div>
     <div class="cta-h2">Обсудим<br>ваш <em>бренд</em><br>за 30 минут</div>
-    <p class="cta-sub">Созвонимся на полчаса: расскажете, что происходит, а я скажу, чем могу помочь.</p>
+    <p class="cta-sub">Напишите в двух словах, что происходит с брендом. Отвечу в течение дня, созвонимся на полчаса, и я скажу, чем могу помочь.</p>
   </div>
   <div class="reveal">
+    <form class="lead-form" id="leadForm">
+      <label class="lead-field"><span>Как вас зовут</span><input type="text" name="lead-name" autocomplete="name"></label>
+      <label class="lead-field"><span>Телефон, почта или Telegram</span><input type="text" name="lead-contact" autocomplete="tel" required></label>
+      <label class="lead-field"><span>Коротко о задаче</span><textarea name="lead-task" rows="3" required placeholder="Например: запускаем свою марку кофемолок, нужны позиционирование и упаковка"></textarea></label>
+      <div class="lead-actions">
+        <button type="submit" class="btn-primary" data-via="tg">Отправить в Telegram</button>
+        <button type="submit" class="btn-secondary" data-via="mail">Отправить на почту</button>
+      </div>
+      <p class="lead-note">Откроется Telegram или почта с готовым сообщением, останется нажать «Отправить». Если хотите описать задачу подробно, заполните <a href="/brief">бриф</a>.</p>
+      <p class="lead-status" role="status" aria-live="polite"></p>
+    </form>
     <div class="cta-contacts">
       <a href="tel:+79933673178" class="cta-item"><div class="cta-icon">📞</div>+7 993 367 31 78</a>
       <a href="mailto:i@creativedm.ru" class="cta-item"><div class="cta-icon">✉</div>i@creativedm.ru</a>
       <a href="https://t.me/Dmitrii_Diezel" target="_blank" class="cta-item"><div class="cta-icon">✈</div>Написать в Telegram</a>
       <a href="https://vk.com/dmitrii_moskalenko" target="_blank" class="cta-item"><div class="cta-icon">◆</div>ВКонтакте</a>
-    </div>
-    <div class="cta-actions">
-      <a href="https://t.me/Dmitrii_Diezel" target="_blank" class="btn-primary">Написать в Telegram</a>
-      <a href="https://disk.yandex.ru/i/wyf3OH_tC1vYxA" target="_blank" class="btn-secondary">Скачать резюме</a>
     </div>
   </div>
 </section>
@@ -806,7 +845,7 @@ document.addEventListener('keydown', function(e) {
     if (!a) return;
     var h = a.getAttribute('href') || '';
     if (h.indexOf('forms.yandex.ru') !== -1) goal('brief_form_open');
-    else if (/(^|\/)brief\.html/.test(h)) goal('brief_click');
+    else if (/(^|\/)brief(\.html)?([?#]|$)/.test(h)) goal('brief_click');
     else if (h.indexOf('t.me/') !== -1) goal('telegram_click');
     else if (h.indexOf('tel:') === 0) goal('phone_click');
     else if (h.indexOf('mailto:') === 0) goal('email_click');
@@ -814,5 +853,6 @@ document.addEventListener('keydown', function(e) {
   });
 })();
 </script>
+<script src="/js/lead-form.js" defer></script>
 </body>
 </html>

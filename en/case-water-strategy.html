@@ -577,7 +577,7 @@
     <li><a href="/en/services">Services</a></li>
     <li><a href="/en/articles">Articles</a></li>
     <li><a href="/en/blog">Blog</a></li>
-    <li><a href="/en/resume">Resume</a></li>
+    <li><a href="/en/services#prices">Prices</a></li>
     <li><a href="/en/brief">Brief</a></li>
     <li><a href="/case-water-strategy" class="lang-switch" hreflang="ru" lang="ru" aria-label="Русская версия">RU</a></li>
     <li><a href="/en/#contact" class="nav-cta">Discuss a project</a></li>
@@ -593,7 +593,7 @@
   <a href="/en/services" onclick="closeMobileMenu()">Services</a>
   <a href="/en/articles" onclick="closeMobileMenu()">Articles</a>
   <a href="/en/blog" onclick="closeMobileMenu()">Blog</a>
-  <a href="/en/resume" onclick="closeMobileMenu()">Resume</a>
+  <a href="/en/services#prices" onclick="closeMobileMenu()">Prices</a>
   <a href="/en/brief" onclick="closeMobileMenu()">Brief</a>
   <a href="/en/#contact" class="nav-cta" onclick="closeMobileMenu()">Discuss a project</a>
   <a href="/case-water-strategy" class="lang-switch" hreflang="ru" lang="ru" onclick="closeMobileMenu()">RU</a>
@@ -928,7 +928,7 @@ document.addEventListener('keydown', function(e) {
     if (!a) return;
     var h = a.getAttribute('href') || '';
     if (h.indexOf('forms.yandex.ru') !== -1) goal('brief_form_open');
-    else if (/(^|\/)brief\.html/.test(h)) goal('brief_click');
+    else if (/(^|\/)brief(\.html)?([?#]|$)/.test(h)) goal('brief_click');
     else if (h.indexOf('t.me/') !== -1) goal('telegram_click');
     else if (h.indexOf('tel:') === 0) goal('phone_click');
     else if (h.indexOf('mailto:') === 0) goal('email_click');

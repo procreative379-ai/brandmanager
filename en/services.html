@@ -449,7 +449,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
     <li><a href="/en/services" class="active">Services</a></li>
     <li><a href="/en/articles">Articles</a></li>
     <li><a href="/en/blog">Blog</a></li>
-    <li><a href="/en/resume">Resume</a></li>
+    <li><a href="/en/services#prices">Prices</a></li>
     <li><a href="/en/brief">Brief</a></li>
     <li><a href="/services" class="lang-switch" hreflang="ru" lang="ru" aria-label="Русская версия">RU</a></li>
     <li><a href="#contact" class="nav-cta">Discuss a project</a></li>
@@ -464,7 +464,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   <a href="/en/services" onclick="closeMobileMenu()">Services</a>
   <a href="/en/articles" onclick="closeMobileMenu()">Articles</a>
   <a href="/en/blog" onclick="closeMobileMenu()">Blog</a>
-  <a href="/en/resume" onclick="closeMobileMenu()">Resume</a>
+  <a href="/en/services#prices" onclick="closeMobileMenu()">Prices</a>
   <a href="/en/brief" onclick="closeMobileMenu()">Brief</a>
   <a href="#contact" class="nav-cta" onclick="closeMobileMenu()">Discuss a project</a>
   <a href="/services" class="lang-switch" hreflang="ru" lang="ru" onclick="closeMobileMenu()">RU</a>
@@ -629,6 +629,38 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   </div>
 </section>
 
+<!-- PRICES -->
+<section class="services-section" id="prices">
+  <div class="services-header reveal">
+    <div>
+      <div class="section-label">Prices</div>
+      <div class="services-h2">What it costs</div>
+    </div>
+    <p class="services-sub">I give the exact amount after the first call, once the task is clear. Below is the starting price for each format.</p>
+  </div>
+  <div class="price-cards reveal">
+    <div class="price-card">
+      <h3>Consultation</h3>
+      <div class="price-sum">from 15,000 ₽</div>
+      <p>A 2–3 hour meeting with the owner or the marketing lead. We go through the situation, and afterwards I send a short plan of what to do first.</p>
+      <div class="price-term">One meeting, online or in Moscow</div>
+    </div>
+    <div class="price-card">
+      <h3>Brand audit</h3>
+      <div class="price-sum">from 80,000 ₽</div>
+      <p>Sales, audience, competitors, packaging, website. At the end you get a document: what keeps the brand from selling and what to fix first.</p>
+      <div class="price-term">From 2 weeks</div>
+    </div>
+    <div class="price-card">
+      <h3>Brand strategy</h3>
+      <div class="price-sum">from 200,000 ₽</div>
+      <p>Brand platform, positioning, key messages and an action plan. You can hand the document to your team and designer and start working.</p>
+      <div class="price-term">4–8 weeks</div>
+    </div>
+  </div>
+  <p class="price-foot reveal">The first 30-minute call is free. A new brand launch and ongoing brand management are priced separately: the scope depends a lot on the category, the channels and what you already have.</p>
+</section>
+
 <!-- FAQ -->
 <section class="faq-section">
   <div class="faq-left reveal">
@@ -643,7 +675,7 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
         <div class="faq-q-text">How much do your services cost?</div>
         <div class="faq-icon">+</div>
       </div>
-      <div class="faq-a"><div class="faq-a-inner">It depends on the task and the scope. A one-off meeting costs one amount, a full strategy with research costs another. Describe your task and I will send an estimate within a day. The first consultation is free.</div></div>
+      <div class="faq-a"><div class="faq-a-inner">A consultation starts at 15,000 ₽, a brand audit at 80,000 ₽, a brand strategy at 200,000 ₽. See <a href="#prices">Prices</a> for details. Describe your task and I will send an estimate within a day. The first half-hour call is free.</div></div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">
@@ -681,18 +713,25 @@ footer{flex-direction:column;gap:20px;text-align:center;padding:32px 24px}
   <div class="reveal">
     <div class="section-label">Let's start</div>
     <div class="cta-h2">Let's discuss<br>your <em>brand</em><br>in 30 minutes</div>
-    <p class="cta-sub">A half-hour call: you tell me what is going on, and I tell you how I can help.</p>
+    <p class="cta-sub">Write a couple of lines about what is going on with your brand. I reply within a day, we have a half-hour call, and I tell you how I can help.</p>
   </div>
   <div class="reveal">
+    <form class="lead-form" id="leadForm">
+      <label class="lead-field"><span>Your name</span><input type="text" name="lead-name" autocomplete="name"></label>
+      <label class="lead-field"><span>Phone, email or Telegram</span><input type="text" name="lead-contact" autocomplete="tel" required></label>
+      <label class="lead-field"><span>Your task in a few words</span><textarea name="lead-task" rows="3" required placeholder="For example: we are launching our own grinder brand and need positioning and packaging"></textarea></label>
+      <div class="lead-actions">
+        <button type="submit" class="btn-primary" data-via="tg">Send via Telegram</button>
+        <button type="submit" class="btn-secondary" data-via="mail">Send by email</button>
+      </div>
+      <p class="lead-note">Telegram or your mail app opens with the message ready, you just press Send. To describe the task in detail, fill in the <a href="/en/brief">brief</a>.</p>
+      <p class="lead-status" role="status" aria-live="polite"></p>
+    </form>
     <div class="cta-contacts">
       <a href="tel:+79933673178" class="cta-item"><div class="cta-icon">📞</div>+7 993 367 31 78</a>
       <a href="mailto:i@creativedm.ru" class="cta-item"><div class="cta-icon">✉</div>i@creativedm.ru</a>
       <a href="https://t.me/Dmitrii_Diezel" target="_blank" class="cta-item"><div class="cta-icon">✈</div>Message me on Telegram</a>
       <a href="https://vk.com/dmitrii_moskalenko" target="_blank" class="cta-item"><div class="cta-icon">◆</div>VK</a>
-    </div>
-    <div class="cta-actions">
-      <a href="https://t.me/Dmitrii_Diezel" target="_blank" class="btn-primary">Message me on Telegram</a>
-      <a href="https://disk.yandex.ru/i/wyf3OH_tC1vYxA" target="_blank" class="btn-secondary">Download resume (RU)</a>
     </div>
   </div>
 </section>
@@ -806,7 +845,7 @@ document.addEventListener('keydown', function(e) {
     if (!a) return;
     var h = a.getAttribute('href') || '';
     if (h.indexOf('forms.yandex.ru') !== -1) goal('brief_form_open');
-    else if (/(^|\/)brief\.html/.test(h)) goal('brief_click');
+    else if (/(^|\/)brief(\.html)?([?#]|$)/.test(h)) goal('brief_click');
     else if (h.indexOf('t.me/') !== -1) goal('telegram_click');
     else if (h.indexOf('tel:') === 0) goal('phone_click');
     else if (h.indexOf('mailto:') === 0) goal('email_click');
@@ -814,5 +853,6 @@ document.addEventListener('keydown', function(e) {
   });
 })();
 </script>
+<script src="/js/lead-form.js" defer></script>
 </body>
 </html>

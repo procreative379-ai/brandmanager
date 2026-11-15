@@ -174,3 +174,37 @@ html.case-dark {
 a.lang-switch { font-size: 12px; letter-spacing: .1em; color: var(--site-muted); text-decoration: none; position: relative; z-index: 1; transition: color .3s; }
 a.lang-switch:hover, a.lang-switch:focus-visible { color: var(--site-accent); }
 .mobile-menu a.lang-switch { font-size: clamp(14px, 4vw, 18px); letter-spacing: .1em; margin-top: 8px; color: var(--site-muted); }
+
+/* Короткая форма заявки: собирает сообщение и открывает Telegram или почту. */
+.lead-form { display: grid; gap: 14px; margin-bottom: 40px; }
+.lead-field { display: grid; gap: 6px; font-size: 13px; color: var(--site-muted); }
+.lead-field input, .lead-field textarea {
+  width: 100%; box-sizing: border-box; font: inherit; font-size: 16px; color: var(--site-text);
+  background: var(--site-surface-2); border: 1px solid var(--site-rule); border-radius: 2px; padding: 13px 14px;
+}
+.lead-field textarea { resize: vertical; min-height: 92px; }
+.lead-field input:focus, .lead-field textarea:focus { border-color: var(--site-accent); outline: none; }
+.lead-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+.lead-form button { cursor: pointer; border: 0; }
+.lead-form button.btn-secondary { background: transparent; border: 1px solid var(--site-rule); }
+.lead-note { font-size: 13px; line-height: 1.6; color: var(--site-muted); margin: 0; }
+.lead-note a { color: var(--site-accent); }
+.lead-status { font-size: 14px; color: var(--site-text); margin: 0; }
+.lead-status:empty { display: none; }
+
+/* Цены на странице услуг */
+.price-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.price-card { border: 1px solid var(--site-rule); background: var(--site-surface-2); border-radius: 2px; padding: 32px 28px; display: flex; flex-direction: column; gap: 14px; }
+.price-card h3 { font-family: 'Unbounded', sans-serif; font-size: 17px; font-weight: 700; margin: 0; color: var(--site-text); }
+.price-sum { font-family: 'Unbounded', sans-serif; font-size: clamp(24px, 2.6vw, 32px); font-weight: 900; color: var(--site-accent); letter-spacing: -.02em; }
+.price-card p { font-size: 15px; line-height: 1.65; color: var(--site-muted); margin: 0; }
+.price-term { font-size: 13px; color: var(--site-text-2); margin-top: auto; }
+.price-foot { font-size: 15px; line-height: 1.7; color: var(--site-muted); margin-top: 32px; max-width: 760px; }
+@media (max-width: 900px) { .price-cards { grid-template-columns: minmax(0, 1fr); } }
+
+/* Заголовок первого экрана переносится по словам, без дефисов. */
+.hero-h1 { -webkit-hyphens: manual !important; hyphens: manual !important; }
+@media (max-width: 767px) {
+  #prices .services-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+  #prices .services-sub { text-align: left; }
+}

@@ -1321,10 +1321,8 @@
     });
   }
   window.__loadMetrika = loadMetrika;
-  // Метрика запускается только после согласия в баннере cookie
-  try {
-    if (localStorage.getItem('cookie_consent') === 'accepted') loadMetrika();
-  } catch(e){}
+  // Метрика запускается сразу для всех посетителей
+  loadMetrika();
 })();
 </script>
 <!-- /Yandex.Metrika counter -->
